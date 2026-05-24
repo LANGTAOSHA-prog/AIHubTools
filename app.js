@@ -251,8 +251,8 @@ async function loadTools() {
     const response = await fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    state.tools = normalizeTools(Array.isArray(data) ? data : []);
-    if (!state.tools.length) throw new Error('Empty tools data');
+    state.tools = normalizeTools(extractToolsData(data));
+    if (!state.tools.length) throw new Error('Empty tools data or unsupported tools-data.json format');
     setStatus('');
   } catch (error) {
     console.warn('AIHubTools data load failed:', error);
@@ -264,39 +264,92 @@ async function loadTools() {
   renderTools();
 }
 
+function extractToolsData(data) {
+  if (typeof data === 'string') {
+    try {
+      return extractToolsData(JSON.parse(data));
+    } catch (error) {
+      console.warn('tools-data.json is a string but not valid JSON:', error);
+      return [];
+    }
+  }
+
+  if (Array.isArray(data)) {
+    if (data.length === 1 && data[0] && typeof data[0] === 'object') {
+      const first = data[0];
+      if (Array.isArray(first.array)) return first.array;
+      if (Array.isArray(first.tools)) return first.tools;
+      if (Array.isArray(first.items)) return first.items;
+      if (Array.isArray(first.data)) return first.data;
+    }
+    return data;
+  }
+
+  if (data && typeof data === 'object') {
+    if (Array.isArray(data.tools)) return data.tools;
+    if (Array.isArray(data.items)) return data.items;
+    if (Array.isArray(data.data)) return data.data;
+    if (Array.isArray(data.array)) return data.array;
+    if (Array.isArray(data.result)) return data.result;
+  }
+
+  return [];
+}
+
 function normalizeTools(rawTools) {
   return rawTools
     .filter(Boolean)
     .map((tool, index) => {
       const normalized = { ...tool };
-      normalized.slug = clean(tool.slug) || slugify(clean(tool.name) || clean(tool.name_en) || clean(tool.name_zh) || `tool-${index + 1}`);
-      normalized.website = clean(tool.website || tool.url || tool.source_url);
-      normalized.featured = toBoolean(tool.featured);
-      normalized.status = clean(tool.status || 'Active');
-      normalized.pricing_url = clean(tool.pricing_url || tool.pricingUrl);
-      normalized.logo_url = clean(tool.logo_url || tool.logoUrl || tool.logo);
-      normalized.source_url = clean(tool.source_url || tool.sourceUrl || tool.website);
-      normalized.updated_at = clean(tool.updated_at || tool.updatedAt);
-      normalized.i18n = normalizeI18n(tool);
+      const name = readValue(tool, ['name', 'Name', 'tool_name', 'toolName', 'title', 'Title', 'name_en', 'name_zh']);
+      const slug = readValue(tool, ['slug', 'Slug', 'id', 'ID']);
+      const website = readValue(tool, ['website', 'Website', 'url', 'URL', 'link', 'Link', 'source_url', 'sourceUrl']);
+
+      normalized.slug = clean(slug) || slugify(clean(name) || `tool-${index + 1}`);
+      normalized.website = clean(website);
+      normalized.featured = toBoolean(readValue(tool, ['featured', 'Featured', 'is_featured', 'recommend', 'recommended']));
+      normalized.status = clean(readValue(tool, ['status', 'Status'])) || 'Active';
+      normalized.pricing_url = clean(readValue(tool, ['pricing_url', 'pricingUrl', 'pricing', 'Pricing']));
+      normalized.logo_url = clean(readValue(tool, ['logo_url', 'logoUrl', 'logo', 'Logo', 'icon', 'Icon']));
+      normalized.source_url = clean(readValue(tool, ['source_url', 'sourceUrl', 'source', 'Source'])) || normalized.website;
+      normalized.updated_at = clean(readValue(tool, ['updated_at', 'updatedAt', 'updated', 'Updated']));
+      normalized.i18n = normalizeI18n(tool, normalized);
       return normalized;
     })
     .filter((tool) => getField(tool, 'name') || tool.website);
 }
 
-function normalizeI18n(tool) {
+function normalizeI18n(tool, normalized = {}) {
   const source = tool.i18n && typeof tool.i18n === 'object' ? tool.i18n : {};
+  const base = {
+    name: readValue(tool, ['name', 'Name', 'title', 'Title', 'tool_name', 'toolName']),
+    category: readValue(tool, ['category', 'Category', 'class', 'Class']),
+    type: readValue(tool, ['type', 'Type', 'pricing_type', 'pricingType']),
+    description: readValue(tool, ['description', 'Description', 'desc', 'Desc', 'summary', 'Summary']),
+    tags: readValue(tool, ['tags', 'Tags', 'tag', 'Tag', 'keywords', 'Keywords'])
+  };
+
   const i18n = {};
   for (const lang of SUPPORTED_LANGS) {
     const nested = source[lang] || {};
     i18n[lang] = {
-      name: clean(nested.name || tool[`name_${lang}`] || tool.name),
-      category: clean(nested.category || tool[`category_${lang}`] || tool.category),
-      type: clean(nested.type || tool[`type_${lang}`] || tool.type),
-      description: clean(nested.description || tool[`description_${lang}`] || tool.description),
-      tags: normalizeTags(nested.tags || tool[`tags_${lang}`] || tool.tags)
+      name: clean(nested.name || readValue(tool, [`name_${lang}`, `Name_${lang}`, `${lang}_name`]) || base.name),
+      category: clean(nested.category || readValue(tool, [`category_${lang}`, `Category_${lang}`, `${lang}_category`]) || base.category),
+      type: clean(nested.type || readValue(tool, [`type_${lang}`, `Type_${lang}`, `${lang}_type`]) || base.type),
+      description: clean(nested.description || readValue(tool, [`description_${lang}`, `Description_${lang}`, `${lang}_description`]) || base.description),
+      tags: normalizeTags(nested.tags || readValue(tool, [`tags_${lang}`, `Tags_${lang}`, `${lang}_tags`]) || base.tags)
     };
   }
   return i18n;
+}
+
+function readValue(object, keys) {
+  for (const key of keys) {
+    if (object && Object.prototype.hasOwnProperty.call(object, key) && object[key] !== null && object[key] !== undefined && clean(object[key]) !== '') {
+      return object[key];
+    }
+  }
+  return '';
 }
 
 function setLanguage(lang, shouldRender = true) {
@@ -446,7 +499,7 @@ function getField(tool, field) {
 }
 
 function getTags(tool) {
-  return normalizeTags(tool.i18n?.[state.lang]?.tags || tool.i18n?.en?.tags || tool.tags);
+  return normalizeTags(tool.i18n?.[state.lang]?.tags || tool.i18n?.en?.tags || tool.i18n?.zh?.tags || tool.tags);
 }
 
 function normalizeTags(value) {

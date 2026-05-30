@@ -1,194 +1,252 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AIHubTools - 智汇工具 | AI Tools Directory</title>
-  <meta name="description" content="AIHubTools 智汇工具：发现实用的 AI 工具、在线工具和开源替代软件，支持中文、English、日本語多语言切换。" />
-  <meta name="keywords" content="AIHubTools, 智汇工具, AI工具导航, AI tools directory, online tools, open source alternatives" />
-  <meta name="author" content="AIHubTools" />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="AIHubTools - 智汇工具" />
-  <meta property="og:description" content="Discover useful AI tools, online tools, and open-source alternatives." />
-  <meta property="og:url" content="https://langtaosha-prog.github.io/AIHubTools/" />
-  <meta property="og:site_name" content="AIHubTools" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="AIHubTools - 智汇工具" />
-  <meta name="twitter:description" content="A multilingual AI tools directory powered by Google Sheets and GitHub Pages." />
-
-  <link rel="stylesheet" href="./style.css" />
-  <!-- Google AdSense：把 ca-pub-XXXXXXXXXXXXXXXX 替换成你自己的发布商 ID -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIHubTools 智汇工具 - AI工具导航</title>
+  <meta name="description" content="AIHubTools 智汇工具，收录AI聊天、写作、图片、视频、办公、编程等实用AI工具。" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f6f8fb;color:#111827}
+    header{background:linear-gradient(135deg,#111827,#2563eb);color:white;padding:48px 20px;text-align:center}
+    header h1{font-size:42px;margin:0 0 12px}
+    header p{font-size:18px;margin:0;opacity:.9}
+    nav{display:flex;justify-content:center;gap:18px;background:white;padding:14px;box-shadow:0 2px 10px #0001;position:sticky;top:0;z-index:10}
+    nav a{color:#111827;text-decoration:none;font-weight:700}
+    .wrap{max-width:1200px;margin:auto;padding:28px 18px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
+    .stat{background:white;border-radius:18px;padding:22px;text-align:center;box-shadow:0 6px 20px #00000012}
+    .stat b{font-size:34px;color:#2563eb;display:block}
+    .controls{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:20px 0}
+    input,select{padding:14px;border:1px solid #d1d5db;border-radius:12px;font-size:15px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+    .card{background:white;border-radius:18px;padding:20px;box-shadow:0 8px 24px #00000012;display:flex;flex-direction:column;gap:10px}
+    .card h3{margin:0;font-size:22px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;background:#eef2ff;color:#1d4ed8;padding:5px 9px;border-radius:999px}
+    .desc{color:#4b5563;line-height:1.6;min-height:48px}
+    .btn{margin-top:auto;display:inline-block;text-align:center;background:#2563eb;color:white;text-decoration:none;padding:11px 14px;border-radius:12px;font-weight:700}
+    .empty,.loading{background:white;border-radius:16px;padding:30px;text-align:center;color:#6b7280}
+    footer{text-align:center;color:#6b7280;padding:40px 20px}
+    @media(max-width:700px){
+      header h1{font-size:30px}
+      .stats,.controls{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="./" aria-label="AIHubTools home">
-        <span class="brand-mark">AI</span>
-        <span>
-          <strong>AIHubTools</strong>
-          <small data-i18n="brandSub">智汇工具</small>
-        </span>
-      </a>
 
-      <div class="nav-actions">
-        <a class="nav-link" href="#tools" data-i18n="navTools">工具</a>
-        <a class="nav-link" href="#about" data-i18n="navAbout">关于</a>
-        <a class="nav-link" href="./privacy.html" data-i18n="navPrivacy">隐私政策</a>
-        <a class="nav-link" href="./contact.html" data-i18n="navContact">联系</a>
-        <select id="languageSelect" class="lang-select" aria-label="Language selector">
-          <option value="zh">中文</option>
-          <option value="en">English</option>
-          <option value="ja">日本語</option>
-        </select>
-      </div>
-    </nav>
-  </header>
+<header>
+  <h1>AIHubTools 智汇工具</h1>
+  <p>发现实用的 AI 工具、在线工具和开源替代方案</p>
+</header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="eyebrow">AI 工具导航 · 在线工具 · 开源替代</p>
-          <h1 data-i18n="heroTitle">发现实用的 AI 工具和免费在线工具</h1>
-          <p class="hero-text" data-i18n="heroText">AIHubTools 汇集 AI 聊天、写作、设计、编程、PDF、办公效率和开源替代工具，支持多语言浏览。</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#tools" data-i18n="exploreBtn">开始浏览</a>
-          </div>
-        </div>
-        <div class="hero-card" aria-label="Site statistics">
-          <div>
-            <span id="totalCount" class="stat-number">0</span>
-            <span data-i18n="totalTools">个工具</span>
-          </div>
-          <div>
-            <span id="categoryCount" class="stat-number">0</span>
-            <span data-i18n="categories">个分类</span>
-          </div>
-          <div>
-            <span id="featuredCount" class="stat-number">0</span>
-            <span data-i18n="featuredTools">个推荐</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<nav>
+  <a href="#tools">工具列表</a>
+  <a href="#about">关于本站</a>
+</nav>
 
+<main class="wrap">
+  <section class="stats">
+    <div class="stat"><b id="totalCount">0</b>个工具</div>
+    <div class="stat"><b id="categoryCount">0</b>个分类</div>
+    <div class="stat"><b id="featuredCount">0</b>个推荐</div>
+  </section>
 
-    <section class="ad-section container" aria-label="Advertisement">
-      <div class="ad-label" data-i18n="adLabel">广告</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="0000000000"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </section>
+  <section id="tools">
+    <h2>工具列表</h2>
 
-    <section id="tools" class="tools-section container">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow" data-i18n="directoryLabel">Tools Directory</p>
-          <h2 data-i18n="toolsTitle">工具列表</h2>
-        </div>
-      </div>
-
-      <div class="toolbar" role="search">
-        <label class="search-box">
-          <span class="sr-only" data-i18n="searchLabel">搜索工具</span>
-          <input id="searchInput" type="search" placeholder="搜索工具、分类、标签..." autocomplete="off" />
-        </label>
-        <select id="categoryFilter" class="filter-select" aria-label="Category filter">
-          <option value="all" data-i18n="allCategories">全部分类</option>
-        </select>
-        <select id="typeFilter" class="filter-select" aria-label="Type filter">
-          <option value="all" data-i18n="allTypes">全部类型</option>
-        </select>
-        <button id="featuredToggle" class="chip" type="button" data-i18n="featuredOnly">只看推荐</button>
-      </div>
-
-      <div id="statusMessage" class="status-message" role="status"></div>
-      <div id="toolsGrid" class="tools-grid" aria-live="polite"></div>
-    </section>
-
-
-    <section class="ad-section container" aria-label="Advertisement">
-      <div class="ad-label" data-i18n="adLabel">广告</div>
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="1111111111"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </section>
-
-    <section id="about" class="about-section container">
-      <div class="about-card">
-        <h2 data-i18n="aboutTitle">关于 AIHubTools</h2>
-        <p data-i18n="aboutText">AIHubTools 是一个面向学习、工作和创作场景的多语言 AI 工具导航网站。我们整理实用的 AI 聊天、写作、设计、编程、PDF、办公效率和开源替代工具，并提供清晰的分类、简介、访问入口和多语言浏览体验，帮助用户更快找到合适的工具。</p>
-      </div>
-    </section>
-
-    <section class="about-detail-section">
-      <div class="about-detail-card">
-        <p class="eyebrow" data-i18n="aboutDetailEyebrow">AIHubTools Guide</p>
-        <h2 data-i18n="aboutDetailTitle">关于 AIHubTools</h2>
-
-        <p data-i18n="aboutDetailP1">
-          AIHubTools 是一个专注于 AI 工具发现、整理和推荐的多语言导航网站，旨在帮助用户快速找到适合自己工作、学习、创作和日常效率提升的人工智能工具。无论你需要 AI 聊天助手、写作工具、图片生成工具、视频创作工具、编程助手、办公自动化工具，还是开源替代软件，AIHubTools 都希望为你提供一个清晰、简洁、方便访问的入口。
-        </p>
-
-        <p data-i18n="aboutDetailP2">
-          随着 AI 技术快速发展，新的工具每天都在出现。很多用户在搜索工具时，经常会遇到信息分散、介绍不清楚、网站难以比较等问题。AIHubTools 通过分类整理、关键词搜索、多语言介绍和工具详情展示，帮助用户更高效地了解每个工具的用途、特点、适合人群和访问方式。
-        </p>
-
-        <p data-i18n="aboutDetailP3">
-          本网站收录的工具覆盖 AI 聊天、文本写作、图片设计、视频生成、语音处理、代码开发、效率办公、学习研究、营销运营、开源项目等多个方向。用户可以根据分类筛选，也可以直接搜索工具名称或关键词，快速找到需要的服务。
-        </p>
-
-        <p data-i18n="aboutDetailP4">
-          AIHubTools 支持中文、英文和日文界面，适合不同语言背景的用户使用。网站采用轻量级设计，支持手机和电脑访问，不需要安装应用，也不需要复杂操作。我们的目标是让更多人能够轻松了解 AI 工具，并把这些工具真正应用到学习、工作和生活中。
-        </p>
-
-        <p data-i18n="aboutDetailP5">
-          需要注意的是，AIHubTools 是一个工具导航和信息整理网站。网站本身不直接提供第三方工具的核心服务，也不代表这些工具的官方立场。用户在访问第三方网站时，应自行查看其服务条款、隐私政策、价格说明和使用限制，并根据自己的需求谨慎选择。
-        </p>
-
-        <p data-i18n="aboutDetailP6">
-          未来，AIHubTools 将持续更新更多实用 AI 工具、免费在线工具和开源替代方案，并不断优化分类、搜索和多语言内容，为用户提供更加完整、可靠、易用的 AI 工具导航体验。
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> AIHubTools · <span data-i18n="footerText">智汇工具</span></p>
-      <p class="footer-links"><a href="./privacy.html" data-i18n="privacyLink">隐私政策</a> · <a href="./terms.html" data-i18n="termsLink">使用条款</a> · <a href="./contact.html" data-i18n="contactLink">联系</a></p>
+    <div class="controls">
+      <input id="searchInput" placeholder="搜索工具、分类、关键词..." />
+      <select id="categoryFilter">
+        <option value="all">全部分类</option>
+      </select>
+      <select id="typeFilter">
+        <option value="all">全部类型</option>
+      </select>
     </div>
-  </footer>
 
-  <dialog id="toolDialog" class="tool-dialog">
-    <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
-    <div id="dialogContent"></div>
-  </dialog>
+    <div id="status" class="loading">正在加载 tools-data.json...</div>
+    <div id="toolsGrid" class="grid"></div>
+  </section>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AIHubTools",
-    "alternateName": "智汇工具",
-    "url": "https://langtaosha-prog.github.io/AIHubTools/",
-    "description": "A multilingual AI tools directory and online tools collection."
+  <section id="about" style="margin-top:40px;background:white;border-radius:18px;padding:24px;box-shadow:0 8px 24px #00000012">
+    <h2>关于 AIHubTools</h2>
+    <p>
+      AIHubTools 是一个多语言 AI 工具导航网站，整理 AI 聊天、写作、图片生成、视频制作、编程助手、办公效率、PDF 工具和开源替代工具，帮助用户更快找到适合自己的工具。
+    </p>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> AIHubTools / 智汇工具
+</footer>
+
+<script>
+const DATA_URL = './tools-data.json';
+let tools = [];
+
+const el = {
+  total: document.getElementById('totalCount'),
+  category: document.getElementById('categoryCount'),
+  featured: document.getElementById('featuredCount'),
+  grid: document.getElementById('toolsGrid'),
+  status: document.getElementById('status'),
+  search: document.getElementById('searchInput'),
+  categoryFilter: document.getElementById('categoryFilter'),
+  typeFilter: document.getElementById('typeFilter')
+};
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+function clean(v){
+  return v === undefined || v === null ? '' : String(v).trim();
+}
+
+function bool(v){
+  if(typeof v === 'boolean') return v;
+  return ['true','1','yes','y','是','推荐','featured'].includes(clean(v).toLowerCase());
+}
+
+function getName(t){
+  return clean(t.name || t.name_zh || t.name_en || t.name_ja || t.title);
+}
+
+function getCategory(t){
+  return clean(t.category || t.category_zh || t.category_en || t.category_ja);
+}
+
+function getType(t){
+  return clean(t.type || t.type_zh || t.type_en || t.type_ja);
+}
+
+function getDescription(t){
+  return clean(t.description || t.description_zh || t.description_en || t.description_ja || t.desc || t.summary);
+}
+
+function getWebsite(t){
+  return clean(t.website || t.url || t.link || t.source_url);
+}
+
+function getTags(t){
+  const raw = clean(t.tags || t.tags_zh || t.tags_en || t.tags_ja || '');
+  return raw ? raw.split(/[,，、;；|]/).map(x=>x.trim()).filter(Boolean) : [];
+}
+
+function normalizeData(data){
+  if(Array.isArray(data)) return data;
+  if(data && Array.isArray(data.tools)) return data.tools;
+  if(data && Array.isArray(data.items)) return data.items;
+  if(data && Array.isArray(data.data)) return data.data;
+  if(data && Array.isArray(data.defaultJson)) return data.defaultJson;
+  return [];
+}
+
+async function loadTools(){
+  try{
+    const res = await fetch(DATA_URL + '?v=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+
+    const data = await res.json();
+    tools = normalizeData(data).filter(t => getName(t) || getWebsite(t));
+
+    if(!tools.length) throw new Error('tools-data.json 没有有效工具数据');
+
+    el.status.style.display = 'none';
+    renderFilters();
+    renderStats();
+    renderTools();
+  }catch(err){
+    console.error(err);
+    el.status.textContent = '读取 tools-data.json 失败：' + err.message;
   }
-  </script>
-  <script src="./app.js" defer></script>
-<script src="./app.js"></script>
+}
+
+function renderStats(){
+  const categories = new Set(tools.map(getCategory).filter(Boolean));
+  el.total.textContent = tools.length;
+  el.category.textContent = categories.size;
+  el.featured.textContent = tools.filter(t => bool(t.featured)).length;
+}
+
+function renderFilters(){
+  const categories = [...new Set(tools.map(getCategory).filter(Boolean))].sort();
+  const types = [...new Set(tools.map(getType).filter(Boolean))].sort();
+
+  el.categoryFilter.innerHTML = '<option value="all">全部分类</option>' +
+    categories.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+
+  el.typeFilter.innerHTML = '<option value="all">全部类型</option>' +
+    types.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
+}
+
+function renderTools(){
+  const q = clean(el.search.value).toLowerCase();
+  const cat = el.categoryFilter.value;
+  const type = el.typeFilter.value;
+
+  const list = tools.filter(t => {
+    const name = getName(t);
+    const category = getCategory(t);
+    const toolType = getType(t);
+    const desc = getDescription(t);
+    const tags = getTags(t).join(' ');
+    const text = `${name} ${category} ${toolType} ${desc} ${tags}`.toLowerCase();
+
+    return (!q || text.includes(q)) &&
+           (cat === 'all' || category === cat) &&
+           (type === 'all' || toolType === type);
+  });
+
+  if(!list.length){
+    el.grid.innerHTML = '<div class="empty">没有找到匹配的工具</div>';
+    return;
+  }
+
+  el.grid.innerHTML = list.map(t => {
+    const name = getName(t);
+    const category = getCategory(t);
+    const type = getType(t);
+    const desc = getDescription(t);
+    const website = getWebsite(t);
+    const tags = getTags(t).slice(0,4);
+    const featured = bool(t.featured);
+
+    return `
+      <article class="card">
+        <div class="meta">
+          ${category ? `<span class="tag">${escapeHtml(category)}</span>` : ''}
+          ${type ? `<span class="tag">${escapeHtml(type)}</span>` : ''}
+          ${featured ? `<span class="tag">★ 推荐</span>` : ''}
+        </div>
+        <h3>${escapeHtml(name || '未命名工具')}</h3>
+        <p class="desc">${escapeHtml(desc || '暂无简介')}</p>
+        ${tags.length ? `<div class="meta">${tags.map(x=>`<span class="tag">${escapeHtml(x)}</span>`).join('')}</div>` : ''}
+        ${website ? `<a class="btn" href="${escapeAttr(website)}" target="_blank" rel="noopener nofollow">访问官网</a>` : ''}
+      </article>
+    `;
+  }).join('');
+}
+
+function escapeHtml(v){
+  return clean(v)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+function escapeAttr(v){
+  return escapeHtml(v).replace(/`/g,'&#96;');
+}
+
+el.search.addEventListener('input', renderTools);
+el.categoryFilter.addEventListener('change', renderTools);
+el.typeFilter.addEventListener('change', renderTools);
+
+loadTools();
+</script>
+
 </body>
 </html>

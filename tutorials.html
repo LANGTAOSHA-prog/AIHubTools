@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>教程中心 - AIHubTools 智汇工具</title>
   <meta name="description" content="AIHubTools 教程中心，整理 AI 工具使用教程、AI写作、AI绘图、AI视频、AI办公和AI编程教程。">
-
   <style>
     body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827}
     header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;text-align:center;padding:60px 20px}
@@ -22,11 +21,11 @@
     .card h3{margin:0 0 10px;font-size:21px}
     .card p{color:#4b5563;line-height:1.7;font-size:14px}
     .btn{display:inline-block;margin-top:12px;background:#2563eb;color:white;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+    .loading,.empty{background:white;border-radius:16px;padding:24px;text-align:center;color:#6b7280}
     footer{text-align:center;color:#6b7280;padding:30px 15px}
     @media(max-width:800px){.grid{grid-template-columns:1fr}header h1{font-size:32px}}
   </style>
 </head>
-
 <body>
 
 <header>
@@ -43,58 +42,93 @@
 
 <main class="wrap">
   <h2 class="section-title">最新教程</h2>
-  <p class="sub">这里会陆续整理 AI 写作、AI绘图、AI视频、AI办公、AI编程等实用教程。</p>
+  <p class="sub">这里会自动显示表格中已启用的教程。</p>
 
-  <div class="grid">
-
-    <article class="card">
-      <span class="tag">AI Chat</span>
-      <h3>ChatGPT 新手使用教程</h3>
-      <p>适合第一次接触 ChatGPT 的用户，了解如何提问、如何写提示词，以及如何用它辅助学习和工作。</p>
-      <a class="btn" href="tutorials/chatgpt-guide.html">查看教程</a>
-    </article>
-
-    <article class="card">
-      <span class="tag">AI Image</span>
-      <h3>AI绘图工具入门教程</h3>
-      <p>介绍 AI 绘图工具的基础使用方法，包括提示词写法、图片风格选择和常见问题处理。</p>
-      <a class="btn" href="tutorials/ai-image-guide.html">查看教程</a>
-    </article>
-
-    <article class="card">
-      <span class="tag">AI Video</span>
-      <h3>AI视频生成工具教程</h3>
-      <p>整理 AI 视频生成工具的常见使用流程，适合短视频创作者、内容运营和自媒体用户参考。</p>
-      <a class="btn" href="tutorials/ai-video-guide.html">查看教程</a>
-    </article>
-
-    <article class="card">
-      <span class="tag">AI PPT</span>
-      <h3>如何用 AI 快速制作 PPT</h3>
-      <p>从主题输入、内容生成、页面优化到导出使用，适合学生、职场人士和内容创作者。</p>
-      <a class="btn" href="tutorials/ai-ppt-guide.html">查看教程</a>
-    </article>
-
-    <article class="card">
-      <span class="tag">AI Coding</span>
-      <h3>AI编程工具使用教程</h3>
-      <p>介绍如何用 AI 辅助写代码、检查错误、生成网页和提高开发效率。</p>
-      <a class="btn" href="tutorials/ai-coding-guide.html">查看教程</a>
-    </article>
-
-    <article class="card">
-      <span class="tag">AI Writing</span>
-      <h3>AI写作工具使用教程</h3>
-      <p>适合写文章、改文案、写总结、做内容运营的用户，整理常用写作场景和方法。</p>
-      <a class="btn" href="tutorials/ai-writing-guide.html">查看教程</a>
-    </article>
-
-  </div>
+  <div id="status" class="loading">正在加载教程数据...</div>
+  <div id="tutorialGrid" class="grid"></div>
 </main>
 
 <footer>
   © 2026 AIHubTools 智汇工具 · AI工具导航与教程中心
 </footer>
+
+<script>
+const DATA_URL = './tools-data.json';
+
+function clean(v){
+  return v === undefined || v === null ? '' : String(v).trim();
+}
+
+function isTrue(v){
+  if(typeof v === 'boolean') return v;
+  return ['true','1','yes','y','是','启用','enabled'].includes(clean(v).toLowerCase());
+}
+
+function escapeHtml(v){
+  return clean(v)
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+function escapeAttr(v){
+  return escapeHtml(v).replace(/`/g,'&#96;');
+}
+
+function normalizeData(data){
+  if(Array.isArray(data)) return data;
+  if(data && Array.isArray(data.tools)) return data.tools;
+  if(data && Array.isArray(data.defaultJson)) return data.defaultJson;
+  return [];
+}
+
+async function loadTutorials(){
+  const status = document.getElementById('status');
+  const grid = document.getElementById('tutorialGrid');
+
+  try{
+    const res = await fetch(DATA_URL + '?v=' + Date.now(), {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+
+    const data = await res.json();
+    const tools = normalizeData(data);
+
+    const tutorials = tools.filter(t => isTrue(t.tutorial_enabled) && clean(t.tutorial_url || t.tutorial_slug));
+
+    if(!tutorials.length){
+      status.className = 'empty';
+      status.textContent = '暂时还没有启用的教程。请先在表格中填写 tutorial_enabled = TRUE。';
+      return;
+    }
+
+    status.style.display = 'none';
+
+    grid.innerHTML = tutorials.map(t => {
+      const category = clean(t.tutorial_category || t.category || 'AI工具教程');
+      const title = clean(t.tutorial_title || ((t.name || '工具') + ' 使用教程'));
+      const summary = clean(t.tutorial_summary || t.description || '查看这篇教程，了解该工具的基础用法和实用技巧。');
+      const url = clean(t.tutorial_url || ('articles/' + t.tutorial_slug + '.html'));
+
+      return `
+        <article class="card">
+          <span class="tag">${escapeHtml(category)}</span>
+          <h3>${escapeHtml(title)}</h3>
+          <p>${escapeHtml(summary)}</p>
+          <a class="btn" href="${escapeAttr(url)}">查看教程</a>
+        </article>
+      `;
+    }).join('');
+
+  }catch(err){
+    status.className = 'empty';
+    status.textContent = '教程数据读取失败：' + err.message;
+  }
+}
+
+loadTutorials();
+</script>
 
 </body>
 </html>

@@ -1,0 +1,402 @@
+[
+  {
+    "slug": "perplexity-ai",
+    "name": "Perplexity AI",
+    "category": "AI Search",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "gamma-ai",
+    "name": "Gamma",
+    "category": "AI PPT",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "runway-ml",
+    "name": "Runway",
+    "category": "AI Video",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "leonardo-ai",
+    "name": "Leonardo AI",
+    "category": "AI Image",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "pika-ai",
+    "name": "Pika",
+    "category": "AI Video",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "claude-ai",
+    "name": "Claude",
+    "category": "AI Chat",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "category": "AI Image",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "AI Audio",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "suno-ai",
+    "name": "Suno AI",
+    "category": "AI Audio",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "udio-ai",
+    "name": "Udio",
+    "category": "AI Audio",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "category": "AI Productivity",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "category": "AI Writing",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "jasper-ai",
+    "name": "Jasper AI",
+    "category": "AI Writing",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "heygen",
+    "name": "HeyGen",
+    "category": "AI Video",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "d-id",
+    "name": "D-ID",
+    "category": "AI Video",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "category": "AI PPT",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "slidesai",
+    "name": "SlidesAI",
+    "category": "AI PPT",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "canva-ai",
+    "name": "Canva AI",
+    "category": "AI Design",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "figma-ai",
+    "name": "Figma AI",
+    "category": "AI Design",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "codeium",
+    "name": "Codeium",
+    "category": "AI Coding",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "tabnine",
+    "name": "Tabnine",
+    "category": "AI Coding",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "phind-ai",
+    "name": "Phind",
+    "category": "AI Coding",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "replit-ai",
+    "name": "Replit AI",
+    "category": "AI Coding",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "cursor-ai",
+    "name": "Cursor",
+    "category": "AI Coding",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "deepl",
+    "name": "DeepL",
+    "category": "AI Translation",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "category": "AI Office",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "fireflies-ai",
+    "name": "Fireflies AI",
+    "category": "AI Office",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "tome-ai",
+    "name": "Tome",
+    "category": "AI PPT",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "remove-bg",
+    "name": "Remove.bg",
+    "category": "AI Image",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "clipdrop",
+    "name": "Clipdrop",
+    "category": "AI Image",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "photoroom",
+    "name": "PhotoRoom",
+    "category": "AI Image",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "zapier-ai",
+    "name": "Zapier AI",
+    "category": "AI Productivity",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "taskade-ai",
+    "name": "Taskade",
+    "category": "AI Productivity",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "durable-ai",
+    "name": "Durable",
+    "category": "AI Website",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "framer-ai",
+    "name": "Framer AI",
+    "category": "AI Website",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "mixo-ai",
+    "name": "Mixo",
+    "category": "AI Website",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "category": "AI Video",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "veed-ai",
+    "name": "VEED",
+    "category": "AI Video",
+    "featured": false,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "capcut-ai",
+    "name": "CapCut AI",
+    "category": "AI Video",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  },
+  {
+    "slug": "luma-ai",
+    "name": "Luma AI",
+    "category": "AI Video",
+    "featured": true,
+    "status": "active",
+    "logo_url": "",
+    "source_url": "",
+    "updated_at": ""
+  }
+]

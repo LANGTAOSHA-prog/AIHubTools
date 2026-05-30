@@ -1,24 +1,24 @@
-[
-  {
-    "id": "1",
-    "slug": "chatgpt",
-    "name": "ChatGPT",
-    "category": "AI Chat",
-    "website": "https://chatgpt.com/",
-    "type": "Freemium",
-    "featured": true,
-    "status": "Active",
-    "description": "OpenAI 推出的 AI 聊天助手，适合写作、学习、编程、办公和资料整理。",
-    "tags": "AI聊天,写作,编程",
-    "pricing_url": "https://openai.com/chatgpt/pricing/",
-    "logo_url": "",
-    "source_url": "https://chatgpt.com/",
-    "updated_at": "46166",
-    "tutorial_category": "AI Chat",
-    "tutorial_title": "ChatGPT 新手使用教程",
-    "tutorial_slug": "chatgpt-guide",
-    "tutorial_summary": "适合第一次接触 ChatGPT 的用户，了解如何提问、如何写提示词，以及如何用它辅助学习和工作",
-    "tutorial_url": "tutorials/chatgpt-guide.html",
-    "tutorial_enabled": true
-  }
-]
+{
+  "id": "1",
+  "slug": "chatgpt",
+  "name": "ChatGPT",
+  "category": "AI Chat",
+  "website": "https://chatgpt.com/",
+  "type": "Freemium",
+  "featured": true,
+  "status": "active",
+  "active": true,
+  "enabled": true,
+  "description": "OpenAI 推出的 AI 聊天助手，适合写作、学习、编程、办公和资料整理。",
+  "tags": "AI聊天,写作,编程",
+  "pricing_url": "https://openai.com/chatgpt/pricing/",
+  "logo_url": "",
+  "source_url": "https://chatgpt.com/",
+  "updated_at": "46166",
+  "tutorial_category": "AI Chat",
+  "tutorial_title": "ChatGPT 新手使用教程",
+  "tutorial_slug": "chatgpt-guide",
+  "tutorial_summary": "适合第一次接触 ChatGPT 的用户，了解如何提问、如何写提示词，以及如何用它辅助学习和工作。",
+  "tutorial_url": "tutorials/chatgpt-guide.html",
+  "tutorial_enabled": true
+}

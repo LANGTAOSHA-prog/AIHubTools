@@ -350,6 +350,7 @@ function renderTools(){
         <p class="desc">${escapeHtml(desc || '暂无简介')}</p>
         ${tags.length ? `<div class="meta">${tags.map(x=>`<span class="tag">${escapeHtml(x)}</span>`).join('')}</div>` : ''}
         ${website ? `<a class="btn" href="${escapeAttr(website)}" target="_blank" rel="noopener nofollow">访问官网</a>` : ''}
+        ${t.tutorial_enabled === true || String(t.tutorial_enabled).toLowerCase() === 'true' ? `<a class="btn" href="${escapeAttr(t.tutorial_url || ('articles/' + t.tutorial_slug + '.html'))}">查看教程</a>` : ''}
       </article>
     `;
   }).join('');

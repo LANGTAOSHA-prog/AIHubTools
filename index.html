@@ -371,6 +371,24 @@ el.categoryFilter.addEventListener('change', renderTools);
 el.typeFilter.addEventListener('change', renderTools);
 
 loadTools();
+document.querySelectorAll(".popular-card").forEach(card => {
+  card.addEventListener("click", function () {
+    const category = this.getAttribute("data-category");
+
+    const categorySelect = document.querySelector("#categoryFilter");
+    if (categorySelect) {
+      categorySelect.value = category;
+      categorySelect.dispatchEvent(new Event("change"));
+    }
+
+    const toolsSection = document.querySelector("#tools");
+    if (toolsSection) {
+      toolsSection.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
+});
 </script>
 
 </body>

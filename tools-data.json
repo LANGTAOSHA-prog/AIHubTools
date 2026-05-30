@@ -80,12 +80,12 @@
     "logo_url": "",
     "source_url": "https://www.perplexity.ai/",
     "updated_at": "46166",
-    "tutorial_category": "",
-    "tutorial_title": "",
-    "tutorial_slug": "",
-    "tutorial_summary": "",
-    "tutorial_url": "",
-    "tutorial_enabled": false
+    "tutorial_category": "AI搜索教程",
+    "tutorial_title": "Perplexity 超全新手入门教程",
+    "tutorial_slug": "perplexity-ai-guide",
+    "tutorial_summary": "新手快速学会 Perplexity AI 搜索、引用来源和资料总结",
+    "tutorial_url": "tutorials/articlesperplexity-ai-guide.html",
+    "tutorial_enabled": true
   },
   {
     "id": "5",

@@ -13,7 +13,12 @@
     "pricing_url": "https://openai.com/chatgpt/pricing/",
     "logo_url": "",
     "source_url": "https://chatgpt.com/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "2",
@@ -29,7 +34,12 @@
     "pricing_url": "https://claude.ai/",
     "logo_url": "",
     "source_url": "https://claude.ai/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "3",
@@ -45,7 +55,12 @@
     "pricing_url": "https://gemini.google.com/",
     "logo_url": "",
     "source_url": "https://gemini.google.com/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "4",
@@ -61,7 +76,12 @@
     "pricing_url": "https://www.perplexity.ai/pro",
     "logo_url": "",
     "source_url": "https://www.perplexity.ai/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "5",
@@ -77,7 +97,12 @@
     "pricing_url": "https://www.photopea.com/",
     "logo_url": "",
     "source_url": "https://www.photopea.com/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "6",
@@ -93,7 +118,12 @@
     "pricing_url": "https://www.stirlingpdf.com/",
     "logo_url": "",
     "source_url": "https://www.stirlingpdf.com/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "7",
@@ -109,7 +139,12 @@
     "pricing_url": "https://krita.org/",
     "logo_url": "",
     "source_url": "https://krita.org/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "8",
@@ -125,7 +160,12 @@
     "pricing_url": "https://www.blender.org/",
     "logo_url": "",
     "source_url": "https://www.blender.org/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "9",
@@ -141,7 +181,12 @@
     "pricing_url": "https://openwebui.com/",
     "logo_url": "",
     "source_url": "https://openwebui.com/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "10",
@@ -157,7 +202,12 @@
     "pricing_url": "https://languagetool.org/",
     "logo_url": "",
     "source_url": "https://languagetool.org/",
-    "updated_at": "46166"
+    "updated_at": "46166",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "11",
@@ -173,7 +223,12 @@
     "pricing_url": "https://chat.deepseek.com/",
     "logo_url": "",
     "source_url": "https://chat.deepseek.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "12",
@@ -189,7 +244,12 @@
     "pricing_url": "https://poe.com/",
     "logo_url": "",
     "source_url": "https://poe.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "13",
@@ -205,7 +265,12 @@
     "pricing_url": "https://copilot.microsoft.com/",
     "logo_url": "",
     "source_url": "https://copilot.microsoft.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "14",
@@ -221,7 +286,12 @@
     "pricing_url": "https://grok.com/",
     "logo_url": "",
     "source_url": "https://grok.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "15",
@@ -237,7 +307,12 @@
     "pricing_url": "https://www.meta.ai/",
     "logo_url": "",
     "source_url": "https://www.meta.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "16",
@@ -253,7 +328,12 @@
     "pricing_url": "https://chat.mistral.ai/",
     "logo_url": "",
     "source_url": "https://chat.mistral.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "17",
@@ -269,7 +349,12 @@
     "pricing_url": "https://huggingface.co/pricing",
     "logo_url": "",
     "source_url": "https://huggingface.co/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "18",
@@ -285,7 +370,12 @@
     "pricing_url": "https://www.kimi.com/",
     "logo_url": "",
     "source_url": "https://www.kimi.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "19",
@@ -301,7 +391,12 @@
     "pricing_url": "https://chat.qwen.ai/",
     "logo_url": "",
     "source_url": "https://chat.qwen.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "20",
@@ -317,7 +412,12 @@
     "pricing_url": "https://www.doubao.com/",
     "logo_url": "",
     "source_url": "https://www.doubao.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "21",
@@ -333,7 +433,12 @@
     "pricing_url": "https://you.com/pricing",
     "logo_url": "",
     "source_url": "https://you.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "22",
@@ -349,7 +454,12 @@
     "pricing_url": "https://www.phind.com/",
     "logo_url": "",
     "source_url": "https://www.phind.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "23",
@@ -365,7 +475,12 @@
     "pricing_url": "https://consensus.app/pricing/",
     "logo_url": "",
     "source_url": "https://consensus.app/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "24",
@@ -381,7 +496,12 @@
     "pricing_url": "https://elicit.com/pricing",
     "logo_url": "",
     "source_url": "https://elicit.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "25",
@@ -397,7 +517,12 @@
     "pricing_url": "https://www.grammarly.com/plans",
     "logo_url": "",
     "source_url": "https://www.grammarly.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "26",
@@ -413,7 +538,12 @@
     "pricing_url": "https://quillbot.com/pricing",
     "logo_url": "",
     "source_url": "https://quillbot.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "27",
@@ -429,7 +559,12 @@
     "pricing_url": "https://www.deepl.com/write",
     "logo_url": "",
     "source_url": "https://www.deepl.com/write",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "28",
@@ -445,7 +580,12 @@
     "pricing_url": "https://www.jasper.ai/pricing",
     "logo_url": "",
     "source_url": "https://www.jasper.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "29",
@@ -461,7 +601,12 @@
     "pricing_url": "https://www.copy.ai/prices",
     "logo_url": "",
     "source_url": "https://www.copy.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "30",
@@ -477,7 +622,12 @@
     "pricing_url": "https://www.midjourney.com/",
     "logo_url": "",
     "source_url": "https://www.midjourney.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "31",
@@ -493,7 +643,12 @@
     "pricing_url": "https://firefly.adobe.com/",
     "logo_url": "",
     "source_url": "https://firefly.adobe.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "32",
@@ -509,7 +664,12 @@
     "pricing_url": "https://leonardo.ai/",
     "logo_url": "",
     "source_url": "https://leonardo.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "33",
@@ -525,7 +685,12 @@
     "pricing_url": "https://ideogram.ai/",
     "logo_url": "",
     "source_url": "https://ideogram.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "34",
@@ -541,7 +706,12 @@
     "pricing_url": "https://www.krea.ai/",
     "logo_url": "",
     "source_url": "https://www.krea.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "35",
@@ -557,7 +727,12 @@
     "pricing_url": "https://www.canva.com/pricing/",
     "logo_url": "",
     "source_url": "https://www.canva.com/magic/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "36",
@@ -573,7 +748,12 @@
     "pricing_url": "https://runwayml.com/pricing",
     "logo_url": "",
     "source_url": "https://runwayml.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "37",
@@ -589,7 +769,12 @@
     "pricing_url": "https://pika.art/",
     "logo_url": "",
     "source_url": "https://pika.art/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "38",
@@ -605,7 +790,12 @@
     "pricing_url": "https://lumalabs.ai/dream-machine",
     "logo_url": "",
     "source_url": "https://lumalabs.ai/dream-machine",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "39",
@@ -621,7 +811,12 @@
     "pricing_url": "https://www.synthesia.io/pricing",
     "logo_url": "",
     "source_url": "https://www.synthesia.io/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "40",
@@ -637,7 +832,12 @@
     "pricing_url": "https://www.heygen.com/pricing",
     "logo_url": "",
     "source_url": "https://www.heygen.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "41",
@@ -653,7 +853,12 @@
     "pricing_url": "https://elevenlabs.io/pricing",
     "logo_url": "",
     "source_url": "https://elevenlabs.io/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "42",
@@ -669,7 +874,12 @@
     "pricing_url": "https://suno.com/",
     "logo_url": "",
     "source_url": "https://suno.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "43",
@@ -685,7 +895,12 @@
     "pricing_url": "https://www.udio.com/",
     "logo_url": "",
     "source_url": "https://www.udio.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "44",
@@ -701,7 +916,12 @@
     "pricing_url": "https://www.descript.com/pricing",
     "logo_url": "",
     "source_url": "https://www.descript.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "45",
@@ -717,7 +937,12 @@
     "pricing_url": "https://otter.ai/pricing",
     "logo_url": "",
     "source_url": "https://otter.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "46",
@@ -733,7 +958,12 @@
     "pricing_url": "https://fireflies.ai/pricing",
     "logo_url": "",
     "source_url": "https://fireflies.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "47",
@@ -749,7 +979,12 @@
     "pricing_url": "https://fathom.video/",
     "logo_url": "",
     "source_url": "https://fathom.video/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "48",
@@ -765,7 +1000,12 @@
     "pricing_url": "https://www.notion.com/pricing",
     "logo_url": "",
     "source_url": "https://www.notion.com/product/ai",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "49",
@@ -781,7 +1021,12 @@
     "pricing_url": "https://gamma.app/pricing",
     "logo_url": "",
     "source_url": "https://gamma.app/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "50",
@@ -797,7 +1042,12 @@
     "pricing_url": "https://tome.app/",
     "logo_url": "",
     "source_url": "https://tome.app/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "51",
@@ -813,7 +1063,12 @@
     "pricing_url": "https://www.beautiful.ai/pricing",
     "logo_url": "",
     "source_url": "https://www.beautiful.ai/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "52",
@@ -829,7 +1084,12 @@
     "pricing_url": "https://cursor.com/pricing",
     "logo_url": "",
     "source_url": "https://cursor.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "53",
@@ -845,7 +1105,12 @@
     "pricing_url": "https://github.com/features/copilot/plans",
     "logo_url": "",
     "source_url": "https://github.com/features/copilot",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "54",
@@ -861,7 +1126,12 @@
     "pricing_url": "https://replit.com/pricing",
     "logo_url": "",
     "source_url": "https://replit.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "55",
@@ -877,7 +1147,12 @@
     "pricing_url": "https://windsurf.com/pricing",
     "logo_url": "",
     "source_url": "https://windsurf.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "56",
@@ -893,7 +1168,12 @@
     "pricing_url": "https://bolt.new/",
     "logo_url": "",
     "source_url": "https://bolt.new/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "57",
@@ -909,7 +1189,12 @@
     "pricing_url": "https://lovable.dev/pricing",
     "logo_url": "",
     "source_url": "https://lovable.dev/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "58",
@@ -925,7 +1210,12 @@
     "pricing_url": "https://v0.dev/pricing",
     "logo_url": "",
     "source_url": "https://v0.dev/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "59",
@@ -941,7 +1231,12 @@
     "pricing_url": "https://replicate.com/pricing",
     "logo_url": "",
     "source_url": "https://replicate.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "60",
@@ -957,7 +1252,12 @@
     "pricing_url": "https://aistudio.google.com/",
     "logo_url": "",
     "source_url": "https://aistudio.google.com/",
-    "updated_at": "2026-05-24"
+    "updated_at": "2026-05-24",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "61",
@@ -973,7 +1273,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.perplexity.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "62",
@@ -989,7 +1294,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://gamma.app/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "63",
@@ -1005,7 +1315,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://runwayml.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "64",
@@ -1021,7 +1336,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://leonardo.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "65",
@@ -1037,7 +1357,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://pika.art/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "66",
@@ -1053,7 +1378,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://claude.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "67",
@@ -1069,7 +1399,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.midjourney.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "68",
@@ -1085,7 +1420,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://elevenlabs.io/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "69",
@@ -1101,7 +1441,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://suno.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "70",
@@ -1117,7 +1462,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.udio.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "71",
@@ -1133,7 +1483,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.notion.so/product/ai",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "72",
@@ -1149,7 +1504,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.copy.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "73",
@@ -1165,7 +1525,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.jasper.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "74",
@@ -1181,7 +1546,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.heygen.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "75",
@@ -1197,7 +1567,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.d-id.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "76",
@@ -1213,7 +1588,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.beautiful.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "77",
@@ -1229,7 +1609,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.slidesai.io/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "78",
@@ -1245,7 +1630,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.canva.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "79",
@@ -1261,7 +1651,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.figma.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "80",
@@ -1277,7 +1672,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://codeium.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "81",
@@ -1293,7 +1693,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.tabnine.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "82",
@@ -1309,7 +1714,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.phind.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "83",
@@ -1325,7 +1735,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://replit.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "84",
@@ -1341,7 +1756,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.cursor.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "85",
@@ -1357,7 +1777,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.deepl.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "86",
@@ -1373,7 +1798,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://otter.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "87",
@@ -1389,7 +1819,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://fireflies.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "88",
@@ -1405,7 +1840,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://tome.app/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "89",
@@ -1421,7 +1861,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.remove.bg/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "90",
@@ -1437,7 +1882,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://clipdrop.co/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "91",
@@ -1453,7 +1903,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.photoroom.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "92",
@@ -1469,7 +1924,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://zapier.com/ai",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "93",
@@ -1485,7 +1945,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.taskade.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "94",
@@ -1501,7 +1966,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://durable.co/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "95",
@@ -1517,7 +1987,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.framer.com/ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "96",
@@ -1533,7 +2008,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.mixo.io/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "97",
@@ -1549,7 +2029,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.descript.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "98",
@@ -1565,7 +2050,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.veed.io/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "99",
@@ -1581,7 +2071,12 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://www.capcut.com/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   },
   {
     "id": "100",
@@ -1597,6 +2092,11 @@
     "pricing_url": "",
     "logo_url": "",
     "source_url": "https://lumalabs.ai/",
-    "updated_at": ""
+    "updated_at": "",
+    "tutorial_category": "",
+    "tutorial_title": "",
+    "tutorial_slug": "",
+    "tutorial_url": "",
+    "tutorial_enabled": false
   }
 ]

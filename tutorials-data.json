@@ -35,9 +35,9 @@
     "sort_order": 5
   },
   {
-    "slug": "deepseek-guide",
-    "title": "DeepSeek 新手完整使用教程",
-    "summary": "tutorial_summary\r\n适合第一次接触 DeepSeek 的用户，从注册、提问、写作、翻译到办公应用，快速掌握 DeepSeek 的核心使用方法。",
+    "slug": "perplexity-ai-guide",
+    "title": "Perplexity 新手教程：从入门到高效使用的完整指南 | AIHubTools 智汇工具",
+    "summary": "新手快速学会 Perplexity AI 搜索、引用来源和资料总结",
     "category": "AI教程",
     "sort_order": 6
   }

@@ -35,9 +35,9 @@
     "sort_order": 5
   },
   {
-    "slug": "perplexity-ai-guide",
-    "title": "Perplexity 新手教程：从入门到高效使用的完整指南 | AIHubTools 智汇工具",
-    "summary": "新手快速学会 Perplexity AI 搜索、引用来源和资料总结",
+    "slug": "perplexity-guide",
+    "title": "Perplexity 新手教程：从入门到高效使用的完整指南",
+    "summary": "面向新手介绍 Perplexity 是什么、和传统搜索的区别、核心功能、使用场景、提问技巧与常见问题。",
     "category": "AI教程",
     "sort_order": 6
   }

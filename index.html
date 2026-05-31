@@ -5,180 +5,225 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>AIHubTools 智汇工具 | 下一代AI工具导航</title>
   <meta name="description" content="AIHubTools 智汇工具——精选全球AI聊天、写作、图片、视频、编程、办公效率工具，发现未来工作方式。" />
-  <!-- 引入Google Fonts & 简洁重置 -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <style>
-    * {
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    :root {
+      --blue: #3b6ef0;
+      --blue-dark: #1a3cc4;
+      --blue-light: #dbe8ff;
+      --navy: #080e24;
+      --surface: #ffffff;
+      --bg: #f4f7fe;
+      --text: #0d1b3e;
+      --muted: #6277a3;
+      --border: #e4eaf8;
+      --radius-card: 24px;
+      --radius-pill: 999px;
+      --shadow-card: 0 4px 24px -4px rgba(59,110,240,0.10);
+      --shadow-hover: 0 16px 48px -8px rgba(59,110,240,0.18);
+    }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #f9fafc;
-      color: #1e293b;
-      scroll-behavior: smooth;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
     }
 
-    /* 优雅滚动条 */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f1f5f9;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #cbd5e1;
-      border-radius: 12px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #94a3b8;
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: #eef2fb; }
+    ::-webkit-scrollbar-thumb { background: #bfcce8; border-radius: 8px; }
+    ::-webkit-scrollbar-thumb:hover { background: #8fa3d0; }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(228,234,248,0.8);
     }
 
-    /* 玻璃态+动态背景 */
-    .hero-glow {
+    .nav-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.4px;
+    }
+
+    .nav-logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--muted);
+      transition: color 0.2s;
+      letter-spacing: 0.1px;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-cta {
+      background: var(--blue);
+      color: white !important;
+      padding: 9px 22px;
+      border-radius: var(--radius-pill);
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      transition: background 0.2s, transform 0.15s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue-dark) !important;
+      color: white !important;
+      transform: translateY(-1px);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 100px 28px 120px;
+      text-align: center;
+    }
+
+    .hero-mesh {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 70% 20%, rgba(37, 99, 235, 0.08), transparent 60%);
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 0%, rgba(59,110,240,0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 100%, rgba(99,60,240,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 50% 50%, rgba(30,80,200,0.10) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    header {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: white;
-      padding: 80px 24px 90px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: "";
+    .hero-grid {
       position: absolute;
       inset: 0;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0 L1200,0 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.02)"/></svg>') repeat-x bottom;
-      background-size: 1200px 80px;
-      opacity: 0.4;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
     }
 
-    header .container {
-      max-width: 1000px;
+    .hero-inner {
+      max-width: 820px;
       margin: 0 auto;
       position: relative;
       z-index: 2;
     }
 
-    header h1 {
-      font-size: 58px;
-      font-weight: 700;
-      letter-spacing: -1px;
-      background: linear-gradient(135deg, #ffffff, #b9d0ff);
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59,110,240,0.15);
+      border: 1px solid rgba(59,110,240,0.3);
+      color: #93b4ff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 28px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(100deg, #7eb3ff, #b599ff, #7eb3ff);
+      background-size: 200% auto;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      margin-bottom: 20px;
+      animation: shimmer 4s linear infinite;
     }
 
-    header p {
-      font-size: 20px;
-      opacity: 0.85;
-      max-width: 680px;
-      margin: 0 auto 32px;
-      line-height: 1.5;
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
     }
 
-    .badge-group {
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.65);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-badges {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
     }
 
-    .badge {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(4px);
-      padding: 8px 20px;
-      border-radius: 60px;
-      font-size: 14px;
+    .hero-badge {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+      color: rgba(255,255,255,0.8);
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
       font-weight: 500;
-      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
     }
 
-    /* 导航栏 - 字体加大加粗 */
-    .sticky-nav {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid #e9edf2;
-      padding: 0 32px;
-    }
-
-    .nav-container {
-      max-width: 1280px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 0;
-    }
-
-    .logo-area {
-      font-weight: 800;
-      font-size: 24px;
-      background: linear-gradient(120deg, #2563eb, #1e40af);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.3px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 42px;
-    }
-
-    /* 核心修改：导航链接字体加大加粗 */
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 700;      /* 加粗 */
-      font-size: 18px;       /* 加大字体 */
-      color: #1e293b;
-      transition: 0.2s;
-      letter-spacing: 0.3px;
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: #2563eb;
-    }
-
-    /* 增加一个优雅的下划线动效 */
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: #2563eb;
-      transition: width 0.25s ease;
-      border-radius: 2px;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* 统计卡片玻璃风 */
-    .stats-section {
-      max-width: 1280px;
-      margin: -40px auto 32px;
-      padding: 0 24px;
+    /* ── STATS ── */
+    .stats-wrap {
+      max-width: 1320px;
+      margin: -52px auto 0;
+      padding: 0 28px;
       position: relative;
       z-index: 10;
     }
@@ -186,420 +231,703 @@
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 16px;
     }
 
     .stat-card {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(10px);
-      border-radius: 32px;
-      padding: 28px 20px;
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
       text-align: center;
-      box-shadow: 0 15px 35px -12px rgba(0,0,0,0.08);
-      border: 1px solid rgba(255,255,255,0.6);
-      transition: transform 0.2s ease;
+      box-shadow: 0 8px 40px -8px rgba(59,110,240,0.14), 0 0 0 1px rgba(228,234,248,0.8);
+      transition: transform 0.25s, box-shadow 0.25s;
     }
 
     .stat-card:hover {
       transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .stat-number {
-      font-size: 48px;
+    .stat-num {
+      font-size: 52px;
       font-weight: 800;
-      color: #2563eb;
-      letter-spacing: -1px;
+      letter-spacing: -2px;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1;
     }
 
     .stat-label {
-      font-size: 16px;
-      font-weight: 500;
-      color: #475569;
       margin-top: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
     }
 
-    /* 热门分类区块 — 高级卡片 */
-    .hot-category {
-      max-width: 1280px;
-      margin: 48px auto 20px;
-      padding: 0 24px;
+    /* ── SECTION HEADER ── */
+    .section-head {
+      max-width: 1320px;
+      margin: 64px auto 0;
+      padding: 0 28px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-light);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 12px;
     }
 
     .section-title {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 700;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
     }
 
     .section-sub {
-      color: #5b6e8c;
-      margin-bottom: 32px;
+      font-size: 15px;
+      color: var(--muted);
     }
 
-    .hot-grid {
+    /* ── CATEGORY CHIPS ── */
+    .category-wrap {
+      max-width: 1320px;
+      margin: 28px auto 0;
+      padding: 0 28px;
+    }
+
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 14px;
     }
 
-    .hot-card {
-      background: white;
-      border-radius: 28px;
-      padding: 20px 16px;
+    .cat-chip {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 14px;
       text-align: center;
       text-decoration: none;
-      color: #0f172a;
-      transition: all 0.25s;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
-      border: 1px solid #eef2ff;
-      backdrop-filter: blur(2px);
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.22s cubic-bezier(0.2,0,0,1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-card);
     }
 
-    .hot-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px -12px rgba(37, 99, 235, 0.18);
-      border-color: #cbdffc;
+    .cat-chip:hover {
+      border-color: var(--blue);
+      background: var(--blue-light);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .hot-emoji {
-      font-size: 40px;
-      margin-bottom: 12px;
-      display: inline-block;
+    .cat-chip-icon {
+      font-size: 32px;
+      line-height: 1;
     }
 
-    .hot-card strong {
-      font-size: 18px;
-      font-weight: 600;
-      display: block;
-    }
-
-    .hot-card small {
+    .cat-chip-name {
       font-size: 13px;
-      color: #5b6e8c;
+      font-weight: 700;
+      color: var(--text);
     }
 
-    /* 工具列表主区域 半透明现代感 */
+    .cat-chip-desc {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── TOOLS AREA ── */
     .tools-area {
-      max-width: 1280px;
-      margin: 32px auto;
-      padding: 0 24px;
+      max-width: 1320px;
+      margin: 64px auto 0;
+      padding: 0 28px;
     }
 
     .control-bar {
-      background: white;
-      padding: 20px 24px;
-      border-radius: 36px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
-      border: 1px solid #eef2ff;
-      margin-bottom: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 16px 20px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
       align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-card);
     }
 
-    .search-box {
+    .search-wrap {
       flex: 2;
       min-width: 200px;
       position: relative;
     }
 
-    .search-box input {
-      width: 100%;
-      padding: 14px 20px;
-      border: 1px solid #e2e8f0;
-      border-radius: 44px;
+    .search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
       font-size: 15px;
-      background: #ffffff;
-      transition: 0.2s;
+      pointer-events: none;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      padding: 12px 16px 12px 40px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-pill);
+      font-size: 14px;
       font-family: inherit;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .search-box input:focus {
+    .search-wrap input:focus {
       outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(59,110,240,0.12);
+      background: #fff;
     }
 
-    .filters {
+    .filter-selects {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
-    .filters select {
-      background: white;
-      border: 1px solid #e2e8f0;
-      padding: 12px 28px 12px 18px;
-      border-radius: 44px;
-      font-size: 14px;
+    .filter-selects select {
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      border-radius: var(--radius-pill);
+      padding: 11px 20px;
+      font-size: 13px;
       font-weight: 500;
-      color: #1e293b;
-      cursor: pointer;
       font-family: inherit;
+      color: var(--text);
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236277a3' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      transition: border-color 0.2s;
     }
 
-    /* 工具卡片网格 高级微交互 */
+    .filter-selects select:focus {
+      outline: none;
+      border-color: var(--blue);
+    }
+
+    /* ── TOOL CARDS ── */
     .tools-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
     }
 
-    .tool-card-modern {
-      background: #ffffff;
-      border-radius: 32px;
-      padding: 24px;
-      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
-      border: 1px solid #edf2f7;
-      box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.02);
+    .tool-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 22px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
+      transition: all 0.25s cubic-bezier(0.2,0,0,1);
+      box-shadow: var(--shadow-card);
     }
 
-    .tool-card-modern:hover {
+    .tool-card:hover {
       transform: translateY(-5px);
-      border-color: #bfdbfe;
-      box-shadow: 0 24px 40px -16px rgba(0, 0, 0, 0.12);
+      border-color: #b0c8ff;
+      box-shadow: var(--shadow-hover);
     }
 
-    .tag-group {
+    .tool-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .tool-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
     }
 
-    .pill {
-      background: #f0f4fe;
-      color: #1e40af;
-      font-size: 12px;
+    .tag {
+      font-size: 11px;
       font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 40px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: var(--blue-light);
+      color: var(--blue);
     }
 
-    .pill.featured {
-      background: linear-gradient(110deg, #fef9e3, #fff3d1);
-      color: #b45309;
+    .tag.featured {
+      background: linear-gradient(110deg, #fff7e0, #ffe9b3);
+      color: #a06600;
     }
 
-    .tool-title {
-      font-size: 22px;
+    .tag.hash {
+      background: #f1f4fb;
+      color: var(--muted);
+    }
+
+    .tool-name {
+      font-size: 20px;
       font-weight: 700;
       letter-spacing: -0.3px;
+      line-height: 1.2;
     }
 
     .tool-desc {
-      color: #475569;
-      line-height: 1.5;
-      font-size: 14px;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
-    }
-
-    .btn-primary {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 12px 0;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 8px;
-      transition: 0.2s;
-      border: none;
-      font-size: 14px;
-    }
-
-    .btn-primary:hover {
-      background: #2563eb;
-    }
-
-    .btn-outline-tutorial {
-      background: transparent;
-      border: 1px solid #cbd5e1;
-      color: #1f3a6b;
-    }
-
-    .btn-outline-tutorial:hover {
-      background: #eef2ff;
-      border-color: #2563eb;
-    }
-
-    .two-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 6px;
-    }
-
-    .two-buttons .btn-primary {
       flex: 1;
-      text-align: center;
     }
 
-    /* 教程区 */
-    .tutorials-section {
-      background: linear-gradient(0deg, #f8fafd, #ffffff);
-      border-radius: 48px;
-      padding: 48px 32px;
-      margin-top: 56px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-      border: 1px solid #eef2ff;
+    .tool-footer {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 11px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.18s;
+      white-space: nowrap;
+    }
+
+    .btn-visit {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-visit:hover {
+      background: var(--blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-tutorial {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-tutorial:hover {
+      background: var(--blue-light);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* ── TUTORIALS ── */
+    .tutorials-area {
+      max-width: 1320px;
+      margin: 64px auto 0;
+      padding: 0 28px;
+    }
+
+    .tutorials-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 44px 36px;
+      box-shadow: var(--shadow-card);
     }
 
     .tutorials-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
     }
 
     .tutorial-card {
-      background: white;
-      border-radius: 28px;
-      padding: 22px;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
       text-decoration: none;
-      color: #0f172a;
-      transition: 0.2s;
-      border: 1px solid #eef2ff;
-    }
-
-    .tutorial-card h4 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .tutorial-card p {
-      font-size: 13px;
-      color: #5b6e8c;
+      color: var(--text);
+      transition: all 0.22s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     .tutorial-card:hover {
-      border-color: #b9d0f0;
+      border-color: var(--blue);
+      background: var(--blue-light);
       transform: translateY(-3px);
     }
 
-    footer {
-      text-align: center;
-      padding: 48px 24px;
-      color: #6c86a3;
-      border-top: 1px solid #eef2ff;
-      margin-top: 40px;
+    .tutorial-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
     }
 
+    .tutorial-card p {
+      font-size: 12.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── ABOUT ── */
+    .about-area {
+      max-width: 1320px;
+      margin: 64px auto 0;
+      padding: 0 28px;
+    }
+
+    .about-box {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d1a40 100%);
+      border-radius: 32px;
+      padding: 48px 44px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-box::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,110,240,0.15) 0%, transparent 70%);
+      top: -100px;
+      right: -100px;
+      pointer-events: none;
+    }
+
+    .about-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #7eb3ff;
+      background: rgba(59,110,240,0.15);
+      padding: 5px 14px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 16px;
+    }
+
+    .about-box h2 {
+      font-size: 30px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .about-box p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .about-feature {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .about-feature-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .about-feature-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 2px;
+    }
+
+    .about-feature-text span {
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 1320px;
+      margin: 64px auto 0;
+      padding: 32px 28px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── STATUS ── */
     .status-loading {
       text-align: center;
-      padding: 60px;
-      background: white;
-      border-radius: 40px;
+      padding: 56px 24px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1.5px dashed var(--border);
+      color: var(--muted);
+      font-size: 15px;
     }
 
-    @media (max-width: 740px) {
-      header h1 { font-size: 38px; }
-      .stats-grid { gap: 12px; }
+    /* ── EMPTY ── */
+    .empty-state {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 64px 24px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1.5px dashed var(--border);
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .about-box {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+      }
+      .about-box::before { display: none; }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding: 72px 20px 100px; }
+      .hero h1 { letter-spacing: -1px; }
+      .stats-grid { grid-template-columns: 1fr; gap: 12px; }
+      .stats-wrap { margin-top: -32px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
       .control-bar { flex-direction: column; align-items: stretch; }
-      .nav-container { flex-direction: column; gap: 12px; }
-      .nav-links { gap: 28px; }
-      .nav-links a { font-size: 16px; } /* 移动端略缩小但仍加粗 */
-      .hot-grid { grid-template-columns: repeat(2,1fr); }
+      footer { justify-content: center; text-align: center; }
+      .tutorials-box { padding: 28px 20px; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="hero-glow"></div>
-  <div class="container">
-    <h1>AIHubTools 智汇工具</h1>
-    <p>甄选全球前沿AI工具 · 发掘智能工作流 · 从创意到落地</p>
-    <div class="badge-group">
-      <span class="badge">✨ 每日更新</span>
-      <span class="badge">🚀 开源替代</span>
-      <span class="badge">🧠 生产提效</span>
-    </div>
-  </div>
-</header>
-
-<div class="sticky-nav">
-  <div class="nav-container">
-    <div class="logo-area">🔮 AIHubTools</div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-icon">🔮</div>
+      AIHubTools
+    </a>
     <div class="nav-links">
-      <!-- 工具库、教程中心、关于 均已加大加粗，字体18px 粗体700 -->
       <a href="#tools-section">工具库</a>
       <a href="tutorials.html">教程中心</a>
       <a href="#about">关于</a>
     </div>
   </div>
-</div>
+</nav>
 
-<div class="stats-section">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">✦ 下一代 AI 工具导航平台</div>
+    <h1>发现最好用的<br><span>AI 工具</span></h1>
+    <p>精选全球前沿 AI 工具，从对话、创作到编程与办公，帮你找到真正提升效率的数字伙伴</p>
+    <div class="hero-badges">
+      <span class="hero-badge">✨ 每日更新</span>
+      <span class="hero-badge">🚀 开源替代</span>
+      <span class="hero-badge">🧠 生产提效</span>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-wrap">
   <div class="stats-grid">
-    <div class="stat-card"><div class="stat-number" id="totalCount">0</div><div class="stat-label">精选工具</div></div>
-    <div class="stat-card"><div class="stat-number" id="categoryCount">0</div><div class="stat-label">细分品类</div></div>
-    <div class="stat-card"><div class="stat-number" id="featuredCount">0</div><div class="stat-label">编辑推荐</div></div>
+    <div class="stat-card">
+      <div class="stat-num" id="totalCount">0</div>
+      <div class="stat-label">精选工具</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="categoryCount">0</div>
+      <div class="stat-label">细分品类</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="featuredCount">0</div>
+      <div class="stat-label">编辑推荐</div>
+    </div>
   </div>
 </div>
 
-<!-- 热门分类区域 保留原有交互 -->
-<div class="hot-category">
-  <div class="section-title">🔥 灵感分类 <span style="font-size:16px; font-weight:400;">一键探索</span></div>
-  <div class="section-sub">根据热门领域快速筛选 AI 工具</div>
-  <div class="hot-grid" id="popularGrid">
-    <!-- js动态注入或静态均可，保持功能 -->
-  </div>
+<!-- CATEGORIES -->
+<div class="section-head">
+  <div class="section-tag">🔥 灵感分类</div>
+  <div class="section-title">按领域快速探索</div>
+  <div class="section-sub">点击分类，一键筛选对应 AI 工具</div>
+</div>
+<div class="category-wrap">
+  <div class="category-grid" id="popularGrid"></div>
 </div>
 
-<!-- 主要工具区域 -->
+<!-- TOOLS -->
 <div class="tools-area" id="tools-section">
+  <div class="section-head" style="margin:0 0 28px; padding:0;">
+    <div class="section-tag">🛠️ 工具库</div>
+    <div class="section-title">全部 AI 工具</div>
+    <div class="section-sub">搜索、筛选，找到最适合你的工具</div>
+  </div>
+
   <div class="control-bar">
-    <div class="search-box">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
       <input type="text" id="searchInput" placeholder="搜索工具名称、描述、标签..." autocomplete="off">
     </div>
-    <div class="filters">
+    <div class="filter-selects">
       <select id="categoryFilter"><option value="all">全部分类</option></select>
       <select id="typeFilter"><option value="all">全部类型</option></select>
     </div>
   </div>
+
   <div id="toolsGrid" class="tools-grid"></div>
-  <div id="statusMessage" style="text-align:center; margin-top: 30px;"></div>
+  <div id="statusMessage" style="margin-top: 24px;"></div>
 </div>
 
-<!-- 教程区域 -->
-<div class="tools-area">
-  <div class="tutorials-section" id="tutorialsArea">
-    <div class="section-title">📘 深度教程 · 实战指南</div>
+<!-- TUTORIALS -->
+<div class="tutorials-area">
+  <div class="tutorials-box">
+    <div class="section-tag">📘 深度教程</div>
+    <div class="section-title">实战指南</div>
     <div class="section-sub">AI 工具上手技巧，提升效率从学习开始</div>
     <div id="tutorialsGrid" class="tutorials-grid">
-      <!-- 加载状态占位 -->
-      <div class="status-loading" style="grid-column:1/-1;">加载教程中...</div>
+      <div class="status-loading" style="grid-column:1/-1;">加载教程中…</div>
     </div>
   </div>
 </div>
 
-<section id="about" style="max-width:1280px; margin: 20px auto 30px; padding: 0 24px;">
-  <div style="background: white; border-radius: 40px; padding: 40px 32px; border:1px solid #edf2f7;">
-    <h2 style="font-size:26px; font-weight:700;">关于 AIHubTools 智汇工具</h2>
-    <p style="margin-top:18px; color:#334155; line-height:1.6;">AIHubTools 致力于打造下一代 AI 工具导航，聚合 AI 聊天、图像生成、视频创意、编程开发、办公自动化等前沿工具，同时提供开源替代方案与详尽教程。帮助开发者、创作者与普通用户发现适合的数字伙伴。</p>
+<!-- ABOUT -->
+<div class="about-area" id="about">
+  <div class="about-box">
+    <div>
+      <div class="about-label">✦ 关于我们</div>
+      <h2>AIHubTools<br>智汇工具</h2>
+      <p>致力于打造下一代 AI 工具导航，聚合 AI 聊天、图像生成、视频创意、编程开发、办公自动化等前沿工具，同时提供开源替代方案与详尽教程，帮助开发者、创作者与普通用户发现最适合的数字伙伴。</p>
+    </div>
+    <div class="about-features">
+      <div class="about-feature">
+        <div class="about-feature-icon">🎯</div>
+        <div class="about-feature-text">
+          <strong>精准筛选</strong>
+          <span>每款工具均经过真实测试与编辑推荐</span>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-icon">🔄</div>
+        <div class="about-feature-text">
+          <strong>持续更新</strong>
+          <span>每日追踪最新 AI 工具动态</span>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-icon">📖</div>
+        <div class="about-feature-text">
+          <strong>深度教程</strong>
+          <span>专属实战指南，快速上手任意工具</span>
+        </div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-icon">🌐</div>
+        <div class="about-feature-text">
+          <strong>全球视野</strong>
+          <span>覆盖英文圈与中文生态的优质 AI 产品</span>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>
 
+<!-- FOOTER -->
 <footer>
-  © <span id="year"></span> AIHubTools / 智汇工具 — 探索智能未来
+  <div class="footer-logo">
+    <div class="nav-logo-icon" style="width:28px;height:28px;font-size:14px;">🔮</div>
+    AIHubTools
+  </div>
+  <div class="footer-copy">© <span id="year"></span> AIHubTools / 智汇工具 — 探索智能未来</div>
 </footer>
 
 <script>
-  // ---------- 完全复用原有数据逻辑，保证全部功能和链接正常 ----------
   const DATA_URL = './tools-data.json';
   let tools = [];
 
-  // DOM 元素
   const totalSpan = document.getElementById('totalCount');
   const categorySpan = document.getElementById('categoryCount');
   const featuredSpan = document.getElementById('featuredCount');
@@ -608,10 +936,9 @@
   const categoryFilter = document.getElementById('categoryFilter');
   const typeFilter = document.getElementById('typeFilter');
   const statusMsgDiv = document.getElementById('statusMessage');
-  
-  // 辅助函数
+
   function clean(v) { return v === undefined || v === null ? '' : String(v).trim(); }
-  function bool(v) { if(typeof v === 'boolean') return v; return ['true','1','yes','y','是','推荐','featured'].includes(clean(v).toLowerCase()); }
+  function bool(v) { if (typeof v === 'boolean') return v; return ['true','1','yes','y','是','推荐','featured'].includes(clean(v).toLowerCase()); }
   function getName(t) { return clean(t.name || t.name_zh || t.name_en || t.name_ja || t.title); }
   function getCategory(t) { return clean(t.category || t.category_zh || t.category_en || t.category_ja); }
   function getType(t) { return clean(t.type || t.type_zh || t.type_en || t.type_ja); }
@@ -619,21 +946,20 @@
   function getWebsite(t) { return clean(t.website || t.url || t.link || t.source_url); }
   function getTags(t) {
     const raw = clean(t.tags || t.tags_zh || t.tags_en || t.tags_ja || '');
-    return raw ? raw.split(/[,，、;；|]/).map(x=>x.trim()).filter(Boolean) : [];
+    return raw ? raw.split(/[,，、;；|]/).map(x => x.trim()).filter(Boolean) : [];
   }
   function normalizeData(data) {
-    if(Array.isArray(data)) return data;
-    if(data && Array.isArray(data.tools)) return data.tools;
-    if(data && Array.isArray(data.items)) return data.items;
-    if(data && Array.isArray(data.data)) return data.data;
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.tools)) return data.tools;
+    if (data && Array.isArray(data.items)) return data.items;
+    if (data && Array.isArray(data.data)) return data.data;
     return [];
   }
-  function escapeHtml(v) { 
+  function escapeHtml(v) {
     return clean(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
   }
   function escapeAttr(v) { return escapeHtml(v).replace(/`/g,'&#96;'); }
 
-  // 渲染统计
   function renderStats() {
     const categories = new Set(tools.map(getCategory).filter(Boolean));
     totalSpan.innerText = tools.length;
@@ -641,7 +967,6 @@
     featuredSpan.innerText = tools.filter(t => bool(t.featured)).length;
   }
 
-  // 渲染下拉筛选器
   function renderFilters() {
     const categories = [...new Set(tools.map(getCategory).filter(Boolean))].sort();
     const types = [...new Set(tools.map(getType).filter(Boolean))].sort();
@@ -649,7 +974,6 @@
     typeFilter.innerHTML = '<option value="all">🏷️ 全部类型</option>' + types.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('');
   }
 
-  // 核心工具渲染
   function renderTools() {
     const q = clean(searchInput.value).toLowerCase();
     const cat = categoryFilter.value;
@@ -664,53 +988,60 @@
       const text = `${name} ${category} ${toolType} ${desc} ${tags}`.toLowerCase();
       return (!q || text.includes(q)) && (cat === 'all' || category === cat) && (type === 'all' || toolType === type);
     });
+
     if (!filtered.length) {
-      toolsGrid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:48px; background:white; border-radius:48px;">✨ 没有找到相关工具，试试其他关键词～</div>';
+      toolsGrid.innerHTML = '<div class="empty-state">✨ 没有找到相关工具，试试其他关键词～</div>';
       return;
     }
+
     toolsGrid.innerHTML = filtered.map(t => {
       const name = getName(t);
       const category = getCategory(t);
       const typeVal = getType(t);
       const desc = getDescription(t);
       const website = getWebsite(t);
-      const tags = getTags(t).slice(0,3);
+      const tags = getTags(t).slice(0, 3);
       const featured = bool(t.featured);
       const tutorialEnabled = (t.tutorial_enabled === true || String(t.tutorial_enabled).toLowerCase() === 'true');
       const tutorialUrl = t.tutorial_url || (t.tutorial_slug ? `articles/${t.tutorial_slug}.html` : '');
-      
-      let buttons = '';
-      if (website) {
-        buttons += `<a class="btn-primary" href="${escapeAttr(website)}" target="_blank" rel="noopener nofollow">访问官网 →</a>`;
+
+      const tagsHtml = tags.map(x => `<span class="tag hash">#${escapeHtml(x)}</span>`).join('');
+
+      let footerHtml = '';
+      if (website && tutorialEnabled && tutorialUrl) {
+        footerHtml = `<div class="tool-footer">
+          <a class="btn btn-visit" href="${escapeAttr(website)}" target="_blank" rel="noopener nofollow">访问官网 →</a>
+          <a class="btn btn-tutorial" href="${escapeAttr(tutorialUrl)}">📖 教程</a>
+        </div>`;
+      } else if (website) {
+        footerHtml = `<div class="tool-footer">
+          <a class="btn btn-visit" href="${escapeAttr(website)}" target="_blank" rel="noopener nofollow">访问官网 →</a>
+        </div>`;
+      } else if (tutorialEnabled && tutorialUrl) {
+        footerHtml = `<div class="tool-footer">
+          <a class="btn btn-tutorial" href="${escapeAttr(tutorialUrl)}">📖 查看教程</a>
+        </div>`;
       }
-      if (tutorialEnabled && tutorialUrl) {
-        buttons += `<a class="btn-primary btn-outline-tutorial" href="${escapeAttr(tutorialUrl)}" style="background:transparent;color:#1e293b;">📖 查看教程</a>`;
-      }
-      // 双按钮情况处理
-      const finalBtns = (website && tutorialEnabled && tutorialUrl) ? 
-        `<div class="two-buttons">${buttons}</div>` : 
-        (buttons ? `<div>${buttons}</div>` : '');
-      
+
       return `
-        <div class="tool-card-modern">
-          <div class="tag-group">
-            ${category ? `<span class="pill">${escapeHtml(category)}</span>` : ''}
-            ${typeVal ? `<span class="pill">${escapeHtml(typeVal)}</span>` : ''}
-            ${featured ? `<span class="pill featured">⭐ 推荐</span>` : ''}
+        <div class="tool-card">
+          <div class="tool-tags">
+            ${category ? `<span class="tag">${escapeHtml(category)}</span>` : ''}
+            ${typeVal ? `<span class="tag">${escapeHtml(typeVal)}</span>` : ''}
+            ${featured ? `<span class="tag featured">⭐ 推荐</span>` : ''}
           </div>
-          <div class="tool-title">${escapeHtml(name || '未命名工具')}</div>
-          <div class="tool-desc">${escapeHtml(desc || '暂无简介，探索高效AI工作流。')}</div>
-          ${tags.length ? `<div class="tag-group">${tags.map(x => `<span class="pill" style="background:#f1f5f9;">#${escapeHtml(x)}</span>`).join('')}</div>` : ''}
-          ${finalBtns}
+          <div class="tool-name">${escapeHtml(name || '未命名工具')}</div>
+          <div class="tool-desc">${escapeHtml(desc || '暂无简介，探索高效 AI 工作流。')}</div>
+          ${tagsHtml ? `<div class="tool-tags">${tagsHtml}</div>` : ''}
+          ${footerHtml}
         </div>
       `;
     }).join('');
   }
 
-  // 加载主数据
   async function loadTools() {
     try {
-      statusMsgDiv.innerHTML = '<div class="status-loading">✨ 正在加载尖端工具库...</div>';
+      statusMsgDiv.innerHTML = '<div class="status-loading">✨ 正在加载工具库…</div>';
       const res = await fetch(DATA_URL + '?v=' + Date.now(), { cache: 'no-store' });
       if (!res.ok) throw new Error('无法获取 tools-data.json');
       const data = await res.json();
@@ -722,35 +1053,34 @@
       renderTools();
     } catch (err) {
       console.error(err);
-      statusMsgDiv.innerHTML = `<div class="status-loading" style="color:red;">⚠️ 加载失败: ${err.message}<br>请确保 tools-data.json 文件存在且格式正确。</div>`;
+      statusMsgDiv.innerHTML = `<div class="status-loading" style="color:#e03e3e;">⚠️ 加载失败: ${err.message}<br>请确保 tools-data.json 文件存在且格式正确。</div>`;
     }
   }
 
-  // 热门分类交互（完全保留原有功能，并动态生成热门卡片保证一致性）
   const popularCategoriesRaw = [
-    { cat: "AI Chat", emoji: "🤖", name: "AI Chat", desc: "智能对话" },
-    { cat: "AI Image", emoji: "🎨", name: "AI Image", desc: "AI绘图" },
-    { cat: "AI Video", emoji: "🎬", name: "AI Video", desc: "视频创作" },
-    { cat: "AI Coding", emoji: "💻", name: "AI Coding", desc: "编程助手" },
-    { cat: "AI Search", emoji: "🔍", name: "AI Search", desc: "智能搜索" },
-    { cat: "AI PPT", emoji: "📊", name: "AI PPT", desc: "演示文稿" },
+    { cat: "AI Chat",    emoji: "🤖", name: "AI Chat",    desc: "智能对话" },
+    { cat: "AI Image",   emoji: "🎨", name: "AI Image",   desc: "AI绘图"   },
+    { cat: "AI Video",   emoji: "🎬", name: "AI Video",   desc: "视频创作" },
+    { cat: "AI Coding",  emoji: "💻", name: "AI Coding",  desc: "编程助手" },
+    { cat: "AI Search",  emoji: "🔍", name: "AI Search",  desc: "智能搜索" },
+    { cat: "AI PPT",     emoji: "📊", name: "AI PPT",     desc: "演示文稿" },
     { cat: "AI Writing", emoji: "✍️", name: "AI Writing", desc: "写作助手" },
-    { cat: "AI Voice", emoji: "🎤", name: "AI Voice", desc: "语音生成" }
+    { cat: "AI Voice",   emoji: "🎤", name: "AI Voice",   desc: "语音生成" }
   ];
+
   function buildPopularGrid() {
     const container = document.getElementById('popularGrid');
     if (!container) return;
     container.innerHTML = popularCategoriesRaw.map(item => `
-      <a href="#tools-section" class="hot-card" data-category="${escapeAttr(item.cat)}">
-        <div class="hot-emoji">${item.emoji}</div>
-        <strong>${escapeHtml(item.name)}</strong>
-        <small>${escapeHtml(item.desc)}</small>
-      </a>
+      <div class="cat-chip" data-category="${escapeAttr(item.cat)}">
+        <div class="cat-chip-icon">${item.emoji}</div>
+        <div class="cat-chip-name">${escapeHtml(item.name)}</div>
+        <div class="cat-chip-desc">${escapeHtml(item.desc)}</div>
+      </div>
     `).join('');
-    // 绑定点击筛选事件
-    document.querySelectorAll('.hot-card[data-category]').forEach(card => {
-      card.addEventListener('click', (e) => {
-        e.preventDefault();
+
+    document.querySelectorAll('.cat-chip[data-category]').forEach(card => {
+      card.addEventListener('click', () => {
         const targetCat = card.getAttribute('data-category');
         if (categoryFilter) {
           categoryFilter.value = targetCat;
@@ -761,9 +1091,7 @@
       });
     });
   }
-  buildPopularGrid();
 
-  // 加载教程数据 (tutorials-data.json)
   async function loadTutorials() {
     const tutorialsGridDiv = document.getElementById('tutorialsGrid');
     try {
@@ -780,17 +1108,16 @@
       `).join('');
     } catch (err) {
       console.warn(err);
-      tutorialsGridDiv.innerHTML = `<div style="grid-column:1/-1; text-align:center;">✨ 即将推出更多精品教程，敬请期待</div>`;
+      tutorialsGridDiv.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding: 24px; color: var(--muted);">✨ 即将推出更多精品教程，敬请期待</div>`;
     }
   }
-  
-  // 事件监听
+
   searchInput.addEventListener('input', renderTools);
   categoryFilter.addEventListener('change', renderTools);
   typeFilter.addEventListener('change', renderTools);
   document.getElementById('year').innerText = new Date().getFullYear();
-  
-  // 初始化
+
+  buildPopularGrid();
   loadTools();
   loadTutorials();
 </script>

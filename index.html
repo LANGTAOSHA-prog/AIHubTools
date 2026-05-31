@@ -180,6 +180,11 @@
      
     </div>
   </div>
+  <section class="tutorials-section">
+  <h2>📚 最新教程</h2>
+  <p style="margin-bottom:20px;color:#666;">AI 工具使用教程与实战指南</p>
+  <div id="tutorialsGrid" class="grid"></div>
+</section>
 </section>
     <h2>工具列表</h2>
 
@@ -391,6 +396,20 @@ document.querySelectorAll(".popular-card").forEach(card => {
       });
     }
   });
+  fetch('./tutorials-data.json')
+  .then(res => res.json())
+  .then(data => {
+    const grid = document.getElementById('tutorialsGrid');
+    if (!grid) return;
+
+    grid.innerHTML = data.slice(0, 8).map(item => `
+      <a href="./tutorials/${item.slug}.html" class="tool-card">
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+      </a>
+    `).join('');
+  })
+  .catch(err => console.error(err));
 });
 </script>
 

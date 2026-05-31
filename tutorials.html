@@ -14,7 +14,6 @@
     nav a{margin:0 12px;color:#2563eb;text-decoration:none;font-weight:700}
     .wrap{max-width:1100px;margin:0 auto;padding:36px 18px}
     .section-title{font-size:28px;margin-bottom:10px}
-    .sub{color:#6b7280;margin-bottom:26px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
     .card{background:white;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(15,23,42,.08)}
     .tag{display:inline-block;background:#eef2ff;color:#3730a3;padding:6px 10px;border-radius:999px;font-size:12px;margin-bottom:12px}
@@ -42,7 +41,7 @@
 
 <main class="wrap">
   <h2 class="section-title">最新教程</h2>
- <div id="status" class="loading">正在加载教程数据...</div>
+  <div id="status" class="loading">正在加载教程数据...</div>
   <div id="tutorialGrid" class="grid"></div>
 </main>
 
@@ -51,15 +50,10 @@
 </footer>
 
 <script>
-const DATA_URL = './tools-data.json';
+const DATA_URL = './tutorials-data.json';
 
 function clean(v){
   return v === undefined || v === null ? '' : String(v).trim();
-}
-
-function isTrue(v){
-  if(typeof v === 'boolean') return v;
-  return ['true','1','yes','y','是','启用','enabled'].includes(clean(v).toLowerCase());
 }
 
 function escapeHtml(v){
@@ -77,8 +71,7 @@ function escapeAttr(v){
 
 function normalizeData(data){
   if(Array.isArray(data)) return data;
-  if(data && Array.isArray(data.tools)) return data.tools;
-  if(data && Array.isArray(data.defaultJson)) return data.defaultJson;
+  if(data && Array.isArray(data.tutorials)) return data.tutorials;
   return [];
 }
 
@@ -91,23 +84,22 @@ async function loadTutorials(){
     if(!res.ok) throw new Error('HTTP ' + res.status);
 
     const data = await res.json();
-    const tools = normalizeData(data);
-
-    const tutorials = tools.filter(t => isTrue(t.tutorial_enabled) && clean(t.tutorial_url || t.tutorial_slug));
+    const tutorials = normalizeData(data);
 
     if(!tutorials.length){
       status.className = 'empty';
-      status.textContent = '暂时还没有启用的教程。请先在表格中填写 tutorial_enabled = TRUE。';
+      status.textContent = '暂时还没有教程。';
       return;
     }
 
     status.style.display = 'none';
 
     grid.innerHTML = tutorials.map(t => {
-      const category = clean(t.tutorial_category || t.category || 'AI工具教程');
-      const title = clean(t.tutorial_title || ((t.name || '工具') + ' 使用教程'));
-      const summary = clean(t.tutorial_summary || t.description || '查看这篇教程，了解该工具的基础用法和实用技巧。');
-      const url = clean(t.tutorial_url || ('articles/' + t.tutorial_slug + '.html'));
+      const category = clean(t.category || 'AI工具教程');
+      const title = clean(t.title || 'AI工具教程');
+      const summary = clean(t.summary || '查看这篇教程，了解该工具的基础用法和实用技巧。');
+      const slug = clean(t.slug);
+      const url = './tutorials/' + slug + '.html';
 
       return `
         <article class="card">

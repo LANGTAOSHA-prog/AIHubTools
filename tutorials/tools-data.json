@@ -1,0 +1,41 @@
+{
+  "tools": [
+    {
+      "slug": "chatgpt",
+      "name": "ChatGPT",
+      "tutorial_slug": "chatgpt-guide",
+      "enabled": true,
+      "sort_order": 1
+    },
+    {
+      "slug": "claude",
+      "name": "Claude",
+      "tutorial_slug": "claude-guide",
+      "enabled": true,
+      "sort_order": 2
+    },
+    {
+      "slug": "gemini",
+      "name": "Gemini",
+      "tutorial_slug": "gemini-guide",
+      "enabled": true,
+      "sort_order": 3
+    },
+    {
+      "slug": "perplexity",
+      "name": "Perplexity",
+      "tutorial_slug": "perplexity-guide",
+      "enabled": true,
+      "sort_order": 4
+    },
+    {
+      "slug": "notebooklm",
+      "name": "NotebookLM",
+      "tutorial_slug": "notebooklm-guide",
+      "enabled": true,
+      "sort_order": 5
+    }
+  ],
+  "lastUpdated": "2026-05-31T06:52:59.387Z",
+  "total": 5
+}

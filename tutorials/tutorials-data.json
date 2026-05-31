@@ -1,0 +1,61 @@
+{
+  "tutorials": [
+    {
+      "id": 1,
+      "slug": "chatgpt-guide",
+      "title": "ChatGPT 新手完整使用教程",
+      "summary": "适合第一次接触 ChatGPT 的用户，介绍注册、提问、写作、翻译和日常使用方法。",
+      "category": "AI教程",
+      "keywords": "ChatGPT教程,AI聊天工具,AI写作",
+      "enabled": true,
+      "sort_order": 1,
+      "file": "chatgpt-guide.html"
+    },
+    {
+      "id": 2,
+      "slug": "claude-guide",
+      "title": "Claude 新手完整使用教程",
+      "summary": "介绍 Claude 的基本用法、适合场景以及长文处理技巧。",
+      "category": "AI教程",
+      "keywords": "Claude教程,Claude使用教程,AI写作",
+      "enabled": true,
+      "sort_order": 2,
+      "file": "claude-guide.html"
+    },
+    {
+      "id": 3,
+      "slug": "gemini-guide",
+      "title": "Gemini 新手完整使用教程",
+      "summary": "介绍 Gemini 的基础功能和与 Google 服务配合的方法。",
+      "category": "AI教程",
+      "keywords": "Gemini教程,Google AI,AI助手",
+      "enabled": true,
+      "sort_order": 3,
+      "file": "gemini-guide.html"
+    },
+    {
+      "id": 4,
+      "slug": "perplexity-guide",
+      "title": "Perplexity 使用教程",
+      "summary": "介绍 Perplexity 搜索型 AI 的使用方法。",
+      "category": "AI教程",
+      "keywords": "Perplexity教程,AI搜索,AI问答",
+      "enabled": true,
+      "sort_order": 4,
+      "file": "perplexity-guide.html"
+    },
+    {
+      "id": 5,
+      "slug": "notebooklm-guide",
+      "title": "NotebookLM 使用教程",
+      "summary": "Google NotebookLM 完整入门指南。",
+      "category": "AI教程",
+      "keywords": "NotebookLM教程,知识库AI,Google工具",
+      "enabled": true,
+      "sort_order": 5,
+      "file": "notebooklm-guide.html"
+    }
+  ],
+  "generatedAt": "2026-05-31T06:53:00.770Z",
+  "total": 5
+}

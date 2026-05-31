@@ -21,13 +21,6 @@
     "sort_order": 3
   },
   {
-    "slug": "perplexity-guide",
-    "title": "Perplexity 使用教程",
-    "summary": "介绍 Perplexity 搜索型 AI 的使用方法。",
-    "category": "AI教程",
-    "sort_order": 4
-  },
-  {
     "slug": "notebooklm-guide",
     "title": "NotebookLM 使用教程",
     "summary": "Google NotebookLM 完整入门指南。",

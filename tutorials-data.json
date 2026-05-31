@@ -1,1 +1,37 @@
-
+[
+  {
+    "slug": "chatgpt-guide",
+    "title": "ChatGPT 新手完整使用教程",
+    "summary": "适合第一次接触 ChatGPT 的用户，介绍注册、提问、写作、翻译和日常使用方法。",
+    "category": "AI教程",
+    "sort_order": 1
+  },
+  {
+    "slug": "claude-guide",
+    "title": "Claude 新手完整使用教程",
+    "summary": "介绍 Claude 的基本用法、适合场景以及长文处理技巧。",
+    "category": "AI教程",
+    "sort_order": 2
+  },
+  {
+    "slug": "gemini-guide",
+    "title": "Gemini 新手完整使用教程",
+    "summary": "介绍 Gemini 的基础功能和与 Google 服务配合的方法。",
+    "category": "AI教程",
+    "sort_order": 3
+  },
+  {
+    "slug": "perplexity-guide",
+    "title": "Perplexity 使用教程",
+    "summary": "介绍 Perplexity 搜索型 AI 的使用方法。",
+    "category": "AI教程",
+    "sort_order": 4
+  },
+  {
+    "slug": "notebooklm-guide",
+    "title": "NotebookLM 使用教程",
+    "summary": "Google NotebookLM 完整入门指南。",
+    "category": "AI教程",
+    "sort_order": 5
+  }
+]

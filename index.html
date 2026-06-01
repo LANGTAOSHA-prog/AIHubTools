@@ -174,7 +174,7 @@
     .cmp-btn.active{background:rgba(0,214,143,.12);border-color:rgba(0,214,143,.45);color:var(--green);}
 
     .tool-name{font-size:17px;font-weight:700;letter-spacing:-.3px;color:var(--text);line-height:1.25;}
-    .tool-desc{font-size:13px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex:1;}
+    .tool-desc{font-size:13px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:0;}
     .tool-desc mark,.tool-name mark{background:rgba(124,106,252,.25);color:var(--text);border-radius:3px;padding:0 2px;}
 
     .tool-footer{display:flex;gap:8px;padding-top:4px;border-top:1px solid var(--border);}
@@ -221,8 +221,18 @@
     .feature-text strong{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;}
     .feature-text span{font-size:12px;color:var(--muted);}
 
+    /* ══ DISCLAIMER ══ */
+    .disclaimer-section{max-width:1300px;margin:80px auto 0;padding:0 24px;}
+    .disclaimer-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px 32px;position:relative;overflow:hidden;}
+    .disclaimer-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,209,102,.03) 0%,rgba(255,107,107,.02) 100%);pointer-events:none;}
+    .disclaimer-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+    .disclaimer-icon{width:32px;height:32px;border-radius:9px;background:rgba(255,209,102,.12);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+    .disclaimer-title{font-size:14px;font-weight:700;color:var(--muted);}
+    .disclaimer-body{display:flex;flex-direction:column;gap:10px;position:relative;}
+    .disclaimer-body p{font-size:12px;color:var(--muted);line-height:1.75;opacity:.85;}
+
     /* ══ FOOTER ══ */
-    .footer{max-width:1300px;margin:80px auto 0;padding:22px 24px 36px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer{max-width:1300px;margin:40px auto 0;padding:22px 24px 36px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
     .footer-logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--text);}
     .footer-copy{font-size:13px;color:var(--muted);}
 
@@ -442,6 +452,21 @@
       <div class="feature-item"><div class="feature-icon fi-green">🔄</div><div class="feature-text"><strong data-i18n="feat2_t">持续更新</strong><span data-i18n="feat2_d">每日追踪最新 AI 工具动态与发布</span></div></div>
       <div class="feature-item"><div class="feature-icon fi-pink">📖</div><div class="feature-text"><strong data-i18n="feat3_t">深度教程</strong><span data-i18n="feat3_d">专属实战指南，快速上手任意工具</span></div></div>
       <div class="feature-item"><div class="feature-icon fi-yellow">🌐</div><div class="feature-text"><strong data-i18n="feat4_t">全球视野</strong><span data-i18n="feat4_d">覆盖英文圈与中文生态的优质 AI 产品</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-section">
+  <div class="disclaimer-box">
+    <div class="disclaimer-head">
+      <div class="disclaimer-icon">⚠️</div>
+      <div class="disclaimer-title">免责声明 · Disclaimer</div>
+    </div>
+    <div class="disclaimer-body">
+      <p>AIHubTools / 智汇工具为第三方 AI 工具导航与学习分享网站，本站仅用于整理公开可访问的工具信息、使用经验和教程内容。本站与所收录工具品牌、公司或平台不存在官方隶属、代理或合作关系，除非页面中另有明确说明。</p>
+      <p>页面中出现的产品名称、商标、Logo 和品牌信息归其各自权利人所有，仅用于识别和介绍相关工具。如相关权利人认为本站内容存在不当使用，请联系我们处理。</p>
+      <p>本站内容仅供学习和参考，不构成法律、投资、医疗、财务或其他专业建议。用户访问第三方网站时，请自行遵守相关平台规则和当地法律法规。</p>
     </div>
   </div>
 </div>
@@ -1061,19 +1086,5 @@ buildCatGrid();
 loadTools();
 loadTutorials();
 </script>
-  <section class="disclaimer">
-  <h2>免责声明</h2>
-  <p>
-    AIHubTools / 智汇工具为第三方 AI 工具导航与学习分享网站，本站仅用于整理公开可访问的工具信息、使用经验和教程内容。
-    本站与所收录工具品牌、公司或平台不存在官方隶属、代理或合作关系，除非页面中另有明确说明。
-  </p>
-  <p>
-    页面中出现的产品名称、商标、Logo 和品牌信息归其各自权利人所有，仅用于识别和介绍相关工具。
-    如相关权利人认为本站内容存在不当使用，请联系我们处理。
-  </p>
-  <p>
-    本站内容仅供学习和参考，不构成法律、投资、医疗、财务或其他专业建议。用户访问第三方网站时，请自行遵守相关平台规则和当地法律法规。
-  </p>
-</section>
 </body>
 </html>

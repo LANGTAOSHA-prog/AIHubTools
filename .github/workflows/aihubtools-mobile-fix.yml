@@ -1,0 +1,73 @@
+name: One-time AIHubTools mobile layout fix
+
+on:
+  push:
+    paths:
+      - '.github/workflows/aihubtools-mobile-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-index:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Patch index.html mobile CSS
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          old = "    html { scroll-behavior:smooth; }\n    body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }"
+          new = "    html { scroll-behavior:smooth; overflow-x:hidden; }\n    body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; overflow-x:hidden; }"
+          if old in s and new not in s:
+              s = s.replace(old, new, 1)
+
+          marker = "      .pagination{flex-direction:column;align-items:flex-start;}\n"
+          fix = """      .nav{padding:0 10px;}
+      .nav-bar{gap:8px;padding:9px 10px;}
+      .nav-logo{font-size:15px;gap:7px;min-width:0;}
+      .nav-gem{width:28px;height:28px;font-size:14px;}
+      .nav-links{gap:6px;min-width:0;}
+      .nav-btn{display:none;}
+      .nav-icon-btn{padding:6px 9px;font-size:12px;}
+      .section,.today-section,.recent-section,.disclaimer-section{padding-left:16px;padding-right:16px;}
+      .tools-grid{grid-template-columns:1fr;gap:12px;}
+      .tool-card{width:100%;min-width:0;padding:16px;}
+      .tool-card-header,.tool-footer,.tool-meta,.filter-selects,.pg-controls,.pg-nums{min-width:0;}
+      .filter-selects{width:100%;display:grid;grid-template-columns:1fr;gap:8px;}
+      .filter-selects select,.pg-size{width:100%;max-width:100%;}
+      .sh-right{width:100%;display:grid;grid-template-columns:1fr;gap:8px;}
+      .sh-right button{width:100%;justify-content:center;}
+      .tool-footer{flex-direction:column;}
+      .tc-btn{width:100%;}
+      .pagination{align-items:stretch;}
+      .pg-controls{width:100%;justify-content:center;flex-wrap:wrap;}
+"""
+          if fix not in s and marker in s:
+              s = s.replace(marker, marker + fix, 1)
+
+          p.write_text(s, encoding='utf-8')
+
+          wf = Path('.github/workflows/aihubtools-mobile-fix.yml')
+          if wf.exists():
+              wf.unlink()
+          PY
+
+      - name: Commit mobile fix and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add -A
+            git commit -m "Fix mobile layout for tools section"
+            git push
+          fi

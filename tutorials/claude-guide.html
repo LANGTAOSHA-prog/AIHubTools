@@ -1,187 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claude新手完整使用教程 - AIHubTools 智汇工具</title>
-  <meta name="description" content="Claude新手完整使用教程，适合写文章、改文案、整理表格和学习问题。用真实使用口吻整理，不是官方说明书。" />
+  <title>Claude 使用入门指南 - AIHubTools 智汇工具</title>
+  <meta name="description" content="Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html" />
   <style>
-    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.8}
-    header{background:linear-gradient(135deg,#5b21b6,#2563eb);color:white;text-align:center;padding:56px 20px}
-    header h1{margin:0;font-size:32px}
-    header p{max-width:780px;margin:14px auto 0;color:#e0e7ff}
-    main{max-width:900px;margin:0 auto;padding:34px 18px}
-    .card{background:white;border-radius:18px;padding:26px;margin-bottom:22px;box-shadow:0 8px 24px rgba(15,23,42,.08)}
-    h2{font-size:24px;margin-top:0;color:#1e293b}
-    h3{font-size:19px;color:#334155}
-    .img-box{border:2px dashed #cbd5e1;border-radius:16px;background:#f1f5f9;color:#64748b;text-align:center;padding:42px 16px;margin:18px 0}
-    .tip{background:#eff6ff;border-left:5px solid #2563eb;padding:14px 16px;border-radius:10px}
-    .warn{background:#fff7ed;border-left:5px solid #f97316;padding:14px 16px;border-radius:10px}
-    ul{padding-left:22px}
-    code{background:#f1f5f9;padding:2px 6px;border-radius:6px}
-    .prompt{background:#0f172a;color:#e5e7eb;border-radius:14px;padding:18px;margin:14px 0;white-space:pre-wrap}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
     footer{text-align:center;color:#64748b;padding:28px 16px}
-    a{color:#2563eb;text-decoration:none}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
   </style>
 </head>
 <body>
-
-<header>
-  <h1>Claude新手完整使用教程</h1>
-  <p>适合写文章、改文案、整理表格、学习问题。不是官方说明书，而是按真实使用习惯整理的一篇入门教程。</p>
-</header>
-
-<main>
-
-  <section class="card">
-    <h2>一、Claude适合拿来做什么？</h2>
-    <p>
-      如果你刚开始接触 Claude，不用把它想得太复杂。它最适合做的事情，其实就是帮你把“脑子里乱七八糟的想法”整理成能用的文字。
-      比如写文章、改文案、总结资料、整理表格、解释学习问题，Claude 都比较顺手。
-    </p>
-    <p>
-      我个人觉得，Claude 的特点不是特别“吵”，它写出来的内容通常比较稳，不会一上来就堆很多夸张的话。
-      所以如果你想写一篇更像人写的文章，或者想把一段生硬的文字改得自然一点，Claude 很适合拿来试。
-    </p>
-
-    <div class="img-box">
-      图片预留位置：Claude首页或对话界面截图
+  <header>
+    <h1>Claude 使用入门指南</h1>
+    <p>Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。</p>
+    <div class="meta">
+      <span>Claude</span>
+      <span>AI Chat</span>
+      <span>入门</span>
+      <span>4 分钟阅读</span>
+      <span>更新：2025-06</span>
     </div>
-  </section>
+  </header>
 
-  <section class="card">
-    <h2>二、新手第一次怎么用 Claude？</h2>
-    <p>
-      第一次使用时，不要只输入一句“帮我写文章”。这样得到的内容一般会比较空。
-      更好的方法是把你的需求说清楚一点，比如写给谁看、用在什么地方、语气要正式还是轻松、字数大概多少。
-    </p>
-
-    <h3>普通问法：</h3>
-    <div class="prompt">帮我写一篇关于AI写作的文章。</div>
-
-    <h3>更好一点的问法：</h3>
-    <div class="prompt">帮我写一篇适合普通新手看的AI写作工具使用经验文章。
-语气自然一点，不要像广告。
-内容包括：我为什么开始用AI写作、实际用下来哪些地方有帮助、哪些地方还需要自己修改。
-字数控制在800字左右。</div>
-
-    <p>
-      两种问法的区别很明显。你给 Claude 的信息越具体，它越容易写出你真正想要的东西。
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>三、用 Claude 写文章的方法</h2>
-    <p>
-      写文章时，我不建议直接让 Claude 一次写完。更稳的方法是先让它列提纲，再让它分段写。
-      这样文章不容易跑偏，也方便你自己改。
-    </p>
-
-    <div class="prompt">我想写一篇《普通人如何用AI提高工作效率》的文章。
-请先帮我列一个自然一点的文章提纲，不要太官方，适合个人博客发布。</div>
-
-    <p>
-      提纲满意后，再继续让它写正文：
-    </p>
-
-    <div class="prompt">按照上面的提纲，帮我写第一版正文。
-要求：口吻像真实使用经验，不要像新闻稿，不要堆概念。</div>
-
-    <div class="tip">
-      小建议：写完后一定要让 Claude 再帮你“去AI味”。比如让它删掉空话、改短句子、增加真实使用场景。
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://claude.ai" target="_blank" rel="noopener nofollow">访问官网 →</a>
     </div>
-  </section>
 
-  <section class="card">
-    <h2>四、用 Claude 改文案</h2>
-    <p>
-      Claude 改文案比从零写更容易出效果。你可以把自己写得不顺的内容丢进去，让它帮你改得更自然。
-    </p>
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。</p>
+    </section>
 
-    <div class="prompt">下面这段文字有点生硬，请帮我改得更像普通人写的。
-要求：不要夸张，不要营销味，保留原来的意思。
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>访问并注册</h2>
+        <p>打开 claude.ai，用 Google 或邮箱注册免费账号。免费版每天可发送一定数量的消息，Claude 3 Sonnet 免费可用。</p>
+        <div class="image-placeholder">截图预留位置：Claude - 访问并注册</div>
+      </section>
+    
 
-【粘贴你的文案】</div>
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>上传超长文档</h2>
+        <p>Claude 支持上传 PDF、Word、TXT 等文档，最长可处理约 150,000 字的内容。可用于合同审查、论文摘要、书籍解读等场景。</p>
+        <div class="image-placeholder">截图预留位置：Claude - 上传超长文档</div>
+      </section>
+    
 
-    <p>
-      如果你是做网站内容，比如工具介绍、教程文章<!-- 可继续添加在 </main> 前面 -->
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>利用 Projects 功能</h2>
+        <p>Projects 允许你在一个空间内保存多轮对话、文档和自定义指令，适合长期项目（如写书、产品开发）持续使用。</p>
+        <div class="image-placeholder">截图预留位置：Claude - 利用 Projects 功能</div>
+      </section>
+    
 
-<section class="card">
-  <h2>十一、适合 Claude 的使用场景示例</h2>
+      <section class="card step-card">
+        <div class="step-num">步骤 4</div>
+        <h2>善用写作与代码场景</h2>
+        <p>Claude 在创意写作、学术论文、代码审查和 Debug 方面表现优异。直接粘贴代码并描述问题，它会给出详细的分析与修改建议。</p>
+        <div class="image-placeholder">截图预留位置：Claude - 善用写作与代码场景</div>
+      </section>
+    
 
-  <h3>1. 写公众号文章</h3>
-  <div class="prompt">我想写一篇公众号文章，主题是【主题】。
-请用真实个人经验的口吻写，不要像AI生成。
-开头自然一点，不要上来就总结大道理。
-字数控制在1200字左右。</div>
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>要求 Claude 「逐步思考」或「展示推理过程」可显著提高回答准确率。</li>
+<li>Claude 比较保守，遇到敏感内容会主动说明。想要更直接的回答，可在 System prompt 中明确说明使用场景。</li>
+      </ul>
+    </section>
+  </main>
 
-  <h3>2. 改网站介绍</h3>
-  <div class="prompt">下面是我的网站介绍，请帮我改得更自然。
-要求：简洁、可信、不要夸张宣传、适合个人网站。
-
-【粘贴网站介绍】</div>
-
-  <h3>3. 整理教程内容</h3>
-  <div class="prompt">请把下面这段内容整理成一篇教程。
-要求：步骤清楚，适合新手阅读，语气像真人分享经验。
-不要写成官方说明书。
-
-【粘贴内容】</div>
-
-  <h3>4. 做学习笔记</h3>
-  <div class="prompt">请把下面内容整理成学习笔记。
-要求：先总结重点，再列出容易混淆的地方，最后给3个练习问题。
-
-【粘贴学习资料】</div>
-</section>
-
-<section class="card">
-  <h2>十二、Claude 和 ChatGPT 怎么选？</h2>
-  <p>
-    如果只是普通使用，不用纠结谁一定更强。我的感觉是：
-    Claude 更适合长文整理、自然改写、阅读资料；ChatGPT 更适合工具丰富、插件生态、综合任务。
-  </p>
-
-  <p>
-    比如你要写一篇比较自然的经验文章，Claude 很顺手。
-    如果你要做网页代码、图片生成、复杂工具组合，ChatGPT 可能更方便。
-    但这不是绝对的，最简单的方法就是同一个问题两个都试一下，看哪个结果更接近你想要的。
-  </p>
-
-  <div class="tip">
-    新手建议：不要一开始就同时研究太多 AI 工具。先把一个工具用熟，比收藏几十个工具更有用。
-  </div>
-</section>
-
-<section class="card">
-  <h2>十三、适合新手保存的万能提示词</h2>
-  <p>下面这段可以直接收藏，以后写文章、改文案、整理教程都能用。</p>
-
-  <div class="prompt">请根据下面内容帮我整理一版可直接发布的文章。
-要求：
-1. 语气自然，像真实个人经验；
-2. 不要官方介绍，不要营销味；
-3. 结构清楚，但不要太模板化；
-4. 删除空话，保留有用信息；
-5. 适合新手阅读。
-
-内容如下：
-
-【粘贴你的内容】</div>
-</section>
-
-<section class="card">
-  <h2>十四、最后建议</h2>
-  <p>
-    Claude 很适合做“第一版内容”，但最好不要完全复制。
-    最稳的做法是：先让它帮你整理，再自己加一点真实经历、截图、使用感受。
-    这样文章看起来会自然很多，也更容易让读者相信。
-  </p>
-
-  <p>
-    如果你是做教程网站，建议每篇教程都至少加上：
-    使用场景、实际步骤、常见问题、个人建议、截图位置。
-    这样比单纯介绍功能更像真实内容。
-  </p>
-</section>
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
+</body>
+</html>

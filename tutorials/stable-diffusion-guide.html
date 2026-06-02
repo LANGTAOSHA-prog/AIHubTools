@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stable Diffusion 本地部署入门 - AIHubTools 智汇工具</title>
+  <meta name="description" content="Stable Diffusion 是最强大的开源 AI 图像生成模型，支持本地部署、完全免费，无内容审查。通过 AUTOMATIC1111 WebUI 或 ComfyUI 即可快速上手，配合 LoRA 模型可生成各种风格的图像。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/stable-diffusion-guide.html" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
+    footer{text-align:center;color:#64748b;padding:28px 16px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stable Diffusion 本地部署入门</h1>
+    <p>Stable Diffusion 是最强大的开源 AI 图像生成模型，支持本地部署、完全免费，无内容审查。通过 AUTOMATIC1111 WebUI 或 ComfyUI 即可快速上手，配合 LoRA 模型可生成各种风格的图像。</p>
+    <div class="meta">
+      <span>Stable Diffusion</span>
+      <span>AI Image</span>
+      <span>专业</span>
+      <span>8 分钟阅读</span>
+      <span>更新：2025-06</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://stability.ai" target="_blank" rel="noopener nofollow">访问官网 →</a>
+    </div>
+
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>Stable Diffusion 是最强大的开源 AI 图像生成模型，支持本地部署、完全免费，无内容审查。通过 AUTOMATIC1111 WebUI 或 ComfyUI 即可快速上手，配合 LoRA 模型可生成各种风格的图像。</p>
+    </section>
+
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>硬件要求</h2>
+        <p>推荐：NVIDIA GPU（显存 ≥6GB），如 RTX 3060/4060。CPU 模式极慢，不推荐。无合适显卡可选择云端方案：Google Colab 或 RunPod。</p>
+        <div class="image-placeholder">截图预留位置：Stable Diffusion - 硬件要求</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>安装 AUTOMATIC1111 WebUI</h2>
+        <p>前往 GitHub 搜索 AUTOMATIC1111/stable-diffusion-webui，按 README 说明安装 Python 3.10 + Git，运行 webui-user.bat（Windows）或 webui.sh（Mac/Linux）一键启动。</p>
+        <div class="image-placeholder">截图预留位置：Stable Diffusion - 安装 AUTOMATIC1111 WebUI</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>下载基础模型</h2>
+        <p>推荐模型下载站：Civitai.com 和 HuggingFace。常用模型：真实系选 Realistic Vision，动漫风选 Anything V5，二次元选 Counterfeit。放入 models/Stable-diffusion/ 目录。</p>
+        <div class="image-placeholder">截图预留位置：Stable Diffusion - 下载基础模型</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 4</div>
+        <h2>使用 LoRA 精细控制风格</h2>
+        <p>LoRA 是轻量化风格模型，放入 models/Lora/ 目录后，在提示词中用 &lt;lora:文件名:权重&gt; 调用。权重范围 0-1，推荐 0.6-0.8，过高会导致图像崩坏。</p>
+        <div class="image-placeholder">截图预留位置：Stable Diffusion - 使用 LoRA 精细控制风格</div>
+      </section>
+    
+
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>Negative Prompt（负向提示词）同样重要，常用：ugly, blurry, extra fingers, watermark, text, bad anatomy。</li>
+<li>CFG Scale（提示词遵循度）推荐 7-12，过高图像过曝，过低细节模糊。Steps 推荐 20-30。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
+</body>
+</html>

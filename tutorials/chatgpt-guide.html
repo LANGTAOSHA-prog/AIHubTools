@@ -3,723 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChatGPT 新手完整使用教程 - AIHubTools 智汇工具</title>
-  <meta name="description" content="一篇适合新手阅读的 ChatGPT 使用教程，从写文章、改文案、整理表格到学习问题，按真实使用场景整理，适合 AIHubTools 教程页面发布。" />
-  <meta name="keywords" content="ChatGPT教程,ChatGPT新手教程,AI写作工具,AI改文案,AI整理表格,AI学习助手,AIHubTools,智汇工具" />
+  <title>ChatGPT 完全入门指南 - AIHubTools 智汇工具</title>
+  <meta name="description" content="ChatGPT 是目前全球用户最多的 AI 对话工具，由 OpenAI 开发。免费账号即可使用 GPT-4o 进行多模态对话——支持上传图片、PDF、分析数据表格，适合写作、编程、学习等几乎所有场景。" />
   <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/chatgpt-guide.html" />
-
   <style>
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #64748b;
-      --border: #e5e7eb;
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --soft: #eff6ff;
-      --warning: #fff7ed;
-      --warning-border: #fed7aa;
-      --shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
-      --radius: 18px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.8;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .site-header {
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      color: #fff;
-      padding: 56px 20px 48px;
-      text-align: center;
-    }
-
-    .site-header .tag {
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .site-header h1 {
-      margin: 0;
-      font-size: clamp(28px, 5vw, 46px);
-      line-height: 1.25;
-    }
-
-    .site-header p {
-      max-width: 760px;
-      margin: 18px auto 0;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 17px;
-    }
-
-    .nav-bar {
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-inner a {
-      font-size: 14px;
-      color: #334155;
-      margin-right: 14px;
-    }
-
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 34px 20px 60px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 300px;
-      gap: 26px;
-    }
-
-    .article {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: clamp(22px, 4vw, 42px);
-    }
-
-    .article-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 24px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .badge {
-      background: var(--soft);
-      color: var(--primary-dark);
-      padding: 5px 12px;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-
-    .article h2 {
-      margin-top: 42px;
-      margin-bottom: 14px;
-      font-size: 26px;
-      line-height: 1.35;
-    }
-
-    .article h3 {
-      margin-top: 26px;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .article p {
-      margin: 14px 0;
-      color: #1f2937;
-    }
-
-    .article ul,
-    .article ol {
-      padding-left: 22px;
-    }
-
-    .article li {
-      margin: 8px 0;
-    }
-
-    .notice {
-      background: var(--warning);
-      border: 1px solid var(--warning-border);
-      border-radius: 14px;
-      padding: 16px 18px;
-      margin: 22px 0;
-      color: #7c2d12;
-    }
-
-    .note {
-      background: #f1f5f9;
-      border-left: 4px solid var(--primary);
-      border-radius: 12px;
-      padding: 15px 18px;
-      margin: 22px 0;
-      color: #334155;
-    }
-
-    .step-card {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-      margin: 18px 0;
-      background: #fff;
-    }
-
-    .step-card strong {
-      color: var(--primary-dark);
-    }
-
-    .image-placeholder {
-      margin: 20px 0 28px;
-      border: 2px dashed #cbd5e1;
-      border-radius: 16px;
-      background: #f8fafc;
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 22px;
-      color: #64748b;
-      font-size: 15px;
-    }
-
-    .example-box {
-      background: #0f172a;
-      color: #e5e7eb;
-      border-radius: 16px;
-      padding: 18px;
-      overflow-x: auto;
-      margin: 18px 0;
-      font-size: 14px;
-    }
-
-    .example-box code {
-      white-space: pre-wrap;
-      font-family: Consolas, Monaco, monospace;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      margin: 18px 0;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 650px;
-      background: #fff;
-    }
-
-    th,
-    td {
-      padding: 13px 15px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f8fafc;
-      color: #334155;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    .sidebar {
-      align-self: start;
-      position: sticky;
-      top: 78px;
-    }
-
-    .side-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 20px;
-      margin-bottom: 18px;
-    }
-
-    .side-card h3 {
-      margin: 0 0 12px;
-      font-size: 18px;
-    }
-
-    .side-card a {
-      display: block;
-      padding: 7px 0;
-      color: #334155;
-      font-size: 14px;
-    }
-
-    .cta {
-      margin-top: 38px;
-      padding: 24px;
-      border-radius: 18px;
-      background: linear-gradient(135deg, #eff6ff, #f5f3ff);
-      border: 1px solid #dbeafe;
-    }
-
-    .cta h2 {
-      margin-top: 0;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 11px 18px;
-      border-radius: 12px;
-      background: var(--primary);
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .btn:hover {
-      background: var(--primary-dark);
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 34px 20px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        position: static;
-      }
-
-      .nav-inner {
-        justify-content: flex-start;
-      }
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
+    footer{text-align:center;color:#64748b;padding:28px 16px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
   </style>
 </head>
-
 <body>
-  <header class="site-header">
-    <div class="tag">AIHubTools 教程</div>
-    <h1>ChatGPT 新手完整使用教程</h1>
-    <p>这篇不是官方说明书，而是给第一次接触 ChatGPT 的人看的入门笔记。重点讲写文章、改文案、整理表格和学习问题时，怎样提问更容易得到能用的结果。</p>
+  <header>
+    <h1>ChatGPT 完全入门指南</h1>
+    <p>ChatGPT 是目前全球用户最多的 AI 对话工具，由 OpenAI 开发。免费账号即可使用 GPT-4o 进行多模态对话——支持上传图片、PDF、分析数据表格，适合写作、编程、学习等几乎所有场景。</p>
+    <div class="meta">
+      <span>ChatGPT</span>
+      <span>AI Chat</span>
+      <span>入门</span>
+      <span>5 分钟阅读</span>
+      <span>更新：2025-06</span>
+    </div>
   </header>
 
-  <nav class="nav-bar">
-    <div class="nav-inner">
-      <div>
-        <a href="../index.html">首页</a>
-        <a href="../tutorials.html">教程中心</a>
-        <a href="../index.html#tools">工具列表</a>
-      </div>
-      <span style="color:#64748b;font-size:14px;">建议阅读时间：8-12 分钟</span>
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://chat.openai.com" target="_blank" rel="noopener nofollow">访问官网 →</a>
     </div>
-  </nav>
 
-  <main class="container">
-    <article class="article">
-      <div class="article-meta">
-        <span class="badge">新手入门</span>
-        <span>工具名称：ChatGPT</span>
-        <span>适用场景：写文章 / 改文案 / 整理表格 / 学习问题</span>
-        <span>更新：2026-06-02</span>
-      </div>
-
-      <p>
-        很多人第一次打开 ChatGPT，都会有点不知道从哪里开始。页面看起来很简单，中间一个输入框，好像什么都能问，但真正用起来又经常出现一个问题：回答看着很完整，实际却不一定能直接用。
-      </p>
-
-      <p>
-        我更建议把 ChatGPT 当成一个“帮你整理思路的助手”，而不是一个“一句话帮你完成全部工作的人”。尤其是写文章、改文案、整理表格、学习知识这几类事情，只要提问方式稍微具体一点，结果会明显好很多。
-      </p>
-
-      <div class="notice">
-        说明：本文按普通用户的真实使用场景来写，不涉及账号价格、具体套餐权益等容易变化的信息。使用前建议以 ChatGPT 页面和 OpenAI 官方帮助说明为准。
-      </div>
-
-      <div class="image-placeholder">
-        截图预留位置 1<br />
-        建议图片：ChatGPT 首页或输入框截图<br />
-        图片路径示例：../images/tutorials/chatgpt-step-1.jpg
-      </div>
-
-      <h2 id="why">一、我建议新手先这样理解 ChatGPT</h2>
-
-      <p>
-        新手最容易踩的坑，是一上来就输入“帮我写一篇文章”“帮我做一个表格”“帮我学习英语”。这些问题不是不能问，而是太宽了。ChatGPT 不知道你要给谁看、用在哪里、想要什么格式，所以它只能给你一个比较普通的答案。
-      </p>
-
-      <p>
-        更好的方式是，把你的需求拆成几句话说明白：
-      </p>
-
-      <ul>
-        <li>我要做什么？比如写公众号文章、整理表格、准备考试。</li>
-        <li>给谁看？比如新手、客户、老板、学生、普通用户。</li>
-        <li>希望输出什么格式？比如表格、步骤、清单、HTML、短文案。</li>
-        <li>有什么限制？比如不要太官方、不要太夸张、字数控制在 800 字左右。</li>
-      </ul>
-
-      <div class="note">
-        我自己的判断是：ChatGPT 真正好用的地方，不是“替你省掉所有思考”，而是帮你把原本混乱的内容先整理成一个可修改的初稿。
-      </div>
-
-      <h2 id="start">二、第一次使用，先从一个小任务开始</h2>
-
-      <p>
-        如果你刚开始用，不建议一上来就让它写很长的文章。可以先从一个小任务试，比如改一段文字、整理一份清单、解释一个概念。任务越小，你越容易判断结果好不好。
-      </p>
-
-      <div class="step-card">
-        <strong>步骤 1：打开 ChatGPT 页面</strong>
-        <p>进入 ChatGPT 后，你会看到一个对话输入框。新手不用急着研究所有功能，先把重点放在“怎么问”上。</p>
-      </div>
-
-      <div class="step-card">
-        <strong>步骤 2：输入一个具体问题</strong>
-        <p>比如不要只写“帮我写文章”，而是写“帮我写一篇给新手看的 ChatGPT 使用文章，语气自然一点，不要像官方介绍”。</p>
-      </div>
-
-      <div class="step-card">
-        <strong>步骤 3：根据结果继续追问</strong>
-        <p>第一次回答不满意很正常。你可以继续说“这段太官方，改得像普通人的经验分享”“标题再朴素一点”“加一个踩坑案例”。</p>
-      </div>
-
-      <div class="image-placeholder">
-        截图预留位置 2<br />
-        建议图片：输入提示词示例截图<br />
-        图片路径示例：../images/tutorials/chatgpt-step-2.jpg
-      </div>
-
-      <h2 id="writing">三、用 ChatGPT 写文章：不要让它直接从零开始编</h2>
-
-      <p>
-        很多 AI 味很重的文章，都是因为提问太简单。比如你输入“写一篇 AI 工具教程”，它大概率会写出一篇看起来很完整、但没什么真实细节的文章。
-      </p>
-
-      <p>
-        更稳的做法是：先给它一点真实材料，再让它整理。比如你可以把自己的使用过程、遇到的问题、截图说明发进去，让它帮你整理成文章。
-      </p>
-
-      <h3>不太推荐的提问</h3>
-
-      <div class="example-box"><code>帮我写一篇 ChatGPT 使用教程。</code></div>
-
-      <h3>更推荐的提问</h3>
-
-      <div class="example-box"><code>请根据下面这些真实使用记录，整理成一篇适合新手看的 ChatGPT 教程。
-
-使用场景：
-1. 我想用它写文章初稿
-2. 我想让它帮我改文案
-3. 我想让它整理表格内容
-4. 我想用它解释学习问题
-
-要求：
-1. 语气像普通用户的经验分享
-2. 不要写得像官方宣传
-3. 必须包含使用步骤、踩坑提醒、适合人群和不适合人群
-4. 每一段都要具体，不要空话
-5. 输出 HTML 结构，预留图片位置</code></div>
-
-      <p>
-        这样写出来的内容，通常会比直接“命令它写一篇教程”自然很多。因为它有真实材料可以整理，而不是只能凭空补充一些通用介绍。
-      </p>
-
-      <h2 id="copywriting">四、用 ChatGPT 改文案：最好告诉它“哪里不好”</h2>
-
-      <p>
-        改文案是 ChatGPT 比较适合新手上手的场景。比如一段介绍太生硬、标题不够清楚、商品说明太啰嗦，都可以让它帮你改。
-      </p>
-
-      <p>
-        但这里也有一个常见问题：如果你只说“帮我优化一下”，它可能会把文字改得更漂亮，但不一定更适合你的用途。
-      </p>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>你的需求</th>
-              <th>建议这样问</th>
-              <th>为什么更好</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>文章开头太像 AI</td>
-              <td>“把这段改得像普通人的使用经验，不要夸张，不要官方。”</td>
-              <td>限制了语气和风格，结果更自然。</td>
-            </tr>
-            <tr>
-              <td>标题不吸引人</td>
-              <td>“给我 10 个标题，要求朴素、真实，不要标题党。”</td>
-              <td>可以一次比较多个版本。</td>
-            </tr>
-            <tr>
-              <td>介绍太长</td>
-              <td>“压缩到 100 字以内，保留重点，适合放在工具卡片里。”</td>
-              <td>明确了字数和使用位置。</td>
-            </tr>
-            <tr>
-              <td>想做多语言</td>
-              <td>“翻译成英文和日文，保持意思自然，不要逐字硬翻。”</td>
-              <td>适合网站多语言内容。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 id="table">五、用 ChatGPT 整理表格：表头一定要说清楚</h2>
-
-      <p>
-        如果你要整理工具表格、教程表格、文章数据，最好先告诉它表头。比如你做 AIHubTools 教程时，可以直接指定：
-      </p>
-
-      <div class="example-box"><code>请按下面表头整理成 CSV 格式：
-id, slug, title_zh, title_en, title_ja, category_zh, category_en, category_ja, summary_zh, summary_en, summary_ja, cover_image, tutorial_url, status, featured, created_at, updated_at</code></div>
-
-      <p>
-        这样比直接说“帮我整理成表格”稳定很多。因为它知道每一列应该放什么，也不容易漏字段。
-      </p>
-
-      <p>
-        如果你有 CSV、Excel 或其他结构化数据，ChatGPT 的数据分析功能可以帮助查看文件、分析内容、生成表格或图表。实际效果取决于你上传的数据质量，表头越清楚、每行记录越规整，处理起来越顺。
-      </p>
-
-      <div class="image-placeholder">
-        截图预留位置 3<br />
-        建议图片：整理表格或 CSV 输出示例截图<br />
-        图片路径示例：../images/tutorials/chatgpt-step-3.jpg
-      </div>
-
-      <h2 id="study">六、用 ChatGPT 学习问题：不要只问答案，要问过程</h2>
-
-      <p>
-        学习类问题也很适合用 ChatGPT，但不要只把它当成“答案机”。如果你只问“这个题答案是什么”，你可能很快得到一个答案，但不一定真正理解。
-      </p>
-
-      <p>
-        更好的问法是：
-      </p>
-
-      <div class="example-box"><code>请用新手能听懂的方式解释这个问题。
-要求：
-1. 先说结论
-2. 再分步骤解释原因
-3. 最后给一个类似例子
-4. 如果我理解错了，请指出容易混淆的地方</code></div>
-
-      <p>
-        这种问法适合学语言、学代码、学考试题，也适合你在复习某个知识点时让它帮你拆解。
-      </p>
-
-      <div class="notice">
-        注意：涉及法律、医疗、投资、考试报名政策、最新价格等内容时，不建议只看 ChatGPT 的回答。它可以帮你整理问题和理解资料，但最终还是要核对官方来源。
-      </div>
-
-      <h2 id="mistakes">七、新手最容易踩的 5 个坑</h2>
-
-      <h3>1. 问题太短，结果太空</h3>
-      <p>
-        “帮我写一篇文章”这种问题太宽泛，容易得到一篇看起来完整、但没什么特点的文章。加上用途、读者、语气、字数，效果会好很多。
-      </p>
-
-      <h3>2. 一次想让它完成所有事</h3>
-      <p>
-        比如写文章、起标题、做 SEO、生成 HTML、加配图说明，全部塞进一个问题里，结果可能会乱。建议一步一步来：先大纲，再正文，再标题，再 HTML。
-      </p>
-
-      <h3>3. 不检查事实</h3>
-      <p>
-        ChatGPT 可以帮你整理信息，但不代表每个细节都一定正确。尤其是时间、价格、政策、法律、软件功能更新，一定要自己再核对。
-      </p>
-
-      <h3>4. 只会说“不满意”</h3>
-      <p>
-        如果结果不满意，不要只说“重写”。可以具体说哪里不好，比如“太官方”“太长”“没有真实案例”“标题像广告”。这样修改会更准。
-      </p>
-
-      <h3>5. 完全不加自己的内容</h3>
-      <p>
-        如果一篇教程完全没有你的使用过程、截图、判断和踩坑，读者很容易看出是模板文。哪怕只补充三四个真实细节，可信度也会明显提高。
-      </p>
-
-      <h2 id="people">八、ChatGPT 适合哪些人？不适合哪些人？</h2>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>适合的人</th>
-              <th>原因</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>经常写文章、文案、说明的人</td>
-              <td>可以帮你起草、改写、扩展、压缩内容。</td>
-            </tr>
-            <tr>
-              <td>需要整理资料的人</td>
-              <td>可以把杂乱信息整理成步骤、表格或清单。</td>
-            </tr>
-            <tr>
-              <td>正在学习新知识的人</td>
-              <td>可以用更简单的方式解释概念，并反复追问。</td>
-            </tr>
-            <tr>
-              <td>做网站、工具站、教程站的人</td>
-              <td>可以辅助生成页面文案、教程结构、SEO 摘要和多语言内容。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>不太适合的用法</th>
-              <th>原因</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>完全不检查，直接发布</td>
-              <td>容易出现事实错误、语气不自然或内容重复。</td>
-            </tr>
-            <tr>
-              <td>用来替代专业判断</td>
-              <td>法律、医疗、财务等问题需要专业人士或官方资料确认。</td>
-            </tr>
-            <tr>
-              <td>要求它凭空写真实体验</td>
-              <td>没有真实素材时，很容易变成空泛的 AI 文。</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h2 id="prompt">九、我常用的一套新手提示词</h2>
-
-      <p>
-        如果你不知道怎么开始，可以直接复制下面这段，再把里面的内容换成自己的需求。
-      </p>
-
-      <div class="example-box"><code>请帮我完成下面这个任务：
-
-我的目标：
-【这里写你要做什么】
-
-使用场景：
-【比如发布到网站、发给客户、自己学习、整理资料】
-
-读者对象：
-【比如新手、普通用户、老板、学生】
-
-输出要求：
-1. 语气自然，不要像官方宣传
-2. 内容具体，不要空话
-3. 分步骤说明
-4. 如果有不确定的地方，请提醒我核对
-5. 最后给我一个可以直接使用的版本
-
-我的原始内容：
-【把你的文字、资料或想法粘贴在这里】</code></div>
-
-      <h2 id="summary">十、最后的建议</h2>
-
-      <p>
-        ChatGPT 对新手最有价值的地方，不是让你完全不用思考，而是把你脑子里零散的想法先整理出来。你可以把它当成一个初稿助手、修改助手、表格整理助手和学习陪练。
-      </p>
-
-      <p>
-        真正想把它用好，关键不是记住多少高级技巧，而是每次提问时多说清楚三件事：我要做什么、给谁看、希望输出成什么样。
-      </p>
-
-      <p>
-        如果你是做网站教程或工具导航，建议不要让 ChatGPT 凭空写“真实体验”。先自己试用几分钟，记下使用过程、遇到的问题和截图说明，再让它整理成文章。这样写出来的内容会自然很多，也更容易让读者相信。
-      </p>
-
-      <section class="cta">
-        <h2>下一步可以怎么做？</h2>
-        <p>
-          你可以把这篇教程保存为 <strong>tutorials/chatgpt-guide.html</strong>，再把截图放到 <strong>images/tutorials/</strong> 目录中。后续在教程中心或首页添加入口链接即可。
-        </p>
-        <a class="btn" href="../tutorials.html">返回教程中心</a>
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>ChatGPT 是目前全球用户最多的 AI 对话工具，由 OpenAI 开发。免费账号即可使用 GPT-4o 进行多模态对话——支持上传图片、PDF、分析数据表格，适合写作、编程、学习等几乎所有场景。</p>
+    </section>
+
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>注册账号</h2>
+        <p>访问 chat.openai.com，点击 Sign Up，可用 Google / Apple / 邮箱注册。免费账号即可开始使用，无需绑定信用卡。</p>
+        <div class="image-placeholder">截图预留位置：ChatGPT - 注册账号</div>
       </section>
-    </article>
+    
 
-    <aside class="sidebar">
-      <div class="side-card">
-        <h3>目录</h3>
-        <a href="#why">一、先理解 ChatGPT</a>
-        <a href="#start">二、第一次使用</a>
-        <a href="#writing">三、写文章</a>
-        <a href="#copywriting">四、改文案</a>
-        <a href="#table">五、整理表格</a>
-        <a href="#study">六、学习问题</a>
-        <a href="#mistakes">七、常见踩坑</a>
-        <a href="#people">八、适合人群</a>
-        <a href="#prompt">九、提示词模板</a>
-        <a href="#summary">十、最后建议</a>
-      </div>
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>掌握提示词技巧</h2>
+        <p>好提示词 = 角色 + 任务 + 格式 + 限制。例如：「你是一位资深产品经理，请用 Markdown 格式写一份 App 竞品分析报告，聚焦功能差异，不超过 800 字。」</p>
+        <div class="image-placeholder">截图预留位置：ChatGPT - 掌握提示词技巧</div>
+      </section>
+    
 
-      <div class="side-card">
-        <h3>页面信息</h3>
-        <p style="margin:0;color:#64748b;font-size:14px;">
-          文件路径：<br />
-          <strong>tutorials/chatgpt-guide.html</strong>
-        </p>
-        <p style="color:#64748b;font-size:14px;">
-          图片目录建议：<br />
-          <strong>images/tutorials/</strong>
-        </p>
-      </div>
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>上传文件与图片</h2>
+        <p>点击对话框左侧的 📎 图标可上传 PDF、Word、Excel、图片等文件。ChatGPT 会自动读取内容，你可以直接提问或要求总结。</p>
+        <div class="image-placeholder">截图预留位置：ChatGPT - 上传文件与图片</div>
+      </section>
+    
 
-      <div class="side-card">
-        <h3>相关教程</h3>
-        <a href="claude-guide.html">Claude 新手使用教程</a>
-        <a href="perplexity-guide.html">Perplexity 搜索教程</a>
-        <a href="ai-writing-guide.html">AI 写作工具使用建议</a>
-      </div>
-    </aside>
+      <section class="card step-card">
+        <div class="step-num">步骤 4</div>
+        <h2>使用 GPT-4o 高级功能</h2>
+        <p>免费用户每天有一定次数的 GPT-4o 额度。可进行图片识别（拍照提问）、实时语音对话、生成图表与代码。Plus 订阅（$20/月）可解除使用限制。</p>
+        <div class="image-placeholder">截图预留位置：ChatGPT - 使用 GPT-4o 高级功能</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 5</div>
+        <h2>自定义 GPT（My GPTs）</h2>
+        <p>在左侧边栏点击「探索 GPT」可访问数万个社区定制 GPT，涵盖法律助手、英语口语练习、SEO 写作等专业场景，无需自己写提示词。</p>
+        <div class="image-placeholder">截图预留位置：ChatGPT - 自定义 GPT（My GPTs）</div>
+      </section>
+    
+
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>遇到错误回答，直接说「这不对，请重新分析」，比重新发问更高效。</li>
+<li>对话框输入 / 可快速切换不同的 GPT 模型。</li>
+<li>用「继续」让 ChatGPT 接续被截断的长回答，无需重复提问。</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    © 2026 AIHubTools 智汇工具 · 本文为新手使用经验整理，具体功能请以官方页面为准。
+    © AIHubTools / 智汇工具
   </footer>
 </body>
 </html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cursor AI 编辑器完整教程 - AIHubTools 智汇工具</title>
+  <meta name="description" content="Cursor 是专为 AI 时代设计的代码编辑器，基于 VS Code 构建，内置 GPT-4、Claude 等多种顶级模型。与 Copilot 不同，Cursor 可以理解整个代码库上下文，实现更大范围的代码修改和重构。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/cursor-guide.html" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
+    footer{text-align:center;color:#64748b;padding:28px 16px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cursor AI 编辑器完整教程</h1>
+    <p>Cursor 是专为 AI 时代设计的代码编辑器，基于 VS Code 构建，内置 GPT-4、Claude 等多种顶级模型。与 Copilot 不同，Cursor 可以理解整个代码库上下文，实现更大范围的代码修改和重构。</p>
+    <div class="meta">
+      <span>Cursor</span>
+      <span>AI Coding</span>
+      <span>入门</span>
+      <span>5 分钟阅读</span>
+      <span>更新：2025-06</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://cursor.sh" target="_blank" rel="noopener nofollow">访问官网 →</a>
+    </div>
+
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>Cursor 是专为 AI 时代设计的代码编辑器，基于 VS Code 构建，内置 GPT-4、Claude 等多种顶级模型。与 Copilot 不同，Cursor 可以理解整个代码库上下文，实现更大范围的代码修改和重构。</p>
+    </section>
+
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>下载与安装</h2>
+        <p>前往 cursor.sh 下载对应系统版本，安装后可一键导入 VS Code 的插件和设置。免费版每月可使用 2000 次 AI 补全 + 50 次 GPT-4/Claude 请求。</p>
+        <div class="image-placeholder">截图预留位置：Cursor - 下载与安装</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>掌握三大核心功能</h2>
+        <p>① Tab 补全（同 Copilot）；② Cmd+K 内联编辑（选中代码后用自然语言指令修改）；③ Cmd+L 打开 Chat 侧边栏（可与整个代码库对话）。这三个功能覆盖 80% 的使用场景。</p>
+        <div class="image-placeholder">截图预留位置：Cursor - 掌握三大核心功能</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>@Codebase 全库问答</h2>
+        <p>在 Chat 中输入 @Codebase，Cursor 会自动索引你的整个项目，回答「这个项目的认证逻辑在哪里？」或「我需要在哪里添加一个新的 API 路由？」等架构级问题。</p>
+        <div class="image-placeholder">截图预留位置：Cursor - @Codebase 全库问答</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 4</div>
+        <h2>Composer 多文件重构</h2>
+        <p>按 Cmd+Shift+I 打开 Composer，可以下达「把所有组件从 class 改为 hooks 写法」这类跨多个文件的大型重构任务，Cursor 会生成 diff 供你审查后一键应用。</p>
+        <div class="image-placeholder">截图预留位置：Cursor - Composer 多文件重构</div>
+      </section>
+    
+
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>项目根目录创建 .cursorrules 文件，写入你的项目规范（语言、框架、代码风格），Cursor 会全程遵守这些规则。</li>
+<li>Chat 里 @ 可以引用特定文件、函数、文档，让 AI 回答更精准。如 @utils.ts 或 @README.md。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
+</body>
+</html>

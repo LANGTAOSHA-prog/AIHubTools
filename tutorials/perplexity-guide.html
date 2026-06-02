@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perplexity 使用教程 | AIHubTools</title>
-    <meta name="description" content="介绍 Perplexity 搜索型 AI 的使用方法。">
-    <meta name="keywords" content="Perplexity教程,AI搜索,AI问答">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perplexity AI 使用指南 - AIHubTools 智汇工具</title>
+  <meta name="description" content="Perplexity AI 是 AI 时代最好的搜索引擎之一，每个答案都附有可点击的来源引用，彻底告别 AI 幻觉问题。它同时具备追问功能和深度研究（Deep Research）模式，是研究型用户的首选工具。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/perplexity-guide.html" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
+    footer{text-align:center;color:#64748b;padding:28px 16px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Perplexity 使用教程</h1>
-            <p class="category">AI教程</p>
-        </div>
-    </header>
-    <main class="container tutorial-content">
-        <div class="tutorial-meta">
-            <span>📖 教程 ID: 4</span>
-            <span>🛠️ 相关工具: perplexity</span>
-        </div>
-        <div class="content">
-            Perplexity 是什么？<br>Perplexity 是结合 AI 与搜索引擎的新型问答工具。<br><br>优势：<br>回答附带来源链接，适合查资料。<br><br>适合人群：<br>学生、研究人员、自媒体创作者。
-        </div>
-        <div class="summary-box">
-            <h3>📌 教程摘要</h3>
-            <p>介绍 Perplexity 搜索型 AI 的使用方法。</p>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 AIHubTools - AI 工具教程集合</p>
-        </div>
-    </footer>
+  <header>
+    <h1>Perplexity AI 使用指南</h1>
+    <p>Perplexity AI 是 AI 时代最好的搜索引擎之一，每个答案都附有可点击的来源引用，彻底告别 AI 幻觉问题。它同时具备追问功能和深度研究（Deep Research）模式，是研究型用户的首选工具。</p>
+    <div class="meta">
+      <span>Perplexity AI</span>
+      <span>AI Search</span>
+      <span>入门</span>
+      <span>3 分钟阅读</span>
+      <span>更新：2025-06</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://www.perplexity.ai" target="_blank" rel="noopener nofollow">访问官网 →</a>
+    </div>
+
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>Perplexity AI 是 AI 时代最好的搜索引擎之一，每个答案都附有可点击的来源引用，彻底告别 AI 幻觉问题。它同时具备追问功能和深度研究（Deep Research）模式，是研究型用户的首选工具。</p>
+    </section>
+
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>直接提问，查看引用</h2>
+        <p>访问 perplexity.ai，无需注册即可使用基础功能。输入问题后，回答下方会显示数字引用标注，点击可直接跳转到原始来源网页验证信息。</p>
+        <div class="image-placeholder">截图预留位置：Perplexity AI - 直接提问，查看引用</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>选择搜索来源类型</h2>
+        <p>搜索框下方可切换来源范围：All（全网）、Academic（学术论文）、YouTube、Reddit、Social Media。学术研究选 Academic，参考 arXiv / PubMed 的论文结果。</p>
+        <div class="image-placeholder">截图预留位置：Perplexity AI - 选择搜索来源类型</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>使用 Deep Research 模式</h2>
+        <p>Pro 用户可开启 Deep Research，Perplexity 会自动发出数十次搜索请求，综合多个来源后生成详细的研究报告，类似人工撰写的深度调研。</p>
+        <div class="image-placeholder">截图预留位置：Perplexity AI - 使用 Deep Research 模式</div>
+      </section>
+    
+
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>用 Perplexity 代替 Google 搜索技术教程，因为它会直接给出步骤答案而不是一堆链接。</li>
+<li>搜索框右侧的 Focus 可以精准限定来源，节省筛选时间。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
 </body>
 </html>

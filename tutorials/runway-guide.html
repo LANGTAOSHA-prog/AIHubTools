@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runway AI 视频生成教程 - AIHubTools 智汇工具</title>
+  <meta name="description" content="Runway 是最专业的 AI 视频生成与编辑平台，其 Gen-3 Alpha 模型可从文字或图片生成高质量短视频，被好莱坞后期制作团队广泛使用。本教程涵盖文生视频、图生视频和视频编辑三大核心功能。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/runway-guide.html" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
+    footer{text-align:center;color:#64748b;padding:28px 16px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Runway AI 视频生成教程</h1>
+    <p>Runway 是最专业的 AI 视频生成与编辑平台，其 Gen-3 Alpha 模型可从文字或图片生成高质量短视频，被好莱坞后期制作团队广泛使用。本教程涵盖文生视频、图生视频和视频编辑三大核心功能。</p>
+    <div class="meta">
+      <span>Runway</span>
+      <span>AI Video</span>
+      <span>进阶</span>
+      <span>5 分钟阅读</span>
+      <span>更新：2025-06</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://runwayml.com" target="_blank" rel="noopener nofollow">访问官网 →</a>
+    </div>
+
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>Runway 是最专业的 AI 视频生成与编辑平台，其 Gen-3 Alpha 模型可从文字或图片生成高质量短视频，被好莱坞后期制作团队广泛使用。本教程涵盖文生视频、图生视频和视频编辑三大核心功能。</p>
+    </section>
+
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>注册与免费额度</h2>
+        <p>在 runwayml.com 用 Google 账号注册，免费账号赠送 125 积分，每生成 1 秒视频约消耗 5 积分（Gen-3 Alpha）。积分用完后需订阅（$15/月起）。</p>
+        <div class="image-placeholder">截图预留位置：Runway - 注册与免费额度</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>文字生成视频（Text to Video）</h2>
+        <p>选择「Gen-3 Alpha」→「Text to Video」，输入详细的英文提示词。建议包含：场景、主体动作、镜头运动（slow pan、zoom in）、光线、风格（cinematic、documentary）。</p>
+        <div class="image-placeholder">截图预留位置：Runway - 文字生成视频（Text to Video）</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>图片生成视频（Image to Video）</h2>
+        <p>上传一张参考图，Runway 会在保持画面一致性的前提下生成动态视频。可同时提供首帧（First Frame）和尾帧（Last Frame）来精确控制运镜。</p>
+        <div class="image-placeholder">截图预留位置：Runway - 图片生成视频（Image to Video）</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 4</div>
+        <h2>视频编辑工具</h2>
+        <p>Runway 内置多种 AI 编辑工具：Remove Background（抠图）、Inpainting（局部修改）、Motion Brush（指定区域动态）、Expand（画面外延），可结合使用完成复杂后期效果。</p>
+        <div class="image-placeholder">截图预留位置：Runway - 视频编辑工具</div>
+      </section>
+    
+
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>提示词加上「no text, no watermark」避免生成画面出现文字水印。</li>
+<li>Gen-3 Alpha 生成 10 秒视频效果远好于 4 秒，建议选择更长时长。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
+</body>
+</html>

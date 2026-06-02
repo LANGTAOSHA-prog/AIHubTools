@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midjourney 完整使用教程 - AIHubTools 智汇工具</title>
+  <meta name="description" content="Midjourney 是目前艺术效果最佳的 AI 绘图工具之一，支持通过 Discord 机器人或官方网页端生成图像。其以风格化、高质感著称，被设计师、插画师和创作者广泛使用。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/midjourney-guide.html" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
+    .intro{font-size:17px}
+    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
+    .tips ul{margin:0;padding-left:22px}
+    .tips li{margin-bottom:8px}
+    footer{text-align:center;color:#64748b;padding:28px 16px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Midjourney 完整使用教程</h1>
+    <p>Midjourney 是目前艺术效果最佳的 AI 绘图工具之一，支持通过 Discord 机器人或官方网页端生成图像。其以风格化、高质感著称，被设计师、插画师和创作者广泛使用。</p>
+    <div class="meta">
+      <span>Midjourney</span>
+      <span>AI Image</span>
+      <span>进阶</span>
+      <span>6 分钟阅读</span>
+      <span>更新：2025-06</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://www.midjourney.com" target="_blank" rel="noopener nofollow">访问官网 →</a>
+    </div>
+
+    <section class="card intro">
+      <h2>适合谁看？</h2>
+      <p>Midjourney 是目前艺术效果最佳的 AI 绘图工具之一，支持通过 Discord 机器人或官方网页端生成图像。其以风格化、高质感著称，被设计师、插画师和创作者广泛使用。</p>
+    </section>
+
+    
+      <section class="card step-card">
+        <div class="step-num">步骤 1</div>
+        <h2>订阅与登录</h2>
+        <p>访问 midjourney.com，用 Discord 账号登录后选择订阅套餐（最低 $10/月，含 200 次生成）。建议从 Basic 开始体验。</p>
+        <div class="image-placeholder">截图预留位置：Midjourney - 订阅与登录</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 2</div>
+        <h2>编写提示词（Prompt）</h2>
+        <p>基本结构：主体描述 + 风格 + 光线 + 镜头/构图 + 质量参数。例：「A futuristic city at sunset, cyberpunk style, neon lights, cinematic shot, ultra realistic, 8K --ar 16:9 --v 6」</p>
+        <div class="image-placeholder">截图预留位置：Midjourney - 编写提示词（Prompt）</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 3</div>
+        <h2>常用参数速查</h2>
+        <p>--ar 比例（16:9 横屏 / 9:16 竖屏 / 1:1 方形）；--v 6.1 最新版本；--style raw 减少过度艺术化；--q 0.5 加速生成（降低质量）；--no text 去除图中文字。</p>
+        <div class="image-placeholder">截图预留位置：Midjourney - 常用参数速查</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 4</div>
+        <h2>Vary 与 Upscale</h2>
+        <p>生成 4 张图后，点击 V1-V4 对某张图进行变体生成，或点击 U1-U4 放大单张图至高清。Vary（Subtle）微调，Vary（Strong）大幅重构。</p>
+        <div class="image-placeholder">截图预留位置：Midjourney - Vary 与 Upscale</div>
+      </section>
+    
+
+      <section class="card step-card">
+        <div class="step-num">步骤 5</div>
+        <h2>参考图与风格迁移</h2>
+        <p>在提示词开头粘贴图片 URL 可作为参考图，--iw 2 增大参考权重（0-2）。使用 --sref URL 可提取特定图片的风格（Style Reference）。</p>
+        <div class="image-placeholder">截图预留位置：Midjourney - 参考图与风格迁移</div>
+      </section>
+    
+
+    <section class="card tips">
+      <h2>实用小建议</h2>
+      <ul>
+        <li>中文提示词效果不如英文，建议先用 ChatGPT 将中文创意翻译成详细的英文 Prompt，再粘贴至 Midjourney。</li>
+<li>避免提示词超过 60 个单词，过长反而会稀释重点，导致效果变差。</li>
+<li>使用 /describe 命令上传任意图片，Midjourney 会自动反向生成提示词，便于学习和复刻风格。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
+</body>
+</html>

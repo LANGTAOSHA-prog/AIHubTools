@@ -71,3 +71,5 @@ jobs:
             git commit -m "Fix mobile layout for tools section"
             git push
           fi
+
+# trigger: 2026-06-03-mobile-fix

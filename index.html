@@ -999,7 +999,7 @@ function renderToolPage(){
   toolsGrid.innerHTML=pageItems.map(tt=>{
     const name=getName(tt),category=getCategory(tt),typeVal=getType(tt),desc=getDescription(tt),website=getWebsite(tt),tags=getTags(tt).slice(0,3),featured=bool(tt.featured);
     const tutorialEnabled=(tt.tutorial_enabled===true||String(tt.tutorial_enabled).toLowerCase()==='true');
-    const tutorialUrl=tt.tutorial_url||(tt.tutorial_slug?`articles/${tt.tutorial_slug}.html`:'');
+    const tutorialUrl=tt.tutorial_url||(tt.tutorial_slug?`tutorials/${tt.tutorial_slug}.html`:'');
     const faved=favs.has(name),cmpd=compareSet.has(name),hot=hotSet.has(name);
     const hashTags=tags.map(x=>`<span class="tag tag-hash">#${esc(x)}</span>`).join('');
     const nameHtml=highlight(name||t('no_desc'),q);

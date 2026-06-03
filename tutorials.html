@@ -34,12 +34,32 @@
     .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap}
     .section-title{font-size:clamp(26px,4vw,34px);margin:0;letter-spacing:-.03em}
     .section-desc{color:var(--muted);font-size:15px;margin-top:6px;line-height:1.7}
+    .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:0 0 26px}
+    .stat{background:white;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    .stat-label{font-size:13px;color:var(--muted);font-weight:800;margin-bottom:6px}
+    .stat-value{font-size:28px;font-weight:900;letter-spacing:-.04em;color:#1e293b}
+    .panel{background:white;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-bottom:26px}
+    .panel-title{font-size:20px;font-weight:900;margin:0 0 14px;letter-spacing:-.02em}
+    .popular-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .popular-card{display:block;text-decoration:none;color:var(--text);padding:16px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#fff,#f8fafc);transition:.18s}
+    .popular-card:hover{transform:translateY(-2px);border-color:rgba(37,99,235,.32);box-shadow:0 14px 28px rgba(37,99,235,.10)}
+    .popular-tag{font-size:12px;font-weight:900;color:#2563eb;margin-bottom:6px}
+    .popular-title{font-size:15px;font-weight:900;line-height:1.35}
+    .controls{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:14px;align-items:center;margin-bottom:24px}
+    .searchbox{position:relative}
+    .searchbox span{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#64748b}
+    .searchbox input{width:100%;border:1px solid var(--line);border-radius:999px;padding:14px 16px 14px 44px;font-size:15px;font-weight:700;outline:none;background:white;box-shadow:0 8px 18px rgba(15,23,42,.06)}
+    .searchbox input:focus{border-color:#2563eb;box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .filter-btn{border:1px solid var(--line);background:white;color:#334155;border-radius:999px;padding:10px 14px;font-size:13px;font-weight:900;cursor:pointer;transition:.18s}
+    .filter-btn:hover,.filter-btn.active{background:#2563eb;color:white;border-color:#2563eb}
+    .result-info{color:var(--muted);font-weight:800;margin:-10px 0 18px;font-size:14px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column;min-height:100%}
     .card:hover{transform:translateY(-4px);box-shadow:0 20px 42px rgba(37,99,235,.14);border-color:rgba(37,99,235,.28)}
     .cover{height:168px;position:relative;overflow:hidden;background:linear-gradient(135deg,#2563eb,#7c3aed);display:flex;align-items:center;justify-content:center;color:white}
-    .cover img{width:100%;height:100%;object-fit:cover;display:block}
-    .cover-fallback{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.26),transparent 30%),linear-gradient(135deg,#2563eb,#7c3aed)}
+    .cover img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:2}
+    .cover-fallback{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:space-between;padding:18px;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.26),transparent 30%),linear-gradient(135deg,#2563eb,#7c3aed)}
     .cover-tool{font-size:14px;font-weight:800;opacity:.92}
     .cover-title{font-size:24px;line-height:1.18;font-weight:900;letter-spacing:-.04em;max-width:92%}
     .content{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
@@ -54,8 +74,8 @@
     .btn:hover{filter:brightness(1.05)}
     .loading,.empty{background:white;border-radius:18px;padding:28px;text-align:center;color:#6b7280;border:1px solid var(--line);box-shadow:var(--shadow)}
     footer{text-align:center;color:#6b7280;padding:34px 15px}
-    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){header{padding:54px 16px 42px}nav{padding:10px 8px}nav a{font-size:14px;padding:8px 11px;margin:3px}.wrap{padding:30px 14px 44px}.grid{grid-template-columns:1fr;gap:18px}.cover{height:158px}.card h3{font-size:20px}}
+    @media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(3,1fr)}.popular-grid{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:1fr}.filters{justify-content:flex-start}}
+    @media(max-width:640px){header{padding:54px 16px 42px}nav{padding:10px 8px}nav a{font-size:14px;padding:8px 11px;margin:3px}.wrap{padding:30px 14px 44px}.grid{grid-template-columns:1fr;gap:18px}.cover{height:158px}.card h3{font-size:20px}.stats{grid-template-columns:repeat(2,1fr);gap:10px}.stat{padding:14px}.stat-value{font-size:24px}.popular-grid{grid-template-columns:1fr}.filter-btn{padding:9px 12px}}
   </style>
 </head>
 <body>
@@ -76,10 +96,30 @@
   <div class="section-head">
     <div>
       <h2 class="section-title">最新教程</h2>
-      <div class="section-desc">包含封面图、阅读时间、发布日期、难度等级和分类标签。</div>
+      <div class="section-desc">支持搜索、分类筛选、热门推荐，并显示封面图、阅读时间、发布日期、难度等级和分类标签。</div>
     </div>
   </div>
+
   <div id="status" class="loading">正在加载教程数据...</div>
+
+  <section id="statsBox" class="stats" style="display:none"></section>
+
+  <section id="popularBox" class="panel" style="display:none">
+    <h2 class="panel-title">🔥 热门教程</h2>
+    <div id="popularGrid" class="popular-grid"></div>
+  </section>
+
+  <section id="controlBox" style="display:none">
+    <div class="controls">
+      <div class="searchbox">
+        <span>🔍</span>
+        <input id="searchInput" type="search" placeholder="搜索教程，例如 ChatGPT、Claude、GitHub、Cursor">
+      </div>
+      <div id="filters" class="filters"></div>
+    </div>
+    <div id="resultInfo" class="result-info"></div>
+  </section>
+
   <div id="tutorialGrid" class="grid"></div>
 </main>
 
@@ -89,6 +129,9 @@
 
 <script>
 const DATA_URL = './tutorials-data.json';
+let ALL_TUTORIALS = [];
+let currentCategory = '全部';
+let currentKeyword = '';
 
 function clean(v){ return v === undefined || v === null ? '' : String(v).trim(); }
 function escapeHtml(v){ return clean(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
@@ -115,46 +158,105 @@ function coverPath(t){
 function fallbackCover(title, tool){
   return `<div class="cover-fallback"><div class="cover-tool">${escapeHtml(tool || 'AIHubTools')}</div><div class="cover-title">${escapeHtml(title)}</div></div>`;
 }
-
+function getTutorial(t){
+  const category = clean(t.category || t.tutorial_category || 'AI工具教程');
+  const title = clean(t.title || t.tutorial_title || 'AI工具教程');
+  const summary = clean(t.summary || t.intro || t.tutorial_summary || '查看这篇教程，了解该工具的基础用法和实用技巧。');
+  const slug = clean(t.slug || t.tutorial_slug);
+  const tool = clean(t.tool || category || 'AIHubTools');
+  const difficulty = clean(t.difficulty || '入门');
+  const readTime = clean(t.read_time || t.readTime || 5);
+  const updated = clean(t.updated || t.updated_at || '2026-06');
+  const cover = coverPath(t);
+  const url = './tutorials/' + slug + '.html';
+  return {category,title,summary,slug,tool,difficulty,readTime,updated,cover,url};
+}
+function cardTemplate(item){
+  return `
+    <article class="card">
+      <div class="cover">
+        ${item.cover ? `<img src="${escapeAttr(item.cover)}" alt="${escapeAttr(item.title)}封面" loading="lazy" onerror="this.style.display='none'">` : ''}
+        ${fallbackCover(item.title, item.tool)}
+      </div>
+      <div class="content">
+        <div class="meta-row">
+          <span class="chip ${difficultyClass(item.difficulty)}">${difficultyIcon(item.difficulty)} ${escapeHtml(item.difficulty)}</span>
+          <span class="chip">⏱ ${escapeHtml(item.readTime)}分钟</span>
+          <span class="chip">📅 ${escapeHtml(item.updated)}</span>
+          <span class="chip">🏷 ${escapeHtml(item.category)}</span>
+        </div>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.summary)}</p>
+        <a class="btn" href="${escapeAttr(item.url)}">开始学习 →</a>
+      </div>
+    </article>`;
+}
+function renderStats(items){
+  const total = items.length;
+  const entry = items.filter(i => /入门|Beginner|初級/.test(i.difficulty)).length;
+  const mid = items.filter(i => /中级|中級|Intermediate/.test(i.difficulty)).length;
+  const hard = items.filter(i => /高级|专业|进阶|Advanced|上級/.test(i.difficulty)).length;
+  const categories = new Set(items.map(i => i.category)).size;
+  document.getElementById('statsBox').innerHTML = `
+    <div class="stat"><div class="stat-label">📚 教程总数</div><div class="stat-value">${total}</div></div>
+    <div class="stat"><div class="stat-label">🟢 入门教程</div><div class="stat-value">${entry}</div></div>
+    <div class="stat"><div class="stat-label">🟡 中级教程</div><div class="stat-value">${mid}</div></div>
+    <div class="stat"><div class="stat-label">🔴 高级教程</div><div class="stat-value">${hard}</div></div>
+    <div class="stat"><div class="stat-label">🏷 教程分类</div><div class="stat-value">${categories}</div></div>`;
+  document.getElementById('statsBox').style.display = 'grid';
+}
+function renderPopular(items){
+  const hotSlugs = ['chatgpt-guide','claude-guide','github-create-repo-aihubtools','cursor-guide'];
+  const hot = hotSlugs.map(s => items.find(i => i.slug === s)).filter(Boolean);
+  if(!hot.length) return;
+  document.getElementById('popularGrid').innerHTML = hot.map(i => `
+    <a class="popular-card" href="${escapeAttr(i.url)}">
+      <div class="popular-tag">🔥 ${escapeHtml(i.category)}</div>
+      <div class="popular-title">${escapeHtml(i.title)}</div>
+    </a>`).join('');
+  document.getElementById('popularBox').style.display = 'block';
+}
+function renderFilters(items){
+  const categories = ['全部', ...Array.from(new Set(items.map(i => i.category))).filter(Boolean)];
+  document.getElementById('filters').innerHTML = categories.map(c => `<button class="filter-btn ${c === currentCategory ? 'active' : ''}" data-category="${escapeAttr(c)}">${escapeHtml(c)}</button>`).join('');
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentCategory = btn.dataset.category || '全部';
+      renderFiltered();
+    });
+  });
+  document.getElementById('controlBox').style.display = 'block';
+}
+function renderFiltered(){
+  const grid = document.getElementById('tutorialGrid');
+  const info = document.getElementById('resultInfo');
+  const keyword = currentKeyword.toLowerCase();
+  const filtered = ALL_TUTORIALS.filter(i => {
+    const categoryOK = currentCategory === '全部' || i.category === currentCategory;
+    const text = `${i.title} ${i.summary} ${i.tool} ${i.category} ${i.difficulty}`.toLowerCase();
+    const keywordOK = !keyword || text.includes(keyword);
+    return categoryOK && keywordOK;
+  });
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.category === currentCategory));
+  info.textContent = `当前显示 ${filtered.length} / ${ALL_TUTORIALS.length} 篇教程`;
+  grid.innerHTML = filtered.length ? filtered.map(cardTemplate).join('') : `<div class="empty" style="grid-column:1/-1">没有找到匹配的教程，请换个关键词试试。</div>`;
+}
 async function loadTutorials(){
   const status = document.getElementById('status');
-  const grid = document.getElementById('tutorialGrid');
   try{
     const res = await fetch(DATA_URL + '?v=' + Date.now(), {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP ' + res.status);
-    const tutorials = normalizeData(await res.json()).filter(t => clean(t.slug));
-    if(!tutorials.length){ status.className='empty'; status.textContent='暂时还没有教程。'; return; }
+    ALL_TUTORIALS = normalizeData(await res.json()).filter(t => clean(t.slug || t.tutorial_slug)).map(getTutorial);
+    if(!ALL_TUTORIALS.length){ status.className='empty'; status.textContent='暂时还没有教程。'; return; }
     status.style.display = 'none';
-    grid.innerHTML = tutorials.map(t => {
-      const category = clean(t.category || t.tutorial_category || 'AI工具教程');
-      const title = clean(t.title || t.tutorial_title || 'AI工具教程');
-      const summary = clean(t.summary || t.intro || t.tutorial_summary || '查看这篇教程，了解该工具的基础用法和实用技巧。');
-      const slug = clean(t.slug || t.tutorial_slug);
-      const tool = clean(t.tool || category || 'AIHubTools');
-      const difficulty = clean(t.difficulty || '入门');
-      const readTime = clean(t.read_time || t.readTime || 5);
-      const updated = clean(t.updated || t.updated_at || '2026-06');
-      const cover = coverPath(t);
-      const url = './tutorials/' + slug + '.html';
-      return `
-        <article class="card">
-          <div class="cover">
-            ${cover ? `<img src="${escapeAttr(cover)}" alt="${escapeAttr(title)}封面" loading="lazy" onerror="this.style.display='none'">` : ''}
-            ${fallbackCover(title, tool)}
-          </div>
-          <div class="content">
-            <div class="meta-row">
-              <span class="chip ${difficultyClass(difficulty)}">${difficultyIcon(difficulty)} ${escapeHtml(difficulty)}</span>
-              <span class="chip">⏱ ${escapeHtml(readTime)}分钟</span>
-              <span class="chip">📅 ${escapeHtml(updated)}</span>
-              <span class="chip">🏷 ${escapeHtml(category)}</span>
-            </div>
-            <h3>${escapeHtml(title)}</h3>
-            <p>${escapeHtml(summary)}</p>
-            <a class="btn" href="${escapeAttr(url)}">开始学习 →</a>
-          </div>
-        </article>`;
-    }).join('');
+    renderStats(ALL_TUTORIALS);
+    renderPopular(ALL_TUTORIALS);
+    renderFilters(ALL_TUTORIALS);
+    renderFiltered();
+    document.getElementById('searchInput').addEventListener('input', e => {
+      currentKeyword = clean(e.target.value);
+      renderFiltered();
+    });
   }catch(err){ status.className='empty'; status.textContent='教程数据读取失败：' + err.message; }
 }
 loadTutorials();

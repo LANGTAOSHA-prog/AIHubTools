@@ -658,5 +658,16 @@
       { "zh": "克隆声音时，录音质量比时长更重要。用安静的环境 + 麦克风录制 1 分钟，胜过嘈杂环境录制 10 分钟。", "en": "For voice cloning, audio quality matters more than length. 1 minute in a quiet room with a mic beats 10 minutes of noisy audio.", "ja": "声のクローンでは、録音の長さより品質が重要。静かな部屋でマイクを使った1分が、騒がしい環境での10分に勝ります。" },
       { "zh": "设置 Stability 较高（0.7以上）可减少情感波动，适合正式旁白；降低 Stability 可让声音更生动有情绪。", "en": "Higher Stability (0.7+) reduces emotional variation — better for formal narration. Lower Stability adds more expressive emotion.", "ja": "Stability を高く（0.7以上）設定すると感情変動が減りフォーマルなナレーションに最適。低くすると声がより表情豊かになります。" }
     ]
+    {
+  "slug": "github-create-repo-aihubtools",
+  "tool": "GitHub",
+  "website": "https://github.com",
+  "category": "网站搭建",
+  "difficulty": "入门",
+  "read_time": 6,
+  "updated": "2026-06",
+  "title": "GitHub 新建仓库完整教程：创建 AIHubTools 项目仓库",
+  "summary": "适合初学者的 GitHub 新建仓库教程，手把手演示创建 AIHubTools 仓库、填写仓库信息、上传文件与发布网站的完整流程。"
+}
   }
 ]

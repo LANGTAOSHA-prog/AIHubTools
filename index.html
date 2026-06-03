@@ -13,16 +13,8 @@
   <div class="box"><div class="loader"></div><h1>AIHubTools 正在加载...</h1><p>如果页面长时间没有打开，请刷新一次。</p></div>
   <script>
     const SOURCE_URL = 'https://raw.githubusercontent.com/LANGTAOSHA-prog/AIHubTools/c571a1d9bd37b60f4b7fc4254c5645cb4fb3a350/index.html';
-    const DETAIL_MAP = {
-      'DALL·E 3':'dalle-3','DALL-E 3':'dalle-3','Canva AI':'canva-ai','v0 by Vercel':'v0-by-vercel','Perplexity AI':'perplexity-ai','Kling AI':'kling-ai','Hailuo AI':'hailuo-ai','Fireflies AI Advanced':'fireflies-ai-2','Descript Advanced':'descript-ai','ElevenLabs Pro':'elevenlabs-pro','Superhuman AI':'superhuman-ai','Mem AI':'mem-ai','tl;dv':'tldv','You.com':'you-com','Copy.ai':'copy-ai','Cleanup.pictures':'cleanup-pictures',"Let's Enhance":'lets-enhance'
-    };
     function safeText(el){return (el && el.textContent ? el.textContent : '').trim();}
-    function slugify(v){
-      var s = String(v||'').trim().toLowerCase();
-      s = s.replace(/·/g,'').replace(/[’']/g,'').replace(/[;:]/g,'').replace(/&/g,'and').replace(/\+/g,'plus');
-      return s.replace(/[^a-z0-9\s.-]+/g,'').replace(/\./g,'-').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-+|-+$/g,'');
-    }
-    function detailHref(name){return 'tools/' + (DETAIL_MAP[name] || slugify(name)) + '.html';}
+    function detailHref(name){return './tool.html?name=' + encodeURIComponent(String(name||'').trim());}
     function addDetailButtons(){
       document.querySelectorAll('.tool-card').forEach(function(card){
         var name = safeText(card.querySelector('.tool-name'));
@@ -60,7 +52,7 @@
         document.close();
         setTimeout(startDetailPatch,0);
       }catch(err){
-        document.body.innerHTML = '<div class="box"><h1>首页加载失败</h1><p>请稍后刷新，或进入 <a href="tutorials.html">教程中心</a> / <a href="tools/chatgpt.html">ChatGPT详情页</a>。</p><p style="opacity:.65">' + String(err.message).replace(/[<>]/g,'') + '</p></div>';
+        document.body.innerHTML = '<div class="box"><h1>首页加载失败</h1><p>请稍后刷新，或进入 <a href="tutorials.html">教程中心</a> / <a href="tool.html?name=ChatGPT">ChatGPT详情页</a>。</p><p style="opacity:.65">' + String(err.message).replace(/[<>]/g,'') + '</p></div>';
       }
     }
     loadHome();

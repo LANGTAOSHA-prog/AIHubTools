@@ -13,89 +13,52 @@
   <div class="box"><div class="loader"></div><h1>AIHubTools 正在加载...</h1><p>如果页面长时间没有打开，请刷新一次。</p></div>
   <script>
     const SOURCE_URL = 'https://raw.githubusercontent.com/LANGTAOSHA-prog/AIHubTools/c571a1d9bd37b60f4b7fc4254c5645cb4fb3a350/index.html';
-    const DETAIL_PATCH = `
-<script>
-(function(){
-  var DETAIL_MAP = {
-    'DALL·E 3':'dalle-3',
-    'DALL-E 3':'dalle-3',
-    'Canva AI':'canva-ai',
-    'v0 by Vercel':'v0-by-vercel',
-    'Perplexity AI':'perplexity-ai',
-    'Kling AI':'kling-ai',
-    'Hailuo AI':'hailuo-ai',
-    'Fireflies AI Advanced':'fireflies-ai-2',
-    'Descript Advanced':'descript-ai',
-    'ElevenLabs Pro':'elevenlabs-pro',
-    'Superhuman AI':'superhuman-ai',
-    'Mem AI':'mem-ai',
-    'tl;dv':'tldv',
-    'You.com':'you-com',
-    'Copy.ai':'copy-ai',
-    'Cleanup.pictures':'cleanup-pictures',
-    "Let's Enhance":'lets-enhance'
-  };
-  function safeText(el){return (el && el.textContent ? el.textContent : '').trim();}
-  function slugify(v){
-    var s = String(v||'').trim().toLowerCase();
-    s = s.replace(/·/g,'').replace(/[’']/g,'').replace(/[;:]/g,'');
-    s = s.replace(/&/g,'and').replace(/\+/g,'plus');
-    s = s.replace(/[^a-z0-9\s.-]+/g,'').replace(/\./g,'-').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-+|-+$/g,'');
-    return s;
-  }
-  function detailHref(name){return 'tools/' + (DETAIL_MAP[name] || slugify(name)) + '.html';}
-  function addDetailButtons(){
-    document.querySelectorAll('.tool-card').forEach(function(card){
-      var name = safeText(card.querySelector('.tool-name'));
-      if(!name) return;
-      var footer = card.querySelector('.tool-footer');
-      if(!footer){
-        footer = document.createElement('div');
-        footer.className = 'tool-footer';
-        card.appendChild(footer);
-      }
-      var link = card.querySelector('.tc-detail-btn');
-      if(!link){
-        link = document.createElement('a');
-        link.className = 'tc-btn tc-btn-outline tc-detail-btn';
-        link.textContent = '📄 详情';
-        footer.insertBefore(link, footer.children.length > 1 ? footer.children[1] : null);
-      }
-      link.href = detailHref(name);
-      link.setAttribute('aria-label', name + ' 详情页');
-    });
-  }
-  function wrapRender(fnName){
-    var old = window[fnName];
-    if(typeof old !== 'function' || old.__detailPatched) return;
-    window[fnName] = function(){
-      var r = old.apply(this, arguments);
-      setTimeout(addDetailButtons, 0);
-      setTimeout(addDetailButtons, 120);
-      return r;
+    const DETAIL_MAP = {
+      'DALL·E 3':'dalle-3','DALL-E 3':'dalle-3','Canva AI':'canva-ai','v0 by Vercel':'v0-by-vercel','Perplexity AI':'perplexity-ai','Kling AI':'kling-ai','Hailuo AI':'hailuo-ai','Fireflies AI Advanced':'fireflies-ai-2','Descript Advanced':'descript-ai','ElevenLabs Pro':'elevenlabs-pro','Superhuman AI':'superhuman-ai','Mem AI':'mem-ai','tl;dv':'tldv','You.com':'you-com','Copy.ai':'copy-ai','Cleanup.pictures':'cleanup-pictures',"Let's Enhance":'lets-enhance'
     };
-    window[fnName].__detailPatched = true;
-  }
-  function boot(){
-    wrapRender('renderToolPage');
-    wrapRender('renderTools');
-    addDetailButtons();
-  }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
-  setTimeout(boot,300);
-  setTimeout(boot,1000);
-  setInterval(addDetailButtons,1500);
-})();
-<\/script>`;
+    function safeText(el){return (el && el.textContent ? el.textContent : '').trim();}
+    function slugify(v){
+      var s = String(v||'').trim().toLowerCase();
+      s = s.replace(/·/g,'').replace(/[’']/g,'').replace(/[;:]/g,'').replace(/&/g,'and').replace(/\+/g,'plus');
+      return s.replace(/[^a-z0-9\s.-]+/g,'').replace(/\./g,'-').replace(/\s+/g,'-').replace(/-+/g,'-').replace(/^-+|-+$/g,'');
+    }
+    function detailHref(name){return 'tools/' + (DETAIL_MAP[name] || slugify(name)) + '.html';}
+    function addDetailButtons(){
+      document.querySelectorAll('.tool-card').forEach(function(card){
+        var name = safeText(card.querySelector('.tool-name'));
+        if(!name) return;
+        var footer = card.querySelector('.tool-footer');
+        if(!footer){footer=document.createElement('div');footer.className='tool-footer';card.appendChild(footer);}
+        var link = card.querySelector('.tc-detail-btn');
+        if(!link){
+          link=document.createElement('a');
+          link.className='tc-btn tc-btn-outline tc-detail-btn';
+          link.textContent='📄 详情';
+          link.style.borderColor='rgba(124,106,252,.45)';
+          link.style.color='var(--text,#fff)';
+          footer.insertBefore(link, footer.children.length>1 ? footer.children[1] : null);
+        }
+        link.href=detailHref(name);
+        link.setAttribute('aria-label', name + ' 详情页');
+      });
+    }
+    function startDetailPatch(){
+      addDetailButtons();
+      setTimeout(addDetailButtons,100);
+      setTimeout(addDetailButtons,500);
+      setTimeout(addDetailButtons,1200);
+      setInterval(addDetailButtons,1500);
+      try{new MutationObserver(addDetailButtons).observe(document.body,{childList:true,subtree:true});}catch(e){}
+    }
     async function loadHome(){
       try{
         const res = await fetch(SOURCE_URL, {cache:'no-store'});
         if(!res.ok) throw new Error('HTTP ' + res.status);
         let html = await res.text();
-        html = html.replace('</body>', DETAIL_PATCH + '\n</body>');
         document.open();
         document.write(html);
         document.close();
+        setTimeout(startDetailPatch,0);
       }catch(err){
         document.body.innerHTML = '<div class="box"><h1>首页加载失败</h1><p>请稍后刷新，或进入 <a href="tutorials.html">教程中心</a> / <a href="tools/chatgpt.html">ChatGPT详情页</a>。</p><p style="opacity:.65">' + String(err.message).replace(/[<>]/g,'') + '</p></div>';
       }

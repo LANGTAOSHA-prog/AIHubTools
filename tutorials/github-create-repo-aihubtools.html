@@ -1,181 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>GitHub 新建仓库完整教程：创建 AIHubTools 项目仓库</title>
-  <meta name="description" content="适合初学者的 GitHub 新建仓库教程，手把手演示注册登录 GitHub、创建 AIHubTools 仓库、上传 HTML 教程文件、上传教程图片到指定目录。" />
-  <meta name="keywords" content="GitHub教程, 新建仓库, AIHubTools, GitHub Pages, 上传HTML, 上传图片, 教程图片目录" />
-  <style>
-    :root{
-      --bg:#08090f;--surface:#0f1120;--surface2:#151829;--card:#1e293b;
-      --border:rgba(255,255,255,.09);--border2:rgba(255,255,255,.16);
-      --text:#f0f2ff;--muted:#9ca3af;--accent:#7c6afc;--accent2:#e040fb;
-      --green:#00d68f;--yellow:#ffd166;--radius:20px;--shadow:0 20px 48px -12px rgba(0,0,0,.5);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;
-      background:
-        radial-gradient(ellipse 70% 55% at 15% 8%,rgba(124,106,252,.18),transparent 60%),
-        radial-gradient(ellipse 55% 45% at 86% 4%,rgba(224,64,251,.13),transparent 60%),
-        var(--bg);
-      color:var(--text);line-height:1.85;
-    }
-    a{color:#c4b5fd;text-decoration:none}
-    img{max-width:100%;display:block}
-    .wrap{max-width:1080px;margin:0 auto;padding:22px 16px 70px}
-    .topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
-    .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;box-shadow:0 0 22px rgba(124,106,252,.35)}
-    .nav{display:flex;gap:10px;flex-wrap:wrap}
-    .nav a{padding:9px 14px;border-radius:999px;border:1px solid var(--border2);background:rgba(255,255,255,.05);color:var(--text);font-size:14px}
-    .hero{padding:34px 24px;border:1px solid var(--border2);border-radius:28px;background:linear-gradient(135deg,rgba(124,106,252,.20),rgba(224,64,251,.10));box-shadow:var(--shadow)}
-    .badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(124,106,252,.18);border:1px solid rgba(196,181,253,.25);color:#ddd6fe;font-size:13px;font-weight:800;margin-bottom:14px}
-    h1,h2,h3{line-height:1.35;margin:0 0 14px}
-    h1{font-size:clamp(28px,5vw,46px);letter-spacing:-.04em}
-    h2{font-size:clamp(22px,4vw,30px);letter-spacing:-.03em}
-    h3{font-size:20px}
-    p{margin:0 0 15px;color:#e5e7eb}
-    .lead{font-size:17px;color:#dbeafe}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .pill{font-size:13px;color:#d1d5db;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border)}
-    .card{margin-top:22px;padding:24px;border-radius:var(--radius);background:rgba(15,17,32,.88);border:1px solid var(--border);box-shadow:var(--shadow)}
-    .toc ul,.list{margin:0;padding-left:20px}.toc li,.list li{margin:7px 0;color:#dbe4ef}
-    .figure{margin:22px 0;border-radius:18px;overflow:hidden;border:1px solid var(--border2);background:#fff}
-    .figure img{width:100%;height:auto;background:#fff}
-    .caption{padding:13px 15px;color:#dbeafe;font-size:14px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.12));border-top:1px solid var(--border)}
-    .caption strong{color:#fff}
-    .note,.warn,.ok{margin:18px 0;padding:15px 16px;border-radius:16px;border:1px solid var(--border)}
-    .note{background:rgba(59,130,246,.10)}.warn{background:rgba(245,158,11,.10)}.ok{background:rgba(34,197,94,.10)}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(255,255,255,.08);padding:.12em .42em;border-radius:7px;color:#fff}
-    .steps{counter-reset:step}
-    .step{counter-increment:step;position:relative;padding:20px 18px 18px 66px;margin:16px 0;background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:18px}
-    .step:before{content:counter(step);position:absolute;left:18px;top:19px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:white;background:linear-gradient(135deg,var(--accent),var(--accent2))}
-    .pathbox{background:#0b1220;border:1px solid var(--border2);padding:14px 16px;border-radius:14px;margin:14px 0;overflow:auto}
-    .footer{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}
-    @media(max-width:680px){.wrap{padding:14px 12px 46px}.hero,.card{padding:18px}.nav a{font-size:13px}.step{padding-left:58px}.step:before{left:14px}}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>GitHub 新建仓库完整教程：创建 AIHubTools 项目仓库</title>
+<meta name="description" content="适合初学者的 GitHub 新建仓库教程，手把手演示注册登录 GitHub、创建 AIHubTools 仓库、上传 HTML 教程文件、上传教程图片到指定目录。" />
+<meta name="keywords" content="GitHub教程, 新建仓库, AIHubTools, GitHub Pages, 上传HTML, 上传图片, 教程图片目录" />
+<style>
+:root{--bg:#08090f;--surface:#0f1120;--border:rgba(255,255,255,.1);--border2:rgba(255,255,255,.18);--text:#f0f2ff;--muted:#9ca3af;--accent:#7c6afc;--accent2:#e040fb;--green:#00d68f;--radius:20px;--shadow:0 20px 48px -12px rgba(0,0,0,.5)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(ellipse 70% 55% at 15% 8%,rgba(124,106,252,.18),transparent 60%),radial-gradient(ellipse 55% 45% at 86% 4%,rgba(224,64,251,.13),transparent 60%),var(--bg);color:var(--text);line-height:1.85}a{color:#c4b5fd;text-decoration:none}img{max-width:100%;display:block}.wrap{max-width:1080px;margin:0 auto;padding:22px 16px 70px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;box-shadow:0 0 22px rgba(124,106,252,.35)}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:9px 14px;border-radius:999px;border:1px solid var(--border2);background:rgba(255,255,255,.05);color:var(--text);font-size:14px}.hero{padding:34px 24px;border:1px solid var(--border2);border-radius:28px;background:linear-gradient(135deg,rgba(124,106,252,.20),rgba(224,64,251,.10));box-shadow:var(--shadow)}.badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(124,106,252,.18);border:1px solid rgba(196,181,253,.25);color:#ddd6fe;font-size:13px;font-weight:800;margin-bottom:14px}h1,h2,h3{line-height:1.35;margin:0 0 14px}h1{font-size:clamp(28px,5vw,46px);letter-spacing:-.04em}h2{font-size:clamp(22px,4vw,30px);letter-spacing:-.03em}h3{font-size:20px}p{margin:0 0 15px;color:#e5e7eb}.lead{font-size:17px;color:#dbeafe}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{font-size:13px;color:#d1d5db;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border)}.card{margin-top:22px;padding:24px;border-radius:var(--radius);background:rgba(15,17,32,.88);border:1px solid var(--border);box-shadow:var(--shadow)}.toc ul,.list{margin:0;padding-left:20px}.toc li,.list li{margin:7px 0;color:#dbe4ef}.figure{margin:22px 0;border-radius:18px;overflow:hidden;border:1px solid var(--border2);background:#fff}.figure img{width:100%;height:auto;background:#fff}.figure.broken{background:#111827;padding:18px}.figure.broken img{display:none}.figure.broken:before{content:"图片暂未加载，请检查 GitHub 图片路径或稍后刷新页面。";display:block;color:#fbbf24;text-align:center;padding:28px 12px}.caption{padding:13px 15px;color:#dbeafe;font-size:14px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.12));border-top:1px solid var(--border)}.caption strong{color:#fff}.note,.warn,.ok{margin:18px 0;padding:15px 16px;border-radius:16px;border:1px solid var(--border)}.note{background:rgba(59,130,246,.10)}.warn{background:rgba(245,158,11,.10)}.ok{background:rgba(34,197,94,.10)}code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(255,255,255,.08);padding:.12em .42em;border-radius:7px;color:#fff}.steps{counter-reset:step}.step{counter-increment:step;position:relative;padding:20px 18px 18px 66px;margin:16px 0;background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:18px}.step:before{content:counter(step);position:absolute;left:18px;top:19px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-weight:900;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2))}.pathbox{background:#0b1220;border:1px solid var(--border2);padding:14px 16px;border-radius:14px;margin:14px 0;overflow:auto}.footer{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}@media(max-width:680px){.wrap{padding:14px 12px 46px}.hero,.card{padding:18px}.nav a{font-size:13px}.step{padding-left:58px}.step:before{left:14px}}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="topbar">
-      <div class="brand"><span class="logo">AI</span><span>AIHubTools 智汇工具</span></div>
-      <nav class="nav">
-        <a href="../index.html">返回首页</a>
-        <a href="../tutorials.html">教程中心</a>
-      </nav>
-    </div>
-
-    <section class="hero">
-      <div class="badge">GitHub 新手教程 · AIHubTools 建站流程</div>
-      <h1>GitHub 新建仓库完整教程：从注册到上传教程图片</h1>
-      <p class="lead">这篇教程专门写给第一次使用 GitHub 的新手。你不需要先懂代码，只要跟着图片一步一步操作，就能创建自己的 <strong>AIHubTools</strong> 仓库，并学会把 HTML 教程文件、教程配图上传到正确目录。</p>
-      <div class="meta">
-        <span class="pill">目标仓库：AIHubTools</span>
-        <span class="pill">适合：零基础新手</span>
-        <span class="pill">内容：建仓库 + 上传 HTML + 上传图片</span>
-        <span class="pill">适配：GitHub Pages</span>
-      </div>
-    </section>
-
-    <section class="card toc">
-      <h2>这篇教程会完成哪些操作</h2>
-      <ul>
-        <li>注册或登录 GitHub 账号</li>
-        <li>创建公开仓库 AIHubTools</li>
-        <li>认识仓库首页和文件入口</li>
-        <li>上传 HTML 教程文件到 <code>tutorials/</code></li>
-        <li>上传教程图片到 <code>images/tutorials/</code> 或子目录</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>一、注册或登录 GitHub</h2>
-      <p>打开 GitHub 后，如果你还没有账号，可以先注册。页面会让你填写 Email、Password、Username 和 Country/Region。用户名以后会出现在仓库链接里，所以建议简单、好记、不要太长。</p>
-
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-01-signup-page.png" alt="GitHub 注册页面" loading="lazy"><div class="caption"><strong>Step 01：</strong>注册 GitHub 账号，填写邮箱、密码、用户名和国家地区。</div></div>
-      <p>如果你选择用 Apple 登录，会跳转到 Apple 账号页面。这里按照提示输入 Apple ID、验证码，并确认是否信任浏览器即可。</p>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-02-apple-login.png" alt="Apple 登录 GitHub" loading="lazy"><div class="caption"><strong>Step 02：</strong>选择 Apple 登录时，会进入 Apple 账号登录页面。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-03-apple-login-confirm.png" alt="Apple 登录确认" loading="lazy"><div class="caption"><strong>Step 03：</strong>输入 Apple ID 后，继续完成登录确认。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-04-apple-code.png" alt="Apple 验证码" loading="lazy"><div class="caption"><strong>Step 04：</strong>输入手机或设备收到的验证码。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-05-trust-browser.png" alt="信任浏览器" loading="lazy"><div class="caption"><strong>Step 05：</strong>自己的电脑可以选择信任浏览器，公共电脑建议不信任。</div></div>
-
-      <div class="warn"><strong>新手提醒：</strong>如果是在公共电脑登录，不要选择“信任此浏览器”。如果是自己的电脑，选择信任可以减少下次登录时的验证步骤。</div>
-    </section>
-
-    <section class="card">
-      <h2>二、创建 AIHubTools 仓库</h2>
-      <p>登录成功后，进入 GitHub 首页。右上角有一个加号按钮，点击后选择 <strong>New repository</strong>。不要点成 New issue，因为 Issue 是记录问题和任务，不是创建项目仓库。</p>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-06-dashboard-new-repo.png" alt="点击 New repository" loading="lazy"><div class="caption"><strong>Step 06：</strong>点击右上角加号，选择 New repository。</div></div>
-
-      <p>进入创建仓库页面后，重点检查三个地方：Owner 是否是你的账号、Repository name 是否填写 <code>AIHubTools</code>、Visibility 是否选择 Public。如果你准备做公开网站，Public 更适合 GitHub Pages。</p>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-07-create-repository-form.png" alt="填写 AIHubTools 仓库信息" loading="lazy"><div class="caption"><strong>Step 07：</strong>填写仓库名称 AIHubTools，选择 Public，然后点击 Create repository。</div></div>
-
-      <div class="steps">
-        <div class="step"><h3>确认 Owner</h3><p>Owner 表示仓库属于谁。个人项目通常选择自己的 GitHub 账号。</p></div>
-        <div class="step"><h3>填写仓库名称</h3><p>在 Repository name 中填写 <code>AIHubTools</code>。建议大小写统一，后续写链接和教程更清楚。</p></div>
-        <div class="step"><h3>选择 Public</h3><p>如果这个仓库要作为公开网站使用，建议选择 Public。</p></div>
-        <div class="step"><h3>点击 Create repository</h3><p>确认无误后点击绿色按钮，仓库就会创建完成。</p></div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>三、认识仓库创建成功后的页面</h2>
-      <p>仓库创建成功后，会看到 Quick setup 页面。出现这个页面，就说明 AIHubTools 仓库已经建立好了。后面你可以从这里创建文件、上传文件，或者复制仓库地址。</p>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-08-repository-created.png" alt="仓库创建成功" loading="lazy"><div class="caption"><strong>Step 08：</strong>仓库创建成功，页面出现 Quick setup。</div></div>
-
-      <p>如果你想先测试仓库能不能保存文件，可以点击 creating a new file。进入新建文件页面后，顶部输入文件名，下面输入内容，最后点击 Commit changes 保存。</p>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-09-create-new-file.png" alt="创建新文件" loading="lazy"><div class="caption"><strong>Step 09：</strong>创建新文件，可以用来测试仓库是否正常保存内容。</div></div>
-    </section>
-
-    <section class="card">
-      <h2>四、上传 HTML 教程文件到仓库</h2>
-      <p>AIHubTools 的教程页面建议统一放在 <code>tutorials/</code> 目录。例如这篇教程可以放在：</p>
-      <div class="pathbox"><code>tutorials/github-create-repo-aihubtools.html</code></div>
-      <p>上传 HTML 文件时，先进入目标仓库，点击 <strong>Add file</strong>，再选择 <strong>Upload files</strong>。如果你已经在本地准备好了 HTML 文件，直接拖进去即可。</p>
-
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-10-upload-html-01.png" alt="点击 Add file 上传 HTML" loading="lazy"><div class="caption"><strong>Step 10.1：</strong>点击 Add file，然后选择 Upload files。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-10-upload-html-02.png" alt="拖入 HTML 文件" loading="lazy"><div class="caption"><strong>Step 10.2：</strong>把 HTML 教程文件拖入上传区域，或点击 choose your files 选择文件。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-10-upload-html-03.png" alt="上传完成返回仓库" loading="lazy"><div class="caption"><strong>Step 10.3：</strong>上传完成后返回仓库，确认 HTML 文件已经出现。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-10-upload-html-04.png" alt="Create new file 创建 HTML" loading="lazy"><div class="caption"><strong>Step 10.4：</strong>也可以用 Create new file 手动创建 HTML 文件，适合直接粘贴代码。</div></div>
-
-      <div class="note"><strong>路径提醒：</strong>教程文件放在 <code>tutorials/</code> 目录后，访问路径一般是 <code>https://用户名.github.io/仓库名/tutorials/文件名.html</code>。</div>
-    </section>
-
-    <section class="card">
-      <h2>五、上传教程图片到指定目录</h2>
-      <p>教程图片不要随便放在根目录。为了后期方便管理，建议统一放到：</p>
-      <div class="pathbox"><code>images/tutorials/github-create-repo/</code></div>
-      <p>这样 HTML 教程里引用图片时，路径就比较清楚。例如教程文件在 <code>tutorials/</code> 目录，图片在 <code>images/tutorials/github-create-repo/</code> 目录，那么 HTML 中可以这样写：</p>
-      <div class="pathbox"><code>&lt;img src="../images/tutorials/github-create-repo/图片名.png" alt="图片说明"&gt;</code></div>
-
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-11-upload-image-01.png" alt="进入 images tutorials 目录上传图片" loading="lazy"><div class="caption"><strong>Step 11.1：</strong>进入 images/tutorials 目录，点击 Add file → Upload files 上传教程图片。</div></div>
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-11-upload-image-02.png" alt="创建图片目录" loading="lazy"><div class="caption"><strong>Step 11.2：</strong>如果目录不存在，可以先用 Create new file 创建 images/tutorials/ 或子目录。</div></div>
-
-      <div class="ok"><strong>推荐命名：</strong>图片名最好统一使用英文和数字，例如 <code>github-repo-step-11-upload-image-01.png</code>。不要使用空格、中文标点或太长的随机名称。</div>
-    </section>
-
-    <section class="card">
-      <h2>六、后续图片和页面怎么放</h2>
-      <p>当你的教程越来越多时，目录一定要提前规划好。建议 HTML 页面统一放在 <code>tutorials/</code>，图片统一放在 <code>images/tutorials/教程名/</code>，这样主页、教程中心、单篇教程之间的链接都更稳定。</p>
-      <div class="pathbox">
-        <code>tutorials/github-create-repo-aihubtools.html</code><br>
-        <code>images/tutorials/github-create-repo/github-repo-step-01-signup-page.png</code><br>
-        <code>images/tutorials/github-create-repo/github-repo-step-10-upload-html-01.png</code>
-      </div>
-      <p>后面如果你继续添加 ChatGPT、Claude、DeepSeek 等教程，也可以沿用同样结构。这样不会因为图片太多导致仓库混乱，也方便你以后批量检查 404 问题。</p>
-
-      <div class="figure"><img src="../images/tutorials/github-create-repo/github-repo-step-10-github-homepage-reference.png" alt="GitHub 首页参考" loading="lazy"><div class="caption"><strong>补充参考：</strong>GitHub 首页和仓库入口，后续可以继续学习上传文件、管理仓库和发布网站。</div></div>
-    </section>
-
-    <section class="card">
-      <h2>写给第一次使用 GitHub 的你</h2>
-      <p>刚开始用 GitHub 时，看见很多英文按钮很正常，不用着急把每个功能都学完。你只要先记住一条主线：创建仓库 → 上传 HTML → 上传图片 → 检查路径 → 打开 GitHub Pages 页面。把这条流程跑通之后，后面添加更多工具页和教程页就会轻松很多。</p>
-      <p>对于 AIHubTools 来说，最重要的是保持目录清晰。教程页面放 <code>tutorials/</code>，教程图片放 <code>images/tutorials/</code>，数据文件放根目录。只要这个规则固定下来，后面维护网站、排查链接、更新教程都会更省心。</p>
-      <div class="footer">© 2026 AIHubTools 智汇工具 · GitHub 新手教程</div>
-    </section>
-  </main>
+<main class="wrap">
+<div class="topbar"><div class="brand"><span class="logo">AI</span><span>AIHubTools 智汇工具</span></div><nav class="nav"><a href="/AIHubTools/index.html">返回首页</a><a href="/AIHubTools/tutorials.html">教程中心</a></nav></div>
+<section class="hero"><div class="badge">GitHub 新手教程 · AIHubTools 建站流程</div><h1>GitHub 新建仓库完整教程：从注册到上传教程图片</h1><p class="lead">这篇教程专门写给第一次使用 GitHub 的新手。你不需要先懂代码，只要跟着图片一步一步操作，就能创建自己的 <strong>AIHubTools</strong> 仓库，并学会把 HTML 教程文件、教程配图上传到正确目录。</p><div class="meta"><span class="pill">目标仓库：AIHubTools</span><span class="pill">适合：零基础新手</span><span class="pill">内容：建仓库 + 上传 HTML + 上传图片</span><span class="pill">适配：GitHub Pages</span></div></section>
+<section class="card toc"><h2>这篇教程会完成哪些操作</h2><ul><li>注册或登录 GitHub 账号</li><li>创建公开仓库 AIHubTools</li><li>认识仓库首页和文件入口</li><li>上传 HTML 教程文件到 <code>tutorials/</code></li><li>上传教程图片到 <code>images/tutorials/</code> 或子目录</li></ul></section>
+<section class="card"><h2>一、注册或登录 GitHub</h2><p>打开 GitHub 后，如果你还没有账号，可以先注册。页面会让你填写 Email、Password、Username 和 Country/Region。用户名以后会出现在仓库链接里，所以建议简单、好记、不要太长。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-01-signup-page.png" alt="GitHub 注册页面" loading="lazy"><div class="caption"><strong>Step 01：</strong>注册 GitHub 账号，填写邮箱、密码、用户名和国家地区。</div></div><p>如果你选择用 Apple 登录，会跳转到 Apple 账号页面。这里按照提示输入 Apple ID、验证码，并确认是否信任浏览器即可。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-02-apple-login.png" alt="Apple 登录 GitHub" loading="lazy"><div class="caption"><strong>Step 02：</strong>选择 Apple 登录时，会进入 Apple 账号登录页面。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-03-apple-login-confirm.png" alt="Apple 登录确认" loading="lazy"><div class="caption"><strong>Step 03：</strong>输入 Apple ID 后，继续完成登录确认。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-04-apple-code.png" alt="Apple 验证码" loading="lazy"><div class="caption"><strong>Step 04：</strong>输入手机或设备收到的验证码。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-05-trust-browser.png" alt="信任浏览器" loading="lazy"><div class="caption"><strong>Step 05：</strong>自己的电脑可以选择信任浏览器，公共电脑建议不信任。</div></div><div class="warn"><strong>新手提醒：</strong>如果是在公共电脑登录，不要选择“信任此浏览器”。如果是自己的电脑，选择信任可以减少下次登录时的验证步骤。</div></section>
+<section class="card"><h2>二、创建 AIHubTools 仓库</h2><p>登录成功后，进入 GitHub 首页。右上角有一个加号按钮，点击后选择 <strong>New repository</strong>。不要点成 New issue，因为 Issue 是记录问题和任务，不是创建项目仓库。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-06-dashboard-new-repo.png" alt="点击 New repository" loading="lazy"><div class="caption"><strong>Step 06：</strong>点击右上角加号，选择 New repository。</div></div><p>进入创建仓库页面后，重点检查三个地方：Owner 是否是你的账号、Repository name 是否填写 <code>AIHubTools</code>、Visibility 是否选择 Public。如果你准备做公开网站，Public 更适合 GitHub Pages。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-07-create-repository-form.png" alt="填写 AIHubTools 仓库信息" loading="lazy"><div class="caption"><strong>Step 07：</strong>填写仓库名称 AIHubTools，选择 Public，然后点击 Create repository。</div></div><div class="steps"><div class="step"><h3>确认 Owner</h3><p>Owner 表示仓库属于谁。个人项目通常选择自己的 GitHub 账号。</p></div><div class="step"><h3>填写仓库名称</h3><p>在 Repository name 中填写 <code>AIHubTools</code>。建议大小写统一，后续写链接和教程更清楚。</p></div><div class="step"><h3>选择 Public</h3><p>如果这个仓库要作为公开网站使用，建议选择 Public。</p></div><div class="step"><h3>点击 Create repository</h3><p>确认无误后点击绿色按钮，仓库就会创建完成。</p></div></div></section>
+<section class="card"><h2>三、认识仓库创建成功后的页面</h2><p>仓库创建成功后，会看到 Quick setup 页面。出现这个页面，就说明 AIHubTools 仓库已经建立好了。后面你可以从这里创建文件、上传文件，或者复制仓库地址。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-08-repository-created.png" alt="仓库创建成功" loading="lazy"><div class="caption"><strong>Step 08：</strong>仓库创建成功，页面出现 Quick setup。</div></div><p>如果你想先测试仓库能不能保存文件，可以点击 creating a new file。进入新建文件页面后，顶部输入文件名，下面输入内容，最后点击 Commit changes 保存。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-09-create-new-file.png" alt="创建新文件" loading="lazy"><div class="caption"><strong>Step 09：</strong>创建新文件，可以用来测试仓库是否正常保存内容。</div></div></section>
+<section class="card"><h2>四、上传 HTML 教程文件到仓库</h2><p>AIHubTools 的教程页面建议统一放在 <code>tutorials/</code> 目录。例如这篇教程可以放在：</p><div class="pathbox"><code>tutorials/github-create-repo-aihubtools.html</code></div><p>上传 HTML 文件时，先进入目标仓库，点击 <strong>Add file</strong>，再选择 <strong>Upload files</strong>。如果你已经在本地准备好了 HTML 文件，直接拖进去即可。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-10-upload-html-01.png" alt="点击 Add file 上传 HTML" loading="lazy"><div class="caption"><strong>Step 10.1：</strong>点击 Add file，然后选择 Upload files。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-10-upload-html-02.png" alt="拖入 HTML 文件" loading="lazy"><div class="caption"><strong>Step 10.2：</strong>把 HTML 教程文件拖入上传区域，或点击 choose your files 选择文件。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-10-upload-html-03.png" alt="上传完成返回仓库" loading="lazy"><div class="caption"><strong>Step 10.3：</strong>上传完成后返回仓库，确认 HTML 文件已经出现。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-10-upload-html-04.png" alt="Create new file 创建 HTML" loading="lazy"><div class="caption"><strong>Step 10.4：</strong>也可以用 Create new file 手动创建 HTML 文件，适合直接粘贴代码。</div></div><div class="note"><strong>路径提醒：</strong>教程文件放在 <code>tutorials/</code> 目录后，访问路径一般是 <code>https://用户名.github.io/仓库名/tutorials/文件名.html</code>。</div></section>
+<section class="card"><h2>五、上传教程图片到指定目录</h2><p>教程图片不要随便放在根目录。为了后期方便管理，建议统一放到：</p><div class="pathbox"><code>images/tutorials/github-create-repo/</code></div><p>这样 HTML 教程里引用图片时，路径就比较清楚。例如教程文件在 <code>tutorials/</code> 目录，图片在 <code>images/tutorials/github-create-repo/</code> 目录，那么 HTML 中可以这样写：</p><div class="pathbox"><code>&lt;img src="/AIHubTools/images/tutorials/github-create-repo/图片名.png" alt="图片说明"&gt;</code></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-11-upload-image-01.png" alt="进入 images tutorials 目录上传图片" loading="lazy"><div class="caption"><strong>Step 11.1：</strong>进入 images/tutorials 目录，点击 Add file → Upload files 上传教程图片。</div></div><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-11-upload-image-02.png" alt="创建图片目录" loading="lazy"><div class="caption"><strong>Step 11.2：</strong>如果目录不存在，可以先用 Create new file 创建 images/tutorials/ 或子目录。</div></div><div class="ok"><strong>推荐命名：</strong>图片名最好统一使用英文和数字，例如 <code>github-repo-step-11-upload-image-01.png</code>。不要使用空格、中文标点或太长的随机名称。</div></section>
+<section class="card"><h2>六、后续图片和页面怎么放</h2><p>当你的教程越来越多时，目录一定要提前规划好。建议 HTML 页面统一放在 <code>tutorials/</code>，图片统一放在 <code>images/tutorials/教程名/</code>，这样主页、教程中心、单篇教程之间的链接都更稳定。</p><div class="pathbox"><code>tutorials/github-create-repo-aihubtools.html</code><br><code>images/tutorials/github-create-repo/github-repo-step-01-signup-page.png</code><br><code>images/tutorials/github-create-repo/github-repo-step-10-upload-html-01.png</code></div><p>后面如果你继续添加 ChatGPT、Claude、DeepSeek 等教程，也可以沿用同样结构。这样不会因为图片太多导致仓库混乱，也方便你以后批量检查 404 问题。</p><div class="figure"><img src="/AIHubTools/images/tutorials/github-create-repo/github-repo-step-10-github-homepage-reference.png" alt="GitHub 首页参考" loading="lazy"><div class="caption"><strong>补充参考：</strong>GitHub 首页和仓库入口，后续可以继续学习上传文件、管理仓库和发布网站。</div></div></section>
+<section class="card"><h2>写给第一次使用 GitHub 的你</h2><p>刚开始用 GitHub 时，看见很多英文按钮很正常，不用着急把每个功能都学完。你只要先记住一条主线：创建仓库 → 上传 HTML → 上传图片 → 检查路径 → 打开 GitHub Pages 页面。把这条流程跑通之后，后面添加更多工具页和教程页就会轻松很多。</p><p>对于 AIHubTools 来说，最重要的是保持目录清晰。教程页面放 <code>tutorials/</code>，教程图片放 <code>images/tutorials/</code>，数据文件放根目录。只要这个规则固定下来，后面维护网站、排查链接、更新教程都会更省心。</p><div class="footer">© 2026 AIHubTools 智汇工具 · GitHub 新手教程</div></section>
+</main>
+<script>document.querySelectorAll('.figure img').forEach(img=>{img.addEventListener('error',()=>img.closest('.figure')?.classList.add('broken'));});</script>
 </body>
 </html>

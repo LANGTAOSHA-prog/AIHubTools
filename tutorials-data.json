@@ -9,63 +9,75 @@
     "difficulty_ja": "初級",
     "read_time": 5,
     "updated": "2025-06",
-    "title":    "ChatGPT 完全入门指南",
+    "title": "ChatGPT 完全入门指南",
     "title_en": "Complete Beginner's Guide to ChatGPT",
     "title_ja": "ChatGPT 完全入門ガイド",
-    "intro":    "ChatGPT 是目前全球用户最多的 AI 对话工具，由 OpenAI 开发。免费账号即可使用 GPT-4o 进行多模态对话——支持上传图片、PDF、分析数据表格，适合写作、编程、学习等几乎所有场景。",
+    "intro": "ChatGPT 是目前全球用户最多的 AI 对话工具，由 OpenAI 开发。免费账号即可使用 GPT-4o 进行多模态对话——支持上传图片、PDF、分析数据表格，适合写作、编程、学习等几乎所有场景。",
     "intro_en": "ChatGPT is the world's most popular AI assistant, developed by OpenAI. Free accounts include GPT-4o with multimodal support — upload images, PDFs, and spreadsheets for writing, coding, learning, and more.",
     "intro_ja": "ChatGPT は OpenAI が開発した世界最大のユーザー数を誇る AI アシスタントです。無料アカウントで GPT-4o のマルチモーダル機能が使えます——画像・PDF・スプレッドシートのアップロードに対応し、執筆・コーディング・学習など幅広い用途に活躍します。",
     "steps": [
       {
         "step": 1,
-        "title":    "注册账号",
+        "title": "注册账号",
         "title_en": "Create an account",
         "title_ja": "アカウント作成",
-        "body":    "访问 chat.openai.com，点击 Sign Up，可用 Google / Apple / 邮箱注册。免费账号即可开始使用，无需绑定信用卡。",
+        "body": "访问 chat.openai.com，点击 Sign Up，可用 Google / Apple / 邮箱注册。免费账号即可开始使用，无需绑定信用卡。",
         "body_en": "Visit chat.openai.com, click Sign Up, and register with Google, Apple, or email. No credit card required to start.",
         "body_ja": "chat.openai.com にアクセスし「Sign Up」をクリック。Google・Apple・メールで登録できます。クレジットカード不要で即利用開始。"
       },
       {
         "step": 2,
-        "title":    "掌握提示词技巧",
+        "title": "掌握提示词技巧",
         "title_en": "Master prompt techniques",
         "title_ja": "プロンプトのコツを掴む",
-        "body":    "好提示词 = 角色 + 任务 + 格式 + 限制。例如：「你是一位资深产品经理，请用 Markdown 格式写一份 App 竞品分析报告，聚焦功能差异，不超过 800 字。」",
+        "body": "好提示词 = 角色 + 任务 + 格式 + 限制。例如：「你是一位资深产品经理，请用 Markdown 格式写一份 App 竞品分析报告，聚焦功能差异，不超过 800 字。」",
         "body_en": "Great prompts = Role + Task + Format + Constraint. E.g., \"You are a senior product manager. Write a competitive analysis report in Markdown, focus on feature differences, under 800 words.\"",
         "body_ja": "優れたプロンプト = 役割＋タスク＋形式＋制約。例：「あなたはシニアプロダクトマネージャーです。機能の違いに焦点を当て、Markdown形式で800字以内の競合分析レポートを書いてください。」"
       },
       {
         "step": 3,
-        "title":    "上传文件与图片",
+        "title": "上传文件与图片",
         "title_en": "Upload files and images",
         "title_ja": "ファイルと画像のアップロード",
-        "body":    "点击对话框左侧的 📎 图标可上传 PDF、Word、Excel、图片等文件。ChatGPT 会自动读取内容，你可以直接提问或要求总结。",
+        "body": "点击对话框左侧的 📎 图标可上传 PDF、Word、Excel、图片等文件。ChatGPT 会自动读取内容，你可以直接提问或要求总结。",
         "body_en": "Click the 📎 icon to upload PDFs, Word docs, Excel files, or images. ChatGPT reads the content automatically — ask questions or request a summary directly.",
         "body_ja": "📎 アイコンをクリックして PDF・Word・Excel・画像をアップロード。ChatGPT が自動で内容を読み込み、そのまま質問や要約依頼ができます。"
       },
       {
         "step": 4,
-        "title":    "使用 GPT-4o 高级功能",
+        "title": "使用 GPT-4o 高级功能",
         "title_en": "Use GPT-4o advanced features",
         "title_ja": "GPT-4o の高度な機能を使う",
-        "body":    "免费用户每天有一定次数的 GPT-4o 额度。可进行图片识别（拍照提问）、实时语音对话、生成图表与代码。Plus 订阅（$20/月）可解除使用限制。",
+        "body": "免费用户每天有一定次数的 GPT-4o 额度。可进行图片识别（拍照提问）、实时语音对话、生成图表与代码。Plus 订阅（$20/月）可解除使用限制。",
         "body_en": "Free users get a daily GPT-4o quota. Use it for image recognition (photo Q&A), real-time voice chat, and code/chart generation. Plus ($20/mo) removes limits.",
         "body_ja": "無料ユーザーは毎日一定量の GPT-4o クォータがあります。画像認識（写真で質問）・リアルタイム音声会話・コード/チャート生成が可能。Plus（月$20）で制限解除。"
       },
       {
         "step": 5,
-        "title":    "自定义 GPT（My GPTs）",
+        "title": "自定义 GPT（My GPTs）",
         "title_en": "Explore custom GPTs",
         "title_ja": "カスタム GPT を探す",
-        "body":    "在左侧边栏点击「探索 GPT」可访问数万个社区定制 GPT，涵盖法律助手、英语口语练习、SEO 写作等专业场景，无需自己写提示词。",
+        "body": "在左侧边栏点击「探索 GPT」可访问数万个社区定制 GPT，涵盖法律助手、英语口语练习、SEO 写作等专业场景，无需自己写提示词。",
         "body_en": "Click \"Explore GPTs\" in the sidebar to access thousands of community-built custom GPTs — legal assistants, English conversation practice, SEO writing, and more.",
         "body_ja": "サイドバーの「GPT を探す」から数万のコミュニティ製カスタム GPT にアクセス。法律アシスタント・英会話練習・SEO ライティングなど、プロンプト不要で専門的な用途に対応。"
       }
     ],
     "tips": [
-      { "zh": "遇到错误回答，直接说「这不对，请重新分析」，比重新发问更高效。", "en": "If you get a wrong answer, say \"That's incorrect, please re-analyze\" — more effective than starting over.", "ja": "間違いがあれば「これは正しくない、再分析して」と伝える方が、最初からやり直すより効率的です。" },
-      { "zh": "对话框输入 / 可快速切换不同的 GPT 模型。", "en": "Type / in the chat box to quickly switch between GPT models.", "ja": "入力欄で / を入力すると GPT モデルを素早く切り替えられます。" },
-      { "zh": "用「继续」让 ChatGPT 接续被截断的长回答，无需重复提问。", "en": "Type \"Continue\" to resume a truncated long response without re-asking.", "ja": "「続けて」と入力するだけで途切れた長い回答を再開できます。" }
+      {
+        "zh": "遇到错误回答，直接说「这不对，请重新分析」，比重新发问更高效。",
+        "en": "If you get a wrong answer, say \"That's incorrect, please re-analyze\" — more effective than starting over.",
+        "ja": "間違いがあれば「これは正しくない、再分析して」と伝える方が、最初からやり直すより効率的です。"
+      },
+      {
+        "zh": "对话框输入 / 可快速切换不同的 GPT 模型。",
+        "en": "Type / in the chat box to quickly switch between GPT models.",
+        "ja": "入力欄で / を入力すると GPT モデルを素早く切り替えられます。"
+      },
+      {
+        "zh": "用「继续」让 ChatGPT 接续被截断的长回答，无需重复提问。",
+        "en": "Type \"Continue\" to resume a truncated long response without re-asking.",
+        "ja": "「続けて」と入力するだけで途切れた長い回答を再開できます。"
+      }
     ]
   },
   {
@@ -78,53 +90,61 @@
     "difficulty_ja": "初級",
     "read_time": 4,
     "updated": "2025-06",
-    "title":    "Claude 使用入门指南",
+    "title": "Claude 使用入门指南",
     "title_en": "Getting Started with Claude",
     "title_ja": "Claude 入門ガイド",
-    "intro":    "Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。",
+    "intro": "Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。",
     "intro_en": "Claude is Anthropic's AI assistant, famous for its 200K token context window, safety, and superior writing and coding quality. It excels at long documents, academic writing, and deep reasoning.",
     "intro_ja": "Claude は Anthropic の AI アシスタントで、200K トークンの超長コンテキスト・安全性・高品質な文章とコードで有名です。長文書・学術執筆・深い推論が必要なタスクに特に強いです。",
     "steps": [
       {
         "step": 1,
-        "title":    "访问并注册",
+        "title": "访问并注册",
         "title_en": "Sign up at claude.ai",
         "title_ja": "claude.ai でサインアップ",
-        "body":    "打开 claude.ai，用 Google 或邮箱注册免费账号。免费版每天可发送一定数量的消息，Claude 3 Sonnet 免费可用。",
+        "body": "打开 claude.ai，用 Google 或邮箱注册免费账号。免费版每天可发送一定数量的消息，Claude 3 Sonnet 免费可用。",
         "body_en": "Open claude.ai and register with Google or email. The free tier includes daily messages with Claude 3 Sonnet.",
         "body_ja": "claude.ai を開き、Google かメールで無料登録。無料版では毎日一定量のメッセージが使え、Claude 3 Sonnet が利用可能です。"
       },
       {
         "step": 2,
-        "title":    "上传超长文档",
+        "title": "上传超长文档",
         "title_en": "Upload long documents",
         "title_ja": "長文書をアップロード",
-        "body":    "Claude 支持上传 PDF、Word、TXT 等文档，最长可处理约 150,000 字的内容。可用于合同审查、论文摘要、书籍解读等场景。",
+        "body": "Claude 支持上传 PDF、Word、TXT 等文档，最长可处理约 150,000 字的内容。可用于合同审查、论文摘要、书籍解读等场景。",
         "body_en": "Claude accepts PDF, Word, and TXT files — up to ~150,000 words per upload. Perfect for contract review, paper summarization, and book analysis.",
         "body_ja": "Claude は PDF・Word・TXT を受け付け、最大約15万字を処理できます。契約書レビュー・論文要約・書籍解読に最適です。"
       },
       {
         "step": 3,
-        "title":    "利用 Projects 功能",
+        "title": "利用 Projects 功能",
         "title_en": "Use the Projects feature",
         "title_ja": "Projects 機能を活用",
-        "body":    "Projects 允许你在一个空间内保存多轮对话、文档和自定义指令，适合长期项目（如写书、产品开发）持续使用。",
+        "body": "Projects 允许你在一个空间内保存多轮对话、文档和自定义指令，适合长期项目（如写书、产品开发）持续使用。",
         "body_en": "Projects lets you save multi-turn conversations, documents, and custom instructions in one space — ideal for ongoing work like writing a book or product development.",
         "body_ja": "Projects では複数の会話・文書・カスタム指示を一つの空間に保存できます。本の執筆や製品開発などの長期プロジェクトに最適です。"
       },
       {
         "step": 4,
-        "title":    "善用写作与代码场景",
+        "title": "善用写作与代码场景",
         "title_en": "Leverage writing and coding",
         "title_ja": "執筆とコーディングを活用",
-        "body":    "Claude 在创意写作、学术论文、代码审查和 Debug 方面表现优异。直接粘贴代码并描述问题，它会给出详细的分析与修改建议。",
+        "body": "Claude 在创意写作、学术论文、代码审查和 Debug 方面表现优异。直接粘贴代码并描述问题，它会给出详细的分析与修改建议。",
         "body_en": "Claude excels at creative writing, academic essays, code review, and debugging. Paste your code, describe the issue, and get detailed analysis and suggestions.",
         "body_ja": "Claude はクリエイティブ執筆・学術論文・コードレビュー・デバッグに優れています。コードを貼り付けて問題を説明するだけで、詳細な分析と修正案が得られます。"
       }
     ],
     "tips": [
-      { "zh": "要求 Claude 「逐步思考」或「展示推理过程」可显著提高回答准确率。", "en": "Ask Claude to \"think step by step\" or \"show your reasoning\" to significantly improve accuracy.", "ja": "「一歩ずつ考えて」「推論過程を見せて」と頼むと回答精度が大幅に向上します。" },
-      { "zh": "Claude 比较保守，遇到敏感内容会主动说明。想要更直接的回答，可在 System prompt 中明确说明使用场景。", "en": "Claude is conservative by default. For more direct responses on sensitive topics, clarify your context in the System prompt.", "ja": "Claude はデフォルトで慎重です。センシティブなトピックで直接的な回答を得たい場合は、System prompt でコンテキストを明確に説明しましょう。" }
+      {
+        "zh": "要求 Claude 「逐步思考」或「展示推理过程」可显著提高回答准确率。",
+        "en": "Ask Claude to \"think step by step\" or \"show your reasoning\" to significantly improve accuracy.",
+        "ja": "「一歩ずつ考えて」「推論過程を見せて」と頼むと回答精度が大幅に向上します。"
+      },
+      {
+        "zh": "Claude 比较保守，遇到敏感内容会主动说明。想要更直接的回答，可在 System prompt 中明确说明使用场景。",
+        "en": "Claude is conservative by default. For more direct responses on sensitive topics, clarify your context in the System prompt.",
+        "ja": "Claude はデフォルトで慎重です。センシティブなトピックで直接的な回答を得たい場合は、System prompt でコンテキストを明確に説明しましょう。"
+      }
     ]
   },
   {
@@ -137,53 +157,61 @@
     "difficulty_ja": "初級",
     "read_time": 4,
     "updated": "2025-06",
-    "title":    "Gemini 使用入门指南",
+    "title": "Gemini 使用入门指南",
     "title_en": "Getting Started with Google Gemini",
     "title_ja": "Google Gemini 入門ガイド",
-    "intro":    "Gemini 是 Google 旗下的旗舰 AI 模型，深度整合 Google 全系产品（Search、Gmail、Docs、Drive），是最适合 Google 生态用户的 AI 助手。Gemini 1.5 Pro 支持 100 万 token 的超大上下文。",
+    "intro": "Gemini 是 Google 旗下的旗舰 AI 模型，深度整合 Google 全系产品（Search、Gmail、Docs、Drive），是最适合 Google 生态用户的 AI 助手。Gemini 1.5 Pro 支持 100 万 token 的超大上下文。",
     "intro_en": "Gemini is Google's flagship AI model, deeply integrated with Google Search, Gmail, Docs, and Drive. It's the ideal AI assistant for Google ecosystem users, with Gemini 1.5 Pro supporting a 1M token context window.",
     "intro_ja": "Gemini は Google のフラグシップ AI モデルで、Google 検索・Gmail・Docs・Drive と深く統合されています。Google エコシステムユーザーに最適な AI アシスタントで、Gemini 1.5 Pro は 100 万トークンのコンテキストをサポート。",
     "steps": [
       {
         "step": 1,
-        "title":    "访问 Gemini",
+        "title": "访问 Gemini",
         "title_en": "Access Gemini",
         "title_ja": "Gemini にアクセス",
-        "body":    "使用 Google 账号登录 gemini.google.com，或在手机上下载 Gemini App（iOS / Android）。免费版即可使用 Gemini 1.5 Flash。",
+        "body": "使用 Google 账号登录 gemini.google.com，或在手机上下载 Gemini App（iOS / Android）。免费版即可使用 Gemini 1.5 Flash。",
         "body_en": "Log in with your Google account at gemini.google.com, or download the Gemini app (iOS/Android). Gemini 1.5 Flash is available on the free tier.",
         "body_ja": "Google アカウントで gemini.google.com にログイン、または Gemini アプリ（iOS/Android）をダウンロード。無料版で Gemini 1.5 Flash が利用可能です。"
       },
       {
         "step": 2,
-        "title":    "连接 Google 应用",
+        "title": "连接 Google 应用",
         "title_en": "Connect Google apps",
         "title_ja": "Google アプリと連携",
-        "body":    "点击「扩展」可授权 Gemini 访问 Gmail、Drive、Docs 等应用，之后可以直接问「帮我总结最新 5 封邮件」或「找一下去年的年报 PDF」。",
+        "body": "点击「扩展」可授权 Gemini 访问 Gmail、Drive、Docs 等应用，之后可以直接问「帮我总结最新 5 封邮件」或「找一下去年的年报 PDF」。",
         "body_en": "Click \"Extensions\" to grant Gemini access to Gmail, Drive, and Docs. Then ask things like \"Summarize my latest 5 emails\" or \"Find last year's annual report PDF.\"",
         "body_ja": "「拡張機能」をクリックして Gmail・Drive・Docs へのアクセスを許可。「最新5通のメールを要約して」「去年の年次報告書PDFを見つけて」などと聞けます。"
       },
       {
         "step": 3,
-        "title":    "图片与视频理解",
+        "title": "图片与视频理解",
         "title_en": "Image and video understanding",
         "title_ja": "画像・動画の理解",
-        "body":    "直接在对话框上传图片，Gemini 可识别内容、提取文字（OCR）、分析图表。Gemini Advanced 还支持分析 YouTube 视频链接。",
+        "body": "直接在对话框上传图片，Gemini 可识别内容、提取文字（OCR）、分析图表。Gemini Advanced 还支持分析 YouTube 视频链接。",
         "body_en": "Upload images directly to the chat. Gemini can identify content, extract text (OCR), and analyze charts. Gemini Advanced also analyzes YouTube video links.",
         "body_ja": "チャットに画像を直接アップロード。Gemini はコンテンツ認識・テキスト抽出（OCR）・グラフ分析が可能。Gemini Advanced は YouTube 動画リンクの分析にも対応。"
       },
       {
         "step": 4,
-        "title":    "使用 Gemini in Google Docs",
+        "title": "使用 Gemini in Google Docs",
         "title_en": "Use Gemini in Google Docs",
         "title_ja": "Google Docs で Gemini を使う",
-        "body":    "在 Google Docs 中点击右侧的 Gemini 图标，可以直接在文档内让 AI 起草段落、改写句子或生成大纲，免切换应用。",
+        "body": "在 Google Docs 中点击右侧的 Gemini 图标，可以直接在文档内让 AI 起草段落、改写句子或生成大纲，免切换应用。",
         "body_en": "Click the Gemini icon in Google Docs to draft paragraphs, rewrite sentences, or generate outlines directly inside your document — no app switching.",
         "body_ja": "Google Docs の Gemini アイコンをクリックして、ドキュメント内で直接段落の下書き・文章の書き直し・アウトライン生成ができます。"
       }
     ],
     "tips": [
-      { "zh": "Gemini 的实时搜索能力很强，问时效性问题（近期新闻、股票、天气）时优先选择 Gemini。", "en": "Gemini excels at real-time search. Use it for time-sensitive questions — recent news, stock prices, or weather.", "ja": "Gemini はリアルタイム検索が得意。最新ニュース・株価・天気など時事的な質問は Gemini を優先しましょう。" },
-      { "zh": "订阅 Google One AI Premium（$20/月）可解锁 Gemini 1.5 Pro 的 100 万 token 超长上下文。", "en": "Subscribe to Google One AI Premium ($20/mo) to unlock Gemini 1.5 Pro's 1M token context window.", "ja": "Google One AI Premium（月$20）に加入すると Gemini 1.5 Pro の 100 万トークンコンテキストを解除できます。" }
+      {
+        "zh": "Gemini 的实时搜索能力很强，问时效性问题（近期新闻、股票、天气）时优先选择 Gemini。",
+        "en": "Gemini excels at real-time search. Use it for time-sensitive questions — recent news, stock prices, or weather.",
+        "ja": "Gemini はリアルタイム検索が得意。最新ニュース・株価・天気など時事的な質問は Gemini を優先しましょう。"
+      },
+      {
+        "zh": "订阅 Google One AI Premium（$20/月）可解锁 Gemini 1.5 Pro 的 100 万 token 超长上下文。",
+        "en": "Subscribe to Google One AI Premium ($20/mo) to unlock Gemini 1.5 Pro's 1M token context window.",
+        "ja": "Google One AI Premium（月$20）に加入すると Gemini 1.5 Pro の 100 万トークンコンテキストを解除できます。"
+      }
     ]
   },
   {
@@ -196,63 +224,75 @@
     "difficulty_ja": "中級",
     "read_time": 6,
     "updated": "2025-06",
-    "title":    "Midjourney 完整使用教程",
+    "title": "Midjourney 完整使用教程",
     "title_en": "Complete Midjourney Tutorial",
     "title_ja": "Midjourney 完全チュートリアル",
-    "intro":    "Midjourney 是目前艺术效果最佳的 AI 绘图工具之一，支持通过 Discord 机器人或官方网页端生成图像。其以风格化、高质感著称，被设计师、插画师和创作者广泛使用。",
+    "intro": "Midjourney 是目前艺术效果最佳的 AI 绘图工具之一，支持通过 Discord 机器人或官方网页端生成图像。其以风格化、高质感著称，被设计师、插画师和创作者广泛使用。",
     "intro_en": "Midjourney is one of the best AI image generators for artistic quality. Available via Discord bot or the official web app, it's beloved by designers, illustrators, and creators for its stylized, high-quality output.",
     "intro_ja": "Midjourney は芸術的なクオリティで最高の AI 画像生成ツールの一つです。Discord ボットまたは公式ウェブアプリで利用でき、スタイリッシュで高品質な出力でデザイナー・イラストレーター・クリエイターに愛用されています。",
     "steps": [
       {
         "step": 1,
-        "title":    "订阅与登录",
+        "title": "订阅与登录",
         "title_en": "Subscribe and log in",
         "title_ja": "サブスクと設定",
-        "body":    "访问 midjourney.com，用 Discord 账号登录后选择订阅套餐（最低 $10/月，含 200 次生成）。建议从 Basic 开始体验。",
+        "body": "访问 midjourney.com，用 Discord 账号登录后选择订阅套餐（最低 $10/月，含 200 次生成）。建议从 Basic 开始体验。",
         "body_en": "Visit midjourney.com, log in with Discord, and choose a plan (from $10/mo, includes 200 image generations). Start with the Basic plan to explore.",
         "body_ja": "midjourney.com を開き、Discord でログイン後にプランを選択（月$10〜、200回の画像生成を含む）。まず Basic プランで試してみましょう。"
       },
       {
         "step": 2,
-        "title":    "编写提示词（Prompt）",
+        "title": "编写提示词（Prompt）",
         "title_en": "Write effective prompts",
         "title_ja": "プロンプトを書く",
-        "body":    "基本结构：主体描述 + 风格 + 光线 + 镜头/构图 + 质量参数。例：「A futuristic city at sunset, cyberpunk style, neon lights, cinematic shot, ultra realistic, 8K --ar 16:9 --v 6」",
+        "body": "基本结构：主体描述 + 风格 + 光线 + 镜头/构图 + 质量参数。例：「A futuristic city at sunset, cyberpunk style, neon lights, cinematic shot, ultra realistic, 8K --ar 16:9 --v 6」",
         "body_en": "Basic structure: subject + style + lighting + composition + quality. E.g., \"A futuristic city at sunset, cyberpunk style, neon lights, cinematic shot, ultra realistic, 8K --ar 16:9 --v 6\"",
         "body_ja": "基本構造：被写体＋スタイル＋光源＋構図＋クオリティ。例：「A futuristic city at sunset, cyberpunk style, neon lights, cinematic shot, ultra realistic, 8K --ar 16:9 --v 6」"
       },
       {
         "step": 3,
-        "title":    "常用参数速查",
+        "title": "常用参数速查",
         "title_en": "Key parameters cheat sheet",
         "title_ja": "主要パラメータ早見表",
-        "body":    "--ar 比例（16:9 横屏 / 9:16 竖屏 / 1:1 方形）；--v 6.1 最新版本；--style raw 减少过度艺术化；--q 0.5 加速生成（降低质量）；--no text 去除图中文字。",
+        "body": "--ar 比例（16:9 横屏 / 9:16 竖屏 / 1:1 方形）；--v 6.1 最新版本；--style raw 减少过度艺术化；--q 0.5 加速生成（降低质量）；--no text 去除图中文字。",
         "body_en": "--ar ratio (16:9 landscape / 9:16 portrait / 1:1 square); --v 6.1 latest version; --style raw less stylized; --q 0.5 faster generation (lower quality); --no text removes text from image.",
         "body_ja": "--ar 比率（16:9横/9:16縦/1:1正方形）; --v 6.1 最新版; --style raw スタイル控えめ; --q 0.5 高速生成（品質低下）; --no text 画像内テキスト除去。"
       },
       {
         "step": 4,
-        "title":    "Vary 与 Upscale",
+        "title": "Vary 与 Upscale",
         "title_en": "Vary and Upscale images",
         "title_ja": "Vary と Upscale",
-        "body":    "生成 4 张图后，点击 V1-V4 对某张图进行变体生成，或点击 U1-U4 放大单张图至高清。Vary（Subtle）微调，Vary（Strong）大幅重构。",
+        "body": "生成 4 张图后，点击 V1-V4 对某张图进行变体生成，或点击 U1-U4 放大单张图至高清。Vary（Subtle）微调，Vary（Strong）大幅重构。",
         "body_en": "After generating 4 images, click V1–V4 to create variations, or U1–U4 to upscale a single image to high resolution. Vary (Subtle) for tweaks, Vary (Strong) for major changes.",
         "body_ja": "4枚生成後、V1〜V4 でバリエーション生成、U1〜U4 で高解像度にアップスケール。Vary（Subtle）は微調整、Vary（Strong）は大幅な再構成。"
       },
       {
         "step": 5,
-        "title":    "参考图与风格迁移",
+        "title": "参考图与风格迁移",
         "title_en": "Reference images and style transfer",
         "title_ja": "参照画像とスタイル転送",
-        "body":    "在提示词开头粘贴图片 URL 可作为参考图，--iw 2 增大参考权重（0-2）。使用 --sref URL 可提取特定图片的风格（Style Reference）。",
+        "body": "在提示词开头粘贴图片 URL 可作为参考图，--iw 2 增大参考权重（0-2）。使用 --sref URL 可提取特定图片的风格（Style Reference）。",
         "body_en": "Paste an image URL at the start of your prompt to use it as a reference. --iw 2 increases reference weight (0–2). Use --sref URL to extract a style from a specific image.",
         "body_ja": "プロンプトの先頭に画像 URL を貼り付けて参照画像として使用。--iw 2 で参照の重みを増加（0〜2）。--sref URL で特定画像のスタイルを抽出できます。"
       }
     ],
     "tips": [
-      { "zh": "中文提示词效果不如英文，建议先用 ChatGPT 将中文创意翻译成详细的英文 Prompt，再粘贴至 Midjourney。", "en": "Chinese prompts underperform English ones. Use ChatGPT to translate your Chinese ideas into detailed English prompts before pasting into Midjourney.", "ja": "中国語プロンプトは英語より効果が低い。ChatGPT でアイデアを詳細な英語プロンプトに翻訳してから Midjourney に貼り付けましょう。" },
-      { "zh": "避免提示词超过 60 个单词，过长反而会稀释重点，导致效果变差。", "en": "Keep prompts under 60 words — longer prompts dilute key concepts and often produce worse results.", "ja": "プロンプトは60語以内が理想。長すぎると主要概念が薄まり結果が悪化することがあります。" },
-      { "zh": "使用 /describe 命令上传任意图片，Midjourney 会自动反向生成提示词，便于学习和复刻风格。", "en": "Use /describe to upload any image — Midjourney reverse-engineers a prompt for it, great for learning and replicating styles.", "ja": "/describe コマンドで任意の画像をアップロードすると、Midjourney が自動でプロンプトを逆生成。スタイルの学習・再現に便利です。" }
+      {
+        "zh": "中文提示词效果不如英文，建议先用 ChatGPT 将中文创意翻译成详细的英文 Prompt，再粘贴至 Midjourney。",
+        "en": "Chinese prompts underperform English ones. Use ChatGPT to translate your Chinese ideas into detailed English prompts before pasting into Midjourney.",
+        "ja": "中国語プロンプトは英語より効果が低い。ChatGPT でアイデアを詳細な英語プロンプトに翻訳してから Midjourney に貼り付けましょう。"
+      },
+      {
+        "zh": "避免提示词超过 60 个单词，过长反而会稀释重点，导致效果变差。",
+        "en": "Keep prompts under 60 words — longer prompts dilute key concepts and often produce worse results.",
+        "ja": "プロンプトは60語以内が理想。長すぎると主要概念が薄まり結果が悪化することがあります。"
+      },
+      {
+        "zh": "使用 /describe 命令上传任意图片，Midjourney 会自动反向生成提示词，便于学习和复刻风格。",
+        "en": "Use /describe to upload any image — Midjourney reverse-engineers a prompt for it, great for learning and replicating styles.",
+        "ja": "/describe コマンドで任意の画像をアップロードすると、Midjourney が自動でプロンプトを逆生成。スタイルの学習・再現に便利です。"
+      }
     ]
   },
   {
@@ -265,53 +305,61 @@
     "difficulty_ja": "上級",
     "read_time": 8,
     "updated": "2025-06",
-    "title":    "Stable Diffusion 本地部署入门",
+    "title": "Stable Diffusion 本地部署入门",
     "title_en": "Stable Diffusion Local Setup Guide",
     "title_ja": "Stable Diffusion ローカル環境構築ガイド",
-    "intro":    "Stable Diffusion 是最强大的开源 AI 图像生成模型，支持本地部署、完全免费，无内容审查。通过 AUTOMATIC1111 WebUI 或 ComfyUI 即可快速上手，配合 LoRA 模型可生成各种风格的图像。",
+    "intro": "Stable Diffusion 是最强大的开源 AI 图像生成模型，支持本地部署、完全免费，无内容审查。通过 AUTOMATIC1111 WebUI 或 ComfyUI 即可快速上手，配合 LoRA 模型可生成各种风格的图像。",
     "intro_en": "Stable Diffusion is the most powerful open-source AI image model. Deploy locally for free with no content restrictions. Get started quickly with AUTOMATIC1111 WebUI or ComfyUI, and use LoRA models for any artistic style.",
     "intro_ja": "Stable Diffusion は最も強力なオープンソース AI 画像モデルです。ローカルで無料展開でき、コンテンツ制限なし。AUTOMATIC1111 WebUI または ComfyUI で素早く始められ、LoRA モデルで様々なスタイルの画像を生成できます。",
     "steps": [
       {
         "step": 1,
-        "title":    "硬件要求",
+        "title": "硬件要求",
         "title_en": "Hardware requirements",
         "title_ja": "ハードウェア要件",
-        "body":    "推荐：NVIDIA GPU（显存 ≥6GB），如 RTX 3060/4060。CPU 模式极慢，不推荐。无合适显卡可选择云端方案：Google Colab 或 RunPod。",
+        "body": "推荐：NVIDIA GPU（显存 ≥6GB），如 RTX 3060/4060。CPU 模式极慢，不推荐。无合适显卡可选择云端方案：Google Colab 或 RunPod。",
         "body_en": "Recommended: NVIDIA GPU with ≥6GB VRAM, such as RTX 3060/4060. CPU mode is extremely slow. Without a suitable GPU, use cloud options like Google Colab or RunPod.",
         "body_ja": "推奨：NVIDIA GPU（VRAM ≥6GB）、RTX 3060/4060 など。CPU モードは非常に遅いため非推奨。適切な GPU がない場合は Google Colab や RunPod などのクラウドを利用しましょう。"
       },
       {
         "step": 2,
-        "title":    "安装 AUTOMATIC1111 WebUI",
+        "title": "安装 AUTOMATIC1111 WebUI",
         "title_en": "Install AUTOMATIC1111 WebUI",
         "title_ja": "AUTOMATIC1111 WebUI のインストール",
-        "body":    "前往 GitHub 搜索 AUTOMATIC1111/stable-diffusion-webui，按 README 说明安装 Python 3.10 + Git，运行 webui-user.bat（Windows）或 webui.sh（Mac/Linux）一键启动。",
+        "body": "前往 GitHub 搜索 AUTOMATIC1111/stable-diffusion-webui，按 README 说明安装 Python 3.10 + Git，运行 webui-user.bat（Windows）或 webui.sh（Mac/Linux）一键启动。",
         "body_en": "Search GitHub for AUTOMATIC1111/stable-diffusion-webui. Follow the README to install Python 3.10 + Git, then run webui-user.bat (Windows) or webui.sh (Mac/Linux) to launch.",
         "body_ja": "GitHub で AUTOMATIC1111/stable-diffusion-webui を検索。README に従い Python 3.10 + Git をインストールし、webui-user.bat（Windows）または webui.sh（Mac/Linux）を実行して起動。"
       },
       {
         "step": 3,
-        "title":    "下载基础模型",
+        "title": "下载基础模型",
         "title_en": "Download a base model",
         "title_ja": "ベースモデルをダウンロード",
-        "body":    "推荐模型下载站：Civitai.com 和 HuggingFace。常用模型：真实系选 Realistic Vision，动漫风选 Anything V5，二次元选 Counterfeit。放入 models/Stable-diffusion/ 目录。",
+        "body": "推荐模型下载站：Civitai.com 和 HuggingFace。常用模型：真实系选 Realistic Vision，动漫风选 Anything V5，二次元选 Counterfeit。放入 models/Stable-diffusion/ 目录。",
         "body_en": "Recommended model sites: Civitai.com and HuggingFace. Popular models: Realistic Vision (photorealism), Anything V5 (anime), Counterfeit (2D art). Place in models/Stable-diffusion/.",
         "body_ja": "モデルダウンロードは Civitai.com と HuggingFace がおすすめ。人気モデル：Realistic Vision（リアル系）、Anything V5（アニメ）、Counterfeit（二次元）。models/Stable-diffusion/ に配置。"
       },
       {
         "step": 4,
-        "title":    "使用 LoRA 精细控制风格",
+        "title": "使用 LoRA 精细控制风格",
         "title_en": "Use LoRA for style control",
         "title_ja": "LoRA でスタイルを細かく制御",
-        "body":    "LoRA 是轻量化风格模型，放入 models/Lora/ 目录后，在提示词中用 <lora:文件名:权重> 调用。权重范围 0-1，推荐 0.6-0.8，过高会导致图像崩坏。",
+        "body": "LoRA 是轻量化风格模型，放入 models/Lora/ 目录后，在提示词中用 <lora:文件名:权重> 调用。权重范围 0-1，推荐 0.6-0.8，过高会导致图像崩坏。",
         "body_en": "LoRA are lightweight style models. Place them in models/Lora/, then call them in prompts with <lora:filename:weight>. Weights range 0–1; 0.6–0.8 is recommended — too high causes image distortion.",
         "body_ja": "LoRA は軽量スタイルモデルです。models/Lora/ に配置後、プロンプトで <lora:ファイル名:重み> として呼び出します。重みは 0〜1、0.6〜0.8 推奨——高すぎると画像が崩れます。"
       }
     ],
     "tips": [
-      { "zh": "Negative Prompt（负向提示词）同样重要，常用：ugly, blurry, extra fingers, watermark, text, bad anatomy。", "en": "Negative prompts matter just as much. Common ones: ugly, blurry, extra fingers, watermark, text, bad anatomy.", "ja": "Negative Prompt（ネガティブプロンプト）も同様に重要。よく使われる例：ugly, blurry, extra fingers, watermark, text, bad anatomy。" },
-      { "zh": "CFG Scale（提示词遵循度）推荐 7-12，过高图像过曝，过低细节模糊。Steps 推荐 20-30。", "en": "Set CFG Scale (prompt adherence) to 7–12. Too high overexposes, too low blurs details. Recommended steps: 20–30.", "ja": "CFG Scale（プロンプト追従度）は 7〜12 がおすすめ。高すぎると過露出、低すぎると細部がぼける。Steps は 20〜30 推奨。" }
+      {
+        "zh": "Negative Prompt（负向提示词）同样重要，常用：ugly, blurry, extra fingers, watermark, text, bad anatomy。",
+        "en": "Negative prompts matter just as much. Common ones: ugly, blurry, extra fingers, watermark, text, bad anatomy.",
+        "ja": "Negative Prompt（ネガティブプロンプト）も同様に重要。よく使われる例：ugly, blurry, extra fingers, watermark, text, bad anatomy。"
+      },
+      {
+        "zh": "CFG Scale（提示词遵循度）推荐 7-12，过高图像过曝，过低细节模糊。Steps 推荐 20-30。",
+        "en": "Set CFG Scale (prompt adherence) to 7–12. Too high overexposes, too low blurs details. Recommended steps: 20–30.",
+        "ja": "CFG Scale（プロンプト追従度）は 7〜12 がおすすめ。高すぎると過露出、低すぎると細部がぼける。Steps は 20〜30 推奨。"
+      }
     ]
   },
   {
@@ -324,53 +372,61 @@
     "difficulty_ja": "中級",
     "read_time": 5,
     "updated": "2025-06",
-    "title":    "Runway AI 视频生成教程",
+    "title": "Runway AI 视频生成教程",
     "title_en": "Runway AI Video Generation Tutorial",
     "title_ja": "Runway AI 動画生成チュートリアル",
-    "intro":    "Runway 是最专业的 AI 视频生成与编辑平台，其 Gen-3 Alpha 模型可从文字或图片生成高质量短视频，被好莱坞后期制作团队广泛使用。本教程涵盖文生视频、图生视频和视频编辑三大核心功能。",
+    "intro": "Runway 是最专业的 AI 视频生成与编辑平台，其 Gen-3 Alpha 模型可从文字或图片生成高质量短视频，被好莱坞后期制作团队广泛使用。本教程涵盖文生视频、图生视频和视频编辑三大核心功能。",
     "intro_en": "Runway is the most professional AI video platform. Its Gen-3 Alpha model generates high-quality short clips from text or images, used widely by Hollywood post-production teams. This tutorial covers text-to-video, image-to-video, and video editing.",
     "intro_ja": "Runway は最もプロフェッショナルな AI 動画プラットフォームです。Gen-3 Alpha モデルはテキストや画像から高品質な短編動画を生成し、ハリウッドの後処理チームにも広く使われています。このチュートリアルでは、テキスト生成・画像生成・動画編集の3つの主要機能を解説します。",
     "steps": [
       {
         "step": 1,
-        "title":    "注册与免费额度",
+        "title": "注册与免费额度",
         "title_en": "Sign up and free credits",
         "title_ja": "登録と無料クレジット",
-        "body":    "在 runwayml.com 用 Google 账号注册，免费账号赠送 125 积分，每生成 1 秒视频约消耗 5 积分（Gen-3 Alpha）。积分用完后需订阅（$15/月起）。",
+        "body": "在 runwayml.com 用 Google 账号注册，免费账号赠送 125 积分，每生成 1 秒视频约消耗 5 积分（Gen-3 Alpha）。积分用完后需订阅（$15/月起）。",
         "body_en": "Sign up at runwayml.com with Google. Free accounts receive 125 credits — Gen-3 Alpha costs ~5 credits per second of video. Subscribe from $15/mo once credits run out.",
         "body_ja": "runwayml.com で Google アカウントを使って登録。無料アカウントに 125 クレジット付与——Gen-3 Alpha は動画 1 秒あたり約 5 クレジット消費。使い切ったら月$15〜のサブスクへ。"
       },
       {
         "step": 2,
-        "title":    "文字生成视频（Text to Video）",
+        "title": "文字生成视频（Text to Video）",
         "title_en": "Text to Video",
         "title_ja": "テキストから動画生成",
-        "body":    "选择「Gen-3 Alpha」→「Text to Video」，输入详细的英文提示词。建议包含：场景、主体动作、镜头运动（slow pan、zoom in）、光线、风格（cinematic、documentary）。",
+        "body": "选择「Gen-3 Alpha」→「Text to Video」，输入详细的英文提示词。建议包含：场景、主体动作、镜头运动（slow pan、zoom in）、光线、风格（cinematic、documentary）。",
         "body_en": "Select \"Gen-3 Alpha\" → \"Text to Video.\" Write a detailed English prompt including: scene, subject action, camera movement (slow pan, zoom in), lighting, and style (cinematic, documentary).",
         "body_ja": "「Gen-3 Alpha」→「Text to Video」を選択。詳細な英語プロンプトを入力——シーン・被写体の動き・カメラの動き（slow pan、zoom in）・光源・スタイル（cinematic、documentary）を含めましょう。"
       },
       {
         "step": 3,
-        "title":    "图片生成视频（Image to Video）",
+        "title": "图片生成视频（Image to Video）",
         "title_en": "Image to Video",
         "title_ja": "画像から動画生成",
-        "body":    "上传一张参考图，Runway 会在保持画面一致性的前提下生成动态视频。可同时提供首帧（First Frame）和尾帧（Last Frame）来精确控制运镜。",
+        "body": "上传一张参考图，Runway 会在保持画面一致性的前提下生成动态视频。可同时提供首帧（First Frame）和尾帧（Last Frame）来精确控制运镜。",
         "body_en": "Upload a reference image and Runway generates a video while maintaining visual consistency. Provide both a First Frame and Last Frame to precisely control camera motion.",
         "body_ja": "参照画像をアップロードすると、Runway は画像の一貫性を保ちながら動画を生成します。First Frame と Last Frame の両方を指定することでカメラの動きを正確に制御できます。"
       },
       {
         "step": 4,
-        "title":    "视频编辑工具",
+        "title": "视频编辑工具",
         "title_en": "Video editing tools",
         "title_ja": "動画編集ツール",
-        "body":    "Runway 内置多种 AI 编辑工具：Remove Background（抠图）、Inpainting（局部修改）、Motion Brush（指定区域动态）、Expand（画面外延），可结合使用完成复杂后期效果。",
+        "body": "Runway 内置多种 AI 编辑工具：Remove Background（抠图）、Inpainting（局部修改）、Motion Brush（指定区域动态）、Expand（画面外延），可结合使用完成复杂后期效果。",
         "body_en": "Runway includes built-in AI editing: Remove Background, Inpainting (local edits), Motion Brush (per-area animation), and Expand (outpainting). Combine them for complex post-production effects.",
         "body_ja": "Runway には AI 編集ツールが内蔵：Remove Background（背景除去）、Inpainting（部分修正）、Motion Brush（エリア指定アニメーション）、Expand（アウトペインティング）。組み合わせて複雑な後処理が可能です。"
       }
     ],
     "tips": [
-      { "zh": "提示词加上「no text, no watermark」避免生成画面出现文字水印。", "en": "Add \"no text, no watermark\" to your prompt to prevent text and watermarks from appearing in the video.", "ja": "プロンプトに「no text, no watermark」を加えることで、動画にテキストや透かしが出るのを防げます。" },
-      { "zh": "Gen-3 Alpha 生成 10 秒视频效果远好于 4 秒，建议选择更长时长。", "en": "Gen-3 Alpha produces notably better results at 10 seconds vs 4 seconds. Always opt for the longer duration.", "ja": "Gen-3 Alpha は 4 秒より 10 秒の方が格段に品質が高い。常に長い尺を選びましょう。" }
+      {
+        "zh": "提示词加上「no text, no watermark」避免生成画面出现文字水印。",
+        "en": "Add \"no text, no watermark\" to your prompt to prevent text and watermarks from appearing in the video.",
+        "ja": "プロンプトに「no text, no watermark」を加えることで、動画にテキストや透かしが出るのを防げます。"
+      },
+      {
+        "zh": "Gen-3 Alpha 生成 10 秒视频效果远好于 4 秒，建议选择更长时长。",
+        "en": "Gen-3 Alpha produces notably better results at 10 seconds vs 4 seconds. Always opt for the longer duration.",
+        "ja": "Gen-3 Alpha は 4 秒より 10 秒の方が格段に品質が高い。常に長い尺を選びましょう。"
+      }
     ]
   },
   {
@@ -383,53 +439,61 @@
     "difficulty_ja": "初級",
     "read_time": 4,
     "updated": "2025-06",
-    "title":    "GitHub Copilot 使用入门",
+    "title": "GitHub Copilot 使用入门",
     "title_en": "GitHub Copilot Getting Started",
     "title_ja": "GitHub Copilot 入門ガイド",
-    "intro":    "GitHub Copilot 是目前最成熟的 AI 编程助手，由 GitHub 和 OpenAI 联合开发。深度集成 VS Code、JetBrains 等主流 IDE，实时提供代码补全、函数生成和错误解释功能。学生可免费开通。",
+    "intro": "GitHub Copilot 是目前最成熟的 AI 编程助手，由 GitHub 和 OpenAI 联合开发。深度集成 VS Code、JetBrains 等主流 IDE，实时提供代码补全、函数生成和错误解释功能。学生可免费开通。",
     "intro_en": "GitHub Copilot is the most mature AI coding assistant, developed by GitHub and OpenAI. It's deeply integrated with VS Code, JetBrains, and other major IDEs, providing real-time code completion, function generation, and error explanation. Free for students.",
     "intro_ja": "GitHub Copilot は GitHub と OpenAI が共同開発した最も成熟した AI コーディングアシスタントです。VS Code・JetBrains などの主要 IDE に深く統合され、リアルタイムでコード補完・関数生成・エラー説明を提供。学生は無料で利用できます。",
     "steps": [
       {
         "step": 1,
-        "title":    "开通 Copilot",
+        "title": "开通 Copilot",
         "title_en": "Enable Copilot",
         "title_ja": "Copilot を有効化",
-        "body":    "登录 GitHub 后，前往 github.com/features/copilot 订阅（$10/月，学生免费）。学生需在 GitHub Education 认证学生身份后可免费激活。",
+        "body": "登录 GitHub 后，前往 github.com/features/copilot 订阅（$10/月，学生免费）。学生需在 GitHub Education 认证学生身份后可免费激活。",
         "body_en": "Log into GitHub and go to github.com/features/copilot to subscribe ($10/mo; free for students). Students can activate for free after verifying via GitHub Education.",
         "body_ja": "GitHub にログイン後、github.com/features/copilot でサブスク（月$10、学生は無料）。学生は GitHub Education で学生認証後に無料で有効化できます。"
       },
       {
         "step": 2,
-        "title":    "安装 VS Code 插件",
+        "title": "安装 VS Code 插件",
         "title_en": "Install the VS Code extension",
         "title_ja": "VS Code 拡張機能をインストール",
-        "body":    "在 VS Code 扩展市场搜索「GitHub Copilot」，安装后用 GitHub 账号登录授权，即可开始使用自动补全功能。",
+        "body": "在 VS Code 扩展市场搜索「GitHub Copilot」，安装后用 GitHub 账号登录授权，即可开始使用自动补全功能。",
         "body_en": "Search for \"GitHub Copilot\" in the VS Code extension marketplace. Install it, log in with your GitHub account, and autocomplete starts working immediately.",
         "body_ja": "VS Code 拡張機能マーケットで「GitHub Copilot」を検索してインストール。GitHub アカウントでログイン後、オートコンプリートがすぐに使えるようになります。"
       },
       {
         "step": 3,
-        "title":    "使用 Tab 接受补全",
+        "title": "使用 Tab 接受补全",
         "title_en": "Accept completions with Tab",
         "title_ja": "Tab で補完を承認",
-        "body":    "Copilot 会以灰色文字实时显示建议代码。按 Tab 接受全部，按 Alt+] 切换下一个建议，按 Esc 忽略。鼠标悬停在建议上可查看备选方案。",
+        "body": "Copilot 会以灰色文字实时显示建议代码。按 Tab 接受全部，按 Alt+] 切换下一个建议，按 Esc 忽略。鼠标悬停在建议上可查看备选方案。",
         "body_en": "Copilot shows suggestions in gray text. Press Tab to accept all, Alt+] to cycle through alternatives, Esc to dismiss. Hover over suggestions to see alternates.",
         "body_ja": "Copilot は提案をグレーのテキストでリアルタイム表示。Tab で全承認、Alt+] で次の候補に切り替え、Esc でキャンセル。候補にカーソルを合わせると代替案を確認できます。"
       },
       {
         "step": 4,
-        "title":    "使用 Copilot Chat",
+        "title": "使用 Copilot Chat",
         "title_en": "Use Copilot Chat",
         "title_ja": "Copilot Chat を使う",
-        "body":    "按 Ctrl+I 唤出 Inline Chat，直接在代码中提问或下达指令（如「优化这段代码」「为这个函数写单元测试」）。侧边栏 Chat 面板可进行多轮对话式编程问答。",
+        "body": "按 Ctrl+I 唤出 Inline Chat，直接在代码中提问或下达指令（如「优化这段代码」「为这个函数写单元测试」）。侧边栏 Chat 面板可进行多轮对话式编程问答。",
         "body_en": "Press Ctrl+I to open Inline Chat and ask questions or give commands directly in your code (e.g., \"Optimize this code\", \"Write unit tests for this function\"). The Chat panel supports multi-turn programming Q&A.",
         "body_ja": "Ctrl+I でインラインチャットを呼び出し、コード内で直接質問や指示を与えられます（例：「このコードを最適化して」「この関数のユニットテストを書いて」）。サイドバーのチャットパネルで複数ターンの問答も可能。"
       }
     ],
     "tips": [
-      { "zh": "写清楚函数名和注释，Copilot 的补全质量会大幅提升。好的命名 = 好的 AI 提示词。", "en": "Clear function names and comments dramatically improve Copilot's suggestions. Good naming = good AI prompts.", "ja": "明確な関数名とコメントを書くと Copilot の補完品質が大幅に向上します。良い命名 = 良い AI プロンプト。" },
-      { "zh": "遇到难以解决的 Bug，在 Chat 面板选中代码后输入 /fix，Copilot 会自动诊断并给出修复方案。", "en": "For tough bugs, select the code in the Chat panel and type /fix — Copilot will diagnose and suggest a fix automatically.", "ja": "手ごわいバグには、チャットパネルでコードを選択して /fix と入力——Copilot が自動で診断・修正案を提示します。" }
+      {
+        "zh": "写清楚函数名和注释，Copilot 的补全质量会大幅提升。好的命名 = 好的 AI 提示词。",
+        "en": "Clear function names and comments dramatically improve Copilot's suggestions. Good naming = good AI prompts.",
+        "ja": "明確な関数名とコメントを書くと Copilot の補完品質が大幅に向上します。良い命名 = 良い AI プロンプト。"
+      },
+      {
+        "zh": "遇到难以解决的 Bug，在 Chat 面板选中代码后输入 /fix，Copilot 会自动诊断并给出修复方案。",
+        "en": "For tough bugs, select the code in the Chat panel and type /fix — Copilot will diagnose and suggest a fix automatically.",
+        "ja": "手ごわいバグには、チャットパネルでコードを選択して /fix と入力——Copilot が自動で診断・修正案を提示します。"
+      }
     ]
   },
   {
@@ -442,53 +506,61 @@
     "difficulty_ja": "初級",
     "read_time": 5,
     "updated": "2025-06",
-    "title":    "Cursor AI 编辑器完整教程",
+    "title": "Cursor AI 编辑器完整教程",
     "title_en": "Complete Cursor AI Editor Tutorial",
     "title_ja": "Cursor AI エディタ完全チュートリアル",
-    "intro":    "Cursor 是专为 AI 时代设计的代码编辑器，基于 VS Code 构建，内置 GPT-4、Claude 等多种顶级模型。与 Copilot 不同，Cursor 可以理解整个代码库上下文，实现更大范围的代码修改和重构。",
+    "intro": "Cursor 是专为 AI 时代设计的代码编辑器，基于 VS Code 构建，内置 GPT-4、Claude 等多种顶级模型。与 Copilot 不同，Cursor 可以理解整个代码库上下文，实现更大范围的代码修改和重构。",
     "intro_en": "Cursor is a VS Code-based code editor built for the AI era, with GPT-4 and Claude built in. Unlike Copilot, Cursor understands your entire codebase, enabling large-scale edits and refactors across files.",
     "intro_ja": "Cursor は VS Code ベースの AI 時代向けコードエディタで、GPT-4 と Claude を内蔵しています。Copilot と異なり、Cursor はコードベース全体を理解するため、複数ファイルにわたる大規模な編集とリファクタリングが可能です。",
     "steps": [
       {
         "step": 1,
-        "title":    "下载与安装",
+        "title": "下载与安装",
         "title_en": "Download and install",
         "title_ja": "ダウンロードとインストール",
-        "body":    "前往 cursor.sh 下载对应系统版本，安装后可一键导入 VS Code 的插件和设置。免费版每月可使用 2000 次 AI 补全 + 50 次 GPT-4/Claude 请求。",
+        "body": "前往 cursor.sh 下载对应系统版本，安装后可一键导入 VS Code 的插件和设置。免费版每月可使用 2000 次 AI 补全 + 50 次 GPT-4/Claude 请求。",
         "body_en": "Download from cursor.sh for your OS. After installing, import your VS Code extensions and settings in one click. The free tier includes 2,000 AI completions + 50 GPT-4/Claude requests per month.",
         "body_ja": "cursor.sh から OS に合ったバージョンをダウンロード。インストール後、VS Code の拡張機能と設定をワンクリックでインポート。無料版は月2,000回の AI 補完＋50回の GPT-4/Claude リクエストが含まれます。"
       },
       {
         "step": 2,
-        "title":    "掌握三大核心功能",
+        "title": "掌握三大核心功能",
         "title_en": "Master three core features",
         "title_ja": "3つのコア機能をマスター",
-        "body":    "① Tab 补全（同 Copilot）；② Cmd+K 内联编辑（选中代码后用自然语言指令修改）；③ Cmd+L 打开 Chat 侧边栏（可与整个代码库对话）。这三个功能覆盖 80% 的使用场景。",
+        "body": "① Tab 补全（同 Copilot）；② Cmd+K 内联编辑（选中代码后用自然语言指令修改）；③ Cmd+L 打开 Chat 侧边栏（可与整个代码库对话）。这三个功能覆盖 80% 的使用场景。",
         "body_en": "① Tab completion (like Copilot); ② Cmd+K inline edit (select code and modify with natural language); ③ Cmd+L opens the Chat panel (chat with your entire codebase). These three cover 80% of use cases.",
         "body_ja": "① Tab 補完（Copilot と同様）；② Cmd+K インライン編集（コードを選択して自然言語で修正）；③ Cmd+L でチャットパネルを開く（コードベース全体と対話）。この3つで使用場面の80%をカバーします。"
       },
       {
         "step": 3,
-        "title":    "@Codebase 全库问答",
+        "title": "@Codebase 全库问答",
         "title_en": "@Codebase whole-project Q&A",
         "title_ja": "@Codebase プロジェクト全体への問答",
-        "body":    "在 Chat 中输入 @Codebase，Cursor 会自动索引你的整个项目，回答「这个项目的认证逻辑在哪里？」或「我需要在哪里添加一个新的 API 路由？」等架构级问题。",
+        "body": "在 Chat 中输入 @Codebase，Cursor 会自动索引你的整个项目，回答「这个项目的认证逻辑在哪里？」或「我需要在哪里添加一个新的 API 路由？」等架构级问题。",
         "body_en": "Type @Codebase in Chat — Cursor indexes your entire project and can answer architecture-level questions like \"Where is the auth logic?\" or \"Where should I add a new API route?\"",
         "body_ja": "チャットで @Codebase と入力——Cursor がプロジェクト全体をインデックス化し、「認証ロジックはどこ？」「新しい API ルートはどこに追加すべき？」などのアーキテクチャレベルの質問に答えられます。"
       },
       {
         "step": 4,
-        "title":    "Composer 多文件重构",
+        "title": "Composer 多文件重构",
         "title_en": "Composer for multi-file refactors",
         "title_ja": "Composer でマルチファイルリファクタリング",
-        "body":    "按 Cmd+Shift+I 打开 Composer，可以下达「把所有组件从 class 改为 hooks 写法」这类跨多个文件的大型重构任务，Cursor 会生成 diff 供你审查后一键应用。",
+        "body": "按 Cmd+Shift+I 打开 Composer，可以下达「把所有组件从 class 改为 hooks 写法」这类跨多个文件的大型重构任务，Cursor 会生成 diff 供你审查后一键应用。",
         "body_en": "Press Cmd+Shift+I to open Composer. Give it cross-file refactoring instructions like \"Convert all class components to hooks.\" Cursor generates a diff for you to review, then apply with one click.",
         "body_ja": "Cmd+Shift+I で Composer を開く。「すべてのクラスコンポーネントを hooks 形式に変換」などの複数ファイルにまたがるリファクタリング指示を与えると、Cursor が差分を生成——レビュー後にワンクリックで適用できます。"
       }
     ],
     "tips": [
-      { "zh": "项目根目录创建 .cursorrules 文件，写入你的项目规范（语言、框架、代码风格），Cursor 会全程遵守这些规则。", "en": "Create a .cursorrules file in your project root with your conventions (language, framework, code style) — Cursor will follow these rules throughout.", "ja": "プロジェクトルートに .cursorrules ファイルを作成して規約（言語・フレームワーク・コードスタイル）を記載。Cursor は全体を通してこれらのルールに従います。" },
-      { "zh": "Chat 里 @ 可以引用特定文件、函数、文档，让 AI 回答更精准。如 @utils.ts 或 @README.md。", "en": "In Chat, use @ to reference specific files, functions, or docs for more precise AI responses. E.g., @utils.ts or @README.md.", "ja": "チャットで @ を使って特定のファイル・関数・ドキュメントを参照すると AI の回答が精確になります。例：@utils.ts や @README.md。" }
+      {
+        "zh": "项目根目录创建 .cursorrules 文件，写入你的项目规范（语言、框架、代码风格），Cursor 会全程遵守这些规则。",
+        "en": "Create a .cursorrules file in your project root with your conventions (language, framework, code style) — Cursor will follow these rules throughout.",
+        "ja": "プロジェクトルートに .cursorrules ファイルを作成して規約（言語・フレームワーク・コードスタイル）を記載。Cursor は全体を通してこれらのルールに従います。"
+      },
+      {
+        "zh": "Chat 里 @ 可以引用特定文件、函数、文档，让 AI 回答更精准。如 @utils.ts 或 @README.md。",
+        "en": "In Chat, use @ to reference specific files, functions, or docs for more precise AI responses. E.g., @utils.ts or @README.md.",
+        "ja": "チャットで @ を使って特定のファイル・関数・ドキュメントを参照すると AI の回答が精確になります。例：@utils.ts や @README.md。"
+      }
     ]
   },
   {
@@ -501,44 +573,52 @@
     "difficulty_ja": "初級",
     "read_time": 3,
     "updated": "2025-06",
-    "title":    "Perplexity AI 使用指南",
+    "title": "Perplexity AI 使用指南",
     "title_en": "Perplexity AI Usage Guide",
     "title_ja": "Perplexity AI 使い方ガイド",
-    "intro":    "Perplexity AI 是 AI 时代最好的搜索引擎之一，每个答案都附有可点击的来源引用，彻底告别 AI 幻觉问题。它同时具备追问功能和深度研究（Deep Research）模式，是研究型用户的首选工具。",
+    "intro": "Perplexity AI 是 AI 时代最好的搜索引擎之一，每个答案都附有可点击的来源引用，彻底告别 AI 幻觉问题。它同时具备追问功能和深度研究（Deep Research）模式，是研究型用户的首选工具。",
     "intro_en": "Perplexity AI is one of the best AI-era search engines. Every answer includes clickable source citations — no more AI hallucinations. It supports follow-up questions and Deep Research mode, making it the go-to tool for research-heavy users.",
     "intro_ja": "Perplexity AI は AI 時代の最高の検索エンジンの一つです。全ての回答にクリッカブルな引用元が付き、AI ハルシネーションとおさらば。追加質問機能と Deep Research モードを備え、調査志向のユーザーに最適なツールです。",
     "steps": [
       {
         "step": 1,
-        "title":    "直接提问，查看引用",
+        "title": "直接提问，查看引用",
         "title_en": "Ask directly and check citations",
         "title_ja": "直接質問して引用を確認",
-        "body":    "访问 perplexity.ai，无需注册即可使用基础功能。输入问题后，回答下方会显示数字引用标注，点击可直接跳转到原始来源网页验证信息。",
+        "body": "访问 perplexity.ai，无需注册即可使用基础功能。输入问题后，回答下方会显示数字引用标注，点击可直接跳转到原始来源网页验证信息。",
         "body_en": "Visit perplexity.ai — no sign-up required for basic use. After getting an answer, numbered citation markers appear below. Click them to jump directly to the source page and verify.",
         "body_ja": "perplexity.ai にアクセス——基本機能は登録不要。回答後、数字の引用マーカーが表示され、クリックすると元のソースページに直接ジャンプして確認できます。"
       },
       {
         "step": 2,
-        "title":    "选择搜索来源类型",
+        "title": "选择搜索来源类型",
         "title_en": "Choose your search source",
         "title_ja": "検索ソースを選ぶ",
-        "body":    "搜索框下方可切换来源范围：All（全网）、Academic（学术论文）、YouTube、Reddit、Social Media。学术研究选 Academic，参考 arXiv / PubMed 的论文结果。",
+        "body": "搜索框下方可切换来源范围：All（全网）、Academic（学术论文）、YouTube、Reddit、Social Media。学术研究选 Academic，参考 arXiv / PubMed 的论文结果。",
         "body_en": "Below the search box, switch between source types: All (whole web), Academic (research papers), YouTube, Reddit, Social Media. Choose Academic for research — it pulls from arXiv and PubMed.",
         "body_ja": "検索ボックス下でソースの種類を切り替え：All（全ウェブ）・Academic（論文）・YouTube・Reddit・Social Media。研究には Academic を選択——arXiv や PubMed から結果を取得します。"
       },
       {
         "step": 3,
-        "title":    "使用 Deep Research 模式",
+        "title": "使用 Deep Research 模式",
         "title_en": "Use Deep Research mode",
         "title_ja": "Deep Research モードを使う",
-        "body":    "Pro 用户可开启 Deep Research，Perplexity 会自动发出数十次搜索请求，综合多个来源后生成详细的研究报告，类似人工撰写的深度调研。",
+        "body": "Pro 用户可开启 Deep Research，Perplexity 会自动发出数十次搜索请求，综合多个来源后生成详细的研究报告，类似人工撰写的深度调研。",
         "body_en": "Pro users can enable Deep Research — Perplexity automatically runs dozens of searches and synthesizes a detailed report from multiple sources, similar to a human-written research brief.",
         "body_ja": "Pro ユーザーは Deep Research を有効化できます——Perplexity が数十回の検索を自動実行し、複数のソースから総合的な詳細レポートを生成。人間が書いた調査レポートに近い品質です。"
       }
     ],
     "tips": [
-      { "zh": "用 Perplexity 代替 Google 搜索技术教程，因为它会直接给出步骤答案而不是一堆链接。", "en": "Use Perplexity instead of Google for technical tutorials — it gives direct step-by-step answers instead of a list of links.", "ja": "技術チュートリアルの検索には Google の代わりに Perplexity を使いましょう——リンク一覧ではなく直接的なステップバイステップの回答が得られます。" },
-      { "zh": "搜索框右侧的 Focus 可以精准限定来源，节省筛选时间。", "en": "The Focus option on the right of the search box pins your source type and saves filtering time.", "ja": "検索ボックス右側の Focus でソースの種類を固定することで絞り込みの時間を節約できます。" }
+      {
+        "zh": "用 Perplexity 代替 Google 搜索技术教程，因为它会直接给出步骤答案而不是一堆链接。",
+        "en": "Use Perplexity instead of Google for technical tutorials — it gives direct step-by-step answers instead of a list of links.",
+        "ja": "技術チュートリアルの検索には Google の代わりに Perplexity を使いましょう——リンク一覧ではなく直接的なステップバイステップの回答が得られます。"
+      },
+      {
+        "zh": "搜索框右侧的 Focus 可以精准限定来源，节省筛选时间。",
+        "en": "The Focus option on the right of the search box pins your source type and saves filtering time.",
+        "ja": "検索ボックス右側の Focus でソースの種類を固定することで絞り込みの時間を節約できます。"
+      }
     ]
   },
   {
@@ -551,53 +631,61 @@
     "difficulty_ja": "初級",
     "read_time": 4,
     "updated": "2025-06",
-    "title":    "Gamma 一键生成 PPT 教程",
+    "title": "Gamma 一键生成 PPT 教程",
     "title_en": "Gamma: Generate PPT in One Click",
     "title_ja": "Gamma で PPT をワンクリック生成",
-    "intro":    "Gamma 是目前最流行的 AI 演示文稿生成工具，只需输入主题或大纲，30 秒内即可生成结构完整、排版精美的幻灯片。支持导出 PDF 和 PowerPoint，免费版有 10 张卡片额度。",
+    "intro": "Gamma 是目前最流行的 AI 演示文稿生成工具，只需输入主题或大纲，30 秒内即可生成结构完整、排版精美的幻灯片。支持导出 PDF 和 PowerPoint，免费版有 10 张卡片额度。",
     "intro_en": "Gamma is the most popular AI presentation generator. Enter a topic or outline and get a complete, beautifully formatted slide deck in 30 seconds. Exports to PDF and PowerPoint. Free tier includes 10 cards.",
     "intro_ja": "Gamma は最も人気の AI プレゼンテーション生成ツールです。トピックやアウトラインを入力するだけで、30秒以内に完成した美しいスライドデッキが生成されます。PDF・PowerPoint エクスポート対応。無料版は10カード。",
     "steps": [
       {
         "step": 1,
-        "title":    "创建第一份演示文稿",
+        "title": "创建第一份演示文稿",
         "title_en": "Create your first presentation",
         "title_ja": "最初のプレゼンを作成",
-        "body":    "访问 gamma.app 注册后，点击「Create New」→「Generate」，输入主题（如「2025 年 AI 行业趋势分析」），选择语言和幻灯片数量，点击 Generate。",
+        "body": "访问 gamma.app 注册后，点击「Create New」→「Generate」，输入主题（如「2025 年 AI 行业趋势分析」），选择语言和幻灯片数量，点击 Generate。",
         "body_en": "Visit gamma.app, sign up, then click \"Create New\" → \"Generate.\" Enter a topic (e.g., \"2025 AI Industry Trends\"), choose language and slide count, and click Generate.",
         "body_ja": "gamma.app でサインアップ後、「Create New」→「Generate」をクリック。トピック（例：「2025年 AI業界トレンド分析」）・言語・スライド枚数を選択して Generate をクリック。"
       },
       {
         "step": 2,
-        "title":    "从大纲生成（更精准）",
+        "title": "从大纲生成（更精准）",
         "title_en": "Generate from outline (more precise)",
         "title_ja": "アウトラインから生成（より精確）",
-        "body":    "选择「Paste in text」，输入你的章节大纲，Gamma 会按照你的结构生成幻灯片，内容更贴合需求，适合有明确内容规划的场景。",
+        "body": "选择「Paste in text」，输入你的章节大纲，Gamma 会按照你的结构生成幻灯片，内容更贴合需求，适合有明确内容规划的场景。",
         "body_en": "Choose \"Paste in text,\" enter your section outline, and Gamma builds slides following your structure — more content-accurate for scenarios with clear content plans.",
         "body_ja": "「Paste in text」を選択してセクションのアウトラインを入力。Gamma があなたの構造に従ってスライドを構築——明確なコンテンツ計画がある場合により精確です。"
       },
       {
         "step": 3,
-        "title":    "编辑与自定义主题",
+        "title": "编辑与自定义主题",
         "title_en": "Edit and customize themes",
         "title_ja": "編集とテーマのカスタマイズ",
-        "body":    "生成后可点击任意卡片编辑文字，拖拽添加图片/图表/视频，右侧面板可更换主题颜色和字体。点击「AI 编辑」可让 AI 重写某张幻灯片的内容。",
+        "body": "生成后可点击任意卡片编辑文字，拖拽添加图片/图表/视频，右侧面板可更换主题颜色和字体。点击「AI 编辑」可让 AI 重写某张幻灯片的内容。",
         "body_en": "After generating, click any card to edit text, drag in images/charts/videos, and use the right panel to change theme colors and fonts. Click \"AI Edit\" to let AI rewrite a specific slide's content.",
         "body_ja": "生成後、任意のカードをクリックしてテキストを編集、画像/グラフ/動画をドラッグ追加、右パネルでテーマカラーとフォントを変更できます。「AI 編集」で特定のスライドの内容を AI に書き直させることも可能。"
       },
       {
         "step": 4,
-        "title":    "导出 PowerPoint",
+        "title": "导出 PowerPoint",
         "title_en": "Export to PowerPoint",
         "title_ja": "PowerPoint にエクスポート",
-        "body":    "点击右上角「Share & Export」→「Export」→「PowerPoint」，即可下载为可编辑的 .pptx 文件，在传统 PowerPoint 中继续编辑或分享给不使用 Gamma 的同事。",
+        "body": "点击右上角「Share & Export」→「Export」→「PowerPoint」，即可下载为可编辑的 .pptx 文件，在传统 PowerPoint 中继续编辑或分享给不使用 Gamma 的同事。",
         "body_en": "Click \"Share & Export\" → \"Export\" → \"PowerPoint\" to download an editable .pptx file. Continue editing in traditional PowerPoint or share with colleagues who don't use Gamma.",
         "body_ja": "「Share & Export」→「Export」→「PowerPoint」をクリックして編集可能な .pptx ファイルをダウンロード。従来の PowerPoint で編集継続、または Gamma を使わない同僚への共有も可能。"
       }
     ],
     "tips": [
-      { "zh": "生成时选择「简洁」风格比「丰富」风格更适合商务场景，内容不会过于拥挤。", "en": "Choose the \"Clean\" style over \"Rich\" for business presentations — content stays uncluttered and professional.", "ja": "ビジネスシーンでは「リッチ」より「クリーン」スタイルを選択——コンテンツがすっきりしてプロらしく見えます。" },
-      { "zh": "Gamma 生成的幻灯片可直接分享链接，接收方无需安装任何软件即可在浏览器中流畅浏览。", "en": "Gamma presentations can be shared via link — viewers can browse in any browser with no software required.", "ja": "Gamma のプレゼンはリンクで共有可能——受け取る側はソフトウェアのインストール不要でブラウザから閲覧できます。" }
+      {
+        "zh": "生成时选择「简洁」风格比「丰富」风格更适合商务场景，内容不会过于拥挤。",
+        "en": "Choose the \"Clean\" style over \"Rich\" for business presentations — content stays uncluttered and professional.",
+        "ja": "ビジネスシーンでは「リッチ」より「クリーン」スタイルを選択——コンテンツがすっきりしてプロらしく見えます。"
+      },
+      {
+        "zh": "Gamma 生成的幻灯片可直接分享链接，接收方无需安装任何软件即可在浏览器中流畅浏览。",
+        "en": "Gamma presentations can be shared via link — viewers can browse in any browser with no software required.",
+        "ja": "Gamma のプレゼンはリンクで共有可能——受け取る側はソフトウェアのインストール不要でブラウザから閲覧できます。"
+      }
     ]
   },
   {
@@ -610,64 +698,79 @@
     "difficulty_ja": "初級",
     "read_time": 4,
     "updated": "2025-06",
-    "title":    "ElevenLabs AI 配音完整教程",
+    "title": "ElevenLabs AI 配音完整教程",
     "title_en": "ElevenLabs AI Dubbing Complete Tutorial",
     "title_ja": "ElevenLabs AI 吹き替え完全チュートリアル",
-    "intro":    "ElevenLabs 是业界公认音色最逼真的 AI 语音平台，支持声音克隆（只需 1 分钟录音）、30+ 种语言合成、有声书和播客生成。免费版每月可合成 10,000 字符。",
+    "intro": "ElevenLabs 是业界公认音色最逼真的 AI 语音平台，支持声音克隆（只需 1 分钟录音）、30+ 种语言合成、有声书和播客生成。免费版每月可合成 10,000 字符。",
     "intro_en": "ElevenLabs is the industry leader in voice realism. It supports voice cloning (just 1 minute of audio), synthesis in 30+ languages, and audiobook/podcast generation. Free tier: 10,000 characters per month.",
     "intro_ja": "ElevenLabs は業界で最もリアルな音声プラットフォームとして認められています。声のクローン（1分の音声で可）・30以上の言語での合成・オーディオブック/ポッドキャスト生成に対応。無料版は月10,000文字。",
     "steps": [
       {
         "step": 1,
-        "title":    "文字转语音（TTS）",
+        "title": "文字转语音（TTS）",
         "title_en": "Text to Speech (TTS)",
         "title_ja": "テキスト読み上げ（TTS）",
-        "body":    "注册后，在「Text to Speech」输入文本，从 300+ 内置声音中选择一个，调整语速（Stability）和情感强度（Similarity）滑块，点击 Generate 即可生成音频。",
+        "body": "注册后，在「Text to Speech」输入文本，从 300+ 内置声音中选择一个，调整语速（Stability）和情感强度（Similarity）滑块，点击 Generate 即可生成音频。",
         "body_en": "After signing up, go to \"Text to Speech,\" enter your text, choose from 300+ built-in voices, adjust Stability and Similarity sliders, and click Generate to produce audio.",
         "body_ja": "登録後、「Text to Speech」でテキストを入力。300以上の内蔵ボイスから選択し、Stability と Similarity のスライダーを調整して Generate をクリックすれば音声が生成されます。"
       },
       {
         "step": 2,
-        "title":    "声音克隆",
+        "title": "声音克隆",
         "title_en": "Voice cloning",
         "title_ja": "声のクローン",
-        "body":    "进入「Voices」→「Add Voice」→「Instant Voice Cloning」，上传 1-3 分钟的清晰录音（无背景噪音），即可创建自己的声音模型，用于 TTS 或内容生产。",
+        "body": "进入「Voices」→「Add Voice」→「Instant Voice Cloning」，上传 1-3 分钟的清晰录音（无背景噪音），即可创建自己的声音模型，用于 TTS 或内容生产。",
         "body_en": "Go to \"Voices\" → \"Add Voice\" → \"Instant Voice Cloning,\" upload 1–3 minutes of clear audio (no background noise) to create your own voice model for TTS or content production.",
         "body_ja": "「Voices」→「Add Voice」→「Instant Voice Cloning」へ進み、1〜3分のクリアな録音（背景ノイズなし）をアップロードしてあなた自身のボイスモデルを作成——TTS やコンテンツ制作に使えます。"
       },
       {
         "step": 3,
-        "title":    "视频/音频配音（Dubbing）",
+        "title": "视频/音频配音（Dubbing）",
         "title_en": "Video/audio dubbing",
         "title_ja": "動画/音声の吹き替え",
-        "body":    "使用「Dubbing Studio」，上传视频文件，选择目标语言，ElevenLabs 会自动识别原声、翻译内容、生成对应语言的配音，并自动对齐口型时间轴。",
+        "body": "使用「Dubbing Studio」，上传视频文件，选择目标语言，ElevenLabs 会自动识别原声、翻译内容、生成对应语言的配音，并自动对齐口型时间轴。",
         "body_en": "Use \"Dubbing Studio\" — upload a video, choose the target language, and ElevenLabs automatically detects the original voice, translates content, generates dubbed audio, and aligns it to the lip-sync timeline.",
         "body_ja": "「Dubbing Studio」を使用——動画をアップロードして対象言語を選択。ElevenLabs が自動で元の声を認識・翻訳・吹き替え音声生成・口パクのタイムライン調整まで行います。"
       },
       {
         "step": 4,
-        "title":    "API 集成",
+        "title": "API 集成",
         "title_en": "API integration",
         "title_ja": "API 連携",
-        "body":    "ElevenLabs 提供简洁的 REST API，可直接在自己的应用中嵌入 TTS 功能。免费账号即可获取 API Key，Python 和 Node.js 均有官方 SDK，几行代码即可接入。",
+        "body": "ElevenLabs 提供简洁的 REST API，可直接在自己的应用中嵌入 TTS 功能。免费账号即可获取 API Key，Python 和 Node.js 均有官方 SDK，几行代码即可接入。",
         "body_en": "ElevenLabs offers a clean REST API to embed TTS in your own apps. Free accounts get an API key. Official SDKs for Python and Node.js let you integrate with just a few lines of code.",
         "body_ja": "ElevenLabs はシンプルな REST API を提供し、自分のアプリに TTS を組み込めます。無料アカウントでも API キーを取得可能。Python・Node.js の公式 SDK で数行のコードで連携できます。"
       }
     ],
     "tips": [
-      { "zh": "克隆声音时，录音质量比时长更重要。用安静的环境 + 麦克风录制 1 分钟，胜过嘈杂环境录制 10 分钟。", "en": "For voice cloning, audio quality matters more than length. 1 minute in a quiet room with a mic beats 10 minutes of noisy audio.", "ja": "声のクローンでは、録音の長さより品質が重要。静かな部屋でマイクを使った1分が、騒がしい環境での10分に勝ります。" },
-      { "zh": "设置 Stability 较高（0.7以上）可减少情感波动，适合正式旁白；降低 Stability 可让声音更生动有情绪。", "en": "Higher Stability (0.7+) reduces emotional variation — better for formal narration. Lower Stability adds more expressive emotion.", "ja": "Stability を高く（0.7以上）設定すると感情変動が減りフォーマルなナレーションに最適。低くすると声がより表情豊かになります。" }
+      {
+        "zh": "克隆声音时，录音质量比时长更重要。用安静的环境 + 麦克风录制 1 分钟，胜过嘈杂环境录制 10 分钟。",
+        "en": "For voice cloning, audio quality matters more than length. 1 minute in a quiet room with a mic beats 10 minutes of noisy audio.",
+        "ja": "声のクローンでは、録音の長さより品質が重要。静かな部屋でマイクを使った1分が、騒がしい環境での10分に勝ります。"
+      },
+      {
+        "zh": "设置 Stability 较高（0.7以上）可减少情感波动，适合正式旁白；降低 Stability 可让声音更生动有情绪。",
+        "en": "Higher Stability (0.7+) reduces emotional variation — better for formal narration. Lower Stability adds more expressive emotion.",
+        "ja": "Stability を高く（0.7以上）設定すると感情変動が減りフォーマルなナレーションに最適。低くすると声がより表情豊かになります。"
+      }
     ]
-    {
-  "slug": "github-create-repo-aihubtools",
-  "tool": "GitHub",
-  "website": "https://github.com",
-  "category": "网站搭建",
-  "difficulty": "入门",
-  "read_time": 6,
-  "updated": "2026-06",
-  "title": "GitHub 新建仓库完整教程：创建 AIHubTools 项目仓库",
-  "summary": "适合初学者的 GitHub 新建仓库教程，手把手演示创建 AIHubTools 仓库、填写仓库信息、上传文件与发布网站的完整流程。"
-}
+  },
+  {
+    "slug": "github-create-repo-aihubtools",
+    "tool": "GitHub",
+    "website": "https://github.com",
+    "category": "网站搭建",
+    "difficulty": "入门",
+    "difficulty_en": "Beginner",
+    "difficulty_ja": "初級",
+    "read_time": 6,
+    "updated": "2026-06",
+    "title": "GitHub 新建仓库完整教程：创建 AIHubTools 项目仓库",
+    "title_en": "Complete GitHub Repository Creation Guide for AIHubTools",
+    "title_ja": "AIHubTools 用 GitHub リポジトリ作成ガイド",
+    "summary": "适合初学者的 GitHub 新建仓库教程，手把手演示创建 AIHubTools 仓库、填写仓库信息、上传文件与发布网站的完整流程。",
+    "intro": "这是一篇写给 GitHub 新手的操作教程，按照实际截图一步一步演示如何创建 AIHubTools 项目仓库，适合第一次搭建网站或整理项目文件的人参考。",
+    "steps": [],
+    "tips": []
   }
 ]

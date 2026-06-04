@@ -1,0 +1,62 @@
+{
+  "page.meta_title": {
+    "zh": "多语种测试页面 - AIHubTools 智汇工具",
+    "en": "Multilingual Test Page - AIHubTools",
+    "ja": "多言語テストページ - AIHubTools"
+  },
+  "page.meta_description": {
+    "zh": "这是 AIHubTools 的多语种底层逻辑测试页面，用于确认中文、英文、日文切换是否正常。",
+    "en": "This is a multilingual test page for AIHubTools, used to verify Chinese, English, and Japanese switching.",
+    "ja": "これはAIHubToolsの多言語基盤ロジックのテストページで、中国語、英語、日本語の切り替えを確認するためのものです。"
+  },
+  "page.title": {
+    "zh": "多语种测试页面",
+    "en": "Multilingual Test Page",
+    "ja": "多言語テストページ"
+  },
+  "page.subtitle": {
+    "zh": "这个页面用于测试 AIHubTools 的公共多语种库是否正常工作。",
+    "en": "This page is used to test whether the shared AIHubTools i18n library works correctly.",
+    "ja": "このページは、AIHubToolsの共通多言語ライブラリが正常に動作するかを確認するためのものです。"
+  },
+  "page.card_1_title": {
+    "zh": "测试内容 1：普通文字切换",
+    "en": "Test 1: Normal Text Switching",
+    "ja": "テスト1：通常テキストの切り替え"
+  },
+  "page.card_1_body": {
+    "zh": "点击上方的中文、English、日本語按钮，如果这段文字跟着变化，说明 data-i18n 正常。",
+    "en": "Click the Chinese, English, or Japanese buttons above. If this text changes, data-i18n is working correctly.",
+    "ja": "上の中文、English、日本語ボタンをクリックしてください。この文章が変われば、data-i18nは正常に動作しています。"
+  },
+  "page.card_2_title": {
+    "zh": "测试内容 2：输入框占位文字",
+    "en": "Test 2: Input Placeholder",
+    "ja": "テスト2：入力欄のプレースホルダー"
+  },
+  "page.card_2_body": {
+    "zh": "下面的输入框 placeholder 也会跟着语言切换。",
+    "en": "The placeholder text in the input box below will also switch with the selected language.",
+    "ja": "下の入力欄のプレースホルダーも、選択した言語に合わせて切り替わります。"
+  },
+  "page.test_placeholder": {
+    "zh": "请输入测试关键词",
+    "en": "Enter a test keyword",
+    "ja": "テストキーワードを入力してください"
+  },
+  "page.card_3_title": {
+    "zh": "测试内容 3：SEO 标题和描述",
+    "en": "Test 3: SEO Title and Description",
+    "ja": "テスト3：SEOタイトルと説明"
+  },
+  "page.card_3_body": {
+    "zh": "这个页面同时设置了 i18n-title 和 i18n-description，切换语言时浏览器标题也会变化。",
+    "en": "This page also uses i18n-title and i18n-description, so the browser title changes when switching languages.",
+    "ja": "このページでは i18n-title と i18n-description も使用しているため、言語を切り替えるとブラウザのタイトルも変わります。"
+  },
+  "page.status_ok": {
+    "zh": "如果以上内容都能切换，说明多语种底层逻辑已经搭建成功。",
+    "en": "If all the content above switches correctly, the multilingual foundation is working.",
+    "ja": "上記の内容がすべて切り替われば、多言語基盤ロジックは正常に構築されています。"
+  }
+}

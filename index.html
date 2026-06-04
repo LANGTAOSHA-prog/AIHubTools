@@ -15,15 +15,15 @@
     const SOURCE_URL = 'https://raw.githubusercontent.com/LANGTAOSHA-prog/AIHubTools/c571a1d9bd37b60f4b7fc4254c5645cb4fb3a350/index.html';
     function safeText(el){return (el && el.textContent ? el.textContent : '').trim();}
     function detailHref(name){return './tool.html?name=' + encodeURIComponent(String(name||'').trim());}
-    function injectPatchStyle(){
-      if(document.getElementById('aihub-extra-style')) return;
-      var style=document.createElement('style');
-      style.id='aihub-extra-style';
-      style.textContent='.aihub-tutorial-entry{display:inline-flex!important;align-items:center;gap:6px;text-decoration:none!important;background:linear-gradient(135deg,rgba(124,106,252,.18),rgba(224,64,251,.14))!important;border:1px solid rgba(124,106,252,.45)!important;color:var(--text,#fff)!important}.aihub-tutorial-entry:hover{border-color:rgba(224,64,251,.75)!important;transform:translateY(-1px)}@media(max-width:720px){.aihub-tutorial-entry{justify-content:center}}';
-      document.head.appendChild(style);
+    function patchHomeHtml(html){
+      const patchCss = '.aihub-tutorial-entry{display:inline-flex!important;align-items:center;gap:6px;text-decoration:none!important;background:linear-gradient(135deg,rgba(124,106,252,.18),rgba(224,64,251,.14))!important;border:1px solid rgba(124,106,252,.45)!important;color:var(--text,#fff)!important}.aihub-tutorial-entry:hover{border-color:rgba(224,64,251,.75)!important;transform:translateY(-1px)}@media(max-width:720px){.aihub-tutorial-entry{justify-content:center}}';
+      if(!html.includes('aihub-tutorial-entry')) html = html.replace('</style>', patchCss + '</style>');
+      const entry = '<a class="rand-btn aihub-tutorial-entry" href="./tutorials.html" aria-label="进入 AIHubTools 教程中心">📖 <span>教程中心</span></a>';
+      const target = '<button class="rand-btn" onclick="showRandom()">🎲 <span data-i18n="rand_btn">随机发现</span></button>';
+      if(!html.includes('aihub-tutorial-entry') && html.includes(target)) html = html.replace(target, entry + '\n      ' + target);
+      return html;
     }
     function addToolsTutorialEntry(){
-      injectPatchStyle();
       var tools=document.getElementById('tools-section');
       if(!tools) return;
       var right=tools.querySelector('.sh .sh-right');
@@ -69,6 +69,7 @@
         const res = await fetch(SOURCE_URL, {cache:'no-store'});
         if(!res.ok) throw new Error('HTTP ' + res.status);
         let html = await res.text();
+        html = patchHomeHtml(html);
         document.open();
         document.write(html);
         document.close();

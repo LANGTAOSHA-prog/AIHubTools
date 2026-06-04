@@ -30,19 +30,19 @@
     "ja": "上の中文、English、日本語ボタンをクリックしてください。この文章が変われば、data-i18nは正常に動作しています。"
   },
   "page.card_2_title": {
-    "zh": "测试内容 2：输入框占位文字",
-    "en": "Test 2: Input Placeholder",
+    "zh": "测试内容 2：输入框占位提示文字",
+    "en": "Test 2: Input Placeholder Text",
     "ja": "テスト2：入力欄のプレースホルダー"
   },
   "page.card_2_body": {
-    "zh": "下面的输入框 placeholder 也会跟着语言切换。",
+    "zh": "下面输入框里的灰色提示文字也会跟着语言切换。",
     "en": "The placeholder text in the input box below will also switch with the selected language.",
-    "ja": "下の入力欄のプレースホルダーも、選択した言語に合わせて切り替わります。"
+    "ja": "下の入力欄に表示される薄い案内テキストも、選択した言語に合わせて切り替わります。"
   },
   "page.test_placeholder": {
-    "zh": "请输入测试关键词",
-    "en": "Enter a test keyword",
-    "ja": "テストキーワードを入力してください"
+    "zh": "中文提示：请输入测试关键词",
+    "en": "English placeholder: enter a test keyword",
+    "ja": "日本語の案内：テストキーワードを入力してください"
   },
   "page.card_3_title": {
     "zh": "测试内容 3：SEO 标题和描述",

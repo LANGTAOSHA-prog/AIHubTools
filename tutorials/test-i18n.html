@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="i18n-page" content="test-i18n" />
+  <meta name="i18n-title" content="page.meta_title" />
+  <meta name="i18n-description" content="page.meta_description" />
+  <title>多语种测试页面 - AIHubTools 智汇工具</title>
+  <meta name="description" content="这是 AIHubTools 的多语种底层逻辑测试页面，用于确认中文、英文、日文切换是否正常。" />
+  <script src="../assets/js/i18n.js" defer></script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --card2: #1e293b;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, .22);
+      --primary: #38bdf8;
+      --primary2: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,.16), transparent 32%),
+        radial-gradient(circle at top right, rgba(167,139,250,.14), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      padding: 24px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    nav a, .lang-switch button {
+      color: var(--muted);
+      background: rgba(15,23,42,.55);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 13px;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    nav a:hover, .lang-switch button:hover {
+      color: var(--text);
+      border-color: rgba(56,189,248,.55);
+    }
+    .lang-switch button.is-active {
+      color: #020617;
+      background: var(--primary);
+      border-color: var(--primary);
+      font-weight: 800;
+    }
+    main { padding: 42px 0 64px; }
+    .hero {
+      padding: clamp(26px, 5vw, 48px);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, .14), rgba(168, 85, 247, .12));
+      box-shadow: 0 24px 80px rgba(0,0,0,.22);
+    }
+    .badge {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(56,189,248,.12);
+      color: #bae6fd;
+      border: 1px solid rgba(56,189,248,.3);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 6vw, 60px);
+      line-height: 1.1;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 760px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .card {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: rgba(17,24,39,.78);
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+    .card p { color: var(--muted); margin: 0; }
+    .test-input {
+      width: 100%;
+      margin-top: 16px;
+      padding: 13px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--card2);
+      color: var(--text);
+      outline: none;
+    }
+    .status {
+      margin-top: 22px;
+      padding: 18px 20px;
+      border-radius: 18px;
+      border: 1px solid rgba(56,189,248,.32);
+      background: rgba(56,189,248,.08);
+      color: #dff7ff;
+      font-weight: 700;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 880px) {
+      .grid { grid-template-columns: 1fr; }
+      header { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="../index.html" data-i18n="common.site_name">AIHubTools 智汇工具</a>
+    <nav>
+      <a href="../index.html" data-i18n="common.home">首页</a>
+      <a href="../tutorials.html" data-i18n="common.tutorials">教程</a>
+      <div class="lang-switch" aria-label="Language">
+        <button type="button" data-set-lang="zh">中文</button>
+        <button type="button" data-set-lang="en">English</button>
+        <button type="button" data-set-lang="ja">日本語</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="badge">AIHubTools i18n Test</span>
+      <h1 data-i18n="page.title">多语种测试页面</h1>
+      <p class="subtitle" data-i18n="page.subtitle">这个页面用于测试 AIHubTools 的公共多语种库是否正常工作。</p>
+    </section>
+
+    <section class="grid" aria-label="i18n test cards">
+      <article class="card">
+        <h2 data-i18n="page.card_1_title">测试内容 1：普通文字切换</h2>
+        <p data-i18n="page.card_1_body">点击上方的中文、English、日本語按钮，如果这段文字跟着变化，说明 data-i18n 正常。</p>
+      </article>
+
+      <article class="card">
+        <h2 data-i18n="page.card_2_title">测试内容 2：输入框占位文字</h2>
+        <p data-i18n="page.card_2_body">下面的输入框 placeholder 也会跟着语言切换。</p>
+        <input class="test-input" type="text" data-i18n-placeholder="page.test_placeholder" placeholder="请输入测试关键词" />
+      </article>
+
+      <article class="card">
+        <h2 data-i18n="page.card_3_title">测试内容 3：SEO 标题和描述</h2>
+        <p data-i18n="page.card_3_body">这个页面同时设置了 i18n-title 和 i18n-description，切换语言时浏览器标题也会变化。</p>
+      </article>
+    </section>
+
+    <div class="status" data-i18n="page.status_ok">如果以上内容都能切换，说明多语种底层逻辑已经搭建成功。</div>
+  </main>
+
+  <footer>
+    <p data-i18n="common.footer_note">AIHubTools 智汇工具整理实用 AI 工具、教程和效率工具。</p>
+    <p data-i18n="common.copyright">© 2026 AIHubTools 智汇工具</p>
+  </footer>
+</body>
+</html>

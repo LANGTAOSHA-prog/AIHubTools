@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 每个页面必须修改这里：content 对应 assets/i18n/pages/xxx.json 的 xxx -->
+  <meta name="i18n-page" content="_template" />
+
+  <!-- 可选：让 JS 自动切换 title 和 description -->
+  <meta name="i18n-title" content="page.meta_title" />
+  <meta name="i18n-description" content="page.meta_description" />
+
+  <title>页面标题 - AIHubTools 智汇工具</title>
+  <meta name="description" content="这里填写页面描述，用于搜索引擎展示。" />
+
+  <!-- 子目录页面用 ../assets/js/i18n.js；根目录页面用 assets/js/i18n.js -->
+  <script src="../assets/js/i18n.js" defer></script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, .22);
+      --primary: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    header, main, footer {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      padding: 28px 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    nav a, .lang-switch button {
+      color: var(--muted);
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 7px 12px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .lang-switch button.is-active {
+      color: #020617;
+      background: var(--primary);
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+    main {
+      padding: 42px 0 64px;
+    }
+    .hero {
+      padding: 36px;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, .12), rgba(168, 85, 247, .10));
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.1;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    section {
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(17, 24, 39, .72);
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .hero, section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="../index.html" data-i18n="common.site_name">AIHubTools 智汇工具</a>
+
+    <nav>
+      <a href="../index.html" data-i18n="common.home">首页</a>
+      <a href="../tutorials.html" data-i18n="common.tutorials">教程</a>
+
+      <div class="lang-switch" aria-label="Language">
+        <button type="button" data-set-lang="zh">中文</button>
+        <button type="button" data-set-lang="en">English</button>
+        <button type="button" data-set-lang="ja">日本語</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1 data-i18n="page.title">页面标题</h1>
+      <p class="subtitle" data-i18n="page.subtitle">这里填写页面副标题。</p>
+    </div>
+
+    <section>
+      <h2 data-i18n="page.section_1_title">第一部分标题</h2>
+      <p data-i18n="page.section_1_body">这里填写中文正文。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="common.footer_note">AIHubTools 智汇工具整理实用 AI 工具、教程和效率工具。</p>
+    <p data-i18n="common.copyright">© 2026 AIHubTools 智汇工具</p>
+  </footer>
+</body>
+</html>

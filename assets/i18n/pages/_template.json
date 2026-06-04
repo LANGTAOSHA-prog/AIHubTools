@@ -1,0 +1,32 @@
+{
+  "page.meta_title": {
+    "zh": "页面标题 - AIHubTools 智汇工具",
+    "en": "Page Title - AIHubTools",
+    "ja": "ページタイトル - AIHubTools"
+  },
+  "page.meta_description": {
+    "zh": "这里填写页面描述，用于搜索引擎展示。",
+    "en": "Write the page description here for search results.",
+    "ja": "検索結果に表示されるページ説明をここに入力します。"
+  },
+  "page.title": {
+    "zh": "页面标题",
+    "en": "Page Title",
+    "ja": "ページタイトル"
+  },
+  "page.subtitle": {
+    "zh": "这里填写页面副标题。",
+    "en": "Write the page subtitle here.",
+    "ja": "ページのサブタイトルをここに入力します。"
+  },
+  "page.section_1_title": {
+    "zh": "第一部分标题",
+    "en": "Section One Title",
+    "ja": "セクション1のタイトル"
+  },
+  "page.section_1_body": {
+    "zh": "这里填写中文正文。",
+    "en": "Write the English body text here.",
+    "ja": "ここに日本語の本文を入力します。"
+  }
+}

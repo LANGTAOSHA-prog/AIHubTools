@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>封面图检测 - AIHubTools 智汇工具</title>
+  <meta name="description" content="AIHubTools 封面图与工具 slug 自动检测页面，用于检查 assets/covers 下的封面是否能被详情页正确读取。" />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 12% 0,rgba(124,106,252,.2),transparent 30%),radial-gradient(circle at 88% 0,rgba(224,64,251,.16),transparent 30%),#08090f;color:#f0f2ff;line-height:1.75;min-height:100vh}.wrap{max-width:1180px;margin:auto;padding:28px 16px 70px}.top{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:24px}.brand{font-weight:900;font-size:18px}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a,.nav button,.btn{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);color:#fff;border-radius:999px;padding:9px 14px;text-decoration:none;font-weight:800;cursor:pointer}.hero,.card{border:1px solid rgba(255,255,255,.12);background:rgba(15,17,32,.86);box-shadow:0 22px 52px rgba(0,0,0,.34)}.hero{border-radius:28px;padding:30px;margin-bottom:20px;background:linear-gradient(135deg,rgba(124,106,252,.28),rgba(224,64,251,.1))}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.12;margin-bottom:12px}.hero p{color:#cbd5e1;max-width:820px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.stat{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);border-radius:18px;padding:16px}.num{font-size:30px;font-weight:900}.lbl{color:#9ca3af;font-size:13px}.ok .num{color:#22c55e}.bad .num{color:#fb7185}.warn .num{color:#facc15}.card{border-radius:22px;padding:18px;margin-top:16px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.progress{height:10px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:14px}.bar{height:100%;width:0;background:linear-gradient(90deg,#7c6afc,#e040fb);transition:width .25s}.table-wrap{overflow:auto;margin-top:14px;border-radius:16px;border:1px solid rgba(255,255,255,.1)}table{width:100%;border-collapse:collapse;min-width:860px}th,td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;font-size:13px}th{color:#c4b5fd;background:rgba(124,106,252,.1);position:sticky;top:0}td{color:#e5e7eb}.pill{display:inline-flex;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:900}.pill.ok{background:rgba(34,197,94,.14);color:#86efac;border:1px solid rgba(34,197,94,.24)}.pill.bad{background:rgba(251,113,133,.14);color:#fda4af;border:1px solid rgba(251,113,133,.24)}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:#93c5fd}.small{font-size:12px;color:#9ca3af;margin-top:8px}.thumb{width:120px;height:68px;object-fit:cover;border-radius:10px;background:#111827;border:1px solid rgba(255,255,255,.1)}.hidden{display:none!important}@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}.hero{padding:22px}.num{font-size:24px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="top">
+      <div class="brand">AIHubTools / 智汇工具</div>
+      <div class="nav">
+        <a href="./index.html">返回首页</a>
+        <a href="./tutorials.html">教程中心</a>
+        <a href="./tool.html?name=ChatGPT">详情页示例</a>
+        <button onclick="setLang(nextLang())" id="langBtn">中文</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <h1 data-i18n="title">封面图自动检测</h1>
+      <p data-i18n="intro">本页面会读取 tools-data.json，按照详情页相同的 slug 规则，检查 assets/covers/工具slug-cover.webp 是否存在，并验证图片能否正常加载。</p>
+      <div class="actions">
+        <button class="btn" onclick="runAudit('first100')" data-i18n="check100">检查前 100 个工具</button>
+        <button class="btn" onclick="runAudit('all')" data-i18n="checkAll">检查全部工具</button>
+        <button class="btn" onclick="copyReport()" data-i18n="copy">复制检测报告</button>
+      </div>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <div class="small" id="status" data-i18n="ready">准备检测。建议先点击“检查前 100 个工具”。</div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><div class="num" id="total">0</div><div class="lbl" data-i18n="total">检测总数</div></div>
+      <div class="stat ok"><div class="num" id="ok">0</div><div class="lbl" data-i18n="ok">正常显示</div></div>
+      <div class="stat bad"><div class="num" id="bad">0</div><div class="lbl" data-i18n="bad">缺失/加载失败</div></div>
+      <div class="stat warn"><div class="num" id="rate">0%</div><div class="lbl" data-i18n="rate">通过率</div></div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="missingTitle">缺失或加载失败列表</h2>
+      <div class="small" data-i18n="tip">如果这里为空，说明本次检测范围内的封面都能被详情页规则读取。</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th data-i18n="tool">工具</th><th>Slug</th><th data-i18n="coverPath">封面路径</th><th data-i18n="statusCol">状态</th><th data-i18n="detail">详情页</th></tr></thead>
+          <tbody id="missingBody"><tr><td colspan="6" class="small">暂无数据</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="allTitle">完整检测结果</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th data-i18n="tool2">工具</th><th>Slug</th><th data-i18n="preview">预览</th><th data-i18n="statusCol2">状态</th><th data-i18n="coverPath2">封面路径</th></tr></thead>
+          <tbody id="allBody"><tr><td colspan="6" class="small">暂无数据</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+<script>
+const I18N={
+ zh:{title:'封面图自动检测',intro:'本页面会读取 tools-data.json，按照详情页相同的 slug 规则，检查 assets/covers/工具slug-cover.webp 是否存在，并验证图片能否正常加载。',check100:'检查前 100 个工具',checkAll:'检查全部工具',copy:'复制检测报告',ready:'准备检测。建议先点击“检查前 100 个工具”。',total:'检测总数',ok:'正常显示',bad:'缺失/加载失败',rate:'通过率',missingTitle:'缺失或加载失败列表',tip:'如果这里为空，说明本次检测范围内的封面都能被详情页规则读取。',tool:'工具',coverPath:'封面路径',statusCol:'状态',detail:'详情页',allTitle:'完整检测结果',tool2:'工具',preview:'预览',statusCol2:'状态',coverPath2:'封面路径',loading:'正在检测',done:'检测完成',copied:'检测报告已复制',copyFail:'复制失败，请手动复制'},
+ en:{title:'Cover Image Audit',intro:'This page reads tools-data.json, uses the same slug rule as the detail page, and checks whether assets/covers/tool-slug-cover.webp exists and loads correctly.',check100:'Check first 100 tools',checkAll:'Check all tools',copy:'Copy report',ready:'Ready. Recommended: check the first 100 tools first.',total:'Total checked',ok:'Loaded',bad:'Missing / failed',rate:'Pass rate',missingTitle:'Missing or failed list',tip:'If this list is empty, all covers in this range can be read by the detail-page rule.',tool:'Tool',coverPath:'Cover path',statusCol:'Status',detail:'Detail page',allTitle:'Full results',tool2:'Tool',preview:'Preview',statusCol2:'Status',coverPath2:'Cover path',loading:'Checking',done:'Done',copied:'Report copied',copyFail:'Copy failed'},
+ ja:{title:'カバー画像自動チェック',intro:'tools-data.json を読み込み、詳細ページと同じ slug ルールで assets/covers/ツールslug-cover.webp が存在し正常に読み込めるか確認します。',check100:'先頭100件を確認',checkAll:'全ツールを確認',copy:'レポートをコピー',ready:'準備完了。まず先頭100件の確認がおすすめです。',total:'確認数',ok:'正常',bad:'欠落/失敗',rate:'成功率',missingTitle:'欠落または読み込み失敗',tip:'ここが空なら、この範囲のカバーは詳細ページの規則で読み込めます。',tool:'ツール',coverPath:'カバー路径',statusCol:'状態',detail:'詳細ページ',allTitle:'全結果',tool2:'ツール',preview:'プレビュー',statusCol2:'状態',coverPath2:'カバー路径',loading:'確認中',done:'完了',copied:'レポートをコピーしました',copyFail:'コピー失敗'}
+};
+let lang=localStorage.getItem('aihub_audit_lang')||'zh',lastResults=[];
+function t(k){return (I18N[lang]&&I18N[lang][k])||I18N.zh[k]||k}function applyLang(){document.documentElement.dataset.lang=lang;document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));document.getElementById('langBtn').textContent=lang==='zh'?'中文':lang==='en'?'English':'日本語'}function nextLang(){return lang==='zh'?'en':lang==='en'?'ja':'zh'}function setLang(l){lang=l;localStorage.setItem('aihub_audit_lang',lang);applyLang()}
+function clean(v){return v==null?'':String(v).trim()}function slugify(v){return clean(v).toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}function nameOf(x){return clean(x.name||x.name_zh||x.name_en||x.title||x.tool)}function slugOf(x){return clean(x.slug||x.id||x.tool_slug||slugify(nameOf(x)))}function arr(d){return Array.isArray(d)?d:(d&&Array.isArray(d.tools)?d.tools:(d&&Array.isArray(d.items)?d.items:[]))}function esc(v){return clean(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
+function testImage(src){return new Promise(resolve=>{const im=new Image();const timer=setTimeout(()=>resolve(false),8000);im.onload=()=>{clearTimeout(timer);resolve(true)};im.onerror=()=>{clearTimeout(timer);resolve(false)};im.src=src+(src.includes('?')?'&':'?')+'v='+Date.now()})}
+async function runAudit(mode){
+  document.getElementById('status').textContent=t('loading')+'...';
+  const res=await fetch('./tools-data.json?audit='+Date.now(),{cache:'no-store'});const data=arr(await res.json());const list=mode==='first100'?data.slice(0,100):data;
+  lastResults=[];let ok=0,bad=0;document.getElementById('total').textContent=list.length;document.getElementById('ok').textContent='0';document.getElementById('bad').textContent='0';document.getElementById('rate').textContent='0%';
+  document.getElementById('missingBody').innerHTML='<tr><td colspan="6" class="small">'+t('loading')+'...</td></tr>';document.getElementById('allBody').innerHTML='';
+  for(let i=0;i<list.length;i++){
+    const item=list[i],nm=nameOf(item),sl=slugOf(item),path='./assets/covers/'+sl+'-cover.webp',loaded=await testImage(path),detail='./tool.html?slug='+encodeURIComponent(sl);
+    if(loaded)ok++;else bad++;lastResults.push({index:i+1,name:nm,slug:sl,path,loaded,detail});
+    document.getElementById('bar').style.width=Math.round(((i+1)/list.length)*100)+'%';document.getElementById('ok').textContent=ok;document.getElementById('bad').textContent=bad;document.getElementById('rate').textContent=Math.round(ok/list.length*100)+'%';document.getElementById('status').textContent=t('loading')+' '+(i+1)+' / '+list.length;
+  }
+  renderResults();document.getElementById('status').textContent=t('done')+'：'+ok+' / '+list.length;}
+function renderResults(){
+  const missing=lastResults.filter(r=>!r.loaded);document.getElementById('missingBody').innerHTML=missing.length?missing.map(r=>`<tr><td>${r.index}</td><td>${esc(r.name)}</td><td class="mono">${esc(r.slug)}</td><td class="mono">${esc(r.path)}</td><td><span class="pill bad">Failed</span></td><td><a href="${r.detail}" target="_blank">打开</a></td></tr>`).join(''):'<tr><td colspan="6"><span class="pill ok">全部正常</span></td></tr>';
+  document.getElementById('allBody').innerHTML=lastResults.map(r=>`<tr><td>${r.index}</td><td>${esc(r.name)}</td><td class="mono">${esc(r.slug)}</td><td>${r.loaded?`<img class="thumb" src="${r.path}">`:'—'}</td><td><span class="pill ${r.loaded?'ok':'bad'}">${r.loaded?'OK':'Failed'}</span></td><td class="mono">${esc(r.path)}</td></tr>`).join('');
+}
+function copyReport(){const total=lastResults.length,ok=lastResults.filter(r=>r.loaded).length,bad=total-ok,missing=lastResults.filter(r=>!r.loaded).map(r=>`${r.index}. ${r.name} => ${r.path}`).join('\n')||'无';const text=`AIHubTools 封面图检测报告\n检测总数：${total}\n正常：${ok}\n缺失/失败：${bad}\n通过率：${total?Math.round(ok/total*100):0}%\n\n缺失列表：\n${missing}`;navigator.clipboard.writeText(text).then(()=>alert(t('copied'))).catch(()=>alert(t('copyFail')))}
+applyLang();
+</script>
+</body>
+</html>

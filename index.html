@@ -15,6 +15,27 @@
     const SOURCE_URL = 'https://raw.githubusercontent.com/LANGTAOSHA-prog/AIHubTools/c571a1d9bd37b60f4b7fc4254c5645cb4fb3a350/index.html';
     function safeText(el){return (el && el.textContent ? el.textContent : '').trim();}
     function detailHref(name){return './tool.html?name=' + encodeURIComponent(String(name||'').trim());}
+    function injectPatchStyle(){
+      if(document.getElementById('aihub-extra-style')) return;
+      var style=document.createElement('style');
+      style.id='aihub-extra-style';
+      style.textContent='.aihub-tutorial-entry{display:inline-flex!important;align-items:center;gap:6px;text-decoration:none!important;background:linear-gradient(135deg,rgba(124,106,252,.18),rgba(224,64,251,.14))!important;border:1px solid rgba(124,106,252,.45)!important;color:var(--text,#fff)!important}.aihub-tutorial-entry:hover{border-color:rgba(224,64,251,.75)!important;transform:translateY(-1px)}@media(max-width:720px){.aihub-tutorial-entry{justify-content:center}}';
+      document.head.appendChild(style);
+    }
+    function addToolsTutorialEntry(){
+      injectPatchStyle();
+      var tools=document.getElementById('tools-section');
+      if(!tools) return;
+      var right=tools.querySelector('.sh .sh-right');
+      if(!right) return;
+      if(right.querySelector('.aihub-tutorial-entry')) return;
+      var link=document.createElement('a');
+      link.className='rand-btn aihub-tutorial-entry';
+      link.href='./tutorials.html';
+      link.innerHTML='📖 <span>教程中心</span>';
+      link.setAttribute('aria-label','进入 AIHubTools 教程中心');
+      right.insertBefore(link,right.firstChild);
+    }
     function addDetailButtons(){
       document.querySelectorAll('.tool-card').forEach(function(card){
         var name = safeText(card.querySelector('.tool-name'));
@@ -35,12 +56,13 @@
       });
     }
     function startDetailPatch(){
+      addToolsTutorialEntry();
       addDetailButtons();
-      setTimeout(addDetailButtons,100);
-      setTimeout(addDetailButtons,500);
-      setTimeout(addDetailButtons,1200);
-      setInterval(addDetailButtons,1500);
-      try{new MutationObserver(addDetailButtons).observe(document.body,{childList:true,subtree:true});}catch(e){}
+      setTimeout(function(){addToolsTutorialEntry();addDetailButtons();},100);
+      setTimeout(function(){addToolsTutorialEntry();addDetailButtons();},500);
+      setTimeout(function(){addToolsTutorialEntry();addDetailButtons();},1200);
+      setInterval(function(){addToolsTutorialEntry();addDetailButtons();},1500);
+      try{new MutationObserver(function(){addToolsTutorialEntry();addDetailButtons();}).observe(document.body,{childList:true,subtree:true});}catch(e){}
     }
     async function loadHome(){
       try{

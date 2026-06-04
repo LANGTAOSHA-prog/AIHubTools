@@ -1,0 +1,107 @@
+{
+  "common.site_name": {
+    "zh": "AIHubTools 智汇工具",
+    "en": "AIHubTools",
+    "ja": "AIHubTools"
+  },
+  "common.site_tagline": {
+    "zh": "好用的 AI 工具与效率工具导航",
+    "en": "A practical directory of AI and productivity tools",
+    "ja": "AIツールと効率化ツールの実用ナビ"
+  },
+  "common.home": {
+    "zh": "首页",
+    "en": "Home",
+    "ja": "ホーム"
+  },
+  "common.tools": {
+    "zh": "工具",
+    "en": "Tools",
+    "ja": "ツール"
+  },
+  "common.tutorials": {
+    "zh": "教程",
+    "en": "Tutorials",
+    "ja": "チュートリアル"
+  },
+  "common.categories": {
+    "zh": "分类",
+    "en": "Categories",
+    "ja": "カテゴリ"
+  },
+  "common.search": {
+    "zh": "搜索",
+    "en": "Search",
+    "ja": "検索"
+  },
+  "common.search_placeholder": {
+    "zh": "搜索工具、教程或关键词",
+    "en": "Search tools, tutorials, or keywords",
+    "ja": "ツール、チュートリアル、キーワードを検索"
+  },
+  "common.language": {
+    "zh": "语言",
+    "en": "Language",
+    "ja": "言語"
+  },
+  "common.zh": {
+    "zh": "中文",
+    "en": "Chinese",
+    "ja": "中国語"
+  },
+  "common.en": {
+    "zh": "英文",
+    "en": "English",
+    "ja": "英語"
+  },
+  "common.ja": {
+    "zh": "日文",
+    "en": "Japanese",
+    "ja": "日本語"
+  },
+  "common.back_home": {
+    "zh": "返回首页",
+    "en": "Back to Home",
+    "ja": "ホームへ戻る"
+  },
+  "common.back_tutorials": {
+    "zh": "返回教程中心",
+    "en": "Back to Tutorials",
+    "ja": "チュートリアル一覧へ戻る"
+  },
+  "common.open_tool": {
+    "zh": "打开工具",
+    "en": "Open Tool",
+    "ja": "ツールを開く"
+  },
+  "common.read_more": {
+    "zh": "阅读全文",
+    "en": "Read More",
+    "ja": "続きを読む"
+  },
+  "common.try_now": {
+    "zh": "立即使用",
+    "en": "Try Now",
+    "ja": "今すぐ使う"
+  },
+  "common.copy": {
+    "zh": "复制",
+    "en": "Copy",
+    "ja": "コピー"
+  },
+  "common.copied": {
+    "zh": "已复制",
+    "en": "Copied",
+    "ja": "コピーしました"
+  },
+  "common.footer_note": {
+    "zh": "AIHubTools 智汇工具整理实用 AI 工具、教程和效率工具。",
+    "en": "AIHubTools curates useful AI tools, tutorials, and productivity utilities.",
+    "ja": "AIHubToolsは、便利なAIツール、チュートリアル、効率化ツールを整理しています。"
+  },
+  "common.copyright": {
+    "zh": "© 2026 AIHubTools 智汇工具",
+    "en": "© 2026 AIHubTools",
+    "ja": "© 2026 AIHubTools"
+  }
+}

@@ -1,101 +1,192 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-i18n-lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ElevenLabs AI 配音完整教程 - AIHubTools 智汇工具</title>
-  <meta name="description" content="ElevenLabs 是业界公认音色最逼真的 AI 语音平台，支持声音克隆（只需 1 分钟录音）、30+ 种语言合成、有声书和播客生成。免费版每月可合成 10,000 字符。" />
-  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/elevenlabs-guide.html" />
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
-    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
-    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
-    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
-    main{max-width:960px;margin:0 auto;padding:32px 18px}
-    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
-    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
-    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
-    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
-    .intro{font-size:17px}
-    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
-    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
-    .tips ul{margin:0;padding-left:22px}
-    .tips li{margin-bottom:8px}
-    footer{text-align:center;color:#64748b;padding:28px 16px}
-    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title data-i18n="title">ElevenLabs AI 语音克隆与配音教程 - AIHubTools 智汇工具</title>
+    <meta name="description" content="本篇 ElevenLabs 教程将指导你如何使用其顶尖的文字转语音(TTS)、声音克隆和 AI 视频配音功能，轻松生成媲美真人的 AI 音频。" data-i18n="desc">
+    <meta name="keywords" content="ElevenLabs,ElevenLabs教程,AI配音,声音克隆,AI语音,TTS,文字转语音,AI视频翻译">
+    <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/elevenlabs-guide.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ElevenLabs AI 语音克隆与配音教程 - AIHubTools 智汇工具">
+    <meta property="og:description" content="学习如何使用 ElevenLabs，从文字生成逼真语音，克隆你自己的声音，并为视频自动配音。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://langtaosha-prog.github.io/AIHubTools/tutorials/elevenlabs-guide.html">
+    <meta property="og:image" content="../assets/images/tutorials/elevenlabs/hero.webp">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ElevenLabs AI 语音克隆与配音教程 - AIHubTools 智汇工具">
+    <meta name="twitter:description" content="学习如何使用 ElevenLabs，从文字生成逼真语音，克隆你自己的声音，并为视频自动配音。">
+    <meta name="twitter:image" content="../assets/images/tutorials/elevenlabs/hero.webp">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <header>
-    <h1>ElevenLabs AI 配音完整教程</h1>
-    <p>ElevenLabs 是业界公认音色最逼真的 AI 语音平台，支持声音克隆（只需 1 分钟录音）、30+ 种语言合成、有声书和播客生成。免费版每月可合成 10,000 字符。</p>
-    <div class="meta">
-      <span>ElevenLabs</span>
-      <span>AI Voice</span>
-      <span>入门</span>
-      <span>4 分钟阅读</span>
-      <span>更新：2025-06</span>
-    </div>
-  </header>
+<body class="darkmode-support">
 
-  <main>
-    <div class="topbar">
-      <a class="back" href="../tutorials.html">← 返回教程中心</a>
-      <a class="site" href="https://elevenlabs.io" target="_blank" rel="noopener nofollow">访问官网 →</a>
-    </div>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="../index.html" data-i18n="nav.home">首页</a> / 
+        <a href="../tutorials.html" data-i18n="nav.tutorials">教程中心</a> / 
+        <span data-i18n="nav.elevenlabs-guide">ElevenLabs 教程</span>
+    </nav>
 
-    <section class="card intro">
-      <h2>适合谁看？</h2>
-      <p>ElevenLabs 是业界公认音色最逼真的 AI 语音平台，支持声音克隆（只需 1 分钟录音）、30+ 种语言合成、有声书和播客生成。免费版每月可合成 10,000 字符。</p>
-    </section>
+    <!-- Main Content -->
+    <main class="tutorial-content">
 
-    
-      <section class="card step-card">
-        <div class="step-num">步骤 1</div>
-        <h2>文字转语音（TTS）</h2>
-        <p>注册后，在「Text to Speech」输入文本，从 300+ 内置声音中选择一个，调整语速（Stability）和情感强度（Similarity）滑块，点击 Generate 即可生成音频。</p>
-        <div class="image-placeholder">截图预留位置：ElevenLabs - 文字转语音（TTS）</div>
-      </section>
-    
+        <!-- Hero -->
+        <header class="hero">
+            <h1 data-i18n="elevenlabs.h1">ElevenLabs AI 语音克隆与配音教程</h1>
+            <div class="hero-meta">
+                <span data-i18n="hero.updated">更新时间：2026-06-12</span>
+                <span data-i18n="hero.reading-time">阅读时间：8分钟</span>
+                <span data-i18n="hero.difficulty">难度：⭐⭐ 中级</span>
+            </div>
+            <img src="../assets/images/tools/elevenlabs.svg" alt="ElevenLabs Logo" class="hero-logo">
+        </header>
 
-      <section class="card step-card">
-        <div class="step-num">步骤 2</div>
-        <h2>声音克隆</h2>
-        <p>进入「Voices」→「Add Voice」→「Instant Voice Cloning」，上传 1-3 分钟的清晰录音（无背景噪音），即可创建自己的声音模型，用于 TTS 或内容生产。</p>
-        <div class="image-placeholder">截图预留位置：ElevenLabs - 声音克隆</div>
-      </section>
-    
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2 data-i18n="toc.title">目录</h2>
+            <ul>
+                <li><a href="#what-is-elevenlabs">一、ElevenLabs 是什么？</a></li>
+                <li><a href="#core-features">二、核心功能实战</a></li>
+                <li><a href="#voice-clone">三、如何克隆一个高质量的声音</a></li>
+                <li><a href="#api">四、API 集成与开发者应用</a></li>
+                <li><a href="#faq">五、常见问题与解答 (FAQ)</a></li>
+            </ul>
+        </nav>
 
-      <section class="card step-card">
-        <div class="step-num">步骤 3</div>
-        <h2>视频/音频配音（Dubbing）</h2>
-        <p>使用「Dubbing Studio」，上传视频文件，选择目标语言，ElevenLabs 会自动识别原声、翻译内容、生成对应语言的配音，并自动对齐口型时间轴。</p>
-        <div class="image-placeholder">截图预留位置：ElevenLabs - 视频/音频配音（Dubbing）</div>
-      </section>
-    
+        <article>
+            <h2 id="what-is-elevenlabs" data-i18n="elevenlabs.h2_what">一、ElevenLabs 是什么？</h2>
+            <p data-i18n="elevenlabs.what_p1">ElevenLabs 是目前公认的、效果最逼真自然的 AI 语音生成和声音克隆平台。无论你是视频创作者、播客主、开发者还是有声书制作者，ElevenLabs 都能提供高质量的音频解决方案。它以其富有情感和极低延迟的语音合成技术而闻名。</p>
+            <p data-i18n="elevenlabs.what_p2">免费版每月提供 10,000 个字符的生成额度，并允许创建最多 3 个自定义声音，非常适合初学者体验。</p>
 
-      <section class="card step-card">
-        <div class="step-num">步骤 4</div>
-        <h2>API 集成</h2>
-        <p>ElevenLabs 提供简洁的 REST API，可直接在自己的应用中嵌入 TTS 功能。免费账号即可获取 API Key，Python 和 Node.js 均有官方 SDK，几行代码即可接入。</p>
-        <div class="image-placeholder">截图预留位置：ElevenLabs - API 集成</div>
-      </section>
-    
+            <h2 id="core-features" data-i18n="elevenlabs.h2_core">二、核心功能实战</h2>
+            
+            <h3 data-i18n="elevenlabs.h3_feature1">1. 文本转语音 (Text-to-Speech, TTS)</h3>
+            <p data-i18n="elevenlabs.feature1_p1">这是 ElevenLabs 的基础功能。在「Speech Synthesis」模块中，你可以输入或粘贴文本，然后从海量的“声音库 (Voice Library)”中选择一个预设声音。通过调整“稳定性 (Stability)”和“清晰度+相似度增强 (Clarity + Similarity Enhancement)”两个滑块，可以控制生成语音的情感和风格。</p>
+            <ul>
+                <li><strong>高稳定性：</strong>声音更平稳、专业，适合新闻播报或教程讲解。</li>
+                <li><strong>低稳定性：</strong>声音更具情感和表现力，适合故事讲述或角色扮演。</li>
+            </ul>
+            <img src="../assets/images/tutorials/elevenlabs/tts.webp" alt="ElevenLabs 的文本转语音界面" loading="lazy" class="tut-img">
 
-    <section class="card tips">
-      <h2>实用小建议</h2>
-      <ul>
-        <li>克隆声音时，录音质量比时长更重要。用安静的环境 + 麦克风录制 1 分钟，胜过嘈杂环境录制 10 分钟。</li>
-<li>设置 Stability 较高（0.7以上）可减少情感波动，适合正式旁白；降低 Stability 可让声音更生动有情绪。</li>
-      </ul>
-    </section>
-  </main>
+            <h3 data-i18n="elevenlabs.h3_feature2">2. 语音转语音 (Speech-to-Speech, STS)</h3>
+            <p data-i18n="elevenlabs.feature2_p1">这个功能允许你上传一段自己的录音，然后将其转换为你选择的任何一种 AI 声音。它会保留你原始录音中的语调、节奏和情感，但使用目标声音的音色。这对于修正录音错误或为角色快速配音非常有用。</p>
 
-  <footer>
-    © AIHubTools / 智汇工具
-  </footer>
+            <h3 data-i18n="elevenlabs.h3_feature3">3. AI 视频/音频翻译与配音 (Dubbing)</h3>
+            <p data-i18n="elevenlabs.feature3_p1">在「Dubbing」模块，你可以上传一个视频或音频文件，选择源语言和目标语言（支持超过29种语言）。ElevenLabs 会自动完成以下所有工作：</p>
+            <ol>
+                <li>转录原始音频内容。</li>
+                <li>将文本翻译成目标语言。</li>
+                <li>使用与原说话人音色相似的 AI 语音生成配音。</li>
+                <li>（对于视频）自动将配音与时间轴对齐。</li>
+            </ol>
+            <p>对于希望将内容国际化的创作者来说，这是一个革命性的工具。</p>
+            <img src="../assets/images/tutorials/elevenlabs/dubbing.webp" alt="ElevenLabs 的 AI 视频配音界面" loading="lazy" class="tut-img">
+
+            <h2 id="voice-clone" data-i18n="elevenlabs.h2_clone">三、如何克隆一个高质量的声音</h2>
+            <p data-i18n="elevenlabs.clone_p1">声音克隆是 ElevenLabs 最令人惊艳的功能。进入「VoiceLab」，选择「Add Voice」→「Instant Voice Cloning」。</p>
+            <p data-i18n="elevenlabs.clone_p2">成功的关键在于<strong>音频质量</strong>而非数量。你需要提供 1-5 分钟的清晰、无背景噪音、无混响的个人演讲录音。使用高质量的麦克风在安静的环境中录制效果最好。上传后，几秒钟内你就可以拥有一个自己的 AI 声音模型，并用它来生成任何文本的语音。</p>
+
+            <h2 id="api" data-i18n="elevenlabs.h2_api">四、API 集成与开发者应用</h2>
+            <p data-i18n="elevenlabs.api_p1">ElevenLabs 提供了非常易于使用的 REST API，允许开发者将其实时语音生成能力集成到自己的应用中。在你的个人资料中可以找到 API 密钥。官方提供了 Python 和 JavaScript (Node.js) 的 SDK，只需几行代码即可调用。</p>
+            <pre><code># Python SDK 示例
+from elevenlabs import play, stream
+
+stream(text="你好，世界！这是一个由 ElevenLabs API 生成的实时音频流。", voice="Rachel")</code></pre>
+            <p>利用 API，你可以构建实时语音聊天机器人、动态新闻播报应用、游戏 NPC 对话系统等。</p>
+
+            <h2 id="faq" data-i18n="elevenlabs.h2_faq">五、常见问题与解答 (FAQ)</h2>
+            <dl class="faq-list">
+                <dt>克隆自己的声音是否安全？</dt>
+                <dd>是的。为了防止滥用，ElevenLabs 对声音克隆功能有严格的验证机制。你需要通过朗读一段随机文本来确认你对所上传的音频拥有所有权。你克隆的声音也仅在你自己的账户下可用。</dd>
+                <dt>免费版和付费版有什么主要区别？</dt>
+                <dd>主要区别在于每月的字符额度、可创建的自定义声音数量、以及是否可以访问更高质量的语音模型和“专业声音克隆”（需要更长的音频样本，效果更佳）功能。付费版还提供商业使用授权。</dd>
+                <dt>ElevenLabs 支持中文吗？</dt>
+                <dd>是的，ElevenLabs 的多语言模型 v2 支持包括中文在内的近30种语言的语音合成，并且中文的发音和语调都非常自然。</dd>
+                <dt>我可以用它来制作有声书吗？</dt>
+                <dd>当然可以。ElevenLabs 推出了专门的“Projects”工具，它非常适合处理长篇内容，如有声书和播客。你可以分章节管理文本，并对每个段落的语音进行精细控制和编辑。</dd>
+            </dl>
+        </article>
+        
+        <!-- Related posts -->
+        <div class="related-posts">
+            <div class="rel-tool">
+                <h3 data-i18n="related.tools">相关工具推荐</h3>
+                <a href="../tools/suno.html">Suno AI</a>
+                <a href="../tools/heygen.html">HeyGen</a>
+            </div>
+            <div class="rel-tutorial">
+                <h3 data-i18n="related.tutorials">相关教程</h3>
+                <a href="./suno-guide.html">Suno AI 音乐创作教程</a>
+                <a href="./heygen-guide.html">HeyGen 视频翻译教程</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Back to Top -->
+    <div class="back-top"><a href="#">↑ <span data-i18n="ui.back-to-top">返回顶部</span></a></div>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ElevenLabs AI 语音克隆与配音教程",
+        "description": "本篇 ElevenLabs 教程将指导你如何使用其顶尖的文字转语音(TTS)、声音克隆和 AI 视频配音功能，轻松生成媲美真人的 AI 音频。",
+        "image": "https://langtaosha-prog.github.io/AIHubTools/assets/images/tutorials/elevenlabs/hero.webp",
+        "author": {
+            "@type": "Organization",
+            "name": "AIHubTools 智汇工具"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AIHubTools 智汇工具",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://langtaosha-prog.github.io/AIHubTools/assets/images/logo.svg"
+            }
+        },
+        "datePublished": "2026-06-12"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "克隆自己的声音是否安全？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "是的。为了防止滥用，ElevenLabs 对声音克隆功能有严格的验证机制。你需要通过朗读一段随机文本来确认你对所上传的音频拥有所有权。你克隆的声音也仅在你自己的账户下可用。"
+            }
+        }, {
+            "@type": "Question",
+            "name": "免费版和付费版有什么主要区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "主要区别在于每月的字符额度、可创建的自定义声音数量、以及是否可以访问更高质量的语音模型和“专业声音克隆”（需要更长的音频样本，效果更佳）功能。付费版还提供商业使用授权。"
+            }
+        }, {
+            "@type": "Question",
+            "name": "ElevenLabs 支持中文吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "是的，ElevenLabs 的多语言模型 v2 支持包括中文在内的近30种语言的语音合成，并且中文的发音和语调都非常自然。"
+            }
+        }, {
+            "@type": "Question",
+            "name": "我可以用它来制作有声书吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "当然可以。ElevenLabs 推出了专门的“Projects”工具，它非常适合处理长篇内容，如有声书和播客。你可以分章节管理文本，并对每个段落的语音进行精细控制和编辑。"
+            }
+        }]
+    }
+    </script>
 </body>
 </html>

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AIHubTools 智汇工具 - AI工具导航 | ChatGPT、Midjourney、Claude等AI工具大全</title>
+  <meta name="description" content="AIHubTools智汇工具是专业的AI工具导航平台，精选ChatGPT、Claude、Midjourney、Stable Diffusion、GitHub Copilot等数百款AI工具，涵盖AI对话、AI绘图、AI视频、AI编程、AI写作等分类，帮助开发者、创作者快速找到最适合的AI工具。" />
+  <meta name="keywords" content="AI工具导航,AI工具大全,ChatGPT,Claude,Midjourney,Stable Diffusion,AI绘图,AI写作,AI编程,AI视频,AI助手,人工智能工具,AIHubTools,智汇工具,免费AI工具,AI工具推荐" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="AIHubTools" />
+  <meta property="og:title" content="AIHubTools 智汇工具 - AI工具导航平台" />
+  <meta property="og:description" content="精选全球最好用的AI工具，涵盖AI对话、AI绘图、AI视频、AI编程等多个品类，帮助你快速发现最合适的AI助手。" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AIHubTools 智汇工具 - 发现最好用的AI工具" />
+  <meta name="twitter:description" content="精选ChatGPT、Midjourney、Claude等数百款AI工具，免费使用，持续更新。" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AIHubTools 智汇工具","description":"AI工具导航平台，精选ChatGPT、Midjourney、Claude等全球优质AI工具","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"?q={search_term_string}"},"query-input":"required name=search_term_string"}}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:#08090f; --surface:#0f1120; --surface2:#151829;
+      --border:rgba(255,255,255,0.07); --border-bright:rgba(255,255,255,0.14);
+      --text:#f0f2ff; --muted:#7c84a8;
+      --accent:#7c6afc; --accent2:#e040fb;
+      --green:#00d68f; --yellow:#ffd166; --red:#ff6b6b;
+      --radius:20px; --radius-sm:12px; --radius-pill:999px;
+      --shadow:0 20px 48px -12px rgba(0,0,0,0.5);
+    }
+    [data-theme="light"] {
+      --bg:#f4f6fb; --surface:#ffffff; --surface2:#f0f2f8;
+      --border:rgba(0,0,0,0.08); --border-bright:rgba(0,0,0,0.13);
+      --text:#0d1230; --muted:#5a6482; --shadow:0 8px 32px -8px rgba(59,110,240,0.12);
+    }
+
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',system-ui,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+    ::-webkit-scrollbar{width:6px;} ::-webkit-scrollbar-track{background:var(--bg);} ::-webkit-scrollbar-thumb{background:#2a2d45;border-radius:6px;}
+    [data-theme="light"] ::-webkit-scrollbar-thumb{background:#c5cbe0;}
+
+    /* ══ NAV ══ */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 24px;}
+    .nav-bar{max-width:1300px;margin:14px auto 0;background:rgba(15,17,32,0.78);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--border-bright);border-radius:18px;padding:11px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+    [data-theme="light"] .nav-bar{background:rgba(255,255,255,0.84);}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px;color:var(--text);letter-spacing:-.3px;}
+    .nav-gem{width:32px;height:32px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 0 16px rgba(124,106,252,0.4);flex-shrink:0;}
+    .nav-links{display:flex;align-items:center;gap:18px;flex-wrap:nowrap;}
+    .nav-links a{text-decoration:none;font-size:13px;font-weight:500;color:var(--muted);transition:color .2s;white-space:nowrap;}
+    .nav-links a:hover{color:var(--text);}
+    .nav-btn{background:linear-gradient(135deg,var(--accent),var(--accent2))!important;color:white!important;padding:8px 18px;border-radius:var(--radius-pill);font-weight:700!important;font-size:12px!important;box-shadow:0 0 20px rgba(124,106,252,0.3);transition:opacity .2s,transform .15s!important;}
+    .nav-btn:hover{opacity:.9;transform:translateY(-1px);}
+
+    /* icon buttons in nav */
+    .nav-icon-btn{background:var(--surface2);border:1px solid var(--border-bright);border-radius:var(--radius-pill);padding:6px 12px;cursor:pointer;font-size:13px;font-weight:600;color:var(--text);transition:all .2s;white-space:nowrap;display:flex;align-items:center;gap:5px;}
+    .nav-icon-btn:hover{border-color:var(--accent);}
+
+    /* ── lang dropdown ── */
+    .lang-wrap{position:relative;}
+    .lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);border:1px solid var(--border-bright);border-radius:14px;padding:6px;min-width:130px;box-shadow:0 16px 40px rgba(0,0,0,0.35);z-index:400;display:none;flex-direction:column;gap:2px;}
+    .lang-wrap.open .lang-menu{display:flex;}
+    .lang-opt{padding:9px 14px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;color:var(--text);transition:background .15s;display:flex;align-items:center;gap:8px;}
+    .lang-opt:hover{background:rgba(124,106,252,0.1);}
+    .lang-opt.active{background:rgba(124,106,252,0.15);color:var(--accent);}
+
+    /* ══ HERO ══ */
+    .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:140px 24px 80px;text-align:center;}
+    [data-theme="light"] .hero{background:linear-gradient(160deg,#0d1040 0%,#1a1060 100%);}
+    .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 15% 50%,rgba(124,106,252,.15) 0%,transparent 55%),radial-gradient(ellipse 60% 50% at 85% 30%,rgba(224,64,251,.12) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 50% 80%,rgba(0,214,143,.07) 0%,transparent 55%);pointer-events:none;}
+    .hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);}
+    .orb{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;opacity:.35;animation:float 8s ease-in-out infinite;}
+    .orb-1{width:320px;height:320px;background:var(--accent);top:15%;left:5%;}
+    .orb-2{width:240px;height:240px;background:var(--accent2);top:10%;right:8%;animation-delay:-3s;}
+    .orb-3{width:200px;height:200px;background:var(--green);bottom:20%;left:30%;animation-delay:-6s;}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-24px);}}
+
+    .hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:2;}
+    .hero-label{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(124,106,252,.4);background:rgba(124,106,252,.08);color:#b0a2ff;font-size:12px;font-weight:600;padding:6px 16px;border-radius:var(--radius-pill);margin-bottom:32px;letter-spacing:.8px;text-transform:uppercase;}
+    .hero-label-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 6px var(--accent);animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+    .hero h1{font-size:clamp(40px,7vw,84px);font-weight:900;letter-spacing:-3px;line-height:1;margin-bottom:28px;color:#fff;}
+    .hero h1 .gt{background:linear-gradient(100deg,#a78bfa,#e879f9,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent;}
+    .hero-sub{font-size:18px;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto 44px;line-height:1.7;}
+    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:64px;}
+    .btn-glow{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;padding:14px 30px;border-radius:var(--radius-pill);font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 0 32px rgba(124,106,252,.35);transition:all .2s;}
+    .btn-glow:hover{transform:translateY(-2px);box-shadow:0 0 48px rgba(124,106,252,.5);}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;padding:13px 28px;border-radius:var(--radius-pill);font-size:15px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,.25);transition:all .2s;}
+    .btn-ghost:hover{background:rgba(255,255,255,.08);}
+
+    /* ══ HERO SEARCH ══ */
+    .hero-search{max-width:600px;margin:0 auto 44px;position:relative;}
+    .hero-search-input{width:100%;background:rgba(255,255,255,.09);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.2);color:#fff;padding:16px 130px 16px 52px;border-radius:var(--radius-pill);font-size:15px;font-family:inherit;transition:all .25s;outline:none;}
+    .hero-search-input::placeholder{color:rgba(255,255,255,.4);}
+    .hero-search-input:focus{border-color:rgba(124,106,252,.7);box-shadow:0 0 0 4px rgba(124,106,252,.15);background:rgba(255,255,255,.13);}
+    .hero-search-icon{position:absolute;left:19px;top:50%;transform:translateY(-50%);font-size:17px;pointer-events:none;opacity:.7;}
+    .hero-search-btn{position:absolute;right:7px;top:50%;transform:translateY(-50%);background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:#fff;padding:10px 22px;border-radius:var(--radius-pill);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap;}
+    .hero-search-btn:hover{box-shadow:0 0 20px rgba(124,106,252,.4);}
+    .hero-search-hint{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px;}
+    .hero-search-hint span{font-size:12px;color:rgba(255,255,255,.4);cursor:pointer;padding:3px 10px;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,.1);transition:all .18s;}
+    .hero-search-hint span:hover{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25);}
+
+    /* stats */
+    .stats-strip{display:flex;justify-content:center;border:1px solid var(--border-bright);border-radius:16px;overflow:hidden;max-width:560px;margin:0 auto;background:rgba(15,17,32,.6);}
+    .stat-item{flex:1;padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
+    .stat-item:last-child{border-right:none;}
+    .stat-val{font-size:32px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+    .stat-lbl{font-size:12px;color:rgba(255,255,255,.5);font-weight:500;margin-top:4px;}
+
+    /* ══ TODAY ══ */
+    .today-section{max-width:1300px;margin:80px auto 0;padding:0 24px;}
+    .today-banner{background:var(--surface);border:1px solid var(--border-bright);border-radius:24px;padding:24px 28px;display:flex;align-items:center;gap:24px;position:relative;overflow:hidden;transition:border-color .2s;flex-wrap:wrap;}
+    .today-banner:hover{border-color:rgba(124,106,252,.4);}
+    .today-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(124,106,252,.05) 0%,rgba(224,64,251,.03) 100%);pointer-events:none;}
+    .today-glow{position:absolute;top:-60px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(124,106,252,.18) 0%,transparent 70%);pointer-events:none;}
+    .today-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,rgba(255,209,102,.15),rgba(255,160,0,.1));border:1px solid rgba(255,209,102,.3);color:var(--yellow);padding:8px 16px;border-radius:var(--radius-pill);font-size:12px;font-weight:700;letter-spacing:.5px;white-space:nowrap;flex-shrink:0;position:relative;}
+    .today-content{flex:1;position:relative;min-width:0;}
+    .today-label{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+    .today-name{font-size:20px;font-weight:800;letter-spacing:-.4px;margin-bottom:4px;}
+    .today-desc{font-size:13px;color:var(--muted);line-height:1.5;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+    .today-tags{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap;}
+    .today-actions{display:flex;gap:10px;flex-shrink:0;position:relative;}
+    .today-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:var(--radius-pill);font-size:13px;font-weight:700;text-decoration:none;transition:all .2s;white-space:nowrap;cursor:pointer;border:none;font-family:inherit;}
+    .today-btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;box-shadow:0 0 20px rgba(124,106,252,.25);}
+    .today-btn-primary:hover{box-shadow:0 0 32px rgba(124,106,252,.45);transform:translateY(-1px);}
+    #todayPickBanner{display:none;}
+
+    /* ══ RECENT ══ */
+    .recent-section{max-width:1300px;margin:28px auto 0;padding:0 24px;}
+    .recent-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+    .recent-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;white-space:nowrap;}
+    .recent-chips{display:flex;gap:8px;flex-wrap:wrap;}
+    .recent-chip{background:var(--surface);border:1px solid var(--border-bright);border-radius:var(--radius-pill);padding:6px 14px;font-size:12px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .18s;}
+    .recent-chip:hover{color:var(--accent);border-color:rgba(124,106,252,.4);}
+    #recentSection{display:none;}
+
+    /* ══ SECTION ══ */
+    .section{max-width:1300px;margin:96px auto 0;padding:0 24px;}
+    .sh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:26px;flex-wrap:wrap;gap:14px;}
+    .sh-chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+    .sh-chip::before{content:'';display:inline-block;width:20px;height:2px;background:var(--accent);border-radius:2px;}
+    .sh-title{font-size:26px;font-weight:800;letter-spacing:-.8px;color:var(--text);}
+    .sh-sub{font-size:14px;color:var(--muted);margin-top:5px;}
+    .sh-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+
+    .fav-tab-btn,.cmp-tab-btn,.rand-btn{display:inline-flex;align-items:center;gap:5px;background:transparent;border:1px solid var(--border-bright);color:var(--muted);padding:7px 14px;border-radius:var(--radius-pill);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;font-family:inherit;white-space:nowrap;}
+    .fav-tab-btn.active,.fav-tab-btn:hover{background:rgba(255,107,107,.1);border-color:rgba(255,107,107,.35);color:var(--red);}
+    .cmp-tab-btn.active,.cmp-tab-btn:hover{background:rgba(0,214,143,.1);border-color:rgba(0,214,143,.35);color:var(--green);}
+    .rand-btn:hover{background:rgba(124,106,252,.1);border-color:rgba(124,106,252,.4);color:var(--accent);}
+    .fav-count,.cmp-count{background:var(--red);color:white;border-radius:99px;padding:1px 6px;font-size:10px;font-weight:700;min-width:17px;text-align:center;}
+    .cmp-count{background:var(--green);}
+
+    /* ══ CAT GRID ══ */
+    .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .cat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px 14px;text-align:center;cursor:pointer;transition:all .22s;display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;overflow:hidden;}
+    .cat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--accent),var(--accent2));opacity:0;transition:opacity .22s;}
+    .cat-card:hover::before{opacity:.07;}
+    .cat-card:hover{border-color:rgba(124,106,252,.5);transform:translateY(-3px);box-shadow:0 12px 40px -8px rgba(124,106,252,.2);}
+    .cat-icon{font-size:28px;position:relative;z-index:1;}
+    .cat-name{font-size:12px;font-weight:700;color:var(--text);position:relative;z-index:1;}
+    .cat-desc{font-size:11px;color:var(--muted);position:relative;z-index:1;}
+
+    /* ══ CONTROL BAR ══ */
+    .control-bar{background:var(--surface);border:1px solid var(--border-bright);border-radius:var(--radius);padding:12px 16px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:20px;}
+    .search-wrap{flex:2;min-width:160px;position:relative;}
+    .search-wrap input{width:100%;background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 14px 10px 36px;border-radius:var(--radius-pill);font-size:14px;font-family:inherit;transition:border-color .2s,box-shadow .2s;}
+    .search-wrap input::placeholder{color:var(--muted);}
+    .search-wrap input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,106,252,.15);}
+    .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--muted);pointer-events:none;}
+    .filter-selects{display:flex;gap:8px;flex-wrap:wrap;}
+    .filter-selects select{background:var(--surface2);border:1px solid var(--border);color:var(--text);border-radius:var(--radius-pill);padding:9px 30px 9px 14px;font-size:13px;font-weight:500;font-family:inherit;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%237c84a8' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;transition:border-color .2s;}
+    .filter-selects select:focus{outline:none;border-color:var(--accent);}
+
+    /* ══ TOOL CARDS ══ */
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:15px;}
+    .tool-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:12px;transition:all .22s;position:relative;overflow:hidden;}
+    .tool-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .22s;}
+    .tool-card:hover{border-color:rgba(124,106,252,.35);transform:translateY(-4px);box-shadow:var(--shadow);}
+    .tool-card:hover::after{opacity:1;}
+    .tool-card.comparing{border-color:rgba(0,214,143,.5)!important;box-shadow:0 0 0 2px rgba(0,214,143,.2)!important;}
+
+    .tool-card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;}
+    .tool-tags{display:flex;flex-wrap:wrap;gap:5px;flex:1;}
+    .tag{font-size:11px;font-weight:600;padding:3px 9px;border-radius:var(--radius-pill);border:1px solid;}
+    .tag-cat{background:rgba(124,106,252,.1);color:#a78bfa;border-color:rgba(124,106,252,.25);}
+    .tag-type{background:rgba(103,232,249,.08);color:#67e8f9;border-color:rgba(103,232,249,.2);}
+    .tag-feat{background:rgba(255,209,102,.1);color:var(--yellow);border-color:rgba(255,209,102,.25);}
+    .tag-hash{background:transparent;color:var(--muted);border-color:var(--border-bright);}
+    .tag-hot{background:rgba(255,107,107,.1);color:var(--red);border-color:rgba(255,107,107,.25);}
+
+    .card-actions{display:flex;gap:5px;flex-shrink:0;}
+    .fav-btn,.share-btn,.cmp-btn{width:28px;height:28px;border-radius:7px;background:transparent;border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;font-size:13px;color:var(--muted);flex-shrink:0;}
+    .fav-btn:hover{background:rgba(255,107,107,.1);border-color:rgba(255,107,107,.4);color:var(--red);}
+    .fav-btn.active{background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.45);color:var(--red);}
+    .share-btn:hover{background:rgba(103,232,249,.1);border-color:rgba(103,232,249,.3);color:#67e8f9;}
+    .cmp-btn:hover{background:rgba(0,214,143,.1);border-color:rgba(0,214,143,.3);color:var(--green);}
+    .cmp-btn.active{background:rgba(0,214,143,.12);border-color:rgba(0,214,143,.45);color:var(--green);}
+
+    .tool-name{font-size:17px;font-weight:700;letter-spacing:-.3px;color:var(--text);line-height:1.25;}
+    .tool-desc{font-size:13px;color:var(--muted);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:0;}
+    .tool-desc mark,.tool-name mark{background:rgba(124,106,252,.25);color:var(--text);border-radius:3px;padding:0 2px;}
+
+    /* ══ TOOL META ROW (pricing / difficulty / highlight) ══ */
+    .tool-meta{display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+    .meta-pill{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:var(--radius-pill);border:1px solid;white-space:nowrap;}
+    .meta-free{background:rgba(0,214,143,.07);color:var(--green);border-color:rgba(0,214,143,.22);}
+    .meta-freemium{background:rgba(255,209,102,.07);color:var(--yellow);border-color:rgba(255,209,102,.22);}
+    .meta-paid{background:rgba(255,107,107,.07);color:var(--red);border-color:rgba(255,107,107,.22);}
+    .meta-diff{background:rgba(124,106,252,.07);color:#a78bfa;border-color:rgba(124,106,252,.2);}
+    .meta-hl{background:transparent;color:var(--muted);border-color:var(--border-bright);font-size:11px;max-width:160px;overflow:hidden;text-overflow:ellipsis;}
+
+    .tool-footer{display:flex;gap:8px;padding-top:4px;border-top:1px solid var(--border);}
+    .tc-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:9px;border-radius:var(--radius-sm);font-size:12px;font-weight:600;text-decoration:none;transition:all .18s;}
+    .tc-btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;box-shadow:0 0 14px rgba(124,106,252,.2);}
+    .tc-btn-primary:hover{box-shadow:0 0 26px rgba(124,106,252,.4);transform:translateY(-1px);}
+    .tc-btn-outline{background:transparent;color:var(--muted);border:1px solid var(--border-bright);}
+    .tc-btn-outline:hover{color:var(--text);border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04);}
+    /* direct site button variant */
+    .tc-btn-site{background:rgba(124,106,252,.1);color:var(--accent);border:1px solid rgba(124,106,252,.25);}
+    .tc-btn-site:hover{background:rgba(124,106,252,.18);border-color:rgba(124,106,252,.5);transform:translateY(-1px);}
+
+    /* ══ PAGINATION ══ */
+    .pagination{display:flex;align-items:center;justify-content:space-between;margin-top:32px;flex-wrap:wrap;gap:14px;}
+    .pg-info{font-size:13px;color:var(--muted);font-weight:500;}
+    .pg-controls{display:flex;align-items:center;gap:8px;}
+    .pg-btn{width:36px;height:36px;border-radius:10px;background:var(--surface);border:1px solid var(--border-bright);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:all .2s;}
+    .pg-btn:hover:not(:disabled){background:rgba(124,106,252,.1);border-color:rgba(124,106,252,.4);color:var(--accent);}
+    .pg-btn:disabled{opacity:.35;cursor:default;}
+    .pg-nums{display:flex;gap:4px;}
+    .pg-num{width:36px;height:36px;border-radius:10px;background:var(--surface);border:1px solid var(--border-bright);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;font-weight:600;transition:all .2s;}
+    .pg-num:hover{background:rgba(124,106,252,.1);border-color:rgba(124,106,252,.4);color:var(--accent);}
+    .pg-num.active{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:white;}
+    .pg-size{background:var(--surface2);border:1px solid var(--border-bright);color:var(--text);border-radius:var(--radius-pill);padding:7px 26px 7px 12px;font-size:12px;font-weight:500;font-family:inherit;cursor:pointer;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%237c84a8' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;}
+    .pg-size:focus{outline:none;border-color:var(--accent);}
+    .pg-dots{color:var(--muted);font-size:14px;padding:0 4px;}
+
+    /* ══ TUTORIALS ══ */
+    .tutorials-box{background:var(--surface);border:1px solid var(--border-bright);border-radius:28px;padding:38px 34px;}
+    .tutorials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:22px;}
+    .tut-card{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;text-decoration:none;color:var(--text);transition:all .2s;display:flex;flex-direction:column;gap:7px;}
+    .tut-card:hover{border-color:rgba(124,106,252,.4);background:rgba(124,106,252,.06);transform:translateY(-2px);}
+    .tut-card h4{font-size:14px;font-weight:700;line-height:1.35;}
+    .tut-card p{font-size:12px;color:var(--muted);line-height:1.5;}
+
+    /* ══ ABOUT ══ */
+    .about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:start;}
+    .about-main{background:var(--surface);border:1px solid var(--border-bright);border-radius:28px;padding:38px 34px;position:relative;overflow:hidden;}
+    .about-main::before{content:'';position:absolute;width:300px;height:300px;background:radial-gradient(circle,rgba(124,106,252,.12) 0%,transparent 70%);top:-80px;right:-80px;pointer-events:none;}
+    .about-title{font-size:32px;font-weight:900;letter-spacing:-1px;margin-bottom:14px;background:linear-gradient(120deg,var(--text),var(--muted));-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;}
+    .about-body{font-size:14px;color:var(--muted);line-height:1.75;position:relative;}
+    .feature-list{display:flex;flex-direction:column;gap:11px;}
+    .feature-item{background:var(--surface);border:1px solid var(--border);border-radius:15px;padding:15px 17px;display:flex;align-items:center;gap:13px;transition:all .2s;}
+    .feature-item:hover{border-color:rgba(124,106,252,.3);background:rgba(124,106,252,.04);}
+    .feature-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+    .fi-purple{background:rgba(124,106,252,.15);}.fi-pink{background:rgba(224,64,251,.12);}.fi-green{background:rgba(0,214,143,.12);}.fi-yellow{background:rgba(255,209,102,.12);}
+    .feature-text strong{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px;}
+    .feature-text span{font-size:12px;color:var(--muted);}
+
+    /* ══ DISCLAIMER ══ */
+    .disclaimer-section{max-width:1300px;margin:80px auto 0;padding:0 24px;}
+    .disclaimer-box{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px 32px;position:relative;overflow:hidden;}
+    .disclaimer-box::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,209,102,.03) 0%,rgba(255,107,107,.02) 100%);pointer-events:none;}
+    .disclaimer-head{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+    .disclaimer-icon{width:32px;height:32px;border-radius:9px;background:rgba(255,209,102,.12);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+    .disclaimer-title{font-size:14px;font-weight:700;color:var(--muted);}
+    .disclaimer-body{display:flex;flex-direction:column;gap:10px;position:relative;}
+    .disclaimer-body p{font-size:12px;color:var(--muted);line-height:1.75;opacity:.85;}
+
+    /* ══ FOOTER ══ */
+    .footer{max-width:1300px;margin:40px auto 0;padding:22px 24px 36px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .footer-logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--text);}
+    .footer-copy{font-size:13px;color:var(--muted);}
+
+    /* ══ COMPARE BAR ══ */
+    .cmp-panel{position:fixed;bottom:0;left:0;right:0;z-index:300;padding:0 24px 20px;pointer-events:none;}
+    .cmp-bar{max-width:680px;margin:0 auto;background:var(--surface);border:1px solid var(--border-bright);border-radius:20px 20px 0 0;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;box-shadow:0 -8px 40px rgba(0,0,0,.4);pointer-events:all;transform:translateY(100%);transition:transform .3s cubic-bezier(.2,0,0,1);flex-wrap:wrap;}
+    .cmp-bar.visible{transform:translateY(0);}
+    .cmp-bar-label{font-size:12px;color:var(--muted);font-weight:600;}
+    .cmp-bar-tools{display:flex;gap:7px;flex-wrap:wrap;}
+    .cmp-chip{background:rgba(0,214,143,.1);border:1px solid rgba(0,214,143,.3);color:var(--green);border-radius:var(--radius-pill);padding:4px 11px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:5px;}
+    .cmp-chip-x{cursor:pointer;opacity:.7;}.cmp-chip-x:hover{opacity:1;}
+    .cmp-go-btn{background:linear-gradient(135deg,var(--green),#00b377);color:white;border:none;border-radius:var(--radius-pill);padding:8px 20px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;white-space:nowrap;}
+    .cmp-go-btn:hover{transform:translateY(-1px);box-shadow:0 0 18px rgba(0,214,143,.3);}
+    .cmp-clear-btn{background:transparent;border:1px solid var(--border-bright);color:var(--muted);border-radius:var(--radius-pill);padding:7px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;}
+    .cmp-clear-btn:hover{color:var(--red);border-color:rgba(255,107,107,.4);}
+
+    /* ══ MODALS ══ */
+    .modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s;}
+    .modal-overlay.open{opacity:1;pointer-events:all;}
+    .modal{background:var(--surface);border:1px solid var(--border-bright);border-radius:26px;padding:28px;max-width:1100px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 40px 80px rgba(0,0,0,.5);transform:scale(.96);transition:transform .25s;}
+    .modal-overlay.open .modal{transform:scale(1);}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+    .modal-title{font-size:20px;font-weight:800;}
+    .modal-close{background:var(--surface2);border:1px solid var(--border-bright);color:var(--muted);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:all .2s;}
+    .modal-close:hover{background:rgba(255,107,107,.1);color:var(--red);border-color:rgba(255,107,107,.4);}
+    .cmp-grid{display:grid;gap:14px;}
+    .cmp-col{background:var(--surface2);border:1px solid var(--border);border-radius:18px;padding:22px;}
+    .cmp-col-title{font-size:17px;font-weight:800;margin-bottom:14px;padding-bottom:11px;border-bottom:1px solid var(--border);}
+    .cmp-row{display:flex;gap:9px;margin-bottom:11px;align-items:flex-start;}
+    .cmp-row-icon{font-size:15px;flex-shrink:0;margin-top:2px;}
+    .cmp-row-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px;}
+    .cmp-row-val{font-size:13px;color:var(--text);line-height:1.5;}
+
+    .rand-modal{background:var(--surface);border:1px solid rgba(124,106,252,.4);border-radius:26px;padding:32px;max-width:460px;width:100%;box-shadow:0 40px 80px rgba(0,0,0,.5);transform:scale(.96);transition:transform .25s;position:relative;overflow:hidden;}
+    .rand-modal::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(124,106,252,.1) 0%,transparent 60%);pointer-events:none;}
+    .modal-overlay.open .rand-modal,.modal-overlay.open .modal{transform:scale(1);}
+
+    /* ══ FLOATING ══ */
+    .back-top{position:fixed;bottom:26px;right:26px;z-index:300;width:42px;height:42px;border-radius:12px;background:rgba(15,17,32,.85);backdrop-filter:blur(12px);border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:var(--muted);transition:all .25s;opacity:0;pointer-events:none;transform:translateY(12px);box-shadow:0 8px 24px rgba(0,0,0,.3);}
+    [data-theme="light"] .back-top{background:rgba(255,255,255,.9);}
+    .back-top.visible{opacity:1;pointer-events:all;transform:translateY(0);}
+    .back-top:hover{background:var(--accent);color:white;border-color:var(--accent);box-shadow:0 0 18px rgba(124,106,252,.4);}
+    .toast{position:fixed;bottom:84px;right:26px;z-index:400;background:var(--surface);border:1px solid var(--border-bright);border-radius:11px;padding:10px 16px;font-size:13px;font-weight:600;color:var(--text);box-shadow:0 8px 24px rgba(0,0,0,.3);opacity:0;transform:translateY(8px);transition:all .25s;pointer-events:none;}
+    .toast.show{opacity:1;transform:translateY(0);}
+    .status-msg{text-align:center;padding:44px 24px;background:var(--surface);border:1px dashed var(--border-bright);border-radius:var(--radius);color:var(--muted);font-size:14px;}
+    .empty-state{grid-column:1/-1;text-align:center;padding:52px 24px;background:var(--surface);border:1px dashed var(--border-bright);border-radius:var(--radius);color:var(--muted);font-size:14px;}
+
+    /* ══ RESPONSIVE ══ */
+    @media(max-width:1000px){.cat-grid{grid-template-columns:repeat(4,1fr);}.about-grid{grid-template-columns:1fr;}}
+    @media(max-width:720px){
+      .nav-bar{border-radius:13px;padding:9px 14px;}
+      .nav-links a:not(.nav-btn){display:none;}
+      .nav-links .nav-icon-btn,.nav-links .lang-wrap{display:flex;}
+      .hero{padding:108px 16px 54px;}.hero h1{letter-spacing:-2px;}
+      .stats-strip{flex-direction:column;max-width:220px;}
+      .stat-item{border-right:none;border-bottom:1px solid var(--border);}
+      .stat-item:last-child{border-bottom:none;}
+      .cat-grid{grid-template-columns:repeat(2,1fr);}
+      .control-bar{flex-direction:column;align-items:stretch;}
+      .about-main{padding:22px 18px;}.about-title{font-size:24px;}
+      .tutorials-box{padding:22px 16px;}
+      .footer{justify-content:center;text-align:center;}
+      .section{margin-top:60px;}.today-section,.recent-section{margin-top:44px;}
+      .back-top{bottom:16px;right:16px;}.toast{bottom:70px;right:16px;}
+      .sh-right{width:100%;}
+      .pagination{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-bar">
+    <a class="nav-logo" href="#">
+      <div class="nav-gem">🔮</div>
+      AIHubTools
+    </a>
+    <div class="nav-links">
+      <a href="#tools-section" data-i18n="nav_tools">工具库</a>
+      <a href="tutorials.html" data-i18n="nav_tutorials">教程中心</a>
+      <a href="#about" data-i18n="nav_about">关于</a>
+      <!-- Theme -->
+      <button class="nav-icon-btn" onclick="toggleTheme()" id="themeBtn">🌙 <span data-i18n="theme_dark">暗色</span></button>
+      <!-- Language -->
+      <div class="lang-wrap" id="langWrap">
+        <button class="nav-icon-btn" onclick="toggleLangMenu()" id="langBtn">🌐 <span id="langLabel">中文</span></button>
+        <div class="lang-menu" id="langMenu">
+          <div class="lang-opt active" data-l="zh" onclick="setLang('zh')">🇨🇳 中文</div>
+          <div class="lang-opt" data-l="en" onclick="setLang('en')">🇺🇸 English</div>
+          <div class="lang-opt" data-l="ja" onclick="setLang('ja')">🇯🇵 日本語</div>
+        </div>
+      </div>
+      <a href="#tools-section" class="nav-btn" data-i18n="nav_browse">浏览工具 →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-dots"></div>
+  <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+  <div class="hero-inner">
+    <div class="hero-label"><span class="hero-label-dot"></span><span data-i18n="hero_label">下一代 AI 工具导航平台</span></div>
+    <h1><span data-i18n="hero_h1a">发现真正好用的</span><br><span class="gt" data-i18n="hero_h1b">AI 工具</span></h1>
+    <p class="hero-sub" data-i18n="hero_sub">精选全球前沿 AI 产品，从创意到交付，帮助开发者、创作者与团队找到最佳数字助手</p>
+    <div class="hero-search">
+      <span class="hero-search-icon">🔍</span>
+      <input class="hero-search-input" id="heroSearchInput" type="text" placeholder="搜索 ChatGPT、Midjourney、Claude..." autocomplete="off" data-i18n-placeholder="hero_search_placeholder">
+      <button class="hero-search-btn" onclick="doHeroSearch()" data-i18n="hero_search_btn">搜索工具</button>
+    </div>
+    <div class="hero-search-hint">
+      <span onclick="heroQuickSearch('ChatGPT')">ChatGPT</span>
+      <span onclick="heroQuickSearch('Midjourney')">Midjourney</span>
+      <span onclick="heroQuickSearch('Claude')">Claude</span>
+      <span onclick="heroQuickSearch('AI绘图')" data-i18n="hint_image">AI绘图</span>
+      <span onclick="heroQuickSearch('AI编程')" data-i18n="hint_coding">AI编程</span>
+    </div>
+    <div class="hero-actions" style="margin-top:32px;margin-bottom:40px;">
+      <a href="#tools-section" class="btn-glow" data-i18n="hero_cta1">🚀 探索工具库</a>
+      <a href="tutorials.html" class="btn-ghost" data-i18n="hero_cta2">📖 查看教程</a>
+    </div>
+    <div class="stats-strip">
+      <div class="stat-item"><div class="stat-val" id="totalCount">—</div><div class="stat-lbl" data-i18n="stat_total">精选工具</div></div>
+      <div class="stat-item"><div class="stat-val" id="categoryCount">—</div><div class="stat-lbl" data-i18n="stat_cats">细分品类</div></div>
+      <div class="stat-item"><div class="stat-val" id="featuredCount">—</div><div class="stat-lbl" data-i18n="stat_feat">编辑推荐</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TODAY -->
+<div class="today-section">
+  <div id="todayPickBanner" class="today-banner">
+    <div class="today-glow"></div>
+    <div class="today-badge">🌟 <span data-i18n="today_badge">今日推荐</span></div>
+    <div class="today-content">
+      <div class="today-label" data-i18n="today_label">TOOL OF THE DAY</div>
+      <div class="today-name" id="todayName">—</div>
+      <div class="today-desc" id="todayDesc">—</div>
+      <div class="today-tags" id="todayTags"></div>
+    </div>
+    <div class="today-actions">
+      <a id="todayLink" href="#" target="_blank" rel="noopener nofollow" class="today-btn today-btn-primary" data-i18n="visit_site">访问官网 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- RECENT -->
+<div class="recent-section" id="recentSection">
+  <div class="recent-wrap">
+    <span class="recent-label" data-i18n="recent_label">🕐 最近浏览</span>
+    <div class="recent-chips" id="recentChips"></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="section">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-chip" data-i18n="cats_chip">灵感分类</div>
+      <div class="sh-title" data-i18n="cats_title">按领域快速探索</div>
+      <div class="sh-sub" data-i18n="cats_sub">点击分类，一键筛选对应 AI 工具</div>
+    </div>
+  </div>
+  <div class="cat-grid" id="popularGrid"></div>
+</div>
+
+<!-- TOOLS -->
+<div class="section" id="tools-section">
+  <div class="sh">
+    <div class="sh-left">
+      <div class="sh-chip" data-i18n="tools_chip">工具库</div>
+      <div class="sh-title" data-i18n="tools_title">全部 AI 工具</div>
+      <div class="sh-sub" data-i18n="tools_sub">搜索、筛选，找到最适合你的那一款</div>
+    </div>
+    <div class="sh-right">
+      <button class="rand-btn" onclick="showRandom()">🎲 <span data-i18n="rand_btn">随机发现</span></button>
+      <button class="fav-tab-btn" id="favTabBtn" onclick="toggleFavFilter()">♡ <span data-i18n="fav_btn">收藏</span> <span class="fav-count" id="favCount">0</span></button>
+      <button class="cmp-tab-btn" id="cmpTabBtn" onclick="openCompare()">⚖️ <span data-i18n="cmp_btn">对比</span> <span class="cmp-count" id="cmpCount">0</span></button>
+    </div>
+  </div>
+  <div class="control-bar">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="搜索工具名称、描述、标签..." autocomplete="off">
+    </div>
+    <div class="filter-selects">
+      <select id="categoryFilter"></select>
+      <select id="typeFilter"></select>
+    </div>
+    <select class="pg-size" id="pageSizeSelect" onchange="onPageSizeChange()">
+      <option value="12">12 / <span data-i18n="per_page">页</span></option>
+      <option value="24" selected>24 / <span data-i18n="per_page">页</span></option>
+      <option value="48">48 / <span data-i18n="per_page">页</span></option>
+    </select>
+  </div>
+  <div id="toolsGrid" class="tools-grid"></div>
+  <div id="statusMessage" style="margin-top:16px;"></div>
+  <div class="pagination" id="paginationWrap" style="display:none;">
+    <div class="pg-info" id="pgInfo"></div>
+    <div class="pg-controls">
+      <button class="pg-btn" id="pgPrev" onclick="goPage(currentPage-1)">‹</button>
+      <div class="pg-nums" id="pgNums"></div>
+      <button class="pg-btn" id="pgNext" onclick="goPage(currentPage+1)">›</button>
+    </div>
+  </div>
+</div>
+
+<!-- TUTORIALS -->
+<div class="section">
+  <div class="tutorials-box">
+    <div class="sh-chip" data-i18n="tut_chip">深度教程</div>
+    <div class="sh-title" style="margin-top:8px;" data-i18n="tut_title">实战指南精选</div>
+    <div class="sh-sub" style="margin-top:5px;" data-i18n="tut_sub">AI 工具上手技巧，提升效率从学习开始</div>
+    <div id="tutorialsGrid" class="tutorials-grid"><div class="status-msg" style="grid-column:1/-1;" data-i18n="loading_tut">加载教程中…</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <div class="about-grid">
+    <div class="about-main">
+      <div class="sh-chip" data-i18n="about_chip">关于我们</div>
+      <div class="about-title" style="margin-top:10px;" data-i18n="about_title">AIHubTools<br>智汇工具</div>
+      <p class="about-body" data-i18n="about_body">致力于打造下一代 AI 工具导航，聚合 AI 聊天、图像生成、视频创意、编程开发、办公自动化等前沿工具，同时提供开源替代方案与详尽教程，帮助开发者、创作者与普通用户发现最适合的数字伙伴。</p>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item"><div class="feature-icon fi-purple">🎯</div><div class="feature-text"><strong data-i18n="feat1_t">精准筛选</strong><span data-i18n="feat1_d">每款工具均经过真实测试与编辑推荐</span></div></div>
+      <div class="feature-item"><div class="feature-icon fi-green">🔄</div><div class="feature-text"><strong data-i18n="feat2_t">持续更新</strong><span data-i18n="feat2_d">每日追踪最新 AI 工具动态与发布</span></div></div>
+      <div class="feature-item"><div class="feature-icon fi-pink">📖</div><div class="feature-text"><strong data-i18n="feat3_t">深度教程</strong><span data-i18n="feat3_d">专属实战指南，快速上手任意工具</span></div></div>
+      <div class="feature-item"><div class="feature-icon fi-yellow">🌐</div><div class="feature-text"><strong data-i18n="feat4_t">全球视野</strong><span data-i18n="feat4_d">覆盖英文圈与中文生态的优质 AI 产品</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-section">
+  <div class="disclaimer-box">
+    <div class="disclaimer-head">
+      <div class="disclaimer-icon">⚠️</div>
+      <div class="disclaimer-title">免责声明 · Disclaimer</div>
+    </div>
+    <div class="disclaimer-body">
+      <p>AIHubTools / 智汇工具为第三方 AI 工具导航与学习分享网站，本站仅用于整理公开可访问的工具信息、使用经验和教程内容。本站与所收录工具品牌、公司或平台不存在官方隶属、代理或合作关系，除非页面中另有明确说明。</p>
+      <p>页面中出现的产品名称、商标、Logo 和品牌信息归其各自权利人所有，仅用于识别和介绍相关工具。如相关权利人认为本站内容存在不当使用，请联系我们处理。</p>
+      <p>本站内容仅供学习和参考，不构成法律、投资、医疗、财务或其他专业建议。用户访问第三方网站时，请自行遵守相关平台规则和当地法律法规。</p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-logo"><div class="nav-gem" style="width:26px;height:26px;font-size:13px;border-radius:7px;">🔮</div>AIHubTools</div>
+  <div class="footer-copy">© <span id="year"></span> AIHubTools / 智汇工具 — <span data-i18n="footer_copy">探索智能未来</span></div>
+</footer>
+
+<!-- COMPARE BAR -->
+<div class="cmp-panel">
+  <div class="cmp-bar" id="cmpBar">
+    <div><div class="cmp-bar-label" data-i18n="cmp_selected">已选择对比工具</div><div class="cmp-bar-tools" id="cmpBarTools"></div></div>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button class="cmp-clear-btn" onclick="clearCompare()" data-i18n="cmp_clear">清空</button>
+      <button class="cmp-go-btn" onclick="openCompare()" data-i18n="cmp_go">开始对比 →</button>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE MODAL -->
+<div class="modal-overlay" id="cmpModal" onclick="if(event.target===this)closeCmpModal()">
+  <div class="modal" id="cmpModalInner">
+    <div class="modal-head">
+      <div class="modal-title">⚖️ <span data-i18n="cmp_modal_title">工具对比</span></div>
+      <button class="modal-close" onclick="closeCmpModal()">✕</button>
+    </div>
+    <div class="cmp-grid" id="cmpGridContent"></div>
+  </div>
+</div>
+
+<!-- RANDOM MODAL -->
+<div class="modal-overlay" id="randModal" onclick="if(event.target===this)closeRandModal()">
+  <div class="rand-modal">
+    <div class="modal-head">
+      <div class="modal-title">🎲 <span data-i18n="rand_title">随机发现</span></div>
+      <button class="modal-close" onclick="closeRandModal()">✕</button>
+    </div>
+    <div id="randContent"></div>
+    <div style="display:flex;gap:10px;margin-top:22px;">
+      <button class="cmp-go-btn" onclick="showRandom()" style="flex:1;" data-i18n="rand_again">再来一个 🎲</button>
+      <button class="cmp-clear-btn" onclick="closeRandModal()" data-i18n="close">关闭</button>
+    </div>
+  </div>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="↑">↑</button>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ═══════════════════════════════════════════
+   I18N
+═══════════════════════════════════════════ */
+const STRINGS = {
+  zh:{
+    nav_tools:'工具库',nav_tutorials:'教程中心',nav_about:'关于',nav_browse:'浏览工具 →',
+    theme_dark:'暗色',theme_light:'亮色',
+    hero_label:'下一代 AI 工具导航平台',hero_h1a:'发现真正好用的',hero_h1b:'AI 工具',
+    hero_sub:'精选全球前沿 AI 产品，从创意到交付，帮助开发者、创作者与团队找到最佳数字助手',
+    hero_cta1:'🚀 探索工具库',hero_cta2:'📖 查看教程',
+    stat_total:'精选工具',stat_cats:'细分品类',stat_feat:'编辑推荐',
+    today_badge:'今日推荐',today_label:'TOOL OF THE DAY',visit_site:'访问官网 →',
+    recent_label:'🕐 最近浏览',
+    cats_chip:'灵感分类',cats_title:'按领域快速探索',cats_sub:'点击分类，一键筛选对应 AI 工具',
+    tools_chip:'工具库',tools_title:'全部 AI 工具',tools_sub:'搜索、筛选，找到最适合你的那一款',
+    rand_btn:'随机发现',fav_btn:'收藏',cmp_btn:'对比',
+    search_placeholder:'搜索工具名称、描述、标签...',
+    filter_all_cat:'📂 全部分类',filter_all_type:'🏷️ 全部类型',
+    per_page:'页',pg_of:'共',pg_items:'款工具',pg_page:'第',pg_total:'页',
+    tut_chip:'深度教程',tut_title:'实战指南精选',tut_sub:'AI 工具上手技巧，提升效率从学习开始',
+    loading_tut:'加载教程中…',tut_coming:'✨ 即将推出更多精品教程，敬请期待',
+    about_chip:'关于我们',about_title:'AIHubTools\n智汇工具',
+    about_body:'致力于打造下一代 AI 工具导航，聚合 AI 聊天、图像生成、视频创意、编程开发、办公自动化等前沿工具，同时提供开源替代方案与详尽教程，帮助开发者、创作者与普通用户发现最适合的数字伙伴。',
+    feat1_t:'精准筛选',feat1_d:'每款工具均经过真实测试与编辑推荐',
+    feat2_t:'持续更新',feat2_d:'每日追踪最新 AI 工具动态与发布',
+    feat3_t:'深度教程',feat3_d:'专属实战指南，快速上手任意工具',
+    feat4_t:'全球视野',feat4_d:'覆盖英文圈与中文生态的优质 AI 产品',
+    footer_copy:'探索智能未来',
+    cmp_selected:'已选择对比工具',cmp_clear:'清空',cmp_go:'开始对比 →',
+    cmp_modal_title:'工具对比',rand_title:'随机发现',rand_again:'再来一个 🎲',close:'关闭',
+    empty_fav:'♡ 还没有收藏，点击卡片右上角的心形按钮添加',
+    empty_search:'✨ 没有找到相关工具，试试其他关键词～',
+    loading_tools:'✨ 正在加载工具库…',
+    faved:'❤️ 已加入收藏',unfaved:'已取消收藏',copied:'🔗 链接已复制',
+    copy_fail:'复制失败，请手动复制',
+    cmp_max:'最多同时对比 3 款工具',cmp_added:'✅ 已加入对比',cmp_removed:'已从对比中移除',
+    cmp_need:'请先勾选至少 2 款工具进行对比',
+    tag_recommended:'⭐ 推荐',tag_hot:'🔥 热门',
+    visit:'🌐 直达官网',tutorial:'📖 教程',
+    hero_search_placeholder:'搜索 ChatGPT、Midjourney、Claude...',hero_search_btn:'搜索工具',
+    hint_image:'AI绘图',hint_coding:'AI编程',
+    rand_load:'工具库加载中…',
+    no_desc:'暂无简介，探索高效 AI 工作流。',
+    cat_ai_chat:'智能对话',cat_ai_image:'AI绘图',cat_ai_video:'视频创作',cat_ai_coding:'编程助手',
+    cat_ai_search:'智能搜索',cat_ai_ppt:'演示文稿',cat_ai_writing:'写作助手',cat_ai_voice:'语音生成',
+  },
+  en:{
+    nav_tools:'Tools',nav_tutorials:'Tutorials',nav_about:'About',nav_browse:'Browse Tools →',
+    theme_dark:'Dark',theme_light:'Light',
+    hero_label:'Next-Gen AI Tools Navigator',hero_h1a:'Discover the best',hero_h1b:'AI Tools',
+    hero_sub:'Curated global AI products — from chat to code, helping developers, creators and teams find their perfect digital partner.',
+    hero_cta1:'🚀 Explore Tools',hero_cta2:'📖 Tutorials',
+    stat_total:'Curated Tools',stat_cats:'Categories',stat_feat:'Editor Picks',
+    today_badge:'Today\'s Pick',today_label:'TOOL OF THE DAY',visit_site:'Visit Site →',
+    recent_label:'🕐 Recently Viewed',
+    cats_chip:'Categories',cats_title:'Explore by Domain',cats_sub:'Click a category to filter AI tools instantly',
+    tools_chip:'Tool Library',tools_title:'All AI Tools',tools_sub:'Search and filter to find the perfect tool for you',
+    rand_btn:'Random',fav_btn:'Saved',cmp_btn:'Compare',
+    search_placeholder:'Search name, description, tags...',
+    filter_all_cat:'📂 All Categories',filter_all_type:'🏷️ All Types',
+    per_page:'/ page',pg_of:'of',pg_items:'tools',pg_page:'Page',pg_total:'pages',
+    tut_chip:'Tutorials',tut_title:'Practical Guides',tut_sub:'Hands-on AI tool tips to boost your productivity',
+    loading_tut:'Loading tutorials…',tut_coming:'✨ More tutorials coming soon, stay tuned',
+    about_chip:'About Us',about_title:'AIHubTools',
+    about_body:'Building the next-generation AI tool navigator — aggregating AI chat, image generation, video creation, coding, and office automation tools, plus open-source alternatives and in-depth tutorials. Helping developers, creators, and everyday users discover their ideal digital partner.',
+    feat1_t:'Curated',feat1_d:'Every tool is tested and reviewed by our editors',
+    feat2_t:'Daily Updates',feat2_d:'We track the latest AI tool releases every day',
+    feat3_t:'Deep Tutorials',feat3_d:'Practical guides to get you started fast',
+    feat4_t:'Global Scope',feat4_d:'Covering both English and Chinese AI ecosystems',
+    footer_copy:'Exploring the intelligent future',
+    cmp_selected:'Selected for comparison',cmp_clear:'Clear',cmp_go:'Compare Now →',
+    cmp_modal_title:'Tool Comparison',rand_title:'Random Discovery',rand_again:'Another one 🎲',close:'Close',
+    empty_fav:'♡ No saved tools yet — click the heart icon on any card to save',
+    empty_search:'✨ No tools found, try different keywords',
+    loading_tools:'✨ Loading tool library…',
+    faved:'❤️ Saved',unfaved:'Removed from saved',copied:'🔗 Link copied',
+    copy_fail:'Copy failed, please copy manually',
+    cmp_max:'Max 3 tools for comparison',cmp_added:'✅ Added to comparison',cmp_removed:'Removed from comparison',
+    cmp_need:'Please select at least 2 tools to compare',
+    tag_recommended:'⭐ Pick',tag_hot:'🔥 Hot',
+    visit:'🌐 Visit Site',tutorial:'📖 Guide',
+    hero_search_placeholder:'Search ChatGPT, Midjourney, Claude...',hero_search_btn:'Search',
+    hint_image:'AI Image',hint_coding:'AI Coding',
+    rand_load:'Loading tool library…',
+    no_desc:'No description available.',
+    cat_ai_chat:'AI Chat',cat_ai_image:'AI Image',cat_ai_video:'AI Video',cat_ai_coding:'AI Coding',
+    cat_ai_search:'AI Search',cat_ai_ppt:'AI PPT',cat_ai_writing:'AI Writing',cat_ai_voice:'AI Voice',
+  },
+  ja:{
+    nav_tools:'ツール',nav_tutorials:'チュートリアル',nav_about:'について',nav_browse:'ツールを見る →',
+    theme_dark:'ダーク',theme_light:'ライト',
+    hero_label:'次世代 AI ツールナビ',hero_h1a:'本当に使える',hero_h1b:'AI ツール',
+    hero_sub:'世界中の最先端 AI プロダクトを厳選。創造から実装まで、開発者・クリエイター・チームの最適なパートナーを見つけよう。',
+    hero_cta1:'🚀 ツールを探す',hero_cta2:'📖 チュートリアル',
+    stat_total:'厳選ツール',stat_cats:'カテゴリ',stat_feat:'編集おすすめ',
+    today_badge:'本日のおすすめ',today_label:'TOOL OF THE DAY',visit_site:'公式サイトへ →',
+    recent_label:'🕐 最近見たもの',
+    cats_chip:'カテゴリ',cats_title:'分野で探す',cats_sub:'カテゴリをクリックして AI ツールを絞り込み',
+    tools_chip:'ツールライブラリ',tools_title:'全 AI ツール',tools_sub:'検索・絞り込みで最適なツールを見つけよう',
+    rand_btn:'ランダム',fav_btn:'お気に入り',cmp_btn:'比較',
+    search_placeholder:'ツール名・説明・タグで検索...',
+    filter_all_cat:'📂 全カテゴリ',filter_all_type:'🏷️ 全タイプ',
+    per_page:'件/ページ',pg_of:'/',pg_items:'件',pg_page:'',pg_total:'ページ',
+    tut_chip:'チュートリアル',tut_title:'実践ガイド',tut_sub:'AI ツールの使い方を学んで効率アップ',
+    loading_tut:'チュートリアル読み込み中…',tut_coming:'✨ 近日公開予定，お楽しみに',
+    about_chip:'私たちについて',about_title:'AIHubTools',
+    about_body:'次世代 AI ツールナビの構築を目指し、AI チャット・画像生成・動画制作・コーディング・業務自動化などの最先端ツールを集約。オープンソースの代替案や詳細なチュートリアルも提供。開発者・クリエイター・一般ユーザーが最適なデジタルパートナーを見つけるお手伝いをします。',
+    feat1_t:'厳選キュレーション',feat1_d:'すべてのツールは編集者が実際にテスト・レビュー',
+    feat2_t:'毎日更新',feat2_d:'最新の AI ツールリリースを毎日追跡',
+    feat3_t:'詳細ガイド',feat3_d:'実践的なチュートリアルですぐに使い始められる',
+    feat4_t:'グローバル視点',feat4_d:'英語・中国語の AI エコシステムを網羅',
+    footer_copy:'インテリジェントな未来を探求',
+    cmp_selected:'比較対象として選択中',cmp_clear:'クリア',cmp_go:'比較を開始 →',
+    cmp_modal_title:'ツール比較',rand_title:'ランダム発見',rand_again:'もう一つ 🎲',close:'閉じる',
+    empty_fav:'♡ まだお気に入りがありません。カードのハートアイコンで追加できます',
+    empty_search:'✨ 該当するツールが見つかりませんでした',
+    loading_tools:'✨ ツールライブラリを読み込み中…',
+    faved:'❤️ お気に入りに追加',unfaved:'お気に入りから削除',copied:'🔗 リンクをコピーしました',
+    copy_fail:'コピーに失敗しました',
+    cmp_max:'比較できるのは最大 3 ツールまでです',cmp_added:'✅ 比較に追加しました',cmp_removed:'比較から削除しました',
+    cmp_need:'比較するには 2 ツール以上を選択してください',
+    tag_recommended:'⭐ おすすめ',tag_hot:'🔥 人気',
+    visit:'🌐 公式サイトへ',tutorial:'📖 ガイド',
+    hero_search_placeholder:'ChatGPT、Midjourney、Claudeを検索...',hero_search_btn:'検索',
+    hint_image:'AI画像',hint_coding:'AIコーディング',
+    rand_load:'ツールライブラリを読み込み中…',
+    no_desc:'説明がありません。',
+    cat_ai_chat:'AI チャット',cat_ai_image:'AI 画像',cat_ai_video:'AI 動画',cat_ai_coding:'AI コーディング',
+    cat_ai_search:'AI 検索',cat_ai_ppt:'AI PPT',cat_ai_writing:'AI ライティング',cat_ai_voice:'AI 音声',
+  }
+};
+
+let currentLang = localStorage.getItem('aihub_lang') || 'zh';
+
+function t(key){ return (STRINGS[currentLang]||STRINGS.zh)[key] || STRINGS.zh[key] || key; }
+
+function applyI18n(){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k=el.getAttribute('data-i18n');
+    if(el.tagName==='INPUT') el.placeholder=t(k);
+    else el.innerHTML=t(k).replace(/\n/g,'<br>');
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{
+    el.placeholder=t(el.getAttribute('data-i18n-placeholder'));
+  });
+  document.documentElement.setAttribute('lang', currentLang==='zh'?'zh-CN':currentLang==='ja'?'ja':'en');
+  // page-size labels
+  const ps=document.getElementById('pageSizeSelect');
+  if(ps){
+    const sizes=[12,24,48]; const sel=ps.value;
+    ps.innerHTML=sizes.map(s=>`<option value="${s}"${s==sel?' selected':''}>${s} ${t('per_page')}</option>`).join('');
+  }
+  if(typeof renderFilters==='function'&&tools.length) renderFilters();
+  if(typeof renderPagination==='function') renderPagination();
+  updateThemeBtn(document.documentElement.getAttribute('data-theme'));
+}
+
+function setLang(lang){
+  currentLang=lang;
+  localStorage.setItem('aihub_lang',lang);
+  document.getElementById('langLabel').textContent=lang==='zh'?'中文':lang==='en'?'EN':'日本語';
+  document.querySelectorAll('.lang-opt').forEach(o=>o.classList.toggle('active',o.dataset.l===lang));
+  document.getElementById('langWrap').classList.remove('open');
+  applyI18n();
+  if(tools.length) renderTools();
+}
+function toggleLangMenu(){ document.getElementById('langWrap').classList.toggle('open'); }
+document.addEventListener('click',e=>{
+  const lw=document.getElementById('langWrap');
+  if(!lw.contains(e.target)) lw.classList.remove('open');
+});
+
+/* ═══ THEME ═══ */
+function initTheme(){
+  const s=localStorage.getItem('aihub_theme')||'dark';
+  document.documentElement.setAttribute('data-theme',s);
+  updateThemeBtn(s);
+}
+function toggleTheme(){
+  const c=document.documentElement.getAttribute('data-theme');
+  const n=c==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',n);
+  localStorage.setItem('aihub_theme',n);
+  updateThemeBtn(n);
+}
+function updateThemeBtn(th){
+  const btn=document.getElementById('themeBtn');
+  if(!btn) return;
+  const span=btn.querySelector('span');
+  if(span) span.textContent=th==='dark'?t('theme_light'):t('theme_dark');
+  btn.childNodes[0].textContent=th==='dark'?'☀️ ':'🌙 ';
+}
+
+/* ═══ TOAST ═══ */
+let toastTimer;
+function showToast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.classList.remove('show'),2200);
+}
+
+/* ═══ DATA HELPERS ═══ */
+const DATA_URL='./tools-data.json';
+let tools=[], hotSet=new Set();
+let currentPage=1, pageSize=24, filteredTools=[];
+let showFavOnly=false, compareSet=new Set();
+
+const totalSpan=document.getElementById('totalCount');
+const categorySpan=document.getElementById('categoryCount');
+const featuredSpan=document.getElementById('featuredCount');
+const toolsGrid=document.getElementById('toolsGrid');
+const searchInput=document.getElementById('searchInput');
+const categoryFilter=document.getElementById('categoryFilter');
+const typeFilter=document.getElementById('typeFilter');
+const statusMsgDiv=document.getElementById('statusMessage');
+
+function clean(v){return v===undefined||v===null?'':String(v).trim();}
+function bool(v){if(typeof v==='boolean')return v;return['true','1','yes','y','是','推荐','featured'].includes(clean(v).toLowerCase());}
+
+function getName(t){
+  if(currentLang==='en') return clean(t.name_en||t.name||t.name_zh||t.name_ja||t.title);
+  if(currentLang==='ja') return clean(t.name_ja||t.name||t.name_zh||t.name_en||t.title);
+  return clean(t.name||t.name_zh||t.name_en||t.name_ja||t.title);
+}
+function getCategory(t){
+  if(currentLang==='en') return clean(t.category_en||t.category||t.category_zh||t.category_ja);
+  if(currentLang==='ja') return clean(t.category_ja||t.category||t.category_zh||t.category_en);
+  return clean(t.category||t.category_zh||t.category_en||t.category_ja);
+}
+function getType(t){
+  if(currentLang==='en') return clean(t.type_en||t.type||t.type_zh||t.type_ja);
+  if(currentLang==='ja') return clean(t.type_ja||t.type||t.type_zh||t.type_en);
+  return clean(t.type||t.type_zh||t.type_en||t.type_ja);
+}
+function getDescription(t){
+  if(currentLang==='en') return clean(t.description_en||t.description||t.description_zh||t.description_ja||t.desc||t.summary);
+  if(currentLang==='ja') return clean(t.description_ja||t.description||t.description_zh||t.description_en||t.desc||t.summary);
+  return clean(t.description||t.description_zh||t.description_en||t.description_ja||t.desc||t.summary);
+}
+function getWebsite(t){return clean(t.website||t.url||t.link||t.source_url);}
+function getPricing(t){return clean(t.pricing||t.price||t.pricing_zh||t.plan||'');}
+function getDifficulty(t){return clean(t.difficulty||t.level||t.skill_level||'');}
+function getHighlight(t){
+  if(currentLang==='en')return clean(t.highlight_en||t.highlight||t.highlight_zh||t.feature||'');
+  if(currentLang==='ja')return clean(t.highlight_ja||t.highlight||t.highlight_zh||t.feature||'');
+  return clean(t.highlight||t.highlight_zh||t.highlight_en||t.feature||'');
+}
+function pricingClass(p){
+  const lc=p.toLowerCase();
+  if(lc.includes('免费')||lc==='free'||lc==='无料')return'meta-free';
+  if(lc.includes('付费')||lc==='paid'||lc==='有料')return'meta-paid';
+  return'meta-freemium';
+}
+function pricingIcon(p){
+  const lc=p.toLowerCase();
+  if(lc.includes('免费')||lc==='free'||lc==='無料')return'💚';
+  if(lc.includes('付费')||lc==='paid'||lc==='有料')return'💳';
+  return'🟡';
+}
+function getTags(t){
+  const r=clean(t.tags||t.tags_zh||t.tags_en||t.tags_ja||'');
+  return r?r.split(/[,，、;；|]/).map(x=>x.trim()).filter(Boolean):[];
+}
+function normalizeData(d){if(Array.isArray(d))return d;if(d&&Array.isArray(d.tools))return d.tools;if(d&&Array.isArray(d.items))return d.items;if(d&&Array.isArray(d.data))return d.data;return[];}
+function esc(v){return clean(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+function escA(v){return esc(v).replace(/`/g,'&#96;');}
+
+/* ═══ FAVOURITES ═══ */
+function getFavs(){try{return new Set(JSON.parse(localStorage.getItem('aihub_favs')||'[]'));}catch{return new Set();}}
+function saveFavs(s){localStorage.setItem('aihub_favs',JSON.stringify([...s]));}
+function toggleFav(name){
+  const s=getFavs();
+  if(s.has(name)){s.delete(name);showToast(t('unfaved'));}
+  else{s.add(name);showToast(t('faved'));}
+  saveFavs(s);updateFavCount();
+  if(showFavOnly)renderTools();
+  else{const btn=document.querySelector(`.fav-btn[data-name="${CSS.escape(name)}"]`);if(btn){btn.classList.toggle('active',s.has(name));btn.textContent=s.has(name)?'♥':'♡';}}
+}
+function updateFavCount(){document.getElementById('favCount').textContent=getFavs().size;}
+function toggleFavFilter(){showFavOnly=!showFavOnly;document.getElementById('favTabBtn').classList.toggle('active',showFavOnly);resetPage();renderTools();}
+
+/* ═══ COMPARE ═══ */
+function toggleCompare(name){
+  if(compareSet.has(name)){compareSet.delete(name);showToast(t('cmp_removed'));}
+  else{if(compareSet.size>=3){showToast(t('cmp_max'));return;}compareSet.add(name);showToast(t('cmp_added'));}
+  updateCompareUI();
+  const btn=document.querySelector(`.cmp-btn[data-name="${CSS.escape(name)}"]`);
+  if(btn)btn.classList.toggle('active',compareSet.has(name));
+}
+function updateCompareUI(){
+  document.getElementById('cmpCount').textContent=compareSet.size;
+  document.getElementById('cmpBar').classList.toggle('visible',compareSet.size>0);
+  document.getElementById('cmpBarTools').innerHTML=[...compareSet].map(n=>`<span class="cmp-chip">${esc(n)}<span class="cmp-chip-x" onclick="toggleCompare('${escA(n)}')">✕</span></span>`).join('');
+}
+function clearCompare(){compareSet.clear();updateCompareUI();renderTools();}
+function openCompare(){
+  if(compareSet.size<2){showToast(t('cmp_need'));return;}
+  const sel=[...compareSet].map(n=>tools.find(tt=>getName(tt)===n)).filter(Boolean);
+  document.getElementById('cmpGridContent').style.gridTemplateColumns=`repeat(${sel.length},1fr)`;
+  document.getElementById('cmpGridContent').innerHTML=sel.map(tt=>{
+    const name=getName(tt),cat=getCategory(tt),type=getType(tt),desc=getDescription(tt),website=getWebsite(tt),tags=getTags(tt);
+    return`<div class="cmp-col">
+      <div class="cmp-col-title">${esc(name)}</div>
+      <div class="cmp-row"><span class="cmp-row-icon">📂</span><div><div class="cmp-row-label">${t('stat_cats')}</div><div class="cmp-row-val">${esc(cat)||'—'}</div></div></div>
+      <div class="cmp-row"><span class="cmp-row-icon">🏷️</span><div><div class="cmp-row-label">Type</div><div class="cmp-row-val">${esc(type)||'—'}</div></div></div>
+      <div class="cmp-row"><span class="cmp-row-icon">📝</span><div><div class="cmp-row-label">Desc</div><div class="cmp-row-val">${esc(desc)||'—'}</div></div></div>
+      <div class="cmp-row"><span class="cmp-row-icon">🔖</span><div><div class="cmp-row-label">Tags</div><div class="cmp-row-val">${tags.length?tags.map(x=>`#${esc(x)}`).join('  '):'—'}</div></div></div>
+      <div class="cmp-row"><span class="cmp-row-icon">⭐</span><div><div class="cmp-row-label">Pick</div><div class="cmp-row-val">${bool(tt.featured)?'✅':'—'}</div></div></div>
+      ${website?`<a class="tc-btn tc-btn-primary" href="${escA(website)}" target="_blank" rel="noopener nofollow" style="margin-top:12px;border-radius:12px;">${t('visit')}</a>`:''}
+    </div>`;
+  }).join('');
+  document.getElementById('cmpModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCmpModal(){document.getElementById('cmpModal').classList.remove('open');document.body.style.overflow='';}
+
+/* ═══ RANDOM ═══ */
+function showRandom(){
+  if(!tools.length){showToast(t('rand_load'));return;}
+  const tt=tools[Math.floor(Math.random()*tools.length)];
+  const name=getName(tt),desc=getDescription(tt),cat=getCategory(tt),type=getType(tt),website=getWebsite(tt),tags=getTags(tt).slice(0,4);
+  document.getElementById('randContent').innerHTML=`
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;">
+      ${cat?`<span class="tag tag-cat">${esc(cat)}</span>`:''}
+      ${type?`<span class="tag tag-type">${esc(type)}</span>`:''}
+      ${bool(tt.featured)?`<span class="tag tag-feat">${t('tag_recommended')}</span>`:''}
+    </div>
+    <div style="font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:10px;">${esc(name)}</div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px;">${esc(desc)||t('no_desc')}</div>
+    ${tags.length?`<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;">${tags.map(x=>`<span class="tag tag-hash">#${esc(x)}</span>`).join('')}</div>`:''}
+    ${website?`<a href="${escA(website)}" target="_blank" rel="noopener nofollow" class="btn-glow" style="width:100%;justify-content:center;">${t('visit')}</a>`:''}`;
+  document.getElementById('randModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeRandModal(){document.getElementById('randModal').classList.remove('open');document.body.style.overflow='';}
+
+/* ═══ RECENT ═══ */
+function getRecent(){try{return JSON.parse(localStorage.getItem('aihub_recent')||'[]');}catch{return[];}}
+function addRecent(name){let r=getRecent().filter(n=>n!==name);r.unshift(name);r=r.slice(0,6);localStorage.setItem('aihub_recent',JSON.stringify(r));renderRecent();}
+function renderRecent(){
+  const r=getRecent().filter(n=>tools.find(tt=>getName(tt)===n));
+  const sec=document.getElementById('recentSection');
+  if(!r.length){sec.style.display='none';return;}
+  sec.style.display='';
+  document.getElementById('recentChips').innerHTML=r.map(n=>`<span class="recent-chip" onclick="searchForTool('${escA(n)}')">${esc(n)}</span>`).join('');
+}
+function searchForTool(name){searchInput.value=name;resetPage();renderTools();document.getElementById('tools-section')?.scrollIntoView({behavior:'smooth'});}
+
+/* ═══ HIGHLIGHT ═══ */
+function highlight(text,q){
+  if(!q)return esc(text);
+  const escaped=esc(text);
+  const qe=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return escaped.replace(new RegExp(`(${qe})`, 'gi'),'<mark>$1</mark>');
+}
+
+/* ═══ STATS ═══ */
+function animateCount(el,target){
+  const steps=40,dur=1000,step=Math.ceil(target/steps);let cur=0;
+  const timer=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur>=target)clearInterval(timer);},dur/steps);
+}
+function renderStats(){
+  const cats=new Set(tools.map(getCategory).filter(Boolean));
+  animateCount(totalSpan,tools.length);
+  animateCount(categorySpan,cats.size);
+  animateCount(featuredSpan,tools.filter(tt=>bool(tt.featured)).length);
+}
+function renderFilters(){
+  const cats=[...new Set(tools.map(getCategory).filter(Boolean))].sort();
+  const types=[...new Set(tools.map(getType).filter(Boolean))].sort();
+  const prevCat=categoryFilter.value, prevType=typeFilter.value;
+  categoryFilter.innerHTML=`<option value="all">${t('filter_all_cat')}</option>`+cats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  typeFilter.innerHTML=`<option value="all">${t('filter_all_type')}</option>`+types.map(tp=>`<option value="${esc(tp)}">${esc(tp)}</option>`).join('');
+  if(prevCat) categoryFilter.value=prevCat;
+  if(prevType) typeFilter.value=prevType;
+}
+
+/* ═══ HOT ═══ */
+function computeHot(){
+  const counts=tools.map(t=>getTags(t).length);
+  const sorted=[...counts].sort((a,b)=>b-a);
+  const threshold=sorted[Math.max(0,Math.floor(sorted.length*.1))]||999;
+  hotSet=new Set();
+  tools.forEach((tt,i)=>{if(counts[i]>=threshold&&counts[i]>0)hotSet.add(getName(tt));});
+}
+
+/* ═══ PAGINATION ═══ */
+function resetPage(){currentPage=1;}
+function onPageSizeChange(){pageSize=parseInt(document.getElementById('pageSizeSelect').value)||24;resetPage();renderTools();}
+function goPage(p){
+  const total=Math.ceil(filteredTools.length/pageSize);
+  if(p<1||p>total)return;
+  currentPage=p;
+  renderToolPage();
+  document.getElementById('tools-section')?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function renderPagination(){
+  const total=Math.ceil(filteredTools.length/pageSize);
+  const wrap=document.getElementById('paginationWrap');
+  if(total<=1){wrap.style.display='none';return;}
+  wrap.style.display='flex';
+
+  const start=(currentPage-1)*pageSize+1;
+  const end=Math.min(currentPage*pageSize,filteredTools.length);
+  document.getElementById('pgInfo').textContent=`${t('pg_page')} ${currentPage} ${t('pg_of')} ${total} ${t('pg_total')} · ${filteredTools.length} ${t('pg_items')}`;
+
+  document.getElementById('pgPrev').disabled=(currentPage===1);
+  document.getElementById('pgNext').disabled=(currentPage===total);
+
+  // Page number buttons (show max 7)
+  const nums=[];
+  if(total<=7){for(let i=1;i<=total;i++)nums.push(i);}
+  else{
+    nums.push(1);
+    if(currentPage>3)nums.push('…');
+    for(let i=Math.max(2,currentPage-1);i<=Math.min(total-1,currentPage+1);i++)nums.push(i);
+    if(currentPage<total-2)nums.push('…');
+    nums.push(total);
+  }
+
+  document.getElementById('pgNums').innerHTML=nums.map(n=>
+    n==='…'?`<span class="pg-dots">…</span>`
+    :`<button class="pg-num${n===currentPage?' active':''}" onclick="goPage(${n})">${n}</button>`
+  ).join('');
+}
+
+function renderToolPage(){
+  const favs=getFavs();
+  const q=clean(searchInput.value).toLowerCase();
+  const pageItems=filteredTools.slice((currentPage-1)*pageSize,currentPage*pageSize);
+
+  toolsGrid.innerHTML=pageItems.map(tt=>{
+    const name=getName(tt),category=getCategory(tt),typeVal=getType(tt),desc=getDescription(tt),website=getWebsite(tt),tags=getTags(tt).slice(0,3),featured=bool(tt.featured);
+    const tutorialEnabled=(tt.tutorial_enabled===true||String(tt.tutorial_enabled).toLowerCase()==='true');
+    const tutorialUrl=tt.tutorial_url||(tt.tutorial_slug?`tutorials/${tt.tutorial_slug}.html`:'');
+    const faved=favs.has(name),cmpd=compareSet.has(name),hot=hotSet.has(name);
+    const hashTags=tags.map(x=>`<span class="tag tag-hash">#${esc(x)}</span>`).join('');
+    const nameHtml=highlight(name||t('no_desc'),q);
+    const descHtml=highlight(desc||t('no_desc'),q);
+    const pricing=getPricing(tt), difficulty=getDifficulty(tt), highlight_=getHighlight(tt);
+
+    // meta row: pricing + difficulty + highlight
+    const metaParts=[];
+    if(pricing) metaParts.push(`<span class="meta-pill ${pricingClass(pricing)}">${pricingIcon(pricing)} ${esc(pricing)}</span>`);
+    if(difficulty) metaParts.push(`<span class="meta-pill meta-diff">⚡ ${esc(difficulty)}</span>`);
+    if(highlight_) metaParts.push(`<span class="meta-pill meta-hl" title="${esc(highlight_)}">✦ ${esc(highlight_)}</span>`);
+    const metaHtml=metaParts.length?`<div class="tool-meta">${metaParts.join('')}</div>`:'';
+
+    let footerHtml='';
+    if(website||(tutorialEnabled&&tutorialUrl)){
+      const vb=website?`<a class="tc-btn tc-btn-primary" href="${escA(website)}" target="_blank" rel="noopener nofollow" onclick="addRecent('${escA(name)}')">${t('visit')}</a>`:'';
+      const tb=(tutorialEnabled&&tutorialUrl)?`<a class="tc-btn tc-btn-outline" href="${escA(tutorialUrl)}">${t('tutorial')}</a>`:'';
+      footerHtml=`<div class="tool-footer">${vb}${tb}</div>`;
+    } else if(website) {
+      footerHtml=`<div class="tool-footer"><a class="tc-btn tc-btn-primary" href="${escA(website)}" target="_blank" rel="noopener nofollow" onclick="addRecent('${escA(name)}')">${t('visit')}</a></div>`;
+    }
+
+    return`<div class="tool-card${cmpd?' comparing':''}">
+      <div class="tool-card-header">
+        <div class="tool-tags">
+          ${category?`<span class="tag tag-cat">${esc(category)}</span>`:''}
+          ${typeVal?`<span class="tag tag-type">${esc(typeVal)}</span>`:''}
+          ${featured?`<span class="tag tag-feat">${t('tag_recommended')}</span>`:''}
+          ${hot?`<span class="tag tag-hot">${t('tag_hot')}</span>`:''}
+        </div>
+        <div class="card-actions">
+          <button class="fav-btn ${faved?'active':''}" data-name="${escA(name)}" onclick="toggleFav('${escA(name)}')" title="${faved?t('unfaved'):t('faved')}">${faved?'♥':'♡'}</button>
+          <button class="share-btn" onclick="shareToolLink('${escA(name)}','${escA(website)}')" title="🔗">🔗</button>
+          <button class="cmp-btn ${cmpd?'active':''}" data-name="${escA(name)}" onclick="toggleCompare('${escA(name)}')" title="⚖">⚖</button>
+        </div>
+      </div>
+      <div class="tool-name">${nameHtml}</div>
+      <div class="tool-desc">${descHtml}</div>
+      ${metaHtml}
+      ${hashTags?`<div class="tool-tags">${hashTags}</div>`:''}
+      ${footerHtml}
+    </div>`;
+  }).join('');
+
+  renderPagination();
+}
+
+/* ═══ RENDER TOOLS ═══ */
+function renderTools(){
+  const q=clean(searchInput.value).toLowerCase();
+  const cat=categoryFilter.value, type=typeFilter.value;
+  const favs=getFavs();
+
+  filteredTools=tools.filter(tt=>{
+    const text=`${getName(tt)} ${getCategory(tt)} ${getType(tt)} ${getDescription(tt)} ${getTags(tt).join(' ')}`.toLowerCase();
+    return(!q||text.includes(q))&&(cat==='all'||getCategory(tt)===cat)&&(type==='all'||getType(tt)===type)&&(!showFavOnly||favs.has(getName(tt)));
+  });
+
+  if(!filteredTools.length){
+    toolsGrid.innerHTML=showFavOnly?`<div class="empty-state">${t('empty_fav')}</div>`:`<div class="empty-state">${t('empty_search')}</div>`;
+    document.getElementById('paginationWrap').style.display='none';
+    return;
+  }
+  renderToolPage();
+}
+
+/* ═══ SHARE ═══ */
+function shareToolLink(name,url){
+  const text=url||`${location.origin}${location.pathname}?q=${encodeURIComponent(name)}`;
+  navigator.clipboard.writeText(text).then(()=>showToast(t('copied'))).catch(()=>showToast(t('copy_fail')));
+}
+
+/* ═══ TODAY'S PICK ═══ */
+function renderTodayPick(){
+  const pool=tools.filter(tt=>bool(tt.featured));const src=pool.length?pool:tools;
+  if(!src.length)return;
+  const d=new Date(),key=d.getFullYear()*10000+(d.getMonth()+1)*100+d.getDate();
+  const tt=src[key%src.length];
+  document.getElementById('todayName').textContent=getName(tt)||'—';
+  document.getElementById('todayDesc').textContent=getDescription(tt)||'—';
+  const tags=[getCategory(tt),getType(tt)].filter(Boolean);
+  document.getElementById('todayTags').innerHTML=tags.map(x=>`<span class="tag tag-cat" style="font-size:11px;">${esc(x)}</span>`).join('');
+  const link=document.getElementById('todayLink');
+  const site=getWebsite(tt);
+  link.href=site||'#';link.style.display=site?'':'none';
+  document.getElementById('todayPickBanner').style.display='flex';
+}
+
+/* ═══ LOAD DATA ═══ */
+async function loadTools(){
+  try{
+    statusMsgDiv.innerHTML=`<div class="status-msg">${t('loading_tools')}</div>`;
+    const res=await fetch(DATA_URL+'?v='+Date.now(),{cache:'no-store'});
+    if(!res.ok)throw new Error('tools-data.json not found');
+    const data=await res.json();
+    tools=normalizeData(data).filter(tt=>getName(tt)||getWebsite(tt));
+    if(!tools.length)throw new Error('No valid tool data');
+    statusMsgDiv.innerHTML='';
+    computeHot();renderStats();renderFilters();renderTools();renderTodayPick();renderRecent();
+  }catch(err){
+    console.error(err);
+    statusMsgDiv.innerHTML=`<div class="status-msg" style="color:#f87171;">⚠️ ${err.message}<br>tools-data.json が必要です / Please check tools-data.json</div>`;
+  }
+}
+
+/* ═══ CATEGORY GRID ═══ */
+const CAT_DATA=[
+  {cat:'AI Chat',emoji:'🤖',zh:'智能对话',en:'AI Chat',ja:'AIチャット'},
+  {cat:'AI Image',emoji:'🎨',zh:'AI绘图',en:'AI Image',ja:'AI画像'},
+  {cat:'AI Video',emoji:'🎬',zh:'视频创作',en:'AI Video',ja:'AI動画'},
+  {cat:'AI Coding',emoji:'💻',zh:'编程助手',en:'AI Coding',ja:'AIコーディング'},
+  {cat:'AI Search',emoji:'🔍',zh:'智能搜索',en:'AI Search',ja:'AI検索'},
+  {cat:'AI PPT',emoji:'📊',zh:'演示文稿',en:'AI PPT',ja:'AI PPT'},
+  {cat:'AI Writing',emoji:'✍️',zh:'写作助手',en:'AI Writing',ja:'AIライティング'},
+  {cat:'AI Voice',emoji:'🎤',zh:'语音生成',en:'AI Voice',ja:'AI音声'},
+];
+function buildCatGrid(){
+  const c=document.getElementById('popularGrid');if(!c)return;
+  c.innerHTML=CAT_DATA.map(item=>`
+    <div class="cat-card" data-category="${escA(item.cat)}">
+      <div class="cat-icon">${item.emoji}</div>
+      <div class="cat-name">${esc(item[currentLang]||item.en)}</div>
+      <div class="cat-desc">${esc(item.cat)}</div>
+    </div>`).join('');
+  c.querySelectorAll('.cat-card').forEach(card=>{
+    card.addEventListener('click',()=>{
+      categoryFilter.value=card.dataset.category;
+      categoryFilter.dispatchEvent(new Event('change'));
+      resetPage();renderTools();
+      document.getElementById('tools-section')?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+}
+
+/* ═══ TUTORIALS ═══ */
+async function loadTutorials(){
+  const grid=document.getElementById('tutorialsGrid');
+  try{
+    const r=await fetch('./tutorials-data.json?v='+Date.now());
+    if(!r.ok)throw new Error();
+    const tuts=await r.json();
+    if(!Array.isArray(tuts)||!tuts.length)throw new Error();
+    grid.innerHTML=tuts.slice(0,6).map(item=>`<a href="./tutorials/${esc(item.slug)}.html" class="tut-card"><h4>${esc(item.title)}</h4><p>${esc(item.summary||'...')}</p></a>`).join('');
+  }catch{
+    grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--muted);">${t('tut_coming')}</div>`;
+  }
+}
+
+/* ═══ HERO SEARCH ═══ */
+const heroSearchInput=document.getElementById('heroSearchInput');
+function doHeroSearch(){
+  const val=heroSearchInput.value.trim();
+  if(!val)return;
+  searchInput.value=val;
+  resetPage();renderTools();
+  document.getElementById('tools-section')?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function heroQuickSearch(kw){
+  heroSearchInput.value=kw;
+  searchInput.value=kw;
+  resetPage();renderTools();
+  document.getElementById('tools-section')?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+heroSearchInput.addEventListener('input',()=>{searchInput.value=heroSearchInput.value;resetPage();renderTools();});
+heroSearchInput.addEventListener('keydown',e=>{if(e.key==='Enter')doHeroSearch();});
+
+/* ═══ BACK TO TOP ═══ */
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>backTop.classList.toggle('visible',scrollY>400),{passive:true});
+
+/* ═══ INIT ═══ */
+searchInput.addEventListener('input',()=>{
+  heroSearchInput.value=searchInput.value; // keep in sync
+  resetPage();renderTools();
+});
+categoryFilter.addEventListener('change',()=>{resetPage();renderTools();});
+typeFilter.addEventListener('change',()=>{resetPage();renderTools();});
+document.getElementById('year').innerText=new Date().getFullYear();
+
+initTheme();
+// init lang label
+document.getElementById('langLabel').textContent=currentLang==='zh'?'中文':currentLang==='en'?'EN':'日本語';
+document.querySelectorAll('.lang-opt').forEach(o=>o.classList.toggle('active',o.dataset.l===currentLang));
+applyI18n();
+updateFavCount();
+buildCatGrid();
+loadTools();
+loadTutorials();
+</script>
+</body>
+</html>

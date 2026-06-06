@@ -12,68 +12,138 @@
 <body>
   <div class="box"><div class="loader"></div><h1>AIHubTools 正在加载...</h1><p>如果页面长时间没有打开，请刷新一次。</p></div>
   <script>
-    const SOURCE_URL = 'https://raw.githubusercontent.com/LANGTAOSHA-prog/AIHubTools/c571a1d9bd37b60f4b7fc4254c5645cb4fb3a350/index.html';
-    function safeText(el){return (el && el.textContent ? el.textContent : '').trim();}
-    function detailHref(name){return './tool.html?name=' + encodeURIComponent(String(name||'').trim());}
+    const SOURCE_URL = './index-home.html';
+    const SOURCE_FALLBACK = 'https://raw.githubusercontent.com/LANGTAOSHA-prog/AIHubTools/c571a1d9bd37b60f4b7fc4254c5645cb4fb3a350/index.html';
+    const TUTORIAL_ENTRY_MARKER = 'aihub-tutorial-entry" href="./tutorials.html"';
+    const PATCH_SCRIPT_MARKER = 'id="aihub-home-patch"';
+
     function patchHomeHtml(html){
-      const patchCss = '.aihub-tutorial-entry{display:inline-flex!important;align-items:center;gap:6px;text-decoration:none!important;background:linear-gradient(135deg,rgba(124,106,252,.18),rgba(224,64,251,.14))!important;border:1px solid rgba(124,106,252,.45)!important;color:var(--text,#fff)!important}.aihub-tutorial-entry:hover{border-color:rgba(224,64,251,.75)!important;transform:translateY(-1px)}@media(max-width:720px){.aihub-tutorial-entry{justify-content:center}}';
-      if(!html.includes('aihub-tutorial-entry{')) html = html.replace('</style>', patchCss + '</style>');
+      const patchCss = '.aihub-tutorial-entry{display:inline-flex!important;align-items:center;gap:6px;text-decoration:none!important;background:linear-gradient(135deg,rgba(124,106,252,.18),rgba(224,64,251,.14))!important;border:1px solid rgba(124,106,252,.45)!important;color:var(--text,#fff)!important}.aihub-tutorial-entry:hover{border-color:rgba(224,64,251,.75)!important;transform:translateY(-1px)}.pg-btn.aihub-pg-tutorial{min-width:42px}@media(max-width:720px){.aihub-tutorial-entry{justify-content:center}}';
+      if(!html.includes('.aihub-tutorial-entry{display:inline-flex')){
+        html = html.replace('</style>', patchCss + '</style>');
+      }
+
       const entry = '<a class="rand-btn aihub-tutorial-entry" href="./tutorials.html" aria-label="进入 AIHubTools 教程中心">📖 <span>教程中心</span></a>';
-      const target = '<button class="rand-btn" onclick="showRandom()">🎲 <span data-i18n="rand_btn">随机发现</span></button>';
-      if(!html.includes('href="./tutorials.html" aria-label="进入 AIHubTools 教程中心"') && html.includes(target)) html = html.replace(target, entry + '\n      ' + target);
+      if(!html.includes(TUTORIAL_ENTRY_MARKER) && html.includes('id="tools-section"')){
+        const toolsIdx = html.indexOf('id="tools-section"');
+        const shRightIdx = html.indexOf('<div class="sh-right">', toolsIdx);
+        if(shRightIdx >= 0){
+          const insertAt = shRightIdx + '<div class="sh-right">'.length;
+          html = html.slice(0, insertAt) + '\n      ' + entry + html.slice(insertAt);
+        }
+      }
+
+      const oldFooter = "let footerHtml='';\n    if(website||(tutorialEnabled&&tutorialUrl)){\n      const vb=website?`<a class=\"tc-btn tc-btn-primary\" href=\"${escA(website)}\" target=\"_blank\" rel=\"noopener nofollow\" onclick=\"addRecent('${escA(name)}')\">${t('visit')}</a>`:'';\n      const tb=(tutorialEnabled&&tutorialUrl)?`<a class=\"tc-btn tc-btn-outline\" href=\"${escA(tutorialUrl)}\">${t('tutorial')}</a>`:'';\n      footerHtml=`<div class=\"tool-footer\">${vb}${tb}</div>`;\n    } else if(website) {\n      footerHtml=`<div class=\"tool-footer\"><a class=\"tc-btn tc-btn-primary\" href=\"${escA(website)}\" target=\"_blank\" rel=\"noopener nofollow\" onclick=\"addRecent('${escA(name)}')\">${t('visit')}</a></div>`;\n    }";
+      const newFooter = "let footerHtml='';\n    {\n      const vb=website?`<a class=\"tc-btn tc-btn-primary\" href=\"${escA(website)}\" target=\"_blank\" rel=\"noopener nofollow\" onclick=\"addRecent('${escA(name)}')\">${t('visit')}</a>`:'';\n      const tb=(tutorialEnabled&&tutorialUrl)?`<a class=\"tc-btn tc-btn-outline\" href=\"${escA(tutorialUrl)}\">${t('tutorial')}</a>`:`<a class=\"tc-btn tc-btn-outline\" href=\"./tutorials.html\">${t('tutorial')}</a>`;\n      footerHtml=`<div class=\"tool-footer\">${vb}${tb}</div>`;\n    }";
+      if(html.includes(oldFooter) && !html.includes('href=\\"./tutorials.html\\">${t(\'tutorial\')}')){
+        html = html.replace(oldFooter, newFooter);
+      }
+
+      if(!html.includes(PATCH_SCRIPT_MARKER)){
+        const boot = `<script ${PATCH_SCRIPT_MARKER}>
+(function(){
+  function safeText(el){return (el&&el.textContent?el.textContent:'').trim();}
+  function detailHref(name){return './tool.html?name='+encodeURIComponent(String(name||'').trim());}
+  function addToolsTutorialEntry(){
+    var tools=document.getElementById('tools-section');
+    if(!tools) return;
+    var right=tools.querySelector('.sh-right');
+    if(!right||right.querySelector('.aihub-tutorial-entry')) return;
+    var link=document.createElement('a');
+    link.className='rand-btn aihub-tutorial-entry';
+    link.href='./tutorials.html';
+    link.innerHTML='📖 <span>教程中心</span>';
+    link.setAttribute('aria-label','进入 AIHubTools 教程中心');
+    right.insertBefore(link,right.firstChild);
+  }
+  function addPaginationTutorialEntry(){
+    var wrap=document.getElementById('paginationWrap');
+    if(!wrap||wrap.style.display==='none') return;
+    var controls=wrap.querySelector('.pg-controls');
+    if(!controls||controls.querySelector('.aihub-pg-tutorial')) return;
+    var link=document.createElement('a');
+    link.className='pg-btn aihub-pg-tutorial aihub-tutorial-entry';
+    link.href='./tutorials.html';
+    link.innerHTML='📖 <span>教程</span>';
+    link.setAttribute('aria-label','进入 AIHubTools 教程中心');
+    controls.appendChild(link);
+  }
+  function addDetailButtons(){
+    document.querySelectorAll('.tool-card').forEach(function(card){
+      var name=safeText(card.querySelector('.tool-name'));
+      if(!name) return;
+      var footer=card.querySelector('.tool-footer');
+      if(!footer){footer=document.createElement('div');footer.className='tool-footer';card.appendChild(footer);}
+      if(!footer.querySelector('a[href*="tutorials"]')){
+        var tut=document.createElement('a');
+        tut.className='tc-btn tc-btn-outline aihub-tut-entry';
+        tut.href='./tutorials.html';
+        tut.textContent='📖 教程';
+        footer.appendChild(tut);
+      }
+      var link=card.querySelector('.tc-detail-btn');
+      if(!link){
+        link=document.createElement('a');
+        link.className='tc-btn tc-btn-outline tc-detail-btn';
+        link.textContent='📄 详情';
+        link.style.borderColor='rgba(124,106,252,.45)';
+        link.style.color='var(--text,#fff)';
+        footer.appendChild(link);
+      }
+      link.href=detailHref(name);
+      link.setAttribute('aria-label',name+' 详情页');
+    });
+  }
+  function wrapFn(name, after){
+    var fn=window[name];
+    if(typeof fn!=='function'||fn.__aihubPatch) return;
+    var orig=fn;
+    window[name]=function(){
+      var ret=orig.apply(this,arguments);
+      try{after();}catch(e){}
+      return ret;
+    };
+    window[name].__aihubPatch=true;
+  }
+  function patchRuntime(){
+    wrapFn('renderToolPage', function(){ addToolsTutorialEntry(); addDetailButtons(); addPaginationTutorialEntry(); });
+    wrapFn('goPage', function(){ addToolsTutorialEntry(); addDetailButtons(); addPaginationTutorialEntry(); });
+    wrapFn('renderTools', function(){ addToolsTutorialEntry(); addDetailButtons(); addPaginationTutorialEntry(); });
+    wrapFn('renderPagination', addPaginationTutorialEntry);
+  }
+  function apply(){ patchRuntime(); addToolsTutorialEntry(); addDetailButtons(); addPaginationTutorialEntry(); }
+  apply();
+  document.addEventListener('DOMContentLoaded', apply);
+  window.addEventListener('load', apply);
+  setInterval(apply, 1200);
+  try{new MutationObserver(apply).observe(document.body,{childList:true,subtree:true});}catch(e){}
+})();
+<\/script>`;
+        html = html.replace('</body>', boot + '\n</body>');
+      }
       return html;
     }
-    function addToolsTutorialEntry(){
-      var tools=document.getElementById('tools-section');
-      if(!tools) return;
-      var right=tools.querySelector('.sh .sh-right');
-      if(!right) return;
-      if(right.querySelector('.aihub-tutorial-entry')) return;
-      var link=document.createElement('a');
-      link.className='rand-btn aihub-tutorial-entry';
-      link.href='./tutorials.html';
-      link.innerHTML='📖 <span>教程中心</span>';
-      link.setAttribute('aria-label','进入 AIHubTools 教程中心');
-      right.insertBefore(link,right.firstChild);
+
+    async function fetchHomeSource(){
+      const urls = [SOURCE_URL, SOURCE_FALLBACK];
+      let lastErr = null;
+      for(const url of urls){
+        try{
+          const res = await fetch(url, {cache:'no-store'});
+          if(!res.ok) throw new Error('HTTP ' + res.status);
+          return await res.text();
+        }catch(err){ lastErr = err; }
+      }
+      throw lastErr || new Error('首页源文件读取失败');
     }
-    function addDetailButtons(){
-      document.querySelectorAll('.tool-card').forEach(function(card){
-        var name = safeText(card.querySelector('.tool-name'));
-        if(!name) return;
-        var footer = card.querySelector('.tool-footer');
-        if(!footer){footer=document.createElement('div');footer.className='tool-footer';card.appendChild(footer);}
-        var link = card.querySelector('.tc-detail-btn');
-        if(!link){
-          link=document.createElement('a');
-          link.className='tc-btn tc-btn-outline tc-detail-btn';
-          link.textContent='📄 详情';
-          link.style.borderColor='rgba(124,106,252,.45)';
-          link.style.color='var(--text,#fff)';
-          footer.insertBefore(link, footer.children.length>1 ? footer.children[1] : null);
-        }
-        link.href=detailHref(name);
-        link.setAttribute('aria-label', name + ' 详情页');
-      });
-    }
-    function startDetailPatch(){
-      addToolsTutorialEntry();
-      addDetailButtons();
-      setTimeout(function(){addToolsTutorialEntry();addDetailButtons();},100);
-      setTimeout(function(){addToolsTutorialEntry();addDetailButtons();},500);
-      setTimeout(function(){addToolsTutorialEntry();addDetailButtons();},1200);
-      setInterval(function(){addToolsTutorialEntry();addDetailButtons();},1500);
-      try{new MutationObserver(function(){addToolsTutorialEntry();addDetailButtons();}).observe(document.body,{childList:true,subtree:true});}catch(e){}
-    }
+
     async function loadHome(){
       try{
-        const res = await fetch(SOURCE_URL, {cache:'no-store'});
-        if(!res.ok) throw new Error('HTTP ' + res.status);
-        let html = await res.text();
+        let html = await fetchHomeSource();
         html = patchHomeHtml(html);
         document.open();
         document.write(html);
         document.close();
-        setTimeout(startDetailPatch,0);
       }catch(err){
         document.body.innerHTML = '<div class="box"><h1>首页加载失败</h1><p>请稍后刷新，或进入 <a href="tutorials.html">教程中心</a> / <a href="tool.html?name=ChatGPT">ChatGPT详情页</a>。</p><p style="opacity:.65">' + String(err.message).replace(/[<>]/g,'') + '</p></div>';
       }

@@ -468,9 +468,9 @@ button, input, select { font: inherit; }
 }
 
 @media (max-width: 640px) {
-  .nav { align-items: flex-start; flex-direction: column; padding: 12px 0; }
+  .nav { align-items: flex-start; flex-direction: column; padding: 12px 0; gap: 20px; }
   .nav-actions { width: 100%; flex-wrap: wrap; }
-  .hero { padding-top: 42px; }
+  .hero { padding-top: 140px; }
   .section-head { align-items: flex-start; flex-direction: column; }
   .toolbar { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: 1fr; }

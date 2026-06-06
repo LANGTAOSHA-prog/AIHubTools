@@ -1,3 +1,4 @@
+
 :root {
   --bg: #f6f8fb;
   --surface: #ffffff;
@@ -461,6 +462,16 @@ button, input, select { font: inherit; }
   color: var(--muted);
 }
 
+.cmp-panel {
+  position: fixed;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  padding: 0 24px 20px;
+  pointer-events: none;
+}
+
 @media (max-width: 940px) {
   .hero-grid { grid-template-columns: 1fr; }
   .tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -547,6 +558,10 @@ button, input, select { font: inherit; }
 
 .about-detail-card p:last-child {
   margin-bottom: 0;
+}
+
+.footer {
+  padding-bottom: 5rem;
 }
 
 @media (max-width: 768px) {

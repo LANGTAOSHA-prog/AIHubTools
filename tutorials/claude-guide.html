@@ -1,101 +1,180 @@
+
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-i18n-lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claude 使用入门指南 - AIHubTools 智汇工具</title>
-  <meta name="description" content="Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。" />
-  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html" />
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
-    header{background:linear-gradient(135deg,#2563eb,#7c3aed);color:white;padding:56px 18px;text-align:center}
-    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
-    header p{max-width:860px;margin:16px auto 0;color:#e0e7ff;font-size:16px}
-    main{max-width:960px;margin:0 auto;padding:32px 18px}
-    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#2563eb;text-decoration:none;font-weight:700}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
-    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
-    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
-    .card h2{margin:0 0 12px;font-size:24px;color:#1e293b}
-    .intro{font-size:17px}
-    .step-num{display:inline-block;background:#eff6ff;color:#2563eb;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
-    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:34px 14px;margin-top:18px}
-    .tips ul{margin:0;padding-left:22px}
-    .tips li{margin-bottom:8px}
-    footer{text-align:center;color:#64748b;padding:28px 16px}
-    @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title data-i18n="title">Claude 新手入门教程｜从注册到高效实战 (200K上下文) - AIHubTools 智汇工具</title>
+    <meta name="description" content="本篇 Claude 教程为新手提供从注册到实战的全方位指导，深入讲解其强大的长文档处理（200K 上下文）、Projects 功能及写作与编程技巧。" data-i18n="desc">
+    <meta name="keywords" content="Claude,Claude教程,Anthropic,AI助手,200K上下文,长文档处理,AI写作">
+    <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Claude 新手入门教程｜从注册到高效实战 (200K上下文) - AIHubTools 智汇工具">
+    <meta property="og:description" content="新手友好！本教程全面指导你如何使用 Claude，发挥其强大的长文档处理和写作能力。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html">
+    <meta property="og:image" content="../assets/images/tutorials/claude/hero.webp">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Claude 新手入门教程｜从注册到高效实战 (200K上下文) - AIHubTools 智汇工具">
+    <meta name="twitter:description" content="新手友好！本教程全面指导你如何使用 Claude，发挥其强大的长文档处理和写作能力。">
+    <meta name="twitter:image" content="../assets/images/tutorials/claude/hero.webp">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <header>
-    <h1>Claude 使用入门指南</h1>
-    <p>Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。</p>
-    <div class="meta">
-      <span>Claude</span>
-      <span>AI Chat</span>
-      <span>入门</span>
-      <span>4 分钟阅读</span>
-      <span>更新：2025-06</span>
-    </div>
-  </header>
+<body class="darkmode-support">
 
-  <main>
-    <div class="topbar">
-      <a class="back" href="../tutorials.html">← 返回教程中心</a>
-      <a class="site" href="https://claude.ai" target="_blank" rel="noopener nofollow">访问官网 →</a>
-    </div>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="../index.html" data-i18n="nav.home">首页</a> / 
+        <a href="../tutorials.html" data-i18n="nav.tutorials">教程中心</a> / 
+        <span data-i18n="nav.claude-guide">Claude 教程</span>
+    </nav>
 
-    <section class="card intro">
-      <h2>适合谁看？</h2>
-      <p>Claude 是 Anthropic 出品的 AI 助手，以超长上下文（最高 200K tokens）、安全可靠和出色的写作与代码质量著称。它尤其擅长处理长文档、学术写作和需要深度推理的任务。</p>
-    </section>
+    <!-- Main Content -->
+    <main class="tutorial-content">
 
-    
-      <section class="card step-card">
-        <div class="step-num">步骤 1</div>
-        <h2>访问并注册</h2>
-        <p>打开 claude.ai，用 Google 或邮箱注册免费账号。免费版每天可发送一定数量的消息，Claude 3 Sonnet 免费可用。</p>
-        <div class="image-placeholder">截图预留位置：Claude - 访问并注册</div>
-      </section>
-    
+        <!-- Hero -->
+        <header class="hero">
+            <h1 data-i18n="claude.h1">Claude 新手入门教程</h1>
+            <div class="hero-meta">
+                <span data-i18n="hero.updated">更新时间：2026-06-09</span>
+                <span data-i18n="hero.reading-time">阅读时间：6分钟</span>
+                <span data-i18n="hero.difficulty">难度：⭐ 新手</span>
+            </div>
+            <img src="../assets/images/tools/claude.svg" alt="Claude Logo" class="hero-logo">
+        </header>
 
-      <section class="card step-card">
-        <div class="step-num">步骤 2</div>
-        <h2>上传超长文档</h2>
-        <p>Claude 支持上传 PDF、Word、TXT 等文档，最长可处理约 150,000 字的内容。可用于合同审查、论文摘要、书籍解读等场景。</p>
-        <div class="image-placeholder">截图预留位置：Claude - 上传超长文档</div>
-      </section>
-    
+        <!-- Table of Contents -->
+        <nav class="toc">
+            <h2 data-i18n="toc.title">目录</h2>
+            <ul>
+                <li><a href="#what-is-claude">一、什么是 Claude？它适合谁？</a></li>
+                <li><a href="#register">二、如何注册 Claude 账号</a></li>
+                <li><a href="#core-features">三、核心功能介绍</a></li>
+                <li><a href="#tips">四、高效使用技巧</a></li>
+                <li><a href="#faq">五、常见问题与解答 (FAQ)</a></li>
+            </ul>
+        </nav>
 
-      <section class="card step-card">
-        <div class="step-num">步骤 3</div>
-        <h2>利用 Projects 功能</h2>
-        <p>Projects 允许你在一个空间内保存多轮对话、文档和自定义指令，适合长期项目（如写书、产品开发）持续使用。</p>
-        <div class="image-placeholder">截图预留位置：Claude - 利用 Projects 功能</div>
-      </section>
-    
+        <article>
+            <h2 id="what-is-claude" data-i18n="claude.h2_what">一、什么是 Claude？它适合谁？</h2>
+            <p data-i18n="claude.what_p1">Claude 是由 Anthropic 公司开发的 AI 助手，以其强大的长文本处理能力、安全性和优秀的写作水平而闻名。它特别适合需要处理和分析大量文本的用户，例如学生、研究人员、律师和程序员。</p>
+            <p data-i18n="claude.what_p2">与其它模型相比，Claude 的最大特色是支持超长上下文窗口（目前最高可达 200K tokens，约等于 15 万个单词），能轻松“阅读”和总结整本书或数百页的文档。</p>
 
-      <section class="card step-card">
-        <div class="step-num">步骤 4</div>
-        <h2>善用写作与代码场景</h2>
-        <p>Claude 在创意写作、学术论文、代码审查和 Debug 方面表现优异。直接粘贴代码并描述问题，它会给出详细的分析与修改建议。</p>
-        <div class="image-placeholder">截图预留位置：Claude - 善用写作与代码场景</div>
-      </section>
-    
+            <h2 id="register" data-i18n="claude.h2_register">二、如何注册 Claude 账号</h2>
+            <p data-i18n="claude.register_p1">访问 Claude 官网 <a href="https://claude.ai" target="_blank">claude.ai</a>，你可以选择通过 Google 账户或电子邮箱进行注册。目前，免费版的 Claude 3 Sonnet 模型已向所有用户开放，但有每日使用次数限制。如果需要更强大的功能或无限次使用，可以考虑升级到 Pro 版本。</p>
+            <img src="../assets/images/tutorials/claude/register.webp" alt="Claude 注册页面" loading="lazy" class="tut-img">
 
-    <section class="card tips">
-      <h2>实用小建议</h2>
-      <ul>
-        <li>要求 Claude 「逐步思考」或「展示推理过程」可显著提高回答准确率。</li>
-<li>Claude 比较保守，遇到敏感内容会主动说明。想要更直接的回答，可在 System prompt 中明确说明使用场景。</li>
-      </ul>
-    </section>
-  </main>
+            <h2 id="core-features" data-i18n="claude.h2_core">三、核心功能介绍</h2>
+            <h3 data-i18n="claude.h3_feature1">1. 超长文档处理</h3>
+            <p data-i18n="claude.feature1_p1">这是 Claude 的王牌功能。你可以直接点击回形针图标，上传一个或多个大型文件（如 PDF、Word、TXT、CSV 等）。上传后，你可以让 Claude 对文件内容进行提问、总结、翻译或数据分析。</p>
+            <pre><code>示例：上传一份公司年度财报PDF，然后提问：“请总结这份财报的关键亮点和潜在风险。”</code></pre>
+            <img src="../assets/images/tutorials/claude/upload-file.webp" alt="在Claude中上传文档" loading="lazy" class="tut-img">
 
-  <footer>
-    © AIHubTools / 智汇工具
-  </footer>
+            <h3 data-i18n="claude.h3_feature2">2. Projects 功能</h3>
+            <p data-i18n="claude.feature2_p1">对于需要长期跟进的复杂任务（例如写小说、进行市场分析、开发一个软件项目），Projects 功能非常有用。它允许你在一个独立的工作空间内保存相关的对话、文档和自定义指令，方便随时回来继续工作。</p>
+
+            <h3 data-i18n="claude.h3_feature3">3. 优秀的写作与编程能力</h3>
+            <p data-i18n="claude.feature3_p1">Claude 在创意写作、学术论文润色、邮件撰写等方面表现出色。同时，它也是一个得力的编程助手，能够帮助你审查代码、解释复杂算法、修复 bug 或将代码从一种语言转换到另一种语言。</p>
+            <pre><code>示例：粘贴一段 Python 代码，然后提问：“请检查这段代码是否存在 bug，并提出优化建议。”</code></pre>
+
+            <h2 id="tips" data-i18n="claude.h2_tips">四、高效使用技巧</h2>
+            <ul>
+                <li data-i18n="claude.tip1"><strong>要求逐步思考：</strong>在复杂的推理任务中，在你的问题后加上一句“请逐步思考并展示你的推理过程”，这能显著提高 Claude 回答的准确性。</li>
+                <li data-i18n="claude.tip2"><strong>提供清晰角色和格式：</strong>告诉 Claude 它应该扮演什么角色，并希望它以何种格式输出。例如：“你是一位专业的市场分析师，请根据我上传的文档，为我生成一份 SWOT 分析报告。”</li>
+                <li data-i18n="claude.tip3"><strong>处理拒绝回答：</strong>Claude 的安全限制非常严格。如果它拒绝回答，尝试换一种方式提问，或者在问题中澄清你的使用场景是合规且无害的。</li>
+            </ul>
+
+            <h2 id="faq" data-i18n="claude.h2_faq">五、常见问题与解答 (FAQ)</h2>
+            <dl class="faq-list">
+                <dt>Claude 和 ChatGPT 有什么主要区别？</dt>
+                <dd>最主要的区别在于长文本处理能力。Claude 的 200K 上下文窗口远超 ChatGPT，更适合处理大型文档。在性格上，Claude 通常被认为更“健谈”和严谨，而 ChatGPT 可能更有创造性。</dd>
+                <dt>什么是“200K 上下文窗口”？</dt>
+                <dd>上下文窗口指的是 AI 模型在一次对话中能够记住和处理的信息量。200K tokens 大约相当于 15 万个英文单词或 7.5 万个汉字，这意味着你可以把一本很厚的书或一份超长的研究报告一次性交给 Claude 处理。</dd>
+                <dt>Claude Pro 版本值得升级吗？</dt>
+                <dd>如果你需要频繁处理大型文件，或者在高峰时段也想获得最快的响应速度和使用最强大的 Claude 3 Opus 模型，那么升级到 Pro 版本是值得的。对于普通用户，免费版已经足够强大。</dd>
+                <dt>我可以用 Claude 来做什么？</dt>
+                <dd>你可以用它来：总结长篇报告、阅读和分析论文、审查合同、校对和润色文章、学习新知识、进行头脑风暴、编写和调试代码等等。</dd>
+            </dl>
+        </article>
+        
+        <!-- Related posts -->
+        <div class="related-posts">
+            <div class="rel-tool">
+                <h3 data-i18n="related.tools">相关工具推荐</h3>
+                <a href="../tools/chatgpt.html">ChatGPT</a>
+                <a href="../tools/gemini.html">Google Gemini</a>
+            </div>
+            <div class="rel-tutorial">
+                <h3 data-i18n="related.tutorials">相关教程</h3>
+                <a href="./chatgpt-guide.html">ChatGPT 教程</a>
+                <a href="./gemini-guide.html">Gemini 教程</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Back to Top -->
+    <div class="back-top"><a href="#">↑ <span data-i18n="ui.back-to-top">返回顶部</span></a></div>
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Claude 新手入门教程｜从注册到高效实战 (200K上下文)",
+        "description": "本篇 Claude 教程为新手提供从注册到实战的全方位指导，深入讲解其强大的长文档处理（200K 上下文）、Projects 功能及写作与编程技巧。",
+        "image": "https://langtaosha-prog.github.io/AIHubTools/assets/images/tutorials/claude/hero.webp",
+        "author": {
+            "@type": "Organization",
+            "name": "AIHubTools 智汇工具"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AIHubTools 智汇工具",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://langtaosha-prog.github.io/AIHubTools/assets/images/logo.svg"
+            }
+        },
+        "datePublished": "2026-06-09"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "Claude 和 ChatGPT 有什么主要区别？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "最主要的区别在于长文本处理能力。Claude 的 200K 上下文窗口远超 ChatGPT，更适合处理大型文档。在性格上，Claude 通常被认为更“健谈”和严谨，而 ChatGPT 可能更有创造性。"
+            }
+        }, {
+            "@type":-_type": "Question",
+            "name": "什么是“200K 上下文窗口”？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "上下文窗口指的是 AI 模型在一次对话中能够记住和处理的信息量。200K tokens 大约相当于 15 万个英文单词或 7.5 万个汉字，这意味着你可以把一本很厚的书或一份超长的研究报告一次性交给 Claude 处理。"
+            }
+        }, {
+            "@type": "Question",
+            "name": "Claude Pro 版本值得升级吗？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "如果你需要频繁处理大型文件，或者在高峰时段也想获得最快的响应速度和使用最强大的 Claude 3 Opus 模型，那么升级到 Pro 版本是值得的。对于普通用户，免费版已经足够强大。"
+            }
+        }, {
+            "@type": "Question",
+            "name": "我可以用 Claude 来做什么？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "你可以用它来：总结长篇报告、阅读和分析论文、审查合同、校对和润色文章、学习新知识、进行头脑风暴、编写和调试代码等等。"
+            }
+        }]
+    }
+    </script>
 </body>
 </html>

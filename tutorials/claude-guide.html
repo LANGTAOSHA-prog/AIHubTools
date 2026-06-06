@@ -1,205 +1,135 @@
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-i18n-lang="zh">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO -->
-    <title data-i18n="title">Claude 教程：长文本处理与安全对话的终极指南 - AIHubTools 智汇工具</title>
-    <meta name="description" content="本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。" data-i18n="desc">
-    <meta name="keywords" content="Claude,Claude教程,Claude 3,Anthropic,AI聊天机器人,长文本处理,PDF分析,AI安全">
-    <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Claude 教程：长文本处理与安全对话的终极指南 - AIHubTools 智汇工具">
-    <meta property="og:description" content="学习如何使用 Claude 3 (Opus, Sonnet, Haiku) 的超大上下文窗口分析文档、代码库和进行更安全的 AI 对话。">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html">
-    <meta property="og:image" content="../assets/images/tutorials/claude/hero.webp">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Claude 教程：长文本处理与安全对话的终极指南 - AIHubTools 智汇工具">
-    <meta name="twitter:description" content="学习如何使用 Claude 3 (Opus, Sonnet, Haiku) 的超大上下文窗口分析文档、代码库和进行更安全的 AI 对话。">
-    <meta name="twitter:image" content="../assets/images/tutorials/claude/hero.webp">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude 教程：长文本处理与安全对话的终极指南 - AIHubTools 智汇工具</title>
+  <meta name="description" content="本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。" />
+  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html" />
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";background:#f8fafc;color:#111827;line-height:1.85}
+    header{background:linear-gradient(135deg, #c084fc, #6d28d9);color:white;padding:56px 18px;text-align:center} /* Claude-style gradient */
+    header h1{margin:0;font-size:clamp(28px,5vw,42px);line-height:1.25}
+    header p{max-width:860px;margin:16px auto 0;color:#f3e8ff;font-size:16px}
+    main{max-width:960px;margin:0 auto;padding:32px 18px}
+    .topbar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+    .back,.site{display:inline-block;background:white;border:1px solid #e5e7eb;border-radius:999px;padding:9px 15px;color:#6d28d9;text-decoration:none;font-weight:700;font-size:14px;transition: all .2s ease}
+    .back:hover,.site:hover{transform:scale(1.05);box-shadow:0 8px 20px rgba(109,40,217,.15)}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .meta span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:13px}
+    .card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:28px;margin-bottom:24px;box-shadow:0 8px 24px rgba(15,23,42,.06);overflow:hidden}
+    .card h2{margin:0 0 16px;font-size:24px;color:#1e293b}
+    .card h3{margin:20px 0 10px;font-size:20px;color:#1e293b}
+    .card ul{padding-left:22px;margin:12px 0}
+    .card li{margin-bottom:10px}
+    .card li strong {color: #5b21b6;}
+    .step-num{display:inline-block;background:#ede9fe;color:#6d28d9;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700;margin-bottom:12px}
+    .image-placeholder{border:2px dashed #cbd5e1;background:#f1f5f9;color:#64748b;border-radius:14px;text-align:center;padding:40px 14px;margin-top:18px;font-size:15px;}
+    .faq-list dt{font-weight:700;color:#1e293b;margin-top:16px}
+    .faq-list dd{color:#475569;margin-left:0;padding-bottom:16px;border-bottom:1px solid #e5e7eb}
+    .faq-list dd:last-child{border-bottom:none}
+    footer{text-align:center;color:#64748b;padding:28px 16px;font-size:14px}
+    @media(max-width:640px){main{padding:24px 14px}.card{padding:24px}}
+  </style>
 </head>
-<body class="darkmode-support">
+<body>
+  <header>
+    <h1>Claude 教程：长文本处理与安全对话的终极指南</h1>
+    <p>本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。</p>
+    <div class="meta">
+      <span>Claude</span>
+      <span>长文本</span>
+      <span>AI安全</span>
+      <span>9 分钟阅读</span>
+      <span>更新：2024-06</span>
+    </div>
+  </header>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
-        <a href="../index.html" data-i18n="nav.home">首页</a> / 
-        <a href="../tutorials.html" data-i18n="nav.tutorials">教程中心</a> / 
-        <span data-i18n="nav.claude-guide">Claude 教程</span>
-    </nav>
+  <main>
+    <div class="topbar">
+      <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <a class="site" href="https://claude.ai/" target="_blank" rel="noopener nofollow">访问官网 →</a>
+    </div>
+    
+    <section class="card">
+        <div class="step-num">第一部分</div>
+        <h2>Claude 是什么？</h2>
+        <p>Claude 是由前 OpenAI 员工创立的 Anthropic 公司开发的 AI 聊天机器人。与追求极限性能的对手不同，Claude 从设计之初就将“安全”和“有用”放在首位。它基于“宪法 AI (Constitutional AI)”原则进行训练，旨在成为一个乐于助人、诚实且无害的 AI 助手。其最突出的特点是能够处理超长文本，被誉为“长文本之王”。</p>
+    </section>
 
-    <!-- Main Content -->
-    <main class="tutorial-content">
+    <section class="card">
+        <div class="step-num">第二部分</div>
+        <h2>认识 Claude 3 模型家族</h2>
+        <p>2024年发布的 Claude 3 家族包含三个模型，以满足不同场景的需求，它们在智能、速度和成本之间取得了平衡。</p>
+        <ul>
+            <li><strong>Opus (作品):</strong> 最强大的模型，具备顶尖的理解和推理能力，能轻松处理复杂分析和长篇内容创作，适合需要最高智能水平的任务。</li>
+            <li><strong>Sonnet (十四行诗):</strong> 平衡型模型，在智能和速度之间做到了最佳结合，是大多数企业工作负载和日常任务的理想选择。目前 claude.ai 官网免费用户使用的就是 Sonnet。</li>
+            <li><strong>Haiku (俳句):</strong> 速度最快、成本最低的模型，用于需要快速响应的简单任务，如图表读取、内容审核等。</li>
+        </ul>
+    </section>
 
-        <!-- Hero -->
-        <header class="hero">
-            <h1 data-i18n="claude.h1">Claude 教程：长文本之王与安全对话模型</h1>
-            <div class="hero-meta">
-                <span data-i18n="hero.updated">更新时间：2026-06-14</span>
-                <span data-i18n="hero.reading-time">阅读时间：9分钟</span>
-                <span data-i18n="hero.difficulty">难度：⭐ 新手</span>
-            </div>
-            <img src="../assets/images/tools/claude.svg" alt="Claude Logo" class="hero-logo">
-        </header>
-
-        <!-- Table of Contents -->
-        <nav class="toc">
-            <h2 data-i18n="toc.title">目录</h2>
-            <ul>
-                <li><a href="#what-is-claude">一、Claude 是什么？</a></li>
-                <li><a href="#claude-3-models">二、认识 Claude 3 模型家族</a></li>
-                <li><a href="#core-features">三、核心功能与实战技巧</a></li>
-                <li><a href="#vs-chatgpt">四、Claude vs. ChatGPT：我该用哪个？</a></li>
-                <li><a href="#faq">五、常见问题与解答 (FAQ)</a></li>
-            </ul>
-        </nav>
-
-        <article>
-            <h2 id="what-is-claude" data-i18n="claude.h2_what">一、Claude 是什么？</h2>
-            <p data-i18n="claude.what_p1">Claude 是由前 OpenAI 员工创立的 Anthropic 公司开发的 AI 聊天机器人。与追求极限性能的对手不同，Claude 从设计之初就将“安全”和“有用”放在首位。它基于“宪法 AI (Constitutional AI)”原则进行训练，旨在成为一个乐于助人、诚实且无害的 AI 助手。其最突出的特点是能够处理超长文本，被誉为“长文本之王”。</p>
-
-            <h2 id="claude-3-models" data-i18n="claude.h2_models">二、认识 Claude 3 模型家族</h2>
-            <p data-i18n="claude.models_p1">2024年发布的 Claude 3 家族包含三个模型，以满足不同场景的需求，它们在智能、速度和成本之间取得了平衡。</p>
-            <ul>
-                <li><strong>Opus (作品):</strong> 最强大的模型，具备顶尖的理解和推理能力，能轻松处理复杂分析和长篇内容创作，适合需要最高智能水平的任务。</li>
-                <li><strong>Sonnet (十四行诗):</strong> 平衡型模型，在智能和速度之间做到了最佳结合，是大多数企业工作负载和日常任务的理想选择。目前 claude.ai 官网免费用户使用的就是 Sonnet。</li>
-                <li><strong>Haiku (俳句):</strong> 速度最快、成本最低的模型，用于需要快速响应的简单任务，如图表读取、内容审核等。</li>
-            </ul>
-
-            <h2 id="core-features" data-i18n="claude.h2_core">三、核心功能与实战技巧</h2>
-            
-            <h3 data-i18n="claude.h3_feature1">1. 超大上下文窗口 (200K Context Window)</h3>
-            <p data-i18n="claude.feature1_p1">这是 Claude 的“杀手级”功能。200K 的上下文窗口意味着你可以一次性向 Claude“喂”入约15万个单词（相当于一本厚书）的内容，并让它进行分析和总结。这是其他模型难以企及的。</p>
-            <p data-i18n="claude.feature1_p2"><strong>实战技巧：</strong></p>
-            <ul>
-                <li><strong>分析财报/论文：</strong>直接点击回形针图标📎，上传一份几十页的 PDF 财报或学术论文，然后提问：“请总结这份文档的核心观点、关键数据和未来风险。”</li>
-                <li><strong>代码库问答：</strong>将多个代码文件（.py, .js, .ts 等）打包成 zip 或直接上传，然后让 Claude 解释“这个项目的整体架构是怎样的？”或“请帮我找出 user_auth.py 文件中的潜在安全漏洞。”</li>
-            </ul>
-            <img src="../assets/images/tutorials/claude/upload-file.webp" alt="Claude 的文件上传功能" loading="lazy" class="tut-img">
-
-            <h3 data-i18n="claude.h3_feature2">2. 更自然、更安全的对话风格</h3>
-            <p data-i18n="claude.feature2_p1">得益于“宪法 AI”，Claude 的回答风格通常更显谨慎、礼貌和周到。它会主动承认自己的局限性（例如“作为一个AI，我没有个人观点”），并倾向于拒绝回答可能涉及危险或不道德的话题，这使其在商业和教育环境中更值得信赖。</p>
-
-            <h3 data-i18n="claude.h3_feature3">3. 强大的写作与总结能力</h3>
-            <p data-i18n="claude.feature3_p1">Claude 的语言组织能力非常出色，尤其擅长生成结构清晰、文笔流畅的正式文本。它的总结能力也非常精准，能够快速从大量信息中提炼出核心要点。</p>
-            <p data-i18n="claude.feature3_p2"><strong>实战技巧：</strong>让 Claude 帮你起草一份商业计划书、一封正式邮件，或者帮你将一段杂乱的会议记录整理成条理清晰的纪要，你会对它的表现感到惊喜。</p>
-
-            <h2 id="vs-chatgpt" data-i18n="claude.h2_vs">四、Claude vs. ChatGPT：我该用哪个？</h2>
-            <p data-i18n="claude.vs_p1">这是一个常见问题。简单来说：</p>
-            <ul>
-                <li><strong>选择 Claude 当你...</strong>
-                    <ul>
-                        <li>需要处理、分析或总结非常长的文档（PDF、Word、代码）。</li>
-                        <li>进行严肃的学术研究或商业分析。</li>
-                        <li>对 AI 的安全性、道德性有较高要求，希望避免“胡说八道”。</li>
-                        <li>喜欢更详细、更结构化的书面回答。</li>
-                    </ul>
-                </li>
-                <li><strong>选择 ChatGPT 当你...</strong>
-                    <ul>
-                        <li>需要更多创意、灵感和多样化的回答风格。</li>
-                        <li>需要使用联网、AI 绘画、数据分析等丰富的多模态功能。</li>
-                        <li>想要访问庞大的 GPTs 应用商店来完成特定任务。</li>
-                        <li>开发需要快速、低成本 API 调用的应用。</li>
-                    </ul>
-                </li>
-            </ul>
-            <p data-i18n="claude.vs_p2"><strong>最佳实践是：</strong>将它们都加入你的工具箱。在需要深度文本分析时启动 Claude，在需要创意和多功能性时使用 ChatGPT。</p>
-
-            <h2 id="faq" data-i18n="claude.h2_faq">五、常见问题与解答 (FAQ)</h2>
-            <dl class="faq-list">
-                <dt>使用 Claude 需要付费吗？</dt>
-                <dd>不需要。你可以在 claude.ai 官网上免费使用 Claude 3 Sonnet 模型，但有使用频率限制。升级到 Pro 版本可以使用更强大的 Opus 模型，并解除大部分限制。</dd>
-                <dt>Claude 支持中文吗？</dt>
-                <dd>是的，Claude 3 对中文的理解和生成能力非常出色，无论是对话还是分析中文文档，效果都非常自然、流畅。</dd>
-                <dt>“宪法 AI”到底是什么意思？</dt>
-                <dd>这是一种训练 AI 的方法。开发者首先制定一套原则（“宪法”），如“选择最无害的回答”。然后，AI 会根据这些原则自我迭代和修正，而不是完全依赖人工标注。这使得 AI 的行为更符合预设的道德和安全框架。</dd>
-                <dt>为什么我上传文件时会失败？</dt>
-                <dd>请检查你的文件大小和格式。免费用户有单文件大小限制。同时，请确保你的文档内容不包含任何可能触发安全策略的敏感信息。</dd>
-            </dl>
-        </article>
+    <section class="card">
+        <div class="step-num">第三部分</div>
+        <h2>核心功能与实战技巧</h2>
         
-        <!-- Related posts -->
-        <div class="related-posts">
-            <div class="rel-tool">
-                <h3 data-i18n="related.tools">相关工具推荐</h3>
-                <a href="../tools/chatgpt.html">ChatGPT</a>
-                <a href="../tools/gemini.html">Google Gemini</a>
-                <a href="../tools/deepseek.html">DeepSeek</a>
-            </div>
-            <div class="rel-tutorial">
-                <h3 data-i18n="related.tutorials">相关教程</h3>
-                <a href="./chatgpt-guide.html">ChatGPT 教程</a>
-                <a href="./gemini-guide.html">Gemini 教程</a>
-                <a href="./deepseek-guide.html">DeepSeek 教程</a>
-            </div>
-        </div>
-    </main>
+        <h3>1. 超大上下文窗口 (200K Context Window)</h3>
+        <p>这是 Claude 的“杀手级”功能。200K 的上下文窗口意味着你可以一次性向 Claude“喂”入约15万个单词（相当于一本厚书）的内容，并让它进行分析和总结。这是其他模型难以企及的。</p>
+        <p><strong>实战技巧：</strong></p>
+        <ul>
+            <li><strong>分析财报/论文：</strong>直接点击回形针图标📎，上传一份几十页的 PDF 财报或学术论文，然后提问：“请总结这份文档的核心观点、关键数据和未来风险。”</li>
+            <li><strong>代码库问答：</strong>将多个代码文件打包成 zip 或直接上传，然后让 Claude 解释“这个项目的整体架构是怎样的？”或“请帮我找出 user_auth.py 文件中的潜在安全漏洞。”</li>
+        </ul>
+        <div class="image-placeholder">预留截图位置：Claude 的文件上传功能</div>
 
-    <!-- Back to Top -->
-    <div class="back-top"><a href="#">↑ <span data-i18n="ui.back-to-top">返回顶部</span></a></div>
+        <h3>2. 更自然、更安全的对话风格</h3>
+        <p>得益于“宪法 AI”，Claude 的回答风格通常更显谨慎、礼貌和周到。它会主动承认自己的局限性，并倾向于拒绝回答可能涉及危险或不道德的话题，这使其在商业和教育环境中更值得信赖。</p>
 
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Claude 教程：长文本处理与安全对话的终极指南",
-        "description": "本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。",
-        "image": "https://langtaosha-prog.github.io/AIHubTools/assets/images/tutorials/claude/hero.webp",
-        "author": {
-            "@type": "Organization",
-            "name": "AIHubTools 智汇工具"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "AIHubTools 智汇工具",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://langtaosha-prog.github.io/AIHubTools/assets/images/logo.svg"
-            }
-        },
-        "datePublished": "2026-06-14"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "使用 Claude 需要付费吗？",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "不需要。你可以在 claude.ai 官网上免费使用 Claude 3 Sonnet 模型，但有使用频率限制。升级到 Pro 版本可以使用更强大的 Opus 模型，并解除大部分限制。"
-            }
-        }, {
-            "@type": "Question",
-            "name": "Claude 支持中文吗？",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "是的，Claude 3 对中文的理解和生成能力非常出色，无论是对话还是分析中文文档，效果都非常自然、流畅。"
-            }
-        }, {
-            "@type": "Question",
-            "name": "“宪法 AI”到底是什么意思？",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "这是一种训练 AI 的方法。开发者首先制定一套原则（“宪法”），如“选择最无害的回答”。然后，AI 会根据这些原则自我迭代和修正，而不是完全依赖人工标注。这使得 AI 的行为更符合预设的道德和安全框架。"
-            }
-        }, {
-            "@type": "Question",
-            "name": "为什么我上传文件时会失败？",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "请检查你的文件大小和格式。免费用户有单文件大小限制。同时，请确保你的文档内容不包含任何可能触发安全策略的敏感信息。"
-            }
-        }]
-    }
-    </script>
+        <h3>3. 强大的写作与总结能力</h3>
+        <p>Claude 的语言组织能力非常出色，尤其擅长生成结构清晰、文笔流畅的正式文本。它的总结能力也非常精准，能够快速从大量信息中提炼出核心要点。</p>
+    </section>
+
+    <section class="card">
+        <div class="step-num">第四部分</div>
+        <h2>Claude vs. ChatGPT：我该用哪个？</h2>
+        <p>这是一个常见问题。简单来说：</p>
+        <ul>
+            <li><strong>选择 Claude 当你...</strong>
+                <ul>
+                    <li>需要处理、分析或总结非常长的文档（PDF、Word、代码）。</li>
+                    <li>进行严肃的学术研究或商业分析。</li>
+                    <li>对 AI 的安全性、道德性有较高要求。</li>
+                    <li>喜欢更详细、更结构化的书面回答。</li>
+                </ul>
+            </li>
+            <li><strong>选择 ChatGPT 当你...</strong>
+                <ul>
+                    <li>需要更多创意、灵感和多样化的回答风格。</li>
+                    <li>需要使用联网、AI 绘画、数据分析等丰富的多模态功能。</li>
+                    <li>想要访问庞大的 GPTs 应用商店来完成特定任务。</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>最佳实践是：</strong>将它们都加入你的工具箱。在需要深度文本分析时启动 Claude，在需要创意和多功能性时使用 ChatGPT。</p>
+    </section>
+
+    <section class="card">
+        <h2>常见问题与解答 (FAQ)</h2>
+        <dl class="faq-list">
+            <dt>使用 Claude 需要付费吗？</dt>
+            <dd>不需要。你可以在 claude.ai 官网上免费使用 Claude 3 Sonnet 模型，但有使用频率限制。升级到 Pro 版本可以使用更强大的 Opus 模型，并解除大部分限制。</dd>
+            <dt>Claude 支持中文吗？</dt>
+            <dd>是的，Claude 3 对中文的理解和生成能力非常出色，无论是对话还是分析中文文档，效果都非常自然、流畅。</dd>
+            <dt>“宪法 AI”到底是什么意思？</dt>
+            <dd>这是一种训练 AI 的方法。开发者首先制定一套原则（“宪法”），然后 AI 会根据这些原则自我迭代和修正，而不是完全依赖人工标注。这使得 AI 的行为更符合预设的道德和安全框架。</dd>
+            <dt>为什么我上传文件时会失败？</dt>
+            <dd>请检查你的文件大小和格式。免费用户有单文件大小限制。同时，请确保你的文档内容不包含任何可能触发安全策略的敏感信息。</dd>
+        </dl>
+    </section>
+  </main>
+
+  <footer>
+    © AIHubTools / 智汇工具
+  </footer>
 </body>
 </html>

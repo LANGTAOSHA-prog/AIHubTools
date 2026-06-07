@@ -1,5 +1,49 @@
 [
   {
+    "slug": "tools/tome",
+    "tool": "Tome",
+    "category": "深度评测",
+    "difficulty": "入门",
+    "read_time": 9,
+    "updated": "2024-07",
+    "title": "Tome 评测：超越 PPT 的 AI 叙事伙伴",
+    "summary": "深入评测 AI 演示工具 Tome。了解它如何用一句话生成完整的演示文稿、将长文档一键转为幻灯片，并通过交互式内容块，创造超越传统 PPT 的叙事体验。",
+    "cover": "assets/covers/tome-cover.webp"
+  },
+  {
+    "slug": "tools/wordtune",
+    "tool": "Wordtune",
+    "category": "深度评测",
+    "difficulty": "入门",
+    "read_time": 8,
+    "updated": "2024-07",
+    "title": "Wordtune 评测：您的 AI 写作增强器",
+    "summary": "深入评测 AI 写作工具 Wordtune。了解其“改写”、“扩展”、“总结”等核心功能如何提升您的写作效率，并提供与 Grammarly 和 QuillBot 的详细对比。",
+    "cover": "assets/covers/wordtune-cover.webp"
+  },
+  {
+    "slug": "tools/lovable",
+    "tool": "Lovable",
+    "category": "深度评测",
+    "difficulty": "中级",
+    "read_time": 7,
+    "updated": "2024-07",
+    "title": "Lovable.ai 评测：AI 驱动的用户访谈分析",
+    "summary": "深入评测 Lovable.ai 如何将数小时的用户访谈录音，自动转化为结构化的洞察报告。了解其在需求挖掘、用户画像和产品决策中的实际应用。",
+    "cover": "assets/covers/lovable-cover.webp"
+  },
+  {
+    "slug": "tools/fireflies-ai",
+    "tool": "Fireflies.ai",
+    "category": "深度评测",
+    "difficulty": "入门",
+    "read_time": 8,
+    "updated": "2024-07",
+    "title": "Fireflies.ai 评测：您的 AI 会议助理",
+    "summary": "深入评测 Fireflies.ai 如何自动录制、转录和总结您的在线会议。了解其核心功能、与 Zoom/Teams 的集成，以及在团队协作中的应用场景。",
+    "cover": "assets/covers/fireflies-ai-cover.webp"
+  },
+  {
     "slug": "chatgpt-guide",
     "tool": "ChatGPT",
     "website": "https://chat.openai.com",

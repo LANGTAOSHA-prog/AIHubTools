@@ -1,5 +1,16 @@
 [
   {
+    "slug": "../tools/canva-ai",
+    "tool": "Canva AI",
+    "category": "深度评测",
+    "difficulty": "入门",
+    "read_time": 9,
+    "updated": "2024-07",
+    "title": "Canva AI 评测：设计从未如此简单",
+    "summary": "深入评测 Canva AI（Magic Studio），探索其如何通过文生图、智能抠图、AI 演示文稿和文案生成等功能，让毫无设计基础的普通人也能快速创作出专业级别的视觉内容。",
+    "cover": "assets/covers/canva-ai-cover.webp"
+  },
+  {
     "slug": "../tools/grammarly",
     "tool": "Grammarly",
     "category": "深度评测",

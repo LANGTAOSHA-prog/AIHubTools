@@ -169,5 +169,22 @@
     "featured": true,
     "tutorial_enabled": true,
     "tutorial_slug": "../tools/grammarly"
+  },
+  {
+    "name": "Canva AI",
+    "name_zh": "Canva AI",
+    "name_en": "Canva AI",
+    "category": "AI Design",
+    "category_zh": "AI Design",
+    "type": "部分免费",
+    "description": "全球最受欢迎的在线设计平台Canva（可画）内置的AI工具集。它将生成式AI的魔力，无缝地融入到了你熟悉的拖拽式操作流程中，让设计和内容创作变得前所未有的简单。",
+    "pricing": "部分免费",
+    "difficulty": "入门",
+    "highlight": "一站式AI设计平台，终结你的设计烦恼",
+    "tags": "设计,图片,PPT,文生图,海报,社交媒体",
+    "website": "https://www.canva.cn",
+    "featured": true,
+    "tutorial_enabled": true,
+    "tutorial_slug": "../tools/canva-ai"
   }
 ]

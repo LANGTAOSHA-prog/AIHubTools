@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>ChatGPT 新手完整使用教程 - AIHubTools 智汇工具</title>
-<meta name="description" content="一份面向新手的 ChatGPT 完整使用教程，从注册账号、基本操作到高级技巧，帮助你快速掌握这款强大的 AI 聊天机器人。">
-<meta name="keywords" content="ChatGPT, 教程, AIHubTools, 入门, AI聊天">
+<title>ChatGPT 终极指南 (2024最新版) - AIHubTools 智汇工具</title>
+<meta name="description" content="一份为追求极致效率的你准备的 ChatGPT 终极指南。从 GPT-4o 的最新功能到高级提示词工程，再到 GPTs 和真实世界案例，助你成为真正的 AI 高手。">
+<meta name="keywords" content="ChatGPT, GPT-4o, DALL-E 3, GPTs, 教程, AIHubTools, 高级技巧, 提示词工程">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 15% 5%,rgba(124,106,252,.22),transparent 32%),radial-gradient(circle at 88% 0%,rgba(224,64,251,.16),transparent 30%),#08090f;color:#f0f2ff;line-height:1.85}
 a{color:#c4b5fd;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:24px 16px 72px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:24px}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#7c6afc,#e040fb);display:grid;place-items:center}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;font-size:14px;font-weight:800}
-.hero{border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:38px 28px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.10));box-shadow:0 22px 52px rgba(0,0,0,.42)}.badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(124,106,252,.18);color:#ddd6fe;font-size:13px;font-weight:900;margin-bottom:16px}h1{font-size:clamp(34px,6vw,52px);line-height:1.1;letter-spacing:-.045em;margin-bottom:14px}h2{font-size:25px;line-height:1.35;margin-bottom:14px}h3{font-size:18px;margin:16px 0 8px}.lead{font-size:17px;color:#dbeafe;max-width:850px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;font-size:14px;font-weight:900}.primary{background:linear-gradient(135deg,#7c6afc,#e040fb);color:#fff}.ghost{border:1px solid rgba(255,255,255,.18);color:#fff}
+.hero{border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:38px 28px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.10));box-shadow:0 22px 52px rgba(0,0,0,.42)}.badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(124,106,252,.18);color:#ddd6fe;font-size:13px;font-weight:900;margin-bottom:16px}h1{font-size:clamp(34px,6vw,52px);line-height:1.1;letter-spacing:-.045em;margin-bottom:14px}h2{font-size:25px;line-height:1.35;margin:24px 0 14px}h3{font-size:20px;color:#f0f2ff;margin:18px 0 10px}p,li{color:#e5e7eb;margin-bottom:12px}.lead{font-size:17px;color:#dbeafe;max-width:850px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;font-size:14px;font-weight:900}.primary{background:linear-gradient(135deg,#7c6afc,#e040fb);color:#fff}.ghost{border:1px solid rgba(255,255,255,.18);color:#fff}
 .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.meta-card{background:rgba(15,17,32,.78);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:15px}.meta-card span{display:block;color:#8b93b8;font-size:12px;font-weight:900}.meta-card strong{display:block;color:#fff;font-size:16px;margin-top:4px}.layout{display:grid;grid-template-columns:270px 1fr;gap:22px;margin-top:22px}.toc{position:sticky;top:18px;align-self:start;background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:18px}.toc strong{display:block;margin-bottom:10px}.toc a{display:block;color:#cbd5e1;font-size:14px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.card{background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:24px;margin-bottom:18px;box-shadow:0 18px 42px rgba(0,0,0,.30)}p{color:#e5e7eb;margin-bottom:12px}img{max-width:100%;border-radius:12px;margin:10px 0;}.list{padding-left:20px}.list li{margin:8px 0;color:#e5e7eb}pre{background:rgba(0,0,0,.2);padding:15px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;font-family:monospace;margin:15px 0}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.mini{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:16px}.footer{text-align:center;color:#8b93b8;font-size:14px;margin-top:28px}
+.card{background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:24px;margin-bottom:18px;box-shadow:0 18px 42px rgba(0,0,0,.30)}img{max-width:100%;border-radius:12px;margin:10px 0;}.list{padding-left:20px}.list li{margin-bottom:8px}pre{background:rgba(0,0,0,.2);padding:15px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;font-family:monospace;margin:15px 0}.table-wrap{overflow-x:auto}.table{width:100%;min-width:600px;border-collapse:collapse}.table th,.table td{text-align:left;border-bottom:1px solid rgba(255,255,255,.10);padding:12px 8px}.table th{font-weight:900;color:#fff;background:rgba(255,255,255,.04)}.footer{text-align:center;color:#8b93b8;font-size:14px;margin-top:28px}
 .hero-grid{display:grid;grid-template-columns:2fr 1fr;gap:28px;align-items:center}.hero-grid img{width:100%;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
 blockquote{margin:15px 0;padding:15px 20px;border-left:4px solid #7c6afc;background:rgba(124,106,252,.1);border-radius:0 8px 8px 0}
 @media(max-width:900px){.layout{grid-template-columns:1fr}.toc{position:relative;top:0}.meta{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}}@media(max-width:620px){.hero,.card{padding:18px}.meta,.grid2{grid-template-columns:1fr}.wrap{padding:16px 12px 48px}}
@@ -21,8 +21,8 @@ blockquote{margin:15px 0;padding:15px 20px;border-left:4px solid #7c6afc;backgro
     <div class="hero-grid">
         <div class="hero-text">
             <div class="badge">⭐ AIHubTools · 官方教程</div>
-            <h1>ChatGPT 新手完整使用教程</h1>
-            <p class="lead">一份面向新手的 ChatGPT 完整使用教程，从注册账号、基本操作到高级技巧，帮助你快速掌握这款强大的 AI 聊天机器人。</p>
+            <h1>ChatGPT 终极指南</h1>
+            <p class="lead">从 GPT-4o 的颠覆性多模态交互，到构建你的第一个 Custom GPT，本指南将带你深入探索 ChatGPT 的全部潜力，让你从入门到精通，成为真正的 AI 应用高手。</p>
             <div class="actions">
                 <a class="btn primary" href="https://chat.openai.com/" target="_blank" rel="noopener nofollow">访问官网 →</a>
             </div>
@@ -33,7 +33,7 @@ blockquote{margin:15px 0;padding:15px 20px;border-left:4px solid #7c6afc;backgro
     </div>
     <div class="meta">
         <div class="meta-card"><span>难度等级</span><strong>🟢 新手友好</strong></div>
-        <div class="meta-card"><span>核心优势</span><strong>通用对话与创意</strong></div>
+        <div class="meta-card"><span>核心优势</span><strong>创意与生态系统</strong></div>
         <div class="meta-card"><span>收费情况</span><strong>免费增值</strong></div>
         <div class="meta-card"><span>适合场景</span><strong>写作 / 编程 / 创意</strong></div>
     </div>
@@ -41,62 +41,150 @@ blockquote{margin:15px 0;padding:15px 20px;border-left:4px solid #7c6afc;backgro
 <div class="layout">
     <aside class="toc">
         <strong>目录</strong>
-        <a href="#signup">注册与登录</a>
-        <a href="#interface">了解主界面</a>
-        <a href="#conversation">第一次对话</a>
-        <a href="#prompting">撰写有效提示词</a>
-        <a href="#advanced">探索高级功能</a>
-        <a href="#summary">总结</a>
+        <a href="#introduction">重新认识 ChatGPT</a>
+        <a href="#getting-started">账户与版本选择</a>
+        <a href="#features">核心功能：不止于聊天</a>
+        <a href="#prompt-engineering">提示词工程：与 AI 对话的艺术</a>
+        <a href="#gpts">GPTs：构建你的专属 AI</a>
+        <a href="#use-cases">真实世界应用场景</a>
+        <a href="#summary">总结：成为 AI 主导者</a>
     </aside>
     <div>
-        <section class="card" id="signup">
-            <h2>第一步：注册与登录</h2>
-            <p>首先，你需要一个 OpenAI 账户。访问 <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>，你可以使用邮箱、Google 账号或 Apple 账号进行注册。注册过程非常简单，但请注意，你可能需要验证手机号码。</p>
-            <img src="../assets/images/tutorials/chatgpt/chatgpt-signup.webp" alt="ChatGPT 注册页面">
+        <section class="card" id="introduction">
+            <h2>重新认识 ChatGPT：不止是聊天机器人</h2>
+            <p>自2022年底发布以来，ChatGPT 以前所未有的方式，将“人工智能”这个概念带给了全世界数亿用户。它不仅仅是一个问答工具，更是一个由 OpenAI 倾力打造、不断进化的“创意与效率引擎”。它正在深刻地改变我们获取信息、编写代码、创作内容和解决问题的方式。</p>
+            <h3>从 GPT-3.5 到 GPT-4o：飞跃式进化</h3>
+            <p>最初的 ChatGPT 基于 GPT-3.5 模型，已经足够惊艳。但真正的革命，随着 GPT-4 系列的到来而开始。2024年，OpenAI 发布了最新的旗舰模型——GPT-4o (“o” 代表 “Omni”，意为“全能”)，标志着人机交互进入了一个全新的纪元。</p>
+            <p>GPT-4o 将文本、音频、视觉三种模态无缝融合，实现了真正意义上的实时多模态对话。这意味着，你不仅可以和它打字聊天，更可以像和真人视频通话一样，与它进行实时语音和视觉互动。这种能力的提升，远不止是“更快更强”，而是带来了质变的用户体验。</p>
+            <blockquote><p><strong>核心观点：</strong> 请抛弃“ChatGPT 只是一个聊天机器人”的旧观念。它现在是一个全能的、多模态的个人助理，一个拥有庞大生态系统的平台级应用。</p></blockquote>
         </section>
-        <section class="card" id="interface">
-            <h2>第二步：了解主界面</h2>
-            <p>登录后，你会看到一个简洁的界面：</p>
+        
+        <section class="card" id="getting-started">
+            <h2>账户与版本选择：最大化你的 AI 投资</h2>
+            <p>访问 <a href="https://chat.openai.com/" target="_blank">chat.openai.com</a>，你可以轻松注册一个免费账户。但要解锁 ChatGPT 的全部潜力，了解不同版本之间的区别至关重要。</p>
+            <div class="table-wrap">
+                <table class="table">
+                    <thead><tr><th>版本</th><th>核心特性</th><th>价格</th><th>最适合谁</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Free (免费版)</strong></td>
+                            <td>体验 GPT-3.5，在高峰时段可能受限访问 GPT-4o，无法使用高级功能。</td>
+                            <td>$0</td>
+                            <td>初学者，轻度用户，体验者。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Plus (增强版)</strong></td>
+                            <td><strong>无限制访问最强的 GPT-4o</strong>, 5倍于免费版的使用额度，使用 DALL-E 3, 高级数据分析, 文件上传, 语音和视觉功能，创建和使用 GPTs。</td>
+                            <td>$20/月</td>
+                            <td><strong>绝大多数希望提升生产力的个人用户</strong>，包括开发者、作家、学生、研究员等。</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Team (团队版)</strong></td>
+                            <td>包含 Plus 所有功能，提供更高的消息额度上限，拥有团队管理控制台，共享 GPTs，数据不会被用于训练。</td>
+                            <td>$25/人/月 (按年计费)</td>
+                            <td>初创公司，企业部门，需要协作和数据隐私保障的组织。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>我们的建议：</strong> 如果你每周使用 ChatGPT 的时间超过1小时，或者希望将其真正融入你的工作流，那么每月20美元的 Plus 订阅是当前市面上最具性价比的个人生产力投资之一。</p>
+        </section>
+
+        <section class="card" id="features">
+            <h2>核心功能：不止于聊天</h2>
+            <p>订阅了 ChatGPT Plus，你就开启了一个包含多种强大工具的“瑞士军刀”。</p>
+            <h3>1. GPT-4o：全能交互的未来</h3>
+            <p>GPT-4o 是真正的游戏规则改变者。它将延迟降低到人类对话的水平（约320毫秒），并能理解和生成包含情感语气的语音，还能通过摄像头“看到”你周围的世界。</p>
             <ul class="list">
-                <li><strong>主聊天窗口：</strong> 你与 ChatGPT 对话的地方。</li>
-                <li><strong>输入框：</strong> 在这里输入你的问题或指令（我们称之为“提示词”）。</li>
-                <li><strong>侧边栏：</strong> 保存你过去所有的聊天记录，方便回顾。</li>
+                <li><strong>实时语音对话：</strong> 你可以打断它，它也能理解你的情绪。你可以用它来练习外语、进行头脑风暴，甚至让它为你读睡前故事。</li>
+                <li><strong>实时视觉理解：</strong> 打开手机摄像头，让它帮你解一道数学题、看懂会议白板上的草图，或者在你旅行时充当实时翻译和导游。</li>
+                <li><strong>桌面应用：</strong> 配合全新的 macOS 桌面应用，你可以用快捷键随时唤醒 ChatGPT，让它“看”到你的屏幕内容并提供帮助，无论是帮你回复邮件，还是解释代码。</li>
             </ul>
+            <h3>2. 高级数据分析 (Advanced Data Analysis)</h3>
+            <p>这可能是最被低估但却最强大的功能之一。你可以上传各种文件（Excel, CSV, PDF, 等），然后让 ChatGPT 成为你的私人数据分析师。</p>
+            <pre>“我上传了一份销售数据 Excel 表格。请帮我：
+1.  识别销售额最高的三个地区。
+2.  创建一个显示每月销售趋势的折线图。
+3.  分析季节性因素对销售的影响，并用自然语言总结你的发现。”</pre>
+            <p>ChatGPT 会在后台编写并运行 Python 代码来完成你的指令，并直接给出图表和分析结果。这对于非技术背景的业务人员来说，是一项超能力。</p>
+            <h3>3. DALL-E 3：所思即所画</h3>
+            <p>直接在对话中创造专业级的图片。DALL-E 3 的强大之处在于它对自然语言的深刻理解，你可以用非常口语化和描述性的语言来指导它。</p>
+            <blockquote><p><strong>创意工作流示例：</strong><br>
+<strong>你:</strong> “帮我生成一张图片：一个宇航员在火星上骑着一匹白马，背景是绚丽的星云，风格要求是数码艺术。”<br>
+<em>(ChatGPT 生成图片)</em><br>
+<strong>你:</strong> “很棒！现在把马换成一只巨大的、友善的太空章鱼，让宇航员看起来更开心一点。”<br>
+<em>(ChatGPT 根据你的反馈迭代图片)</em></p></blockquote>
+            <h3>4. 网页浏览 (Web Browsing)</h3>
+            <p>当需要最新信息时，ChatGPT 会自动调用其浏览功能，访问互联网来查找资料，确保它的回答不是基于过时的数据。你可以让它帮你总结最新的行业新闻、查找特定产品的价格，或者规划一次旅行。</p>
         </section>
-        <section class="card" id="conversation">
-            <h2>第三步：开始你的第一次对话</h2>
-            <p>尝试问一个简单的问题，比如：</p>
-            <pre>“你好，请用简单的语言解释一下什么是人工智能。”</pre>
-            <p>ChatGPT 会立即给出一个详细的回答。你可以继续追问，比如“它和机器学习有什么关系？”，ChatGPT 能够理解上下文，并给出相关的回答。</p>
+
+        <section class="card" id="prompt-engineering">
+            <h2>提示词工程：与 AI 对话的艺术</h2>
+            <p>向 AI 提问的质量，直接决定了回答的质量。掌握提示词工程，就是掌握让 AI 为你创造最大价值的钥匙。</p>
+            <h3>CO-STAR 框架：写出完美的提示词</h3>
+            <p>忘掉零散的技巧，使用这个结构化的框架来构建你的指令：</p>
+            <ul class="list">
+                <li><strong>[C] Context (背景):</strong> 提供相关的背景信息、前因后果。</li>
+                <li><strong>[O] Objective (目标):</strong> 清晰地定义你希望 AI 完成的具体任务。</li>
+                <li><strong>[S] Style (风格):</strong> 指定输出的风格、语气 (例如：专业、幽默、小红书风格)。</li>
+                <li><strong>[T] Tone (语调):</strong> 指定情感色彩 (例如：正式、友好、有说服力)。</li>
+                <li><strong>[A] Audience (受众):</strong> 明确最终内容的读者是谁 (例如：技术专家、初学者、投资者)。</li>
+                <li><strong>[R] Response Format (响应格式):</strong> 规定输出的格式 (例如：Markdown 表格, JSON, 要点列表)。</li>
+            </ul>
+            <h3>高级应用：思维链 (Chain-of-Thought)</h3>
+            <p>当你面对一个复杂问题时，不要直接问最终答案。引导 AI “一步一步地思考”，可以显著提高复杂推理任务的准确性。</p>
+            <pre>
+问题：一个水桶里有5个红球和3个蓝球。我随机取出两个球。如果第一个是红球，那么第二个也是红球的概率是多少？
+
+请不要直接给出答案。请按照以下步骤解决这个问题：
+1.  分析初始状态。
+2.  计算取出第一个红球后的新状态。
+3.  基于新状态，计算第二个球是红球的概率。
+4.  最后给出最终答案。
+            </pre>
         </section>
-        <section class="card" id="prompting">
-            <h2>第四步：学习撰写有效的提示词 (Prompt)</h2>
-            <p>你给出的指令质量，直接决定了 ChatGPT 的输出质量。一个好的提示词应该包含以下元素：</p>
+
+        <section class="card" id="gpts">
+            <h2>GPTs：构建你的专属 AI 助手</h2>
+            <p>GPTs 是 ChatGPT 生态系统的核心。你可以将它们理解为针对特定任务、经过优化的“定制版 ChatGPT”。这些 GPTs 可以在 GPT Store 中找到，也可以由你自己创建，无需任何代码。</p>
+            <h3>使用 GPT Store</h3>
+            <p>在 ChatGPT 的侧边栏点击“探索 GPTs (Explore GPTs)”，你就能进入一个类似于 App Store 的应用商店。这里有由 OpenAI 官方和社区开发者创建的数百万个 GPTs，涵盖了从学术论文写作、编程、设计、市场营销到娱乐的方方面面。</p>
+            <ul class="list">
+                <li><strong>例如：</strong> 你可以找到一个名为 “Consensus” 的 GPT，它能帮你搜索和总结 2 亿篇学术论文；或者一个名为 “Canva” 的 GPT，可以帮你快速设计社交媒体帖子。</li>
+            </ul>
+            <h3>创建你自己的 GPT</h3>
+            <p>这才是最强大的地方。你可以通过简单的对话，创建一个属于你自己的、独一无二的 GPT。</p>
+            <p><strong>创建流程：</strong></p>
             <ol class="list">
-                <li><strong>角色扮演：</strong> 让 ChatGPT 扮演一个角色，例如“你现在是一名资深的程序员...”。</li>
-                <li><strong>清晰的任务：</strong> 明确告诉它你想要什么，例如“...请帮我写一个 Python 函数，实现冒泡排序”。</li>
-                <li><strong>提供背景信息：</strong> 给出足够的上下文，帮助它更好地理解你的需求。</li>
-                <li><strong>指定输出格式：</strong> 要求它以特定的格式输出，例如“请用表格形式展示...”、“请用 Markdown 格式输出代码”。</li>
+                <li>进入“创建 GPT (Create a GPT)”，你会进入一个对话界面。</li>
+                <li><strong>定义角色：</strong> “我想创建一个‘文案大师’，它是一位顶级的广告文案专家，擅长撰写有说服力、能引起共鸣的社交媒体文案。”</li>
+                <li><strong>上传知识：</strong> 你可以上传你们公司的品牌指南、过去的优秀文案、产品介绍等 PDF 或 TXT 文件。这些将成为你的 GPT 的“独家记忆”。</li>
+                <li><strong>设置能力：</strong> 你可以决定它是否需要联网、生成图片或运行代码。</li>
+                <li><strong>迭代测试：</strong> 在右侧的预览窗口与你的新 GPT 对话，不断调整和优化它的指令，直到你满意为止。</li>
             </ol>
-            <blockquote>
-            <p><strong>优秀提示词示例：</strong><br>
-            “你是一位经验丰富的旅行规划师。请为我设计一个为期 7 天的日本东京家庭旅行计划。我们的成员包括两名大人和一名 5 岁的孩子，预算为 20000 元人民币。我们对动漫、美食和自然风光感兴趣。请以表格形式列出每天的行程、交通方式和预算估算。”</p>
-            </blockquote>
+            <p>通过这种方式，你可以为你自己、你的团队，甚至你的客户，打造一系列高度定制化的 AI 工具。</p>
         </section>
-        <section class="card" id="advanced">
-            <h2>第五步：探索高级功能 (GPT-4)</h2>
-            <p>如果你订阅了 ChatGPT Plus，你将可以使用更强大的 GPT-4 模型，并解锁一系列高级功能：</p>
-            <ul class="list">
-                <li><strong>联网功能：</strong> 允许 ChatGPT 访问互联网，获取最新的信息。</li>
-                <li><strong>数据分析：</strong> 上传文件（如 Excel、CSV），让 ChatGPT 帮你进行数据分析和可视化。</li>
-                <li><strong>DALL-E 3 绘画：</strong> 直接在对话中输入描述，让 AI 为你生成图片。</li>
-                <li><strong>GPTs：</strong> 使用由社区创建的、针对特定任务的定制版 ChatGPT。</li>
-            </ul>
-            <img src="../assets/images/tutorials/chatgpt/chatgpt-plus.webp" alt="ChatGPT Plus 的高级功能">
+
+        <section class="card" id="use-cases">
+            <h2>真实世界应用场景</h2>
+            <p>让我们来看一些专业人士如何将 ChatGPT Plus 融入日常工作，创造价值。</p>
+            <div class="grid2">
+                <div class="mini">
+                    <h3>市场经理 📈</h3>
+                    <p><strong>任务：</strong> 为即将到来的季度策划一场营销活动。<br><strong>工作流：</strong><br>1.  使用「Web Browsing」研究竞争对手近期的活动和市场趋势。<br>2.  使用「Advanced Data Analysis」上传用户调研数据，分析用户画像和痛点。<br>3.  与 ChatGPT 进行头脑风暴，生成三个不同的活动主题和创意方向。<br>4.  使用「DALL-E 3」为选定的创意生成概念视觉图。<br>5.  让 ChatGPT 撰写详细的活动策划方案、社交媒体宣传日历和邮件营销文案初稿。</p>
+                </div>
+                <div class="mini">
+                    <h3>软件开发者 💻</h3>
+                    <p><strong>任务：</strong> 开发一个集成天气 API 的新功能。<br><strong>工作流：</strong><br>1.  粘贴一个不熟悉的代码库文件，要求 ChatGPT “为我解释这个文件的主要功能和架构”。<br>2.  描述所需功能，让 ChatGPT 生成核心的函数代码框架，包括 API 调用和错误处理。<br>3.  遇到 Bug 时，将错误信息和相关代码一起粘贴，询问“为什么会出现这个错误，如何修复？”<br>4.  使用 ChatGPT 自动为新编写的函数生成单元测试代码和技术文档。<br>5.  使用专门的“代码审查” GPT 来检查代码的风格和潜在问题。</p>
+                </div>
+            </div>
         </section>
+
         <section class="card" id="summary">
-            <h2>总结</h2>
-            <p>ChatGPT 是一个潜力无限的工具。不断练习和探索，你会发现它能为你带来的巨大价值。希望本教程能帮助你迈出成功的第一步！</p>
+            <h2>总结：从 AI 使用者到 AI 主导者</h2>
+            <p>ChatGPT 已经远非一个简单的工具，它是一个强大的、可定制的、多模态的平台。掌握它，意味着你拥有了一个不知疲倦的个人助理、创意伙伴和技术顾问。</p>
+            <p>本指南所介绍的功能和技巧，只是冰山一角。真正的精通，来自于将它应用到你自己的具体问题和工作流中。不断地提问、不断地挑战、不断地创造，你将发现，你和你的 AI 伙伴能共同达到的高度，将远超你的想象。</p>
+            <p>不要满足于成为一个被动的 AI “使用者”，而要努力成为一个能主导 AI、用它来放大你的创造力和智慧的“主导者”。欢迎来到人机协作的新时代！</p>
         </section>
     </div>
 </div>

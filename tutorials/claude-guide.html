@@ -1,153 +1,96 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude 教程：长文本处理与安全对话的终极指南 - AIHubTools 智汇工具</title>
-  <meta name="description" content="本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。">
-  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/claude-guide.html">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
-  <!-- Inter Font -->
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Claude 教程：长文本处理与安全对话的终极指南 - AIHubTools 智汇工具</title>
+<meta name="description" content="本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。">
+<meta name="keywords" content="Claude, 教程, AIHubTools, 长文本, AI安全">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 15% 5%,rgba(124,106,252,.22),transparent 32%),radial-gradient(circle at 88% 0%,rgba(224,64,251,.16),transparent 30%),#08090f;color:#f0f2ff;line-height:1.85}
+a{color:#c4b5fd;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:24px 16px 72px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:24px}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#7c6afc,#e040fb);display:grid;place-items:center}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;font-size:14px;font-weight:800}
+.hero{border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:38px 28px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.10));box-shadow:0 22px 52px rgba(0,0,0,.42)}.badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(124,106,252,.18);color:#ddd6fe;font-size:13px;font-weight:900;margin-bottom:16px}h1{font-size:clamp(34px,6vw,52px);line-height:1.1;letter-spacing:-.045em;margin-bottom:14px}h2{font-size:25px;line-height:1.35;margin-bottom:14px}h3{font-size:18px;margin:16px 0 8px}.lead{font-size:17px;color:#dbeafe;max-width:850px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;font-size:14px;font-weight:900}.primary{background:linear-gradient(135deg,#7c6afc,#e040fb);color:#fff}.ghost{border:1px solid rgba(255,255,255,.18);color:#fff}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.meta-card{background:rgba(15,17,32,.78);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:15px}.meta-card span{display:block;color:#8b93b8;font-size:12px;font-weight:900}.meta-card strong{display:block;color:#fff;font-size:16px;margin-top:4px}.layout{display:grid;grid-template-columns:270px 1fr;gap:22px;margin-top:22px}.toc{position:sticky;top:18px;align-self:start;background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:18px}.toc strong{display:block;margin-bottom:10px}.toc a{display:block;color:#cbd5e1;font-size:14px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.card{background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:24px;margin-bottom:18px;box-shadow:0 18px 42px rgba(0,0,0,.30)}p{color:#e5e7eb;margin-bottom:12px}img{max-width:100%;border-radius:12px;margin:10px 0;}.list{padding-left:20px}.list li{margin:8px 0;color:#e5e7eb}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.mini{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:16px}.table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;border-bottom:1px solid rgba(255,255,255,.10);padding:11px 8px;color:#e5e7eb}.table th{color:#fff;background:rgba(255,255,255,.04)}.note{margin-top:14px;padding:14px;border-radius:15px;background:rgba(255,209,102,.10);color:#fde68a}.faq details{border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:14px 16px;margin:10px 0;background:rgba(255,255,255,.035)}.faq summary{cursor:pointer;font-weight:900;color:#fff}.related{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.related a{display:block;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:14px;color:#fff}.related span{color:#9ca3af;font-size:13px}.footer{text-align:center;color:#8b93b8;font-size:14px;margin-top:28px}
+blockquote{margin:15px 0;padding:15px 20px;border-left:4px solid #7c6afc;background:rgba(124,106,252,.1);border-radius:0 8px 8px 0}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.toc{position:relative;top:0}.meta{grid-template-columns:repeat(2,1fr)}.related{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero,.card{padding:18px}.meta,.grid2,.related{grid-template-columns:1fr}.wrap{padding:16px 12px 48px}}
+</style>
 </head>
-
-<body>
-
-  <header class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <div class="header__logo">
-          <a href="../index.html">
-            <img src="../assets/images/logo.png" alt="AIHubTools Logo">
-          </a>
-          <a href="../index.html" class="header__logo-text">
-            <span>AIHubTools</span>
-          </a>
-        </div>
-        <nav class="header__nav">
-          <ul>
-            <li><a href="../index.html">工具</a></li>
-            <li><a href="../news.html">快讯</a></li>
-            <li><a href="../about.html">关于</a></li>
-            <li><a href="../tutorials.html">教程</a></li>
-            <li><a href="../collections.html">合集</a></li>
-            <li><a href="../favorites.html">收藏</a></li>
-          </ul>
-        </nav>
-        <div class="header__actions">
-          <div class="header__search">
-            <input type="text" placeholder="搜索...">
-            <button><i class="icon-search"></i></button>
-          </div>
-          <a href="../submit.html" class="btn btn--primary">提交</a>
-        </div>
-      </div>
+<body><main class="wrap">
+<div class="topbar"><div class="brand"><span class="logo">AI</span><span>AIHubTools 智汇工具</span></div><nav class="nav"><a href="../index.html">返回首页</a><a href="../tutorials.html">教程中心</a></nav></div>
+<section class="hero">
+    <div class="badge">⭐ AIHubTools · 官方教程</div>
+    <h1>Claude 教程：长文本处理与安全对话</h1>
+    <p class="lead">本篇 Claude 教程将从入门到精通，教你如何利用其强大的200K上下文窗口进行长文本分析、文档总结和安全对话，全面了解 Anthropic 的顶尖 AI 模型。</p>
+    <div class="actions">
+        <a class="btn primary" href="https://www.anthropic.com/claude" target="_blank" rel="noopener nofollow">访问官网 →</a>
+        <a class="btn ghost" href="https://claude.ai" target="_blank" rel="noopener nofollow">直接体验 →</a>
     </div>
-  </header>
-
-  <main class="main">
-
-    <div class="container">
-      <div class="tutorial-page">
-        <div class="tutorial-page__header">
-          <h1>Claude 教程：长文本处理与安全对话的终极指南</h1>
-          <div class="tutorial-page__meta">
-            <span>发布于：2024-05-15</span>
-            <span>阅读时间：9分钟</span>
-            <div class="tags">
-              <a href="#" class="tag">Claude</a>
-              <a href="#" class="tag">长文本</a>
-              <a href="#" class="tag">AI安全</a>
+    <div class="meta">
+        <div class="meta-card"><span>难度等级</span><strong>🟢 新手友好</strong></div>
+        <div class="meta-card"><span>核心优势</span><strong>超长文本处理</strong></div>
+        <div class="meta-card"><span>收费情况</span><strong>免费增值</strong></div>
+        <div class="meta-card"><span>适合场景</span><strong>文档分析 / 对话 / 编程</strong></div>
+    </div>
+</section>
+<div class="layout">
+    <aside class="toc">
+        <strong>目录</strong>
+        <a href="#what">什么是 Claude？</a>
+        <a href="#features">核心功能</a>
+        <a href="#comparison">Claude vs. ChatGPT</a>
+        <a href="#tips">实用技巧</a>
+        <a href="#summary">总结</a>
+    </aside>
+    <div>
+        <section class="card" id="what">
+            <h2>什么是 Claude？</h2>
+            <p>Claude 是由前 OpenAI 员工创立的 Anthropic 公司开发的 AI 聊天机器人。与追求极限性能的对手不同，Claude 从设计之初就将“安全”和“有用”放在首位。它基于“宪法 AI (Constitutional AI)”原则进行训练，旨在成为一个乐于助人、诚实且无害的 AI 助手。</p>
+            <img src="../assets/images/tutorials/claude/claude-interface.webp" alt="Claude 聊天界面">
+        </section>
+        <section class="card" id="features">
+            <h2>核心功能</h2>
+            <ul class="list">
+                <li><strong>超大上下文窗口：</strong> Claude 3 系列模型最高支持 200K 的上下文窗口，可以轻松处理数十万单词的输入，非常适合分析长篇报告、论文或代码库。</li>
+                <li><strong>强大的多语言能力：</strong> Claude 3 在多种语言上都表现出色，包括中文。</li>
+                <li><strong>视觉能力：</strong> 支持图像和文档的上传和分析。</li>
+                <li><strong>更安全的交互：</strong> Anthropic 强调 AI 的安全性，Claude 在拒绝不当请求方面表现得更坚决。</li>
+            </ul>
+        </section>
+        <section class="card" id="comparison">
+            <h2>Claude vs. ChatGPT：如何选择？</h2>
+            <p>这是一个常见的问题。简单来说，它们各有侧重，最佳实践是让它们成为你工具箱中的不同选项。</p>
+            <div class="grid2">
+                <div class="mini">
+                    <h3>选择 Claude 当你...</h3>
+                    <ul class="list">
+                        <li>需要处理、分析或总结非常长的文档（PDF、Word、代码）。</li>
+                        <li>进行严肃的学术研究或商业分析。</li>
+                        <li>对 AI 的安全性、道德性有较高要求。</li>
+                    </ul>
+                </div>
+                <div class="mini">
+                    <h3>选择 ChatGPT 当你...</h3>
+                    <ul class="list">
+                        <li>需要更多创意、灵感和多样化的回答风格。</li>
+                        <li>需要使用联网、AI 绘画、数据分析等丰富的多模态功能。</li>
+                        <li>想要访问庞大的 GPTs 应用商店来完成特定任务。</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="tutorial-page__content">
-          <p>Claude 是由 Anthropic 开发的一款强大的 AI 助手，尤其以其处理超长上下文窗口（高达200K token）的能力而闻名。这使它在文档分析、代码理解和需要深度背景知识的对话中表现出色。本教程将带你从基础到进阶，全面掌握 Claude 的使用技巧。</p>
-          <h2>Claude 是什么？</h2>
-          <p>Claude 是由前 OpenAI 员工创立的 Anthropic 公司开发的 AI 聊天机器人。与追求极限性能的对手不同，Claude 从设计之初就将“安全”和“有用”放在首位。它基于“宪法 AI (Constitutional AI)”原则进行训练，旨在成为一个乐于助人、诚实且无害的 AI 助手。</p>
-          <img src="../assets/images/tutorials/claude/claude-interface.webp" alt="Claude 聊天界面">
-          <h2>核心功能</h2>
-          <ul>
-            <li><strong>超大上下文窗口：</strong> Claude 3 系列模型最高支持 200K 的上下文窗口，可以轻松处理数十万单词的输入，非常适合分析长篇报告、论文或代码库。</li>
-            <li><strong>强大的多语言能力：</strong> Claude 3 在多种语言上都表现出色，包括中文。</li>
-            <li><strong>视觉能力：</strong> 支持图像和文档的上传和分析。</li>
-            <li><strong>更安全的交互：</strong> Anthropic 强调 AI 的安全性，Claude 在拒绝不当请求方面表现得更坚决。</li>
-          </ul>
-          <h2>Claude vs. ChatGPT：如何选择？</h2>
-          <p>这是一个常见的问题。简单来说：</p>
-          <ul>
-            <li><strong>选择 Claude 当你...</strong>
-              <ul>
-                <li>需要处理、分析或总结非常长的文档（PDF、Word、代码）。</li>
-                <li>进行严肃的学术研究或商业分析。</li>
-                <li>对 AI 的安全性、道德性有较高要求。</li>
-              </ul>
-            </li>
-            <li><strong>选择 ChatGPT 当你...</strong>
-              <ul>
-                <li>需要更多创意、灵感和多样化的回答风格。</li>
-                <li>需要使用联网、AI 绘画、数据分析等丰富的多模态功能。</li>
-                <li>想要访问庞大的 GPTs 应用商店来完成特定任务。</li>
-              </ul>
-            </li>
-          </ul>
-          <p><strong>最佳实践是：</strong>将它们都加入你的工具箱。在需要深度文本分析时启动 Claude，在需要创意和多功能性时使用 ChatGPT。</p>
-          <h2>实用技巧</h2>
-          <ol>
-            <li><strong>提供清晰的指令：</strong> 无论使用哪个模型，清晰的指令都是获得高质量输出的关键。</li>
-            <li><strong>利用上下文窗口：</strong> 充分利用 Claude 的长处，将完整的背景信息一次性提供给它。</li>
-            <li><strong>追问和迭代：</strong> 不要满足于第一个答案。通过追问来不断优化结果。</li>
-          </ol>
-          <blockquote>
-            <p>“Claude 的长文本处理能力为我们分析复杂的法律文件提供了极大的便利。” - 某律师事务所合伙人</p>
-          </blockquote>
-          <h2>总结</h2>
-          <p>Claude 凭借其独特的长文本处理能力和对安全性的重视，在 AI 工具中占据了重要的位置。通过本教程，希望你能更好地了解和使用 Claude，让它成为你工作和学习中的得力助手。</p>
-        </div>
-      </div>
+        </section>
+        <section class="card" id="tips">
+            <h2>实用技巧</h2>
+            <ol class="list">
+                <li><strong>提供清晰的指令：</strong> 无论使用哪个模型，清晰的指令都是获得高质量输出的关键。</li>
+                <li><strong>利用上下文窗口：</strong> 充分利用 Claude 的长处，将完整的背景信息一次性提供给它。例如，你可以把整篇 PDF 论文粘贴进去，然后提问。</li>
+                <li><strong>追问和迭代：</strong> 不要满足于第一个答案。通过追问来不断优化结果，让 AI 的回答更接近你的真实需求。</li>
+            </ol>
+            <blockquote><p>“Claude 的长文本处理能力为我们分析复杂的法律文件提供了极大的便利。” - 某律师事务所合伙人</p></blockquote>
+        </section>
+        <section class="card" id="summary">
+            <h2>总结</h2>
+            <p>Claude 凭借其独特的长文本处理能力和对安全性的重视，在 AI 工具中占据了重要的位置。它不是万能的，但在处理需要深度背景理解的复杂任务时，它往往是比其他工具更优的选择。通过本教程，希望你能更好地了解和使用 Claude，让它成为你工作和学习中的得力助手。</p>
+        </section>
     </div>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer__col">
-          <div class="footer__logo">
-            <img src="../assets/images/logo.png" alt="AIHubTools Logo">
-            <span>AIHubTools</span>
-          </div>
-          <p class="footer__desc">AIHubTools - 发现、分享和学习使用最好的 AI 工具。</p>
-        </div>
-        <div class="footer__col">
-          <h6>导航</h6>
-          <ul>
-            <li><a href="../about.html">关于我们</a></li>
-            <li><a href="../contact.html">联系方式</a></li>
-            <li><a href="../privacy.html">隐私政策</a></li>
-            <li><a href="../terms.html">服务条款</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h6>关注我们</h6>
-          <div class="footer__social">
-            <a href="#"><i class="icon-twitter"></i></a>
-            <a href="#"><i class="icon-github"></i></a>
-            <a href="#"><i class="icon-discord"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2024 AIHubTools. 保留所有权利。</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-</body>
-
-</html>
+</div>
+<div class="footer">© 2024 AIHubTools / 智汇工具 · Claude 教程页面</div>
+</main></body></html>

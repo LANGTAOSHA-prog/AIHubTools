@@ -1,150 +1,96 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatGPT 新手完整使用教程 - AIHubTools 智汇工具</title>
-  <meta name="description" content="一份面向新手的 ChatGPT 完整使用教程，从注册账号、基本操作到高级技巧，帮助你快速掌握这款强大的 AI 聊天机器人。">
-  <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/chatgpt-guide.html">
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
-  <!-- Inter Font -->
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="../css/style.css">
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ChatGPT 新手完整使用教程 - AIHubTools 智汇工具</title>
+<meta name="description" content="一份面向新手的 ChatGPT 完整使用教程，从注册账号、基本操作到高级技巧，帮助你快速掌握这款强大的 AI 聊天机器人。">
+<meta name="keywords" content="ChatGPT, 教程, AIHubTools, 入门, AI聊天">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 15% 5%,rgba(124,106,252,.22),transparent 32%),radial-gradient(circle at 88% 0%,rgba(224,64,251,.16),transparent 30%),#08090f;color:#f0f2ff;line-height:1.85}
+a{color:#c4b5fd;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:24px 16px 72px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:24px}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#7c6afc,#e040fb);display:grid;place-items:center}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;font-size:14px;font-weight:800}
+.hero{border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:38px 28px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.10));box-shadow:0 22px 52px rgba(0,0,0,.42)}.badge{display:inline-flex;padding:7px 12px;border-radius:999px;background:rgba(124,106,252,.18);color:#ddd6fe;font-size:13px;font-weight:900;margin-bottom:16px}h1{font-size:clamp(34px,6vw,52px);line-height:1.1;letter-spacing:-.045em;margin-bottom:14px}h2{font-size:25px;line-height:1.35;margin-bottom:14px}h3{font-size:18px;margin:16px 0 8px}.lead{font-size:17px;color:#dbeafe;max-width:850px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;padding:12px 18px;border-radius:999px;font-size:14px;font-weight:900}.primary{background:linear-gradient(135deg,#7c6afc,#e040fb);color:#fff}.ghost{border:1px solid rgba(255,255,255,.18);color:#fff}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.meta-card{background:rgba(15,17,32,.78);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:15px}.meta-card span{display:block;color:#8b93b8;font-size:12px;font-weight:900}.meta-card strong{display:block;color:#fff;font-size:16px;margin-top:4px}.layout{display:grid;grid-template-columns:270px 1fr;gap:22px;margin-top:22px}.toc{position:sticky;top:18px;align-self:start;background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:18px}.toc strong{display:block;margin-bottom:10px}.toc a{display:block;color:#cbd5e1;font-size:14px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.card{background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:24px;margin-bottom:18px;box-shadow:0 18px 42px rgba(0,0,0,.30)}p{color:#e5e7eb;margin-bottom:12px}img{max-width:100%;border-radius:12px;margin:10px 0;}.list{padding-left:20px}.list li{margin:8px 0;color:#e5e7eb}pre{background:rgba(0,0,0,.2);padding:15px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;font-family:monospace;margin:15px 0}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.mini{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:16px}.footer{text-align:center;color:#8b93b8;font-size:14px;margin-top:28px}
+blockquote{margin:15px 0;padding:15px 20px;border-left:4px solid #7c6afc;background:rgba(124,106,252,.1);border-radius:0 8px 8px 0}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.toc{position:relative;top:0}.meta{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero,.card{padding:18px}.meta,.grid2{grid-template-columns:1fr}.wrap{padding:16px 12px 48px}}
+</style>
 </head>
-
-<body>
-
-  <header class="header">
-    <div class="container">
-      <div class="header__wrapper">
-        <div class="header__logo">
-          <a href="../index.html">
-            <img src="../assets/images/logo.png" alt="AIHubTools Logo">
-          </a>
-          <a href="../index.html" class="header__logo-text">
-            <span>AIHubTools</span>
-          </a>
-        </div>
-        <nav class="header__nav">
-          <ul>
-            <li><a href="../index.html">工具</a></li>
-            <li><a href="../news.html">快讯</a></li>
-            <li><a href="../about.html">关于</a></li>
-            <li><a href="../tutorials.html">教程</a></li>
-            <li><a href="../collections.html">合集</a></li>
-            <li><a href="../favorites.html">收藏</a></li>
-          </ul>
-        </nav>
-        <div class="header__actions">
-          <div class="header__search">
-            <input type="text" placeholder="搜索...">
-            <button><i class="icon-search"></i></button>
-          </div>
-          <a href="../submit.html" class="btn btn--primary">提交</a>
-        </div>
-      </div>
+<body><main class="wrap">
+<div class="topbar"><div class="brand"><span class="logo">AI</span><span>AIHubTools 智汇工具</span></div><nav class="nav"><a href="../index.html">返回首页</a><a href="../tutorials.html">教程中心</a></nav></div>
+<section class="hero">
+    <div class="badge">⭐ AIHubTools · 官方教程</div>
+    <h1>ChatGPT 新手完整使用教程</h1>
+    <p class="lead">一份面向新手的 ChatGPT 完整使用教程，从注册账号、基本操作到高级技巧，帮助你快速掌握这款强大的 AI 聊天机器人。</p>
+    <div class="actions">
+        <a class="btn primary" href="https://chat.openai.com/" target="_blank" rel="noopener nofollow">访问官网 →</a>
     </div>
-  </header>
-
-  <main class="main">
-
-    <div class="container">
-      <div class="tutorial-page">
-        <div class="tutorial-page__header">
-          <h1>ChatGPT 新手完整使用教程</h1>
-          <div class="tutorial-page__meta">
-            <span>发布于：2024-05-12</span>
-            <span>阅读时间：12分钟</span>
-            <div class="tags">
-              <a href="#" class="tag">ChatGPT</a>
-              <a href="#" class="tag">AI聊天</a>
-              <a href="#" class="tag">入门</a>
-            </div>
-          </div>
-        </div>
-        <div class="tutorial-page__content">
-          <p>欢迎来到 ChatGPT 的世界！作为目前最强大的 AI 聊天机器人之一，ChatGPT 可以帮助你写作、编程、学习、翻译，甚至激发创意。本教程将带你从零开始，一步步掌握 ChatGPT。</p>
-          <h2>第一步：注册与登录</h2>
-          <p>首先，你需要一个 OpenAI 账户。访问 <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>，你可以使用邮箱、Google 账号或 Apple 账号进行注册。注册过程非常简单，但请注意，你可能需要验证手机号码。</p>
-          <img src="../assets/images/tutorials/chatgpt/chatgpt-signup.webp" alt="ChatGPT 注册页面">
-          <h2>第二步：了解主界面</h2>
-          <p>登录后，你会看到一个简洁的界面：</p>
-          <ul>
-            <li><strong>主聊天窗口：</strong> 你与 ChatGPT 对话的地方。</li>
-            <li><strong>输入框：</strong> 在这里输入你的问题或指令（我们称之为“提示词”）。</li>
-            <li><strong>侧边栏：</strong> 保存你过去所有的聊天记录，方便回顾。</li>
-          </ul>
-          <h2>第三步：开始你的第一次对话</h2>
-          <p>尝试问一个简单的问题，比如：</p>
-          <pre><code>“你好，请用简单的语言解释一下什么是人工智能。”</code></pre>
-          <p>ChatGPT 会立即给出一个详细的回答。你可以继续追问，比如“它和机器学习有什么关系？”，ChatGPT 能够理解上下文，并给出相关的回答。</p>
-          <h2>第四步：学习撰写有效的提示词 (Prompt)</h2>
-          <p>你给出的指令质量，直接决定了 ChatGPT 的输出质量。一个好的提示词应该包含以下元素：</p>
-          <ol>
-            <li><strong>角色扮演：</strong> 让 ChatGPT 扮演一个角色，例如“你现在是一名资深的程序员...”。</li>
-            <li><strong>清晰的任务：</strong> 明确告诉它你想要什么，例如“...请帮我写一个 Python 函数，实现冒泡排序”。</li>
-            <li><strong>提供背景信息：</strong> 给出足够的上下文，帮助它更好地理解你的需求。</li>
-            <li><strong>指定输出格式：</strong> 要求它以特定的格式输出，例如“请用表格形式展示...”、“请用 Markdown 格式输出代码”。</li>
-          </ol>
-          <blockquote>
+    <div class="meta">
+        <div class="meta-card"><span>难度等级</span><strong>🟢 新手友好</strong></div>
+        <div class="meta-card"><span>核心优势</span><strong>通用对话与创意</strong></div>
+        <div class="meta-card"><span>收费情况</span><strong>免费增值</strong></div>
+        <div class="meta-card"><span>适合场景</span><strong>写作 / 编程 / 创意</strong></div>
+    </div>
+</section>
+<div class="layout">
+    <aside class="toc">
+        <strong>目录</strong>
+        <a href="#signup">注册与登录</a>
+        <a href="#interface">了解主界面</a>
+        <a href="#conversation">第一次对话</a>
+        <a href="#prompting">撰写有效提示词</a>
+        <a href="#advanced">探索高级功能</a>
+        <a href="#summary">总结</a>
+    </aside>
+    <div>
+        <section class="card" id="signup">
+            <h2>第一步：注册与登录</h2>
+            <p>首先，你需要一个 OpenAI 账户。访问 <a href="https://chat.openai.com" target="_blank">chat.openai.com</a>，你可以使用邮箱、Google 账号或 Apple 账号进行注册。注册过程非常简单，但请注意，你可能需要验证手机号码。</p>
+            <img src="../assets/images/tutorials/chatgpt/chatgpt-signup.webp" alt="ChatGPT 注册页面">
+        </section>
+        <section class="card" id="interface">
+            <h2>第二步：了解主界面</h2>
+            <p>登录后，你会看到一个简洁的界面：</p>
+            <ul class="list">
+                <li><strong>主聊天窗口：</strong> 你与 ChatGPT 对话的地方。</li>
+                <li><strong>输入框：</strong> 在这里输入你的问题或指令（我们称之为“提示词”）。</li>
+                <li><strong>侧边栏：</strong> 保存你过去所有的聊天记录，方便回顾。</li>
+            </ul>
+        </section>
+        <section class="card" id="conversation">
+            <h2>第三步：开始你的第一次对话</h2>
+            <p>尝试问一个简单的问题，比如：</p>
+            <pre>“你好，请用简单的语言解释一下什么是人工智能。”</pre>
+            <p>ChatGPT 会立即给出一个详细的回答。你可以继续追问，比如“它和机器学习有什么关系？”，ChatGPT 能够理解上下文，并给出相关的回答。</p>
+        </section>
+        <section class="card" id="prompting">
+            <h2>第四步：学习撰写有效的提示词 (Prompt)</h2>
+            <p>你给出的指令质量，直接决定了 ChatGPT 的输出质量。一个好的提示词应该包含以下元素：</p>
+            <ol class="list">
+                <li><strong>角色扮演：</strong> 让 ChatGPT 扮演一个角色，例如“你现在是一名资深的程序员...”。</li>
+                <li><strong>清晰的任务：</strong> 明确告诉它你想要什么，例如“...请帮我写一个 Python 函数，实现冒泡排序”。</li>
+                <li><strong>提供背景信息：</strong> 给出足够的上下文，帮助它更好地理解你的需求。</li>
+                <li><strong>指定输出格式：</strong> 要求它以特定的格式输出，例如“请用表格形式展示...”、“请用 Markdown 格式输出代码”。</li>
+            </ol>
+            <blockquote>
             <p><strong>优秀提示词示例：</strong><br>
             “你是一位经验丰富的旅行规划师。请为我设计一个为期 7 天的日本东京家庭旅行计划。我们的成员包括两名大人和一名 5 岁的孩子，预算为 20000 元人民币。我们对动漫、美食和自然风光感兴趣。请以表格形式列出每天的行程、交通方式和预算估算。”</p>
-          </blockquote>
-          <h2>第五步：探索高级功能 (GPT-4)</h2>
-          <p>如果你订阅了 ChatGPT Plus，你将可以使用更强大的 GPT-4 模型，并解锁一系列高级功能：</p>
-          <ul>
-            <li><strong>联网功能：</strong> 允许 ChatGPT 访问互联网，获取最新的信息。</li>
-            <li><strong>数据分析：</strong> 上传文件（如 Excel、CSV），让 ChatGPT 帮你进行数据分析和可视化。</li>
-            <li><strong>DALL-E 3 绘画：</strong> 直接在对话中输入描述，让 AI 为你生成图片。</li>
-            <li><strong>GPTs：</strong> 使用由社区创建的、针对特定任务的定制版 ChatGPT。</li>
-          </ul>
-          <img src="../assets/images/tutorials/chatgpt/chatgpt-plus.webp" alt="ChatGPT Plus 的高级功能">
-          <h2>总结</h2>
-          <p>ChatGPT 是一个潜力无限的工具。不断练习和探索，你会发现它能为你带来的巨大价值。希望本教程能帮助你迈出成功的第一步！</p>
-        </div>
-      </div>
+            </blockquote>
+        </section>
+        <section class="card" id="advanced">
+            <h2>第五步：探索高级功能 (GPT-4)</h2>
+            <p>如果你订阅了 ChatGPT Plus，你将可以使用更强大的 GPT-4 模型，并解锁一系列高级功能：</p>
+            <ul class="list">
+                <li><strong>联网功能：</strong> 允许 ChatGPT 访问互联网，获取最新的信息。</li>
+                <li><strong>数据分析：</strong> 上传文件（如 Excel、CSV），让 ChatGPT 帮你进行数据分析和可视化。</li>
+                <li><strong>DALL-E 3 绘画：</strong> 直接在对话中输入描述，让 AI 为你生成图片。</li>
+                <li><strong>GPTs：</strong> 使用由社区创建的、针对特定任务的定制版 ChatGPT。</li>
+            </ul>
+            <img src="../assets/images/tutorials/chatgpt/chatgpt-plus.webp" alt="ChatGPT Plus 的高级功能">
+        </section>
+        <section class="card" id="summary">
+            <h2>总结</h2>
+            <p>ChatGPT 是一个潜力无限的工具。不断练习和探索，你会发现它能为你带来的巨大价值。希望本教程能帮助你迈出成功的第一步！</p>
+        </section>
     </div>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__wrapper">
-        <div class="footer__col">
-          <div class="footer__logo">
-            <img src="../assets/images/logo.png" alt="AIHubTools Logo">
-            <span>AIHubTools</span>
-          </div>
-          <p class="footer__desc">AIHubTools - 发现、分享和学习使用最好的 AI 工具。</p>
-        </div>
-        <div class="footer__col">
-          <h6>导航</h6>
-          <ul>
-            <li><a href="../about.html">关于我们</a></li>
-            <li><a href="../contact.html">联系方式</a></li>
-            <li><a href="../privacy.html">隐私政策</a></li>
-            <li><a href="../terms.html">服务条款</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h6>关注我们</h6>
-          <div class="footer__social">
-            <a href="#"><i class="icon-twitter"></i></a>
-            <a href="#"><i class="icon-github"></i></a>
-            <a href="#"><i class="icon-discord"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <p>&copy; 2024 AIHubTools. 保留所有权利。</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-</body>
-
-</html>
+</div>
+<div class="footer">© 2024 AIHubTools / 智汇工具 · ChatGPT 教程页面</div>
+</main></body></html>

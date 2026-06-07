@@ -1,6 +1,6 @@
 [
   {
-    "slug": "tools/tome",
+    "slug": "../tools/tome",
     "tool": "Tome",
     "category": "深度评测",
     "difficulty": "入门",
@@ -11,7 +11,7 @@
     "cover": "assets/covers/tome-cover.webp"
   },
   {
-    "slug": "tools/wordtune",
+    "slug": "../tools/wordtune",
     "tool": "Wordtune",
     "category": "深度评测",
     "difficulty": "入门",
@@ -22,7 +22,7 @@
     "cover": "assets/covers/wordtune-cover.webp"
   },
   {
-    "slug": "tools/lovable",
+    "slug": "../tools/lovable",
     "tool": "Lovable",
     "category": "深度评测",
     "difficulty": "中级",
@@ -33,7 +33,7 @@
     "cover": "assets/covers/lovable-cover.webp"
   },
   {
-    "slug": "tools/fireflies-ai",
+    "slug": "../tools/fireflies-ai",
     "tool": "Fireflies.ai",
     "category": "深度评测",
     "difficulty": "入门",

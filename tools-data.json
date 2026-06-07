@@ -152,5 +152,22 @@
     "featured": true,
     "tutorial_enabled": true,
     "tutorial_slug": "../tools/fireflies-ai"
+  },
+  {
+    "name": "Grammarly",
+    "name_zh": "Grammarly",
+    "name_en": "Grammarly",
+    "category": "AI Writing",
+    "category_zh": "AI Writing",
+    "type": "部分免费",
+    "description": "不止是语法检查，更是你的AI写作教练。从基础的语法纠错、风格建议，到最新的生成式AI功能，全面提升你的写作水平。",
+    "pricing": "部分免费",
+    "difficulty": "入门",
+    "highlight": "最可靠的语法和风格检查工具",
+    "tags": "写作,语法,校对,风格,生成式AI",
+    "website": "https://www.grammarly.com",
+    "featured": true,
+    "tutorial_enabled": true,
+    "tutorial_slug": "../tools/grammarly"
   }
 ]

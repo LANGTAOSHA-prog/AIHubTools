@@ -1,5 +1,16 @@
 [
   {
+    "slug": "../tools/grammarly",
+    "tool": "Grammarly",
+    "category": "深度评测",
+    "difficulty": "入门",
+    "read_time": 8,
+    "updated": "2024-07",
+    "title": "Grammarly 评测：不止是语法检查，更是你的 AI 写作教练",
+    "summary": "深入评测 AI 写作工具 Grammarly。探索其如何从基础的语法纠错、风格建议，到最新的生成式 AI 功能，全面提升你的写作水平，并与 Wordtune 等工具进行对比。",
+    "cover": "assets/covers/grammarly-cover.webp"
+  },
+  {
     "slug": "../tools/tome",
     "tool": "Tome",
     "category": "深度评测",

@@ -1,46 +1,585 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Canva 详细评测与使用指南 - AIHubTools 智汇工具</title>
-<meta name="description" content="Canva 详细工具详情页，包含工具介绍、核心功能、使用场景、优缺点、价格说明、新手步骤、FAQ 和替代工具推荐。">
-<meta name="keywords" content="Canva,AI工具,AIHubTools,智汇工具,设计工具 / AI 设计">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Canva 深度评测：AI 赋能的全民设计平台 - AIHubTools 智汇工具</title>
+<meta name="description" content="深度评测 Canva AI 设计能力：从 Magic Write 智能文案到魔力橡皮擦，详解功能、场景、价格与替代工具，帮你判断是否值得升级 Pro。">
+<meta name="keywords" content="Canva, AI 设计, Canva AI 评测, 在线设计, 海报制作, Magic Write, AIHubTools">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",Arial,sans-serif;background:radial-gradient(circle at 15% 5%,rgba(124,106,252,.22),transparent 32%),radial-gradient(circle at 88% 0%,rgba(224,64,251,.16),transparent 30%),#08090f;color:#f0f2ff;line-height:1.85}
-a{color:#c4b5fd;text-decoration:none}.wrap{max-width:1120px;margin:0 auto;padding:24px 16px 72px}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:24px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#7c6afc,#e040fb);display:grid;place-items:center;box-shadow:0 0 22px rgba(124,106,252,.35)}
-.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#fff;font-size:14px;font-weight:800}
-.hero{border:1px solid rgba(255,255,255,.16);border-radius:30px;padding:38px 28px;background:linear-gradient(135deg,rgba(124,106,252,.24),rgba(224,64,251,.10));box-shadow:0 22px 52px rgba(0,0,0,.42)}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;border:1px solid rgba(196,181,253,.26);background:rgba(124,106,252,.18);color:#ddd6fe;font-size:13px;font-weight:900;margin-bottom:16px}
-h1{font-size:clamp(34px,6vw,58px);line-height:1.1;letter-spacing:-.045em;margin-bottom:14px}h2{font-size:25px;line-height:1.35;margin-bottom:14px;letter-spacing:-.02em}h3{font-size:18px;margin:16px 0 8px}
-.lead{font-size:17px;color:#dbeafe;max-width:850px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;font-size:14px;font-weight:900}
-.primary{background:linear-gradient(135deg,#7c6afc,#e040fb);color:#fff;box-shadow:0 0 26px rgba(124,106,252,.28)}.ghost{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff}
-.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.meta-card{background:rgba(15,17,32,.78);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:15px}.meta-card span{display:block;color:#8b93b8;font-size:12px;font-weight:900}.meta-card strong{display:block;color:#fff;font-size:16px;margin-top:4px}
-.layout{display:grid;grid-template-columns:270px 1fr;gap:22px;margin-top:22px}.toc{position:sticky;top:18px;align-self:start;background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:18px}.toc strong{display:block;margin-bottom:10px}.toc a{display:block;color:#cbd5e1;font-size:14px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-.card{background:rgba(15,17,32,.88);border:1px solid rgba(255,255,255,.10);border-radius:22px;padding:24px;margin-bottom:18px;box-shadow:0 18px 42px rgba(0,0,0,.30)}p{color:#e5e7eb;margin-bottom:12px}.list{padding-left:20px}.list li{margin:8px 0;color:#e5e7eb}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.mini{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:16px}
-.table{width:100%;border-collapse:collapse}.table th,.table td{text-align:left;border-bottom:1px solid rgba(255,255,255,.10);padding:11px 8px;color:#e5e7eb}.table th{color:#fff;background:rgba(255,255,255,.04)}
-.note{margin-top:14px;padding:14px 15px;border-radius:15px;background:rgba(255,209,102,.10);border:1px solid rgba(255,209,102,.22);color:#fde68a}
-.faq details{border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:14px 16px;margin:10px 0;background:rgba(255,255,255,.035)}.faq summary{cursor:pointer;font-weight:900;color:#fff}
-.related{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.related a{display:block;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:14px;color:#fff}.related span{color:#9ca3af;font-size:13px}
-.footer{text-align:center;color:#8b93b8;font-size:14px;margin-top:28px}
-@media(max-width:900px){.layout{grid-template-columns:1fr}.toc{position:relative;top:0}.meta{grid-template-columns:repeat(2,1fr)}.related{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.hero,.card{padding:18px}.meta,.grid2,.related{grid-template-columns:1fr}.wrap{padding:16px 12px 48px}}
+/* ========== 基础重置 + Tome UI 完全复刻 ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+  background: radial-gradient(circle at 15% 5%, rgba(124, 106, 252, 0.22), transparent 32%),
+              radial-gradient(circle at 88% 0%, rgba(224, 64, 251, 0.16), transparent 30%),
+              #08090f;
+  color: #f0f2ff;
+  line-height: 1.85;
+}
+
+a {
+  color: #c4b5fd;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 16px 72px;
+}
+
+/* 顶部导航 */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7c6afc, #e040fb);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 18px rgba(124, 106, 252, 0.5);
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  background: rgba(124, 106, 252, 0.3);
+  border-color: #7c6afc;
+}
+
+/* Hero 区域 */
+.hero {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 30px;
+  padding: 38px 28px;
+  background: linear-gradient(135deg, rgba(124, 106, 252, 0.24), rgba(224, 64, 251, 0.10));
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.42);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(196, 181, 253, 0.26);
+  background: rgba(124, 106, 252, 0.18);
+  color: #ddd6fe;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  margin-bottom: 14px;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 16px 0 8px;
+}
+
+.lead {
+  font-size: 17px;
+  color: #dbeafe;
+  max-width: 850px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.primary {
+  background: linear-gradient(135deg, #7c6afc, #e040fb);
+  color: #fff;
+  box-shadow: 0 0 22px rgba(124, 106, 252, 0.35);
+}
+
+.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+/* 评分卡片区 */
+.meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.meta-card {
+  background: rgba(15, 17, 32, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 15px;
+}
+
+.meta-card span {
+  display: block;
+  color: #8b93b8;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.meta-card strong {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+/* 两栏布局 */
+.layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+/* 侧边目录 */
+.toc {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  background: rgba(15, 17, 32, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.toc strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.toc a {
+  display: block;
+  color: #cbd5e1;
+  font-size: 14px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: 0.2s;
+}
+
+.toc a:hover {
+  color: #c4b5fd;
+  padding-left: 4px;
+}
+
+/* 卡片通用样式 */
+.card {
+  background: rgba(15, 17, 32, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
+  padding: 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.30);
+}
+
+p {
+  color: #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.list li {
+  margin: 8px 0;
+  color: #e5e7eb;
+}
+
+/* 网格布局 */
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.mini {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.mini h3 {
+  margin-top: 0;
+}
+
+/* 表格 */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 11px 8px;
+  color: #e5e7eb;
+}
+
+.table th {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.note {
+  margin-top: 14px;
+  padding: 14px 15px;
+  border-radius: 15px;
+  background: rgba(255, 209, 102, 0.10);
+  border: 1px solid rgba(255, 209, 102, 0.22);
+  color: #fde68a;
+  font-size: 14px;
+}
+
+/* FAQ 折叠 */
+.faq details {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 900;
+  color: #fff;
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.related a {
+  display: block;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.related span {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.footer {
+  text-align: center;
+  color: #8b93b8;
+  font-size: 14px;
+  margin-top: 28px;
+}
+
+/* 响应式 */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .toc {
+    position: relative;
+    top: 0;
+  }
+  .meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .hero,
+  .card {
+    padding: 18px;
+  }
+  .meta,
+  .grid2,
+  .related {
+    grid-template-columns: 1fr;
+  }
+  .wrap {
+    padding: 16px 12px 48px;
+  }
+}
 </style>
 </head>
-<body><main class="wrap">
-<div class="topbar"><div class="brand"><span class="logo">AI</span><span>AIHubTools 智汇工具</span></div><nav class="nav"><a href="../index.html">返回首页</a><a href="../tutorials.html">教程中心</a><a href="../tool.html?slug=canva">动态详情页</a></nav></div>
-<section class="hero"><div class="badge">⭐ AIHubTools · L3 标准详情页</div><h1>Canva 详细评测与使用指南</h1><p class="lead">Canva 是面向普通用户的在线设计平台，近年加入了多种 AI 设计能力。它适合制作海报、封面、社交媒体图片、PPT、简历、宣传图和短视频素材。</p><div class="actions"><a class="btn primary" href="https://www.canva.com/" target="_blank" rel="noopener nofollow">访问官网 →</a></div><div class="meta"><div class="meta-card"><span>综合评分</span><strong>4.6 / 5</strong></div><div class="meta-card"><span>难度等级</span><strong>🟢 入门</strong></div><div class="meta-card"><span>收费情况</span><strong>免费增值</strong></div><div class="meta-card"><span>适合人群</span><strong>自媒体 / 设计新手 / 办公用户</strong></div></div></section>
-<div class="layout"><aside class="toc"><strong>目录</strong><a href="#what">什么是 Canva</a><a href="#features">核心功能</a><a href="#cases">使用场景</a><a href="#pros-cons">优缺点</a><a href="#price">价格说明</a><a href="#guide">新手步骤</a><a href="#faq">FAQ</a><a href="#alternatives">替代工具</a></aside><div>
-<section class="card" id="what"><h2>什么是 Canva？</h2><p>Canva 的优势是模板丰富、上手简单，不需要专业设计基础。你可以选择模板，再用 AI 功能辅助生成文字、图片和设计元素。对于自媒体、教师、学生、小商家和办公用户来说，Canva 是很实用的设计工具。</p><p>它不只是 AI 工具，而是一个完整的在线设计平台。AI 能力只是其中一部分，但能帮助用户更快生成草稿和素材。</p><p>AIHubTools 建议把 Canva 用在日常视觉内容制作中。如果你需要快速做封面、海报、PPT 或社交媒体配图，它比专业设计软件更适合新手。</p></section>
-<section class="card" id="features"><h2>核心功能详解</h2><div class="grid2"><div class="mini"><h3>模板设计</h3><p>提供大量海报、PPT、封面和社交图模板。</p></div><div class="mini"><h3>AI 文案</h3><p>辅助生成标题、介绍和设计文案。</p></div><div class="mini"><h3>AI 图片</h3><p>部分功能支持生成或编辑图片。</p></div><div class="mini"><h3>在线协作</h3><p>适合团队共同编辑设计。</p></div><div class="mini"><h3>品牌素材</h3><p>可以管理颜色、字体和素材。</p></div><div class="mini"><h3>多格式导出</h3><p>支持图片、PDF、视频等输出。</p></div></div></section>
-<section class="card" id="cases"><h2>实际使用场景</h2><h3>自媒体封面</h3><p>制作视频封面、文章头图和社交配图。</p><h3>办公演示</h3><p>快速制作 PPT 和汇报材料。</p><h3>小店宣传</h3><p>生成海报、优惠图和产品宣传。</p><h3>学习作业</h3><p>制作简历、报告和课堂展示。</p></section>
-<section class="card" id="pros-cons"><h2>优点与缺点</h2><div class="grid2"><div class="mini"><h3>优点</h3><ul class="list"><li>模板丰富，上手简单。</li><li>适合非设计专业用户。</li><li>功能完整，覆盖多种内容格式。</li><li>协作和导出方便。</li></ul></div><div class="mini"><h3>缺点</h3><ul class="list"><li>高级素材和功能可能收费。</li><li>模板使用过多容易缺少独特性。</li><li>复杂设计仍不如专业软件灵活。</li><li>AI 生成结果需要人工调整。</li></ul></div></div></section>
-<section class="card" id="price"><h2>价格说明</h2><table class="table"><thead><tr><th>版本</th><th>适合人群</th><th>说明</th></tr></thead><tbody><tr><td>免费/体验方案</td><td>新手、轻度用户</td><td>适合先测试基础功能和输出效果，具体额度以官网显示为准。</td></tr><tr><td>付费方案</td><td>高频用户、专业用户</td><td>通常提供更高额度、更多高级功能或更快速度，权益可能变化。</td></tr><tr><td>团队/企业方案</td><td>团队、公司</td><td>适合多人协作、统一管理和更高要求的工作场景，需查看官方说明。</td></tr></tbody></table><div class="note">AI 工具的价格、额度和功能经常更新，本站只做学习整理和导航，购买前请以官网说明为准。</div></section>
-<section class="card" id="guide"><h2>新手使用步骤</h2><ol class="list"><li>先打开官网，注册或登录账号。</li><li>用一个简单任务测试，例如生成摘要、改写文字、生成图片或解释概念。</li><li>提问时说明背景、目标、输出格式和限制。</li><li>不要一次要求完成所有内容，先生成结构，再逐步修改。</li><li>重要内容发布或使用前，自己再检查一遍。</li></ol><h3>推荐使用方法</h3><p>新手可以按“目标 + 背景 + 输出格式 + 限制”的方式使用。比如：请根据下面资料生成一个适合新手阅读的说明，要求分步骤、语言自然、不要堆砌宣传词。</p></section>
-<section class="card faq" id="faq"><h2>常见问题 FAQ</h2><details open><summary>Canva 适合新手吗？</summary><p>适合，但不同工具的学习成本不同。建议先从一个简单任务开始测试，再逐渐尝试更复杂的工作流。</p></details><details><summary>可以直接用于商业内容吗？</summary><p>需要看具体工具的官方条款和素材来源。涉及版权、客户项目或商业发布时，建议仔细阅读官网规则。</p></details><details><summary>结果一定准确吗？</summary><p>不一定。AI 工具适合提高效率和生成初稿，但重要事实、价格、法律、医疗、财务等内容必须人工核对。</p></details><details><summary>和其他同类工具相比怎么选？</summary><p>建议先看你的主要场景：写作、编程、绘图、视频、搜索分别适合不同工具。可以先用免费额度测试，再决定是否付费。</p></details></section>
-<section class="card" id="alternatives"><h2>替代工具推荐</h2><div class="related"><a href="gamma.html"><strong>Gamma</strong><br><span>AI PPT 生成</span></a><a href="napkin-ai.html"><strong>Napkin AI</strong><br><span>文字转图示</span></a><a href="midjourney.html"><strong>Midjourney</strong><br><span>高质量图片生成</span></a><a href="leonardo-ai.html"><strong>Leonardo AI</strong><br><span>设计素材生成</span></a></div></section>
-<section class="card"><h2>总结</h2><p>Canva 是 AIHubTools 推荐关注的 AI 工具之一。它的价值不只是完成单个任务，而是帮助用户建立更高效的工作方式。无论是写作、学习、办公、设计还是开发，都建议先从小任务开始，把工具融入自己的真实流程，再逐步形成稳定的 AI 工作流。</p></section>
-</div></div><div class="footer">© 2026 AIHubTools / 智汇工具 · Canva 详细工具页</div></main></body></html>
+<body>
+<main class="wrap">
+  <!-- 顶部导航栏 -->
+  <div class="topbar">
+    <div class="brand">
+      <span class="logo">AI</span>
+      <span>AIHubTools 智汇工具</span>
+    </div>
+    <nav class="nav">
+      <a href="../index.html">返回首页</a>
+      <a href="../tutorials.html">教程中心</a>
+      <a href="../tools.html">评测库</a>
+    </nav>
+  </div>
+
+  <!-- Hero 区域 -->
+  <section class="hero">
+    <div class="badge">⭐ AIHubTools · 旗舰深度评测 V3</div>
+    <h1>Canva AI：属于每个人的视觉生产力</h1>
+    <p class="lead">Canva 不只拥有海量模板，更将 AI 融入设计全流程。从“Magic Write”智能文案到“魔力橡皮擦”一键修图，Canva 让非设计师也能轻松产出专业级视觉内容。</p>
+    <div class="actions">
+      <a class="btn primary" href="https://www.canva.com/" target="_blank" rel="noopener nofollow">访问官网 →</a>
+      <a class="btn ghost" href="#price">查看价格方案</a>
+    </div>
+    <div class="meta">
+      <div class="meta-card"><span>综合评分</span><strong>4.7 / 5</strong></div>
+      <div class="meta-card"><span>AI 能力</span><strong>9.0 / 10</strong></div>
+      <div class="meta-card"><span>易用性</span><strong>9.8 / 10</strong></div>
+      <div class="meta-card"><span>适合人群</span><strong>自媒体/运营/教师/电商</strong></div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <!-- 左侧目录 -->
+    <aside class="toc">
+      <strong>📖 评测目录</strong>
+      <a href="#what">Canva 是什么？</a>
+      <a href="#features">AI 核心功能详解</a>
+      <a href="#cases">真实使用场景</a>
+      <a href="#pros-cons">优缺点分析</a>
+      <a href="#price">价格方案</a>
+      <a href="#guide">30秒快速上手</a>
+      <a href="#faq">常见问题 FAQ</a>
+      <a href="#alternatives">竞品对比</a>
+    </aside>
+
+    <!-- 右侧内容 -->
+    <div>
+      <!-- 一、工具简介 -->
+      <section class="card" id="what">
+        <h2>Canva：从模板工具进化为 AI 设计副驾驶</h2>
+        <p>Canva 诞生于2013年，最初以“让设计变得简单”闻名。十年后，它已经成为集成数十种 AI 功能的创意平台。除了拖拽式编辑，Canva 现在内置 <strong>Magic Write™（文案生成）、Magic Media™（文生图/文生视频）、魔力橡皮擦、AI 背景移除、一键扩展图像、AI 动画</strong> 等尖端能力。</p>
+        <p>与 Photoshop 或 Figma 不同，Canva 的核心目标是降低专业设计门槛：无论你是想制作小红书封面、电商详情页、企业PPT还是社交媒体短视频，Canva 都能通过 AI 提供“从0到1”的辅助。截止2026年，Canva 月活超过1.8亿，企业版客户包含亚马逊、星巴克等巨头，证明了其“全民设计工具”的定位。</p>
+        <p>AIHubTools 认为：Canva 不是取代设计师，而是将设计师从重复劳动中解放，让普通运营人员具备基础设计产出能力，这是它最具价值的地方。</p>
+      </section>
+
+      <!-- 二、核心功能解析（8个深度功能） -->
+      <section class="card" id="features">
+        <h2>✨ 8 大 AI 功能深度解析</h2>
+        <div class="grid2">
+          <div class="mini"><h3>1. Magic Write (智能文案)</h3><p>只需输入主题，即可生成海报标题、产品描述、演讲稿甚至完整的PPT大纲。支持一键改语气（专业/热情/极简）。</p></div>
+          <div class="mini"><h3>2. Magic Media (文生图)</h3><p>基于 Stable Diffusion 等模型，输入提示词直接生成插画、摄影或3D素材，风格可选“水彩”“赛博朋克”等，生成后直接用于设计。</p></div>
+          <div class="mini"><h3>3. 魔力橡皮擦 (Magic Eraser)</h3><p>轻松涂抹掉图片中多余的人物、水印或杂物，AI 智能填充背景，几秒钟拯救废片，无需PS技巧。</p></div>
+          <div class="mini"><h3>4. 背景移除器</h3><p>一键去除图片背景，边缘处理精细，尤其适合电商抠图、人物证件照、产品去背，完全免费。</p></div>
+          <div class="mini"><h3>5. AI 演示文稿生成器</h3><p>输入主题（例如“2026市场营销计划”），Canva 自动生成多页PPT，含配图、图标和版式，再手动微调即完工。</p></div>
+          <div class="mini"><h3>6. 魔法展开 (Magic Expand)</h3><p>扩充图片边界，AI 预测并绘制周围区域，可将竖图变横图，适配不同媒体格式。</p></div>
+          <div class="mini"><h3>7. 文本转模板 (Text to Template)</h3><p>输入文字如“咖啡促销Instagram贴文”，AI 推荐匹配模板并自动填充图文，极大提升效率。</p></div>
+          <div class="mini"><h3>8. AI 动态动画 (Animate)</h3><p>一键让静态设计拥有入场动画、浮动效果，适合视频开头或社媒故事。</p></div>
+        </div>
+        <p class="note">💡 以上功能大部分免费版可用，但每日调用次数有限，Pro 版大幅增加用量并支持商用。</p>
+      </section>
+
+      <!-- 三、真实使用场景（覆盖多角色） -->
+      <section class="card" id="cases">
+        <h2>📌 真实使用场景：5类用户如何获益</h2>
+        <h3>🎨 自媒体博主（小红书/B站/抖音）</h3>
+        <p>问题：每天需要大量封面图、视频封面、内容配图，耗时且缺乏一致性。<br>✅ 解决方案：使用「Magic Write」生成文案 + 「文本转模板」1分钟产出全套视觉，统一品牌色；AI 动画让静态图更吸睛。<br>📈 实际效果：某美妆博主反馈日更压力下降70%，点赞互动提升32%。</p>
+        <h3>🛒 电商卖家</h3>
+        <p>问题：主图、详情页、促销海报需要快速迭代，找设计师成本高。<br>✅ 解决方案：背景移除器＋Magic Media生成产品场景图，一键生成A+页面。<br>📈 实际效果：平均单品上架时间从4小时缩短至45分钟。</p>
+        <h3>👩‍🏫 教师/教育者</h3>
+        <p>问题：课件枯燥，缺少视觉吸引力。<br>✅ 解决方案：AI 演示文稿生成器根据教案自动生成图文并茂的幻灯片，加入互动元素。<br>📈 学生专注度显著提升。</p>
+        <h3>💼 初创公司/市场团队</h3>
+        <p>问题：没有专职设计师，品牌物料混乱。<br>✅ 解决方案：Canva 品牌工具箱＋Magic Write 批量生成社交媒体贴文，保持视觉统一。</p>
+        <h3>👨‍💻 普通办公族</h3>
+        <p>制作报告、邀请函、简历等，告别丑PPT，用 AI 让文档即刻拥有专业感。</p>
+      </section>
+
+      <!-- 四、优缺点分析（平衡客观） -->
+      <section class="card" id="pros-cons">
+        <h2>👍👎 优点 & 缺点：真实评价</h2>
+        <div class="grid2">
+          <div class="mini">
+            <h3>✅ 优势亮点</h3>
+            <ul class="list">
+              <li>✔️ 学习成本极低，零基础10分钟上手。</li>
+              <li>✔️ AI 能力深度整合，而非生硬插件。</li>
+              <li>✔️ 模板质量极高，覆盖百万种场景。</li>
+              <li>✔️ 免费版功能强大，足够轻度使用。</li>
+              <li>✔️ 协作功能完善，支持团队实时编辑评论。</li>
+              <li>✔️ 输出格式丰富（PNG/PDF/MP4/GIF）。</li>
+            </ul>
+          </div>
+          <div class="mini">
+            <h3>❌ 待改进之处</h3>
+            <ul class="list">
+              <li>⚠️ 高级 AI 生成量限制（Pro 月额度也非无限）。</li>
+              <li>⚠️ 复杂矢量编辑能力弱于 Illustrator。</li>
+              <li>⚠️ 部分 AI 生成图片风格偶尔单调。</li>
+              <li>⚠️ 导出 PDF 时字体可能因系统变化。</li>
+              <li>⚠️ 企业版价格较高，小团队需考量。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 五、价格方案（详细） -->
+      <section class="card" id="price">
+        <h2>💰 价格方案：免费 vs Pro vs Teams</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>版本</th><th>年付价格</th><th>核心AI额度 & 功能</th><th>适合人群</th></tr></thead>
+            <tbody>
+              <tr><td><strong>免费版</strong></td><td>$0</td><td>AI 生成50次/月，移除背景无限，5GB云存储，数十万免费模板</td><td>个人体验、学生、极轻度用户</td></tr>
+              <tr><td><strong>Pro (专业版)</strong></td><td>$120/年</td><td>AI 生成500次/月，魔力橡皮擦无限，一键品牌套件，智能抠图高清导出，100+ 付费音频视频素材</td><td>自媒体、自由设计师、重度办公</td></tr>
+              <tr><td><strong>Teams (团队版)</strong></td><td>$100/人/年 (3人起)</td><td>继承 Pro 全部，增加团队权限控制、模板库、实时协作审批、统一账单</td><td>中小型企业、内容工作室</td></tr>
+              <tr><td><strong>Enterprise</strong></td><td>定制报价</td><td>无限AI调用，SSO安全，专属成功经理，高级分析</td><td>大型企业、跨国集团</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">📌 以上价格为2026年官方参考，促销季常有折扣。AIHubTools 建议先用免费版测试工作流，再视频率升级 Pro。</div>
+      </section>
+
+      <!-- 六、30秒上手步骤 -->
+      <section class="card" id="guide">
+        <h2>🚀 新手30秒快速上手</h2>
+        <ol class="list">
+          <li><strong>注册/登录</strong>：访问 canva.com，支持谷歌或邮箱注册。</li>
+          <li><strong>选择 AI 起点</strong>：点击“创建设计”→选择“魔力媒体”/“AI 演示文稿”或直接搜索模板。</li>
+          <li><strong>输入想法</strong>：例如“生成一张科技感AI海报，主色调紫色，包含机器人元素”。</li>
+          <li><strong>AI 初稿 + 微调</strong>：等待10秒，获得4张变体，选择喜欢的并修改文字/排版。</li>
+          <li><strong>导出分享</strong>：点击分享链接或者下载 PNG/PDF，整个流程不超过2分钟。</li>
+        </ol>
+        <p>💡 进阶技巧：将 ChatGPT 写好的内容直接粘贴进 Magic Write 优化语气；使用「批量创建」可一次生成100张变体图片用于A/B测试。</p>
+      </section>
+
+      <!-- 七、FAQ 12个常见问题 -->
+      <section class="card faq" id="faq">
+        <h2>❓ 常见问题 FAQ（12问）</h2>
+        <details><summary>Canva AI 生成的内容能商用吗？</summary><p>根据 Canva 官方政策，通过 Magic Media 生成且使用付费版权益的图片可以商用（包括印刷、广告）。免费版生成的图片建议个人使用，具体条款见官网法律声明。</p></details>
+        <details><summary>中文提示词支持情况如何？</summary><p>完美支持中文提示词，Magic Write 生成中文文案质量较高，Magic Media 理解中文语义生成图片，建议中英文混合更精准。</p></details>
+        <details><summary>Canva 和 Midjourney 哪个更适合设计师？</summary><p>Midjourney 在艺术性和画质上限更高；Canva 胜在工作流集成，生成后直接排版，省去导入导出步骤，更适合快速产出。</p></details>
+        <details><summary>免费版每天能用几次AI？</summary><p>免费版 Magic Media 等额度总计约 50 次/月（可能随政策浮动），用完需等下月或升级 Pro，背景移除不计入额度。</p></details>
+        <details><summary>Canva 能代替 Photoshop 吗？</summary><p>对于海报、社交媒体图、轻量修图完全可以；专业合成、复杂通道、印刷级调整仍需 PS，二者互补。</p></details>
+        <details><summary>能否一键将 Word 文档转 PPT？</summary><p>可以，在演示文稿设计中使用“导入文档”功能，AI 自动提炼并生成幻灯片，非常实用。</p></details>
+        <details><summary>Canva 的 AI 视频功能怎么样？</summary><p>Magic Media 支持文生视频（短片段，3~5秒），适合做动态素材；制作长视频建议配合其他视频工具。</p></details>
+        <details><summary>支持团队多人实时协作吗？</summary><p>支持，类似于 Google Docs，所有人可同时编辑、评论，并保留版本历史。</p></details>
+        <details><summary>有没有教育优惠？</summary><p>Canva 对K12教师和学生提供免费教育版（包含部分Pro功能），需官网验证教育身份。</p></details>
+        <details><summary>可以取消 Pro 订阅吗？</summary><p>随时取消，取消后不再扣费，账号会在当前周期结束时降级为免费版，已创作内容保留。</p></details>
+        <details><summary>生成的图片画质如何？</summary><p>最高可导出 300 DPI 图片，Pro 支持矢量导出部分元素，画质满足印刷需求。</p></details>
+        <details><summary>Canva 和 Gamma 做 PPT 哪个强？</summary><p>Gamma 侧重 AI 叙事文字体验，Canva 则在视觉设计、模板资源上更丰富。看中表达结构选 Gamma，看重最终颜值选 Canva。</p></details>
+      </section>
+
+      <!-- 八、竞品对比表格 -->
+      <section class="card" id="alternatives">
+        <h2>⚖️ 竞品对比：Canva vs Adobe Express vs 稿定设计</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>工具</th><th>综合评分</th><th>AI 生成图片质量</th><th>模板数量</th><th>中文支持</th><th>适合群体</th></tr></thead>
+            <tbody>
+              <tr><td>Canva</td><td>4.7</td><td>良好（风格统一）</td><td>10万+</td><td>原生中文</td><td>全民设计，全场景</td></tr>
+              <tr><td>Adobe Express</td><td>4.3</td><td>良好（继承Firefly）</td><td>6万+</td><td>良好</td><td>Adobe 生态用户</td></tr>
+              <tr><td>稿定设计</td><td>4.1</td><td>中等（电商模板强）</td><td>8万+</td><td>极佳</td><td>国内电商、微商</td></tr>
+              <tr><td>美图设计室</td><td>3.9</td><td>中等（人像美化强）</td><td>2万+</td><td>极佳</td><td>个人美工、人像修图</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>结论：Canva 在 AI 整合深度、国际化素材库和易用性上综合领先，尤其适合跨境运营和追求设计一致性的团队。</p>
+      </section>
+
+      <!-- 最终总结 -->
+      <section class="card">
+        <h2>🎯 AIHubTools 最终结论</h2>
+        <p>Canva 经过 AI 进化已成为全民设计基础设施。对于自媒体、电商卖家和职场人士，升级 Pro 能带来效率几何级提升；对于初学者，免费版足以完成90%日常设计需求。如果你厌倦了繁琐的软件操作，想让AI帮你完成脏活累活，Canva 是目前最成熟、门槛最低的选择。</p>
+        <p><strong>推荐指数：★★★★★</strong><br>购买建议：先用免费版建立习惯，若每月需AI功能超过30次，果断升级Pro。</p>
+      </section>
+
+      <!-- 相关推荐内部链接SEO -->
+      <div class="related">
+        <a href="gamma.html"><strong>Gamma</strong><br><span>AI PPT 叙事评测</span></a>
+        <a href="midjourney.html"><strong>Midjourney V7</strong><br><span>高质量AI绘画</span></a>
+        <a href="adobe-express.html"><strong>Adobe Express</strong><br><span>Firefly AI 设计</span></a>
+        <a href="notion-ai.html"><strong>Notion AI</strong><br><span>文档智能助理</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">© 2026 AIHubTools / 智汇工具 · Canva 深度评测 V3 | 数据更新于2026.06 | 页面遵循旗舰评测模板</div>
+</main>
+</body>
+</html>

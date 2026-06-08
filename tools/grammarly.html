@@ -1,132 +1,308 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Grammarly 深度评测：不止是语法检查 (2024) - AIHubTools</title>
-    <meta name="description" content="深入评测 AI 写作工具 Grammarly。探索其如何从基础的语法纠错、风格建议，到最新的生成式 AI 功能，全面提升你的写作水平，并与 Wordtune 等工具进行对比。">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIHubTools 深度评测模板 2.0</title>
+<style>
+:root{
+ --bg:#0f172a;
+ --card:#111827;
+ --card2:#1f2937;
+ --text:#e5e7eb;
+ --muted:#94a3b8;
+ --primary:#3b82f6;
+ --border:#334155;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+ background:var(--bg);
+ color:var(--text);
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ line-height:1.7;
+}
+.container{max-width:1200px;margin:auto;padding:20px}
+.nav{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:15px 0;border-bottom:1px solid var(--border);
+}
+.logo{font-size:22px;font-weight:700}
+.hero{
+ display:grid;
+ grid-template-columns:1.2fr 1fr;
+ gap:30px;
+ padding:60px 0;
+}
+.hero-card,.image-card,.card{
+ background:var(--card);
+ border:1px solid var(--border);
+ border-radius:20px;
+ padding:25px;
+}
+.badge{
+ display:inline-block;
+ background:rgba(59,130,246,.15);
+ color:#60a5fa;
+ padding:6px 12px;
+ border-radius:999px;
+ margin-bottom:15px;
+}
+h1{font-size:48px;margin-bottom:10px}
+.subtitle{color:var(--muted);margin-bottom:15px}
+.rating{font-size:24px;margin:15px 0}
+.tags span{
+ display:inline-block;
+ background:var(--card2);
+ padding:8px 12px;
+ border-radius:999px;
+ margin:5px;
+}
+.btn{
+ display:inline-block;
+ margin-top:15px;
+ background:var(--primary);
+ color:white;
+ text-decoration:none;
+ padding:12px 18px;
+ border-radius:12px;
+}
+.image-card{
+ min-height:320px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ color:var(--muted);
+}
+.grid4{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:20px;
+ margin:30px 0;
+}
+.score{
+ text-align:center;
+}
+.score strong{
+ display:block;
+ font-size:42px;
+ color:#60a5fa;
+}
+.section{margin:35px 0}
+.section h2{margin-bottom:15px}
+.highlight{
+ background:linear-gradient(135deg,#1e3a8a,#2563eb);
+ border-radius:20px;
+ padding:25px;
+}
+.fit{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:20px;
+}
+.feature-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:20px;
+}
+.feature{
+ background:var(--card);
+ border:1px solid var(--border);
+ border-radius:16px;
+ padding:20px;
+}
+.proscons{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:20px;
+}
+table{
+ width:100%;
+ border-collapse:collapse;
+}
+th,td{
+ border:1px solid var(--border);
+ padding:12px;
+}
+details{
+ background:var(--card);
+ border:1px solid var(--border);
+ border-radius:12px;
+ padding:15px;
+ margin:10px 0;
+}
+.related{
+ display:grid;
+ grid-template-columns:repeat(5,1fr);
+ gap:15px;
+}
+.related div{
+ background:var(--card);
+ border:1px solid var(--border);
+ border-radius:12px;
+ padding:18px;
+ text-align:center;
+}
+footer{
+ text-align:center;
+ color:var(--muted);
+ padding:40px 0;
+}
+@media(max-width:900px){
+ .hero,.fit,.proscons{grid-template-columns:1fr}
+ .grid4{grid-template-columns:repeat(2,1fr)}
+ .feature-grid{grid-template-columns:1fr}
+ .related{grid-template-columns:repeat(2,1fr)}
+ h1{font-size:34px}
+}
+</style>
 </head>
 <body>
-<main class="wrap">
-<div class="topbar"><div class="brand"><span class="logo">AI</span><span>AIHubTools 智汇工具</span></div><nav class="nav"><a href="../index.html">返回首页</a><a href="../tutorials.html">教程中心</a></nav></div>
+<div class="container">
+
+<div class="nav">
+<div class="logo">AIHubTools 深度评测</div>
+<div>首页 | 工具库 | 教程中心</div>
+</div>
 
 <section class="hero">
-    <div class="hero-grid">
-        <div class="hero-text">
-            <div class="badge">⭐ AIHubTools · 深度评测</div>
-            <h1>Grammarly: AI 写作教练</h1>
-            <p class="lead">从基础的语法纠错到高级的风格建议，再到最新的生成式 AI 功能，Grammarly 正从一个“语法警察”进化为全能的“写作教练”，帮助你自信地完成每一次书写。</p>
-            <div class="actions">
-                <a class="btn primary" href="https://www.grammarly.com" target="_blank" rel="noopener nofollow">访问官网 →</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="../assets/covers/grammarly-cover.webp" alt="Grammarly 评测封面">
-        </div>
-    </div>
-    <div class="meta">
-        <div class="meta-card"><span>难度等级</span><strong>🟢 新手友好</strong></div>
-        <div class="meta-card"><span>核心优势</span><strong>准确性与全面性</strong></div>
-        <div class="meta-card"><span>收费情况</span><strong>免费增值</strong></div>
-        <div class="meta-card"><span>适合场景</span><strong>邮件 / 论文 / 报告</strong></div>
-    </div>
+<div class="hero-card">
+<span class="badge">AIHubTools Review 2.0</span>
+<h1>Grammarly</h1>
+<p class="subtitle">全球最受欢迎的 AI 英文写作助手</p>
+<div class="rating">⭐⭐⭐⭐⭐ 4.8 / 5</div>
+<div class="tags">
+<span>学生</span>
+<span>职场</span>
+<span>外贸</span>
+<span>内容创作者</span>
+</div>
+<a href="#" class="btn">访问官网</a>
+</div>
+
+<div class="image-card">
+产品截图位置
+</div>
 </section>
 
-<div class="layout">
-    <aside class="toc">
-        <strong>目录</strong>
-        <a href="#intro">Grammarly 是什么？</a>
-        <a href="#features">核心功能解析</a>
-        <a href="#generative-ai">生成式 AI 功能</a>
-        <a href="#pricing">价格与方案</a>
-        <a href="#comparison">竞品对比</a>
-        <a href="#summary">总结：值得投资吗？</a>
-    </aside>
-    <div>
-        <section class="card" id="intro">
-            <h2>Grammarly：超越基础语法检查</h2>
-            <p>Grammarly 是全球最知名、用户量最大的在线写作辅助工具。它不仅仅是一个简单的拼写和语法检查器，更是一个全面的AI写作伙伴。通过浏览器插件、桌面应用和移动键盘，Grammarly 几乎可以在你进行任何文本输入的场景中提供实时反馈和建议。</p>
-            <p>它的核心价值在于，通过AI算法分析你的文本，从四个维度提升你的写作质量：</p>
-            <ul class="list">
-                <li><strong>正确性 (Correctness):</strong> 修正拼写、语法和标点错误。</li>
-                <li><strong>清晰度 (Clarity):</strong> 改进句子结构，使其更易于理解。</li>
-                <li><strong>参与度 (Engagement):</strong> 提供更生动的词汇，避免重复。</li>
-                <li><strong>得体性 (Delivery):</strong> 确保你的语气符合预设的受众和目标。</li>
-            </ul>
-        </section>
-
-        <section class="card" id="features">
-            <h2>核心功能解析：不仅仅是红线</h2>
-            <h3>1. 实时语法与拼写检查</h3>
-            <p>这是 Grammarly 的基础功能，也是其安身立命之本。它的准确性经过了十多年的迭代和亿万级用户数据的训练，在业界处于领先地位。无论是常见的时态错误，还是易混淆的词汇（如 affect/effect），它都能精准识别并提供修正建议。</p>
-            <h3>2. 风格与语气建议 (Premium)</h3>
-            <p>这是区分免费版和付费版的核心功能之一。你可以为你的文档设定目标（例如，受众是“专家”，语气是“自信”，场景是“学术论文”），Grammarly 会据此提供更高级的建议。它可能会建议你将一个被动语态的句子改为主动语态以增强说服力，或者将一个过于口语化的词汇替换为更正式的表达。</p>
-            <h3>3. 抄袭检测 (Premium)</h3>
-            <p>对于学生、学者和内容创作者来说，这是一个至关重要的功能。Grammarly 会将你的文本与 ProQuest 的数据库和数十亿网页进行比对，高亮显示可能存在抄袭风险的段落，并提供引文来源建议，帮助你确保内容的原创性。</p>
-        </section>
-
-        <section class="card" id="generative-ai">
-            <h2>生成式 AI：GrammarlyGO</h2>
-            <p>面对 ChatGPT 等大模型的冲击，Grammarly 迅速推出了自己的生成式 AI 功能——GrammarlyGO。它并非要取代你的写作，而是作为“催化剂”和“优化器”，无缝集成在你现有的工作流中。</p>
-            <blockquote><p><strong>核心理念：</strong> GrammarlyGO 旨在理解你的写作“上下文”，在你需要的地方提供快速、相关的 AI 支持，而不是让你跳转到一个全新的聊天界面。</p></blockquote>
-            <p>你可以通过点击输入框旁边的绿色小图标来激活 GrammarlyGO，它能帮你：</p>
-            <ul class="list">
-                <li><strong>快速构思：</strong> 输入“帮我写一封邮件，向客户催要逾期款项，语气要坚定但礼貌”，它能迅速生成一封得体的邮件草稿。</li>
-                <li><strong>一键改写：</strong> 选中你写的句子，让它帮你变得“更简短”、“更专业”或“更自信”。</li>
-                <li><strong>回复邮件：</strong> 在 Gmail 中，它可以自动分析收到的邮件内容，并为你生成几个不同语气的回复选项。</li>
-            </ul>
-            <p>与直接使用 ChatGPT 相比，GrammarlyGO 的优势在于它对你当前写作环境的感知。它知道你正在写什么、给谁写，因此生成的建议往往更具相关性。</p>
-        </section>
-
-        <section class="card" id="pricing">
-            <h2>价格与方案：免费版够用吗？</h2>
-            <div class="table-wrap">
-                <table class="table">
-                    <thead><tr><th>版本</th><th>核心功能</th><th>价格</th><th>适合人群</th></tr></thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Free (免费版)</strong></td>
-                            <td>基础语法、拼写、标点纠错。</td>
-                            <td>$0</td>
-                            <td>对写作要求不高的普通用户，主要用于避免基础错误。</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Premium (高级版)</strong></td>
-                            <td>包含免费版所有功能，外加风格与语气调整、清晰度重写、抄袭检测、词汇增强等。</td>
-                            <td>约 $12/月 (年付)</td>
-                            <td><strong>学生、职场人士、作家、任何需要频繁进行英文写作的用户。</strong></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Business (商业版)</strong></td>
-                            <td>包含高级版所有功能，外加团队风格指南、分析仪表盘、SAML 单点登录等。</td>
-                            <td>约 $15/人/月 (年付)</td>
-                            <td>需要统一写作风格、进行品牌管理的企业团队。</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p><strong>结论：</strong> 对于任何需要认真对待英文写作的人来说，免费版是“不够用的”。Premium 版本提供的风格、清晰度和语气建议，才是真正能让你的写作水平产生质变的关键。我们强烈建议将 Premium 视为一项对个人专业能力的投资。</p>
-        </section>
-
-        <section class="card" id="comparison">
-            <h2>竞品对比：Grammarly vs. Wordtune</h2>
-            <p>在 AI 写作增强领域，Wordtune 是 Grammarly 最有力的竞争者之一。</p>
-            <ul class="list">
-                <li><strong>Grammarly 的强项：</strong>在于“纠错”和“规范”。它的语法数据库更全面，规则更严谨，更适合用于需要确保“正确性”的场景，如学术论文、法律文件、商业合同等。</li>
-                <li><strong>Wordtune 的强项：</strong>在于“改写”和“润色”。它的核心功能是“Spices”，能够从不同角度（如举例、反驳、强调）丰富和扩展你的句子，更适合用于需要激发创意、探索不同表达方式的场景，如市场文案、博客文章等。</li>
-            </ul>
-            <p>简单来说：<strong>先用 Grammarly 确保你的文章没有错误（60分 -> 85分），再用 Wordtune 让你的表达更精彩（85分 -> 95分）。</strong> 对大多数人来说，Grammarly 是更基础、更不可或缺的那一个。</p>
-        </section>
-
-        <section class="card" id="summary">
-            <h2>总结：你的 AI 写作教练</h2>
-            <p>在 AI 时代，写作能力不仅没有被削弱，反而变得更加重要。清晰、准确、有说服力的书面沟通，是你专业能力的延伸。</p>
-            <p>Grammarly，特别是其 Premium 版本，正是磨练这项能力的最佳工具。它像一位不知疲倦的私人教练，时刻在你身边，纠正你的错误、优化你的表达、拓宽你的思路。如果你希望在学术或职业生涯中，通过写作建立自己的信誉和影响力，那么投资 Grammarly Premium 将会获得极高的回报。</p>
-        </section>
-    </div>
+<div class="grid4">
+<div class="card score"><span>总体评分</span><strong>4.8</strong></div>
+<div class="card score"><span>易用性</span><strong>5.0</strong></div>
+<div class="card score"><span>功能性</span><strong>4.9</strong></div>
+<div class="card score"><span>性价比</span><strong>4.5</strong></div>
 </div>
-<div class="footer">© 2024 AIHubTools / 智汇工具 · Grammarly 深度评测</div>
-</main>
+
+<section class="section">
+<div class="highlight">
+<h2>一句话总结</h2>
+<p>如果你经常写英文邮件、论文或商业文档，Grammarly 几乎是必装工具。</p>
+</div>
+</section>
+
+<section class="section fit">
+<div class="card">
+<h2>✅ 适合谁</h2>
+<ul>
+<li>学生</li>
+<li>研究人员</li>
+<li>外贸从业者</li>
+<li>内容创作者</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>❌ 不适合谁</h2>
+<ul>
+<li>完全不写英文的人</li>
+<li>仅中文写作用户</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<h2>核心功能</h2>
+<div class="feature-grid">
+<div class="feature">语法检查</div>
+<div class="feature">AI改写</div>
+<div class="feature">语气分析</div>
+<div class="feature">风格优化</div>
+<div class="feature">抄袭检测</div>
+<div class="feature">邮件回复</div>
+</div>
+</section>
+
+<section class="section">
+<div class="card">
+<h2>功能实测</h2>
+<p><strong>原文：</strong> I has went to school yesterday.</p>
+<p><strong>修正：</strong> I went to school yesterday.</p>
+<p>点评：成功识别多个语法错误。</p>
+</div>
+</section>
+
+<section class="section proscons">
+<div class="card">
+<h2>👍 优点</h2>
+<ul>
+<li>准确率高</li>
+<li>实时检查</li>
+<li>浏览器插件丰富</li>
+<li>界面友好</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>👎 缺点</h2>
+<ul>
+<li>价格偏高</li>
+<li>高级功能收费</li>
+<li>中文支持有限</li>
+</ul>
+</div>
+</section>
+
+<section class="section">
+<h2>竞品对比</h2>
+<table>
+<tr><th>功能</th><th>Grammarly</th><th>Wordtune</th><th>QuillBot</th></tr>
+<tr><td>语法检查</td><td>★★★★★</td><td>★★★</td><td>★★★</td></tr>
+<tr><td>AI改写</td><td>★★★★</td><td>★★★★★</td><td>★★★★</td></tr>
+<tr><td>抄袭检测</td><td>★★★★★</td><td>✘</td><td>★★</td></tr>
+</table>
+</section>
+
+<section class="section">
+<h2>FAQ</h2>
+<details>
+<summary>Grammarly 免费版够用吗？</summary>
+<p>基础纠错够用，高级功能建议 Premium。</p>
+</details>
+
+<details>
+<summary>支持中文吗？</summary>
+<p>主要面向英文写作。</p>
+</details>
+
+<details>
+<summary>和 ChatGPT 有什么区别？</summary>
+<p>Grammarly 专注写作优化，ChatGPT 更偏向通用 AI。</p>
+</details>
+</section>
+
+<section class="section">
+<h2>相关推荐</h2>
+<div class="related">
+<div>Canva AI</div>
+<div>Gamma</div>
+<div>Claude</div>
+<div>ChatGPT</div>
+<div>Notion AI</div>
+</div>
+</section>
+
+<footer>
+© AIHubTools Review Template 2.0
+</footer>
+
+</div>
 </body>
 </html>

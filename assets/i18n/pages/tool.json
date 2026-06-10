@@ -1,0 +1,197 @@
+{
+  "tool.meta_title": {
+    "zh": "工具详情 - AIHubTools 智汇工具",
+    "en": "Tool Details - AIHubTools",
+    "ja": "ツール詳細 - AIHubTools"
+  },
+  "tool.meta_description": {
+    "zh": "AIHubTools 智汇工具详情页，包含封面图、相关推荐、上一篇下一篇、工具评分和最近更新。",
+    "en": "AIHubTools tool details page with cover image, related recommendations, prev/next navigation, tool rating, and latest updates.",
+    "ja": "AIHubTools 智匯工具の詳細ページ、カバー画像、関連おすすめ、前後の記事、ツール評価、最新更新情報を含む。"
+  },
+  "tool.back_home": {
+    "zh": "返回首页",
+    "en": "Back to Home",
+    "ja": "ホームへ戻る"
+  },
+  "tool.tutorials": {
+    "zh": "教程中心",
+    "en": "Tutorials",
+    "ja": "チュートリアル"
+  },
+  "tool.loading": {
+    "zh": "正在加载工具详情...",
+    "en": "Loading tool details...",
+    "ja": "ツール詳細を読み込み中..."
+  },
+  "tool.category_label": {
+    "zh": "分类",
+    "en": "Category",
+    "ja": "分類"
+  },
+  "tool.type_label": {
+    "zh": "类型",
+    "en": "Type",
+    "ja": "タイプ"
+  },
+  "tool.pricing_label": {
+    "zh": "价格",
+    "en": "Pricing",
+    "ja": "価格"
+  },
+  "tool.difficulty_label": {
+    "zh": "难度",
+    "en": "Difficulty",
+    "ja": "難易度"
+  },
+  "tool.rating_label": {
+    "zh": "工具评分",
+    "en": "Tool Rating",
+    "ja": "ツール評価"
+  },
+  "tool.updated_label": {
+    "zh": "最近更新",
+    "en": "Last Updated",
+    "ja": "最終更新"
+  },
+  "tool.scenarios_title": {
+    "zh": "适合使用场景",
+    "en": "Suitable Use Cases",
+    "ja": "に適した利用シーン"
+  },
+  "tool.info_title": {
+    "zh": "工具信息",
+    "en": "Tool Information",
+    "ja": "ツール情報"
+  },
+  "tool.advantages_title": {
+    "zh": "主要优点",
+    "en": "Main Advantages",
+    "ja": "主なメリット"
+  },
+  "tool.tips_title": {
+    "zh": "新手使用建议",
+    "en": "Tips for Beginners",
+    "ja": "初心者向けヒント"
+  },
+  "tool.tags_title": {
+    "zh": "标签",
+    "en": "Tags",
+    "ja": "タグ"
+  },
+  "tool.related_title": {
+    "zh": "相关推荐工具",
+    "en": "Related Recommended Tools",
+    "ja": "関連おすすめツール"
+  },
+  "tool.visit_website": {
+    "zh": "访问官网",
+    "en": "Visit Website",
+    "ja": "公式サイトを見る"
+  },
+  "tool.view_tutorial": {
+    "zh": "查看教程",
+    "en": "View Tutorial",
+    "ja": "チュートリアルを見る"
+  },
+  "tool.back_tools": {
+    "zh": "返回工具库",
+    "en": "Back to Tools",
+    "ja": "ツール一覧に戻る"
+  },
+  "tool.prev": {
+    "zh": "上一篇",
+    "en": "Previous",
+    "ja": "前へ"
+  },
+  "tool.next": {
+    "zh": "下一篇",
+    "en": "Next",
+    "ja": "次へ"
+  },
+  "tool.no_prev": {
+    "zh": "暂无",
+    "en": "None",
+    "ja": "なし"
+  },
+  "tool.no_next": {
+    "zh": "暂无",
+    "en": "None",
+    "ja": "なし"
+  },
+  "tool.edge_reached": {
+    "zh": "已经到达列表边界",
+    "en": "End of list",
+    "ja": "リスト終端"
+  },
+  "tool.featured_recommend": {
+    "zh": "编辑推荐，适合优先体验",
+    "en": "Editor recommended, suitable for priority experience",
+    "ja": "編集者のおすすめ優先体験に適しています"
+  },
+  "tool.try_recommended": {
+    "zh": "适合按需尝试",
+    "en": "Suitable for trying as needed",
+    "ja": "必要に応じて試すのに適しています"
+  },
+  "tool.disclaimer": {
+    "zh": "本站评分为编辑整理分，不代表真实用户投票。工具名称、Logo、商标及服务内容归原平台所有。",
+    "en": "Ratings on this site are curated by editors and do not represent actual user votes. Tool names, logos, trademarks, and service content belong to the original platform.",
+    "ja": "このサイトの評価は編集者によるもので、実際のユーザーの投票，不代表です。ツール名、Logo、商標およびサービス内容は元のプラットフォームに帰属します。"
+  },
+  "tool.advantage_1": {
+    "zh": "上手门槛相对较低，适合新手尝试",
+    "en": "Relatively low entry barrier, suitable for beginners",
+    "ja": "参入门槛が低く、初心者にも最適"
+  },
+  "tool.advantage_2": {
+    "zh": "适合与其他 AI 工具组合成工作流",
+    "en": "Suitable for combining with other AI tools into workflows",
+    "ja": "他のAIツールと組み合わせてワークフローに利用可能"
+  },
+  "tool.advantage_3": {
+    "zh": "可以减少重复劳动，把时间留给判断和创意",
+    "en": "Can reduce repetitive work, leaving time for judgment and creativity",
+    "ja": "반복作業を削減し、判断力と創造性に時間を充てられる"
+  },
+  "tool.tip_1": {
+    "zh": "先用一个简单任务测试输出效果",
+    "en": "First test output with a simple task",
+    "ja": "まずは簡単なタスクで出力をテスト"
+  },
+  "tool.tip_2": {
+    "zh": "写清楚背景、目标、输出格式和限制",
+    "en": "Clearly state background, goals, output format, and constraints",
+    "ja": "背景、目標、出力形式、制約を明確に書く"
+  },
+  "tool.tip_3": {
+    "zh": "重要内容不要完全依赖 AI 结果",
+    "en": "Do not completely rely on AI results for important content",
+    "ja": "重要な内容はAI結果に完全依存しない"
+  },
+  "tool.tip_4": {
+    "zh": "价格、版权和商业用途请以官网说明为准",
+    "en": "For pricing, copyright, and commercial use, refer to official website",
+    "ja": "価格、著作権、商用利用は公式サイトをご確認ください"
+  },
+  "tool.missing_param": {
+    "zh": "缺少工具参数，请从首页工具卡进入。",
+    "en": "Missing tool parameter, please enter from homepage tool card.",
+    "ja": "ツールパラメータが不足しています。ホームページのツールカードから入ってください。"
+  },
+  "tool.not_found": {
+    "zh": "没有找到这个工具，请检查链接。",
+    "en": "Tool not found, please check the link.",
+    "ja": "ツールが見つかりません。リンクを確認してください。"
+  },
+  "tool.load_error": {
+    "zh": "工具详情加载失败：",
+    "en": "Failed to load tool details: ",
+    "ja": "ツール詳細の読み込みに失敗しました："
+  },
+  "tool.cover_fallback": {
+    "zh": "详情页封面图",
+    "en": "Details page cover",
+    "ja": "詳細ページカバー"
+  }
+}

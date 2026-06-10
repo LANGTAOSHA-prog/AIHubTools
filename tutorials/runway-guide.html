@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="i18n-page" content="runway-guide" />
   <title>Runway AI 视频生成教程 - AIHubTools 智汇工具</title>
   <meta name="description" content="Runway 是最专业的 AI 视频生成与编辑平台，其 Gen-3 Alpha 模型可从文字或图片生成高质量短视频，被好莱坞后期制作团队广泛使用。本教程涵盖文生视频、图生视频和视频编辑三大核心功能。" />
   <link rel="canonical" href="https://langtaosha-prog.github.io/AIHubTools/tutorials/runway-guide.html" />
+  <script src="../assets/js/i18n.js" defer></script>
   <style>
     *{box-sizing:border-box}
     body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8fafc;color:#111827;line-height:1.85}
@@ -25,6 +27,8 @@
     .tips ul{margin:0;padding-left:22px}
     .tips li{margin-bottom:8px}
     footer{text-align:center;color:#64748b;padding:28px 16px}
+    .lang-switch{display:flex;gap:6px}
+    .lang-switch a.is-active{background:#2563eb;color:#fff}
     @media(max-width:640px){main{padding:24px 14px}.card{padding:20px}}
   </style>
 </head>
@@ -44,6 +48,11 @@
   <main>
     <div class="topbar">
       <a class="back" href="../tutorials.html">← 返回教程中心</a>
+      <div class="lang-switch" aria-label="Language">
+        <a class="site" data-set-lang="zh">中文</a>
+        <a class="site" data-set-lang="en">EN</a>
+        <a class="site" data-set-lang="ja">日本語</a>
+      </div>
       <a class="site" href="https://runwayml.com" target="_blank" rel="noopener nofollow">访问官网 →</a>
     </div>
 

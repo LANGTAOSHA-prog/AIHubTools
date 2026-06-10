@@ -1,0 +1,77 @@
+{
+  "tutorial.chatgpt.meta_title": {
+    "zh": "ChatGPT 终极指南 (2024最新版) - AIHubTools 智汇工具",
+    "en": "The Ultimate ChatGPT Guide (2024) - AIHubTools",
+    "ja": "ChatGPT 究極ガイド (2024最新版) - AIHubTools"
+  },
+  "tutorial.chatgpt.meta_description": {
+    "zh": "一份为追求极致效率的你准备的 ChatGPT 终极指南。从 GPT-4o 的最新功能到高级提示词工程，再到 GPTs 和真实世界案例，助你成为真正的 AI 高手。",
+    "en": "The ultimate ChatGPT guide for maximum efficiency. From GPT-4o's latest features to advanced prompt engineering and real-world use cases.",
+    "ja": "究極の効率を追求するあなたへの ChatGPT 究極ガイド。GPT-4o の最新機能から高度なプロンプトエンジニアリング、 реальные случаиまで。"
+  },
+  "tutorial.chatgpt.badge": {
+    "zh": "⭐ AIHubTools · 官方教程",
+    "en": "⭐ AIHubTools · Official Tutorial",
+    "ja": "⭐ AIHubTools · 公式チュートリアル"
+  },
+  "tutorial.chatgpt.hero_title": {
+    "zh": "ChatGPT 终极指南",
+    "en": "The Ultimate ChatGPT Guide",
+    "ja": "ChatGPT 究極ガイド"
+  },
+  "tutorial.chatgpt.hero_subtitle": {
+    "zh": "从 GPT-4o 的颠覆性多模态交互，到构建你的第一个 Custom GPT，本指南将带你深入探索 ChatGPT 的全部潜力，让你从入门到精通，成为真正的 AI 应用高手。",
+    "en": "From GPT-4o's revolutionary multimodal interaction to building your first Custom GPT, this guide takes you deep into ChatGPT's full potential.",
+    "ja": "GPT-4o の革命的なマルチモーダルインタラクションから最初の Custom GPT の構築まで、本ガイドは ChatGPT の全潜在能力を深く探ります。"
+  },
+  "tutorial.chatgpt.visit_website": {
+    "zh": "访问官网 →",
+    "en": "Visit Website →",
+    "ja": "公式サイトを見る →"
+  },
+  "tutorial.chatgpt.difficulty": {
+    "zh": "难度等级",
+    "en": "Difficulty",
+    "ja": "難易度"
+  },
+  "tutorial.chatgpt.difficulty_easy": {
+    "zh": "🟢 新手友好",
+    "en": "🟢 Beginner Friendly",
+    "ja": "🟢 初心者向け"
+  },
+  "tutorial.chatgpt.core_advantage": {
+    "zh": "核心优势",
+    "en": "Core Advantage",
+    "ja": "コアアドバンテージ"
+  },
+  "tutorial.chatgpt.advantage_value": {
+    "zh": "创意与生态系统",
+    "en": "Creativity & Ecosystem",
+    "ja": "クリエイティブとエコシステム"
+  },
+  "tutorial.chatgpt.pricing": {
+    "zh": "收费情况",
+    "en": "Pricing",
+    "ja": "料金"
+  },
+  "tutorial.chatgpt.pricing_value": {
+    "zh": "免费增值",
+    "en": "Freemium",
+    "ja": "フリーミアム"
+  },
+  "tutorial.chatgpt.suitable": {
+    "zh": "适合场景",
+    "en": "Best For",
+    "ja": "最適なシーン"
+  },
+  "tutorial.chatgpt.suitable_value": {
+    "zh": "写作 / 编程 / 创意",
+    "en": "Writing / Coding / Creative",
+    "ja": "ライティング / コーディング / クリエイティブ"
+  },
+  "tutorial.chatgpt.toc_title": {
+    "zh": "目录",
+    "en": "Table of Contents",
+    "ja": "目次"
+  }
+}

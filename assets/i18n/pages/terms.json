@@ -1,0 +1,77 @@
+{
+  "terms.meta_title": {
+    "zh": "使用条款 - AIHubTools 智汇工具",
+    "en": "Terms of Use - AIHubTools",
+    "ja": "利用規約 - AIHubTools"
+  },
+  "terms.meta_description": {
+    "zh": "AIHubTools 智汇工具使用条款，说明网站内容、第三方链接、免责声明和用户使用规则。",
+    "en": "AIHubTools Terms of Use explains website content, third-party links, disclaimer, and user usage rules.",
+    "ja": "AIHubTools 智匯工具の利用規約では、ウェブサイトコンテンツ、サードパーティリンク、免責事項、ユーザーの利用規則を説明します。"
+  },
+  "terms.eyebrow": {
+    "zh": "使用条款",
+    "en": "Terms of Use",
+    "ja": "利用規約"
+  },
+  "terms.title": {
+    "zh": "使用条款",
+    "en": "Terms of Use",
+    "ja": "利用規約"
+  },
+  "terms.last_updated": {
+    "zh": "最后更新：2026-05-24",
+    "en": "Last updated: 2026-05-24",
+    "ja": "最終更新日：2026-05-24"
+  },
+  "terms.section_1_title": {
+    "zh": "网站用途",
+    "en": "Website Purpose",
+    "ja": "ウェブサイトの目的"
+  },
+  "terms.section_1_text": {
+    "zh": "AIHubTools 提供 AI 工具、在线工具和开源替代工具的整理、分类、简介和访问入口，帮助用户快速发现实用工具。",
+    "en": "AIHubTools provides organization, categorization, introduction, and access to AI tools, online tools, and open-source alternatives, helping users quickly discover useful tools.",
+    "ja": "AIHubToolsは、AIツール、オンラインツール、オープンソース代替ツールの整理、分類、紹介、アクセスポイントを提供し、ユーザーがすぐに便利なツールを見つけられるようにします。"
+  },
+  "terms.section_2_title": {
+    "zh": "内容准确性",
+    "en": "Content Accuracy",
+    "ja": "コンテンツの正確性"
+  },
+  "terms.section_2_text": {
+    "zh": "我们会尽力保持信息清晰和有用，但第三方工具的价格、功能、可用性、政策和网址可能随时变化。请以第三方工具官方网站发布的信息为准。",
+    "en": "We strive to keep information clear and useful, but the prices, features, availability, policies, and URLs of third-party tools may change at any time. Please refer to the information published on the official website of third-party tools.",
+    "ja": "私たちは情報を明確で有用に保つように努めていますが、サードパーティツールの価格、機能、利用可能性ポリシー、URLはいつでも変更される可能性があります。サードパーティツールの公式サイト公布の情報をご確認ください。"
+  },
+  "terms.section_3_title": {
+    "zh": "第三方服务",
+    "en": "Third-Party Services",
+    "ja": "サードパーティサービス"
+  },
+  "terms.section_3_text": {
+    "zh": "本网站包含第三方链接。用户访问或使用第三方服务时，应自行判断其安全性、适用性和合规性。",
+    "en": "This website contains links to third parties. When users access or use third-party services, they should judge the safety, applicability, and compliance on their own.",
+    "ja": "このウェブサイトにはサードパーティへのリンクが含まれています。ユーザーがサードパーティサービスにアクセスまたは使用する際は、安全性、適用性、コンプライアンスを自行判断してください。"
+  },
+  "terms.section_4_title": {
+    "zh": "禁止行为",
+    "en": "Prohibited Behavior",
+    "ja": "禁止行為"
+  },
+  "terms.section_4_text": {
+    "zh": "用户不得利用本网站从事违法、侵权、恶意攻击、爬取破坏、传播恶意软件或其他影响网站正常运行的行为。",
+    "en": "Users must not use this website for illegal activities, infringement, malicious attacks, scraping or destruction, spreading malware, or other behaviors that affect the normal operation of the website.",
+    "ja": "ユーザーは、このウェブサイトを使用して、違法行為、侵害、悪意のある攻撃、スクレイピングまたは破壊、マルウェアの传播、またはウェブサイトの正常运行に影響を与える他の行為を行うことはできません。"
+  },
+  "terms.section_5_title": {
+    "zh": "免责声明",
+    "en": "Disclaimer",
+    "ja": "免責事項"
+  },
+  "terms.section_5_text": {
+    "zh": "本网站内容仅供信息参考，不构成法律、财务、医疗或专业建议。因使用第三方工具或外部链接产生的风险由用户自行承担。",
+    "en": "The content on this website is for information reference only and does not constitute legal, financial, medical, or professional advice. Users bear the risks arising from the use of third-party tools or external links.",
+    "ja": "このウェブサイトのコンテンツは情報提供のみを目的としており、法律、財務、医学、または専門的なアドバイスするものではありません。サードパーティツールまたは外部リンクの使用から生じるリスクは、ユーザーが自行負担します。"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "contact.meta_title": {
+    "zh": "联系 - AIHubTools 智汇工具",
+    "en": "Contact - AIHubTools",
+    "ja": "お問い合わせ - AIHubTools"
+  },
+  "contact.meta_description": {
+    "zh": "联系 AIHubTools 智汇工具，提交工具收录、反馈问题或提出合作建议。",
+    "en": "Contact AIHubTools to submit tool suggestions, report issues, or propose collaborations.",
+    "ja": "AIHubTools 联系工具掲載の提案、問題報告、合作提案など。"
+  },
+  "contact.eyebrow": {
+    "zh": "联系",
+    "en": "Contact",
+    "ja": "お問い合わせ"
+  },
+  "contact.title": {
+    "zh": "联系 AIHubTools",
+    "en": "Contact AIHubTools",
+    "ja": "AIHubTools へのお問い合わせ"
+  },
+  "contact.intro": {
+    "zh": "欢迎提交工具收录建议、错误反馈、页面改进建议或合作咨询。",
+    "en": "Welcome to submit tool suggestions, error reports, page improvement ideas, or partnership inquiries.",
+    "ja": "ツール掲載の提案、エラー報告、ページ改善の提案または合作のお問い合わせを歓迎します。"
+  },
+  "contact.email_title": {
+    "zh": "联系邮箱",
+    "en": "Contact Email",
+    "ja": "連絡先メール"
+  },
+  "contact.submission_title": {
+    "zh": "提交建议时请包含",
+    "en": "When Submitting Suggestions, Please Include",
+    "ja": "提案を提出する際は以下を含める"
+  },
+  "contact.suggestion_1": {
+    "zh": "工具名称和官网链接",
+    "en": "Tool name and official website link",
+    "ja": "ツール名と公式サイトリンク"
+  },
+  "contact.suggestion_2": {
+    "zh": "工具分类和主要用途",
+    "en": "Tool category and main purpose",
+    "ja": "ツールの分類と主な用途"
+  },
+  "contact.suggestion_3": {
+    "zh": "免费、开源、付费或免费增值类型",
+    "en": "Free, open source, paid, or freemium model",
+    "ja": "無料、オープンソース有料またはフリーミアムモデル"
+  },
+  "contact.suggestion_4": {
+    "zh": "中 / 英 / 日任一语言的简短介绍",
+    "en": "A brief introduction in Chinese, English, or Japanese",
+    "ja": "中国語/英語/日本語いずれかでの簡単な紹介"
+  },
+  "contact.note_title": {
+    "zh": "说明",
+    "en": "Note",
+    "ja": "説明"
+  },
+  "contact.note_text": {
+    "zh": "AIHubTools 会优先收录信息清晰、访问正常、对学习和工作有实际帮助的工具。",
+    "en": "AIHubTools gives priority to tools with clear information, normal access, and practical help for learning and work.",
+    "ja": "AIHubTools は、情報明確でアクセス正常で、学習と仕事に実際役立つツールを優先的に掲載します。"
+  }
+}

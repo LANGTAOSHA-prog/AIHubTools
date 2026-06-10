@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="i18n-page" content="notebooklm-guide" />
 <title>NotebookLM 使用教程 | AIHubTools</title>
 <meta name="description" content="Google NotebookLM 完整入门指南。">
 <meta name="keywords" content="NotebookLM 使用教程,AI教程,AI工具教程">
+<script src="../assets/js/i18n.js" defer></script>
 
 <style>
 body{
@@ -33,6 +35,9 @@ footer{
   border-top:1px solid #eee;
   color:#888;
 }
+.lang-switch{display:flex;gap:6px;margin-top:12px}
+.lang-switch a{padding:6px 12px;background:#e5e7eb;color:#333;border-radius:999px;text-decoration:none;font-size:14px}
+.lang-switch a.is-active{background:#2563eb;color:#fff}
 </style>
 </head>
 
@@ -40,6 +45,11 @@ footer{
 <div class="container">
 
 <a class="back" href="../tutorials.html">← 返回教程中心</a>
+<div class="lang-switch" aria-label="Language">
+  <a data-set-lang="zh">中文</a>
+  <a data-set-lang="en">EN</a>
+  <a data-set-lang="ja">日本語</a>
+</div>
 
 <h1>NotebookLM 使用教程</h1>
 
